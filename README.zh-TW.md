@@ -1,3 +1,7 @@
+<div align="right">
+  [English](https://github.com/malilion/malilion/blob/main/README.md) · [繁體中文](https://github.com/malilion/malilion/blob/main/README.zh-TW.md)
+</div>
+
 <div align="center">
 
 # 嗨，我是碼力獅 MaliLion 🦁
@@ -8,7 +12,6 @@
 
 [個人網站](https://malilion.com) · [Threads](https://www.threads.com/@malilion.dev) · [GitHub 專案](https://github.com/malilion?tab=repositories)
 
-**Language / 語言：** [English](https://github.com/malilion/malilion/blob/main/README.md) · [繁體中文](https://github.com/malilion/malilion/blob/main/README.zh-TW.md)
 
 </div>
 
