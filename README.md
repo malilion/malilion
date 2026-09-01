@@ -23,12 +23,25 @@ I'm MaliLion, a creator building at the intersection of AI, code, and game devel
 
 ## Tech Stack
 
-| Area | Tools |
-| --- | --- |
-| AI & workflows | OpenAI · Agent workflows · Automation |
-| Web | Vue 3 · Vite · Vite SSG · Supabase · Vercel · SEO |
-| Interactive & games | Three.js · PixiJS · Ink.js · Godot |
-| Creative practice | AI experiments · Build in public · Technical writing |
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=html,css,js,ts,php,cs,vue,vite,pinia,laravel,dotnet,react,godot,vercel,docker,aws,github,git,mysql,mssql&perline=10" alt="HTML5, CSS3, JavaScript, TypeScript, PHP, C#, Vue.js, Vite, Pinia, Laravel, .NET, React, Godot, Vercel, Docker, AWS, GitHub, Git, SQL Server, MySQL" />
+</p>
+
+## GitHub Activity
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/output/github-contribution-grid-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/malilion/malilion/output/github-contribution-grid-snake.svg" />
+    <img alt="GitHub contribution snake animation" src="https://raw.githubusercontent.com/malilion/malilion/output/github-contribution-grid-snake.svg" />
+  </picture>
+</p>
+
+## Certifications
+
+Certification records are currently being prepared.
+
+AWS · Google Cloud · Microsoft
 
 ## Work Experience
 
