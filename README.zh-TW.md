@@ -23,12 +23,23 @@
 
 ## 技術棧
 
-| 領域 | 工具 |
-| --- | --- |
-| AI 與工作流程 | OpenAI · Agent 工作流程 · Automation |
-| 網站開發 | Vue 3 · Vite · Vite SSG · Supabase · Vercel · SEO |
-| 互動與遊戲 | Three.js · PixiJS · Ink.js · Godot |
-| 創作實踐 | AI 實驗 · Build in public · 技術寫作 |
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=html,css,js,ts,php,cs,vue,vite,pinia,laravel,dotnet,react,godot,vercel,docker,aws,github,git,mysql,mssql&perline=10" alt="HTML5、CSS3、JavaScript、TypeScript、PHP、C#、Vue.js、Vite、Pinia、Laravel、.NET、React、Godot、Vercel、Docker、AWS、GitHub、Git、SQL Server、MySQL" />
+</p>
+
+## GitHub 活動
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/output/github-contribution-grid-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/malilion/malilion/output/github-contribution-grid-snake.svg" />
+    <img alt="GitHub 貢獻紀錄蛇形動畫" src="https://raw.githubusercontent.com/malilion/malilion/output/github-contribution-grid-snake.svg" />
+  </picture>
+</p>
+
+## 證照
+
+目前正在整理證照資料，分類包含 AWS、Google Cloud 與 Microsoft。
 
 ## 工作經歷
 
