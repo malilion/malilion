@@ -10,8 +10,9 @@
 
 把學習做成作品，把作品做成品牌。
 
-[個人網站](https://malilion.com) · [Threads](https://www.threads.com/@malilion.dev) · [GitHub 專案](https://github.com/malilion?tab=repositories)
+<a href="https://malilion.com">個人網站</a> · <a href="https://www.threads.com/@malilion.dev">Threads</a> · <a href="https://github.com/malilion?tab=repositories">GitHub 專案</a>
 
+<a href="https://github.com/malilion"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=3000&pause=1000&color=F59E0B&center=true&vCenter=true&width=700&lines=MaliLion;AI+%C3%97+Code+%C3%97+Game+Development;Building+small+ideas+into+real+projects" alt="MaliLion 打字動畫" /></a>
 
 </div>
 
@@ -27,23 +28,40 @@
   <img src="https://skillicons.dev/icons?i=html,css,js,ts,php,cs,vue,vite,pinia,laravel,dotnet,react,godot,vercel,docker,aws,github,git,mysql,mssql&perline=10" alt="HTML5、CSS3、JavaScript、TypeScript、PHP、C#、Vue.js、Vite、Pinia、Laravel、.NET、React、Godot、Vercel、Docker、AWS、GitHub、Git、SQL Server、MySQL" />
 </p>
 
+<p align="center"><sub>HTML5 · CSS · JavaScript · TypeScript · PHP · C# · Vue.js · Vite · Pinia · Laravel · .NET · React · Godot · Vercel · Docker · AWS · GitHub · Git · SQL Server · MySQL</sub></p>
+
 ## GitHub 活動
 
 <p align="center">
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=malilion&show_icons=true&hide_border=true&theme=transparent&rank_icon=github" alt="MaliLion 的 GitHub 統計" />
+  <img height="165" src="https://streak-stats.demolab.com?user=malilion&theme=transparent&hide_border=true" alt="MaliLion 的 GitHub 連續活動" />
+</p>
+
+<p align="center">
+  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=malilion&layout=compact&hide_border=true&theme=transparent" alt="MaliLion 常用語言" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=malilion&theme=github-compact&hide_border=true&area=true" alt="MaliLion 的 GitHub 活動圖" />
+</p>
+
+<p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/output/github-contribution-grid-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/malilion/malilion/output/github-contribution-grid-snake.svg" />
-    <img alt="GitHub 貢獻紀錄蛇形動畫" src="https://raw.githubusercontent.com/malilion/malilion/output/github-contribution-grid-snake.svg" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/malilion/malilion/output/github-contribution-grid-snake.svg">
+    <img src="https://raw.githubusercontent.com/malilion/malilion/output/github-contribution-grid-snake.svg" alt="GitHub 貢獻紀錄蛇形動畫" />
   </picture>
 </p>
 
 ## 證照
 
-目前正在整理證照資料，分類包含 AWS、Google Cloud 與 Microsoft。
+目前正在整理證照資料。
+
+AWS · Google Cloud · Microsoft
 
 ## 工作經歷
 
-#### 新創公司｜軟體工程師
+#### 新創公司 · 軟體工程師
 
 **2023～2023**
 
@@ -55,7 +73,7 @@
 - 撰寫 Unit Test，確保程式品質與系統穩定性
 - 落實 Git 版本控管，強化團隊協作效率
 
-#### 工業電腦公司｜軟體工程師
+#### 工業電腦公司 · 軟體工程師
 
 **2024～2026**
 
@@ -67,9 +85,9 @@
 - 開發 Chart.js 資料視覺化儀表板，強化工廠端決策效率
 - 獨立開發 ESOP、BPM 簽呈等系統，優化跨部門作業流程，有效降低人力成本
 
-#### 科技業｜軟體工程師
+#### 科技業 · 軟體工程師
 
-**2026～至今**
+**2026～現在**
 
 負責企業級應用系統開發與維護，採用 Vue.js 與 .NET Core API 技術架構，支撐核心業務系統運作。
 
@@ -80,12 +98,10 @@
 
 ## 精選專案
 
-- **[MaliLion 個人網站](https://malilion.com)** — 整合 AI 實驗、Side Project、遊戲開發與技術文章的個人品牌網站。
-- **[MaliLion 3D World](https://malilion.com/world)** — 以 AI × 程式 × 遊戲開發為主題的互動式 3D 世界。
-- **[《九重燼》技術文章系列](https://ithelp.ithome.com.tw/users/20183394/ironman/9059)** — 以 Vue 3、PixiJS、Ink.js 打造互動視覺小說的完整開發紀錄。
-- **[The Nocturne Atlas](https://github.com/malilion/The-Nocturne-Atlas)** — 使用 TypeScript 製作，提供英文與繁體中文文件。
-- **[Editorial Photo Poster](https://github.com/malilion/editorial-photo-poster)** — 將照片轉化為克制編輯風格海報與手繪場景插畫的 Codex skill。
+- **[MaliLion 個人網站](https://malilion.com)** — 以 AI 實驗、Side Project、遊戲開發與文章為主題的品牌網站與開發筆記中心。
+- **[MaliLion 3D World](https://malilion.com/world)** — 以 AI × 程式 × 遊戲開發為核心的互動式 3D 世界。
+- **[九重燼技術系列](https://ithelp.ithome.com.tw/users/20183394/ironman/9059)** — Vue 3 + PixiJS + Ink.js 互動小說的開發紀錄。
+- **[The Nocturne Atlas](https://github.com/malilion/The-Nocturne-Atlas)** — 提供英文與繁體中文文件的 TypeScript 專案。
+- **[Editorial Photo Poster](https://github.com/malilion/editorial-photo-poster)** — 將照片轉化為簡約編輯風海報與手繪場景插畫的 Codex skill。
 
-<div align="center">
-  <sub>感謝造訪，歡迎探索我的作品。</sub>
-</div>
+<sub>謝謝來訪，歡迎探索我的作品。</sub>
