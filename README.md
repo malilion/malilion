@@ -10,8 +10,9 @@
 
 Turning learning into projects, and projects into a body of work.
 
-[Personal website](https://malilion.com) · [Threads](https://www.threads.com/@malilion.dev) · [Repositories](https://github.com/malilion?tab=repositories)
+<a href="https://malilion.com">Personal website</a> · <a href="https://www.threads.com/@malilion.dev">Threads</a> · <a href="https://github.com/malilion?tab=repositories">Repositories</a>
 
+<a href="https://github.com/malilion"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=3000&pause=1000&color=F59E0B&center=true&vCenter=true&width=700&lines=MaliLion;AI+%C3%97+Code+%C3%97+Game+Development;Building+small+ideas+into+real+projects" alt="MaliLion typing animation" /></a>
 
 </div>
 
@@ -27,13 +28,28 @@ I'm MaliLion, a creator building at the intersection of AI, code, and game devel
   <img src="https://skillicons.dev/icons?i=html,css,js,ts,php,cs,vue,vite,pinia,laravel,dotnet,react,godot,vercel,docker,aws,github,git,mysql,mssql&perline=10" alt="HTML5, CSS3, JavaScript, TypeScript, PHP, C#, Vue.js, Vite, Pinia, Laravel, .NET, React, Godot, Vercel, Docker, AWS, GitHub, Git, SQL Server, MySQL" />
 </p>
 
+<p align="center"><sub>HTML5 · CSS · JavaScript · TypeScript · PHP · C# · Vue.js · Vite · Pinia · Laravel · .NET · React · Godot · Vercel · Docker · AWS · GitHub · Git · SQL Server · MySQL</sub></p>
+
 ## GitHub Activity
 
 <p align="center">
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=malilion&show_icons=true&hide_border=true&theme=transparent&rank_icon=github" alt="Malilion's GitHub stats" />
+  <img height="165" src="https://streak-stats.demolab.com?user=malilion&theme=transparent&hide_border=true" alt="Malilion's GitHub streak" />
+</p>
+
+<p align="center">
+  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=malilion&layout=compact&hide_border=true&theme=transparent" alt="Malilion's top languages" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=malilion&theme=github-compact&hide_border=true&area=true" alt="Malilion's GitHub activity graph" />
+</p>
+
+<p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/output/github-contribution-grid-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/malilion/malilion/output/github-contribution-grid-snake.svg" />
-    <img alt="GitHub contribution snake animation" src="https://raw.githubusercontent.com/malilion/malilion/output/github-contribution-grid-snake.svg" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/malilion/malilion/output/github-contribution-grid-snake.svg">
+    <img src="https://raw.githubusercontent.com/malilion/malilion/output/github-contribution-grid-snake.svg" alt="GitHub contribution snake animation" />
   </picture>
 </p>
 
@@ -88,6 +104,4 @@ Responsible for developing and maintaining enterprise applications using Vue.js 
 - **[The Nocturne Atlas](https://github.com/malilion/The-Nocturne-Atlas)** — A TypeScript project with English and Traditional Chinese documentation.
 - **[Editorial Photo Poster](https://github.com/malilion/editorial-photo-poster)** — A Codex skill for turning photographs into restrained editorial posters with hand-drawn scene illustrations.
 
-<div align="center">
-  <sub>Thanks for stopping by — feel free to explore.</sub>
-</div>
+<sub>Thanks for stopping by — feel free to explore.</sub>
