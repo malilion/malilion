@@ -33,23 +33,23 @@
 ## GitHub 活動
 
 <p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=malilion&show_icons=true&hide_border=true&theme=transparent&rank_icon=github" alt="MaliLion 的 GitHub 統計" />
+  <img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=malilion&theme=github_dark" alt="MaliLion 的 GitHub 統計" />
   <img height="165" src="https://streak-stats.demolab.com?user=malilion&theme=transparent&hide_border=true" alt="MaliLion 的 GitHub 連續活動" />
 </p>
 
 <p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=malilion&layout=compact&hide_border=true&theme=transparent" alt="MaliLion 常用語言" />
+  <img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=malilion&theme=github_dark" alt="MaliLion 常用語言" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=malilion&theme=github-compact&hide_border=true&area=true" alt="MaliLion 的 GitHub 活動圖" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=malilion&theme=github_dark" alt="MaliLion 的 GitHub 活動圖" />
 </p>
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/output/github-contribution-grid-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/malilion/malilion/output/github-contribution-grid-snake.svg">
-    <img src="https://raw.githubusercontent.com/malilion/malilion/output/github-contribution-grid-snake.svg" alt="GitHub 貢獻紀錄蛇形動畫" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/github-contribution-grid-snake.svg">
+    <img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/github-contribution-grid-snake.svg" alt="GitHub 貢獻紀錄蛇形動畫" />
   </picture>
 </p>
 
