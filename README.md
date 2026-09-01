@@ -1,3 +1,7 @@
+<div align="right">
+  [English](https://github.com/malilion/malilion/blob/main/README.md) · [繁體中文](https://github.com/malilion/malilion/blob/main/README.zh-TW.md)
+</div>
+
 <div align="center">
 
 # Hi, I'm Malilion 🦁
@@ -8,7 +12,6 @@ Turning learning into projects, and projects into a body of work.
 
 [Personal website](https://malilion.com) · [Threads](https://www.threads.com/@malilion.dev) · [Repositories](https://github.com/malilion?tab=repositories)
 
-**Language / 語言：** [English](https://github.com/malilion/malilion/blob/main/README.md) · [繁體中文](https://github.com/malilion/malilion/blob/main/README.zh-TW.md)
 
 </div>
 
