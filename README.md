@@ -1,5 +1,5 @@
 <div align="right">
-  [English](https://github.com/malilion/malilion/blob/main/README.md) · [繁體中文](https://github.com/malilion/malilion/blob/main/README.zh-TW.md)
+  <a href="https://github.com/malilion/malilion/blob/main/README.md">English</a> · <a href="https://github.com/malilion/malilion/blob/main/README.zh-TW.md">繁體中文</a>
 </div>
 
 <div align="center">
