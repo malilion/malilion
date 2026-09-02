@@ -25,10 +25,10 @@
 ## 技術棧
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=html,css,js,ts,php,cs,vue,vite,pinia,laravel,dotnet,react,godot,vercel,docker,aws,github,git,mysql,mssql&perline=10" alt="HTML5、CSS3、JavaScript、TypeScript、PHP、C#、Vue.js、Vite、Pinia、Laravel、.NET、React、Godot、Vercel、Docker、AWS、GitHub、Git、SQL Server、MySQL" />
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=html,css,js,ts,php,cs,vue,vite,pinia,laravel,dotnet,nextjs,react,godot,vercel,docker,aws,github,git,mssql,mysql&perline=7&theme=dark" alt="Technology stack" />
+  </a>
 </p>
-
-<p align="center"><sub>HTML5 · CSS · JavaScript · TypeScript · PHP · C# · Vue.js · Vite · Pinia · Laravel · .NET · React · Godot · Vercel · Docker · AWS · GitHub · Git · SQL Server · MySQL</sub></p>
 
 ## GitHub 活動
 
