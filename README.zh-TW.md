@@ -25,9 +25,35 @@
 ## 技術棧
 
 <p align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=html,css,js,ts,php,cs,vue,vite,pinia,laravel,dotnet,nextjs,react,godot,vercel,docker,aws,github,git,mssql,mysql&perline=7&theme=dark" alt="Technology stack" />
-  </a>
+  <table>
+    <tr>
+      <td align="center"><img src="https://skillicons.dev/icons?i=html" width="42" height="42" alt="HTML5" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=css" width="42" height="42" alt="CSS" /></td>
+      <td align="center"><img src="https://techstack-generator.vercel.app/js-icon.svg" width="42" height="42" alt="JavaScript" /></td>
+      <td align="center"><img src="https://techstack-generator.vercel.app/ts-icon.svg" width="42" height="42" alt="TypeScript" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=php" width="42" height="42" alt="PHP" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=cs" width="42" height="42" alt="C#" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=vue" width="42" height="42" alt="Vue.js" /></td>
+    </tr>
+    <tr>
+      <td align="center"><img src="https://skillicons.dev/icons?i=vite" width="42" height="42" alt="Vite" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=pinia" width="42" height="42" alt="Pinia" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=laravel" width="42" height="42" alt="Laravel" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=dotnet" width="42" height="42" alt=".NET" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=nextjs" width="42" height="42" alt="Next.js" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=react" width="42" height="42" alt="React" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=godot" width="42" height="42" alt="Godot" /></td>
+    </tr>
+    <tr>
+      <td align="center"><img src="https://skillicons.dev/icons?i=vercel" width="42" height="42" alt="Vercel" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=docker" width="42" height="42" alt="Docker" /></td>
+      <td align="center"><img src="https://techstack-generator.vercel.app/aws-icon.svg" width="42" height="42" alt="AWS" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=github" width="42" height="42" alt="GitHub" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=git" width="42" height="42" alt="Git" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=mssql" width="42" height="42" alt="SQL Server" /></td>
+      <td align="center"><img src="https://techstack-generator.vercel.app/mysql-icon.svg" width="42" height="42" alt="MySQL" /></td>
+    </tr>
+  </table>
 </p>
 
 ## GitHub 活動
