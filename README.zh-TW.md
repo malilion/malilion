@@ -81,9 +81,20 @@
 
 ## 證照
 
-目前正在整理證照資料。
+<p align="center">
+  <table>
+    <tr>
+      <td align="center" width="200"><a href="https://aws.amazon.com/certification/certified-ai-practitioner/"><img src="https://raw.githubusercontent.com/turboBasic/aws-certification-badges/main/assets/raster%20examples/aws-certified-ai-practitioner-logo-600px.png" width="120" alt="AWS Certified AI Practitioner" /></a></td>
+      <td align="center" width="200"><a href="https://aws.amazon.com/certification/certified-cloud-practitioner/"><img src="https://raw.githubusercontent.com/turboBasic/aws-certification-badges/main/assets/raster%20examples/aws-certified-cloud-practitioner-logo-600px.png" width="120" alt="AWS Certified Cloud Practitioner" /></a></td>
+    </tr>
+    <tr>
+      <td align="center"><b>AWS Certified<br />AI Practitioner</b></td>
+      <td align="center"><b>AWS Certified<br />Cloud Practitioner</b></td>
+    </tr>
+  </table>
+</p>
 
-AWS · Google Cloud · Microsoft
+<p align="center"><sub>證照徽章來自 <a href="https://github.com/turboBasic/aws-certification-badges">turboBasic/aws-certification-badges</a> · 其他證照持續準備中</sub></p>
 
 ## 工作經歷
 
