@@ -10,7 +10,9 @@
 
 把學習做成作品，把作品做成品牌。
 
-<a href="https://malilion.com">個人網站</a> · <a href="https://www.threads.com/@malilion.dev">Threads</a> · <a href="https://github.com/malilion?tab=repositories">GitHub 專案</a>
+<a href="https://malilion.com"><img src="https://img.shields.io/badge/%E5%80%8B%E4%BA%BA%E7%B6%B2%E7%AB%99-F59E0B?style=for-the-badge&logo=googlechrome&logoColor=white" alt="個人網站" /></a>
+<a href="https://www.threads.com/@malilion.dev"><img src="https://img.shields.io/badge/Threads-000000?style=for-the-badge&logo=threads&logoColor=white" alt="Threads" /></a>
+<a href="https://github.com/malilion?tab=repositories"><img src="https://img.shields.io/badge/GitHub_%E5%B0%88%E6%A1%88-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub 專案" /></a>
 
 <a href="https://github.com/malilion"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=3000&pause=1000&color=F59E0B&center=true&vCenter=true&width=700&lines=MaliLion;AI+%C3%97+Code+%C3%97+Game+Development;Building+small+ideas+into+real+projects" alt="MaliLion 打字動畫" /></a>
 

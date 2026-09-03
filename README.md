@@ -10,7 +10,9 @@
 
 Turning learning into projects, and projects into a body of work.
 
-<a href="https://malilion.com">Personal website</a> · <a href="https://www.threads.com/@malilion.dev">Threads</a> · <a href="https://github.com/malilion?tab=repositories">Repositories</a>
+<a href="https://malilion.com"><img src="https://img.shields.io/badge/Personal_Website-F59E0B?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Personal website" /></a>
+<a href="https://www.threads.com/@malilion.dev"><img src="https://img.shields.io/badge/Threads-000000?style=for-the-badge&logo=threads&logoColor=white" alt="Threads" /></a>
+<a href="https://github.com/malilion?tab=repositories"><img src="https://img.shields.io/badge/Repositories-181717?style=for-the-badge&logo=github&logoColor=white" alt="Repositories" /></a>
 
 <a href="https://github.com/malilion"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=3000&pause=1000&color=F59E0B&center=true&vCenter=true&width=700&lines=MaliLion;AI+%C3%97+Code+%C3%97+Game+Development;Building+small+ideas+into+real+projects" alt="MaliLion typing animation" /></a>
 
