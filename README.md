@@ -86,17 +86,14 @@ I'm MaliLion, a creator building at the intersection of AI, code, and game devel
 <p align="center">
   <table>
     <tr>
-      <td align="center" width="200"><a href="https://aws.amazon.com/certification/certified-ai-practitioner/"><img src="https://raw.githubusercontent.com/turboBasic/aws-certification-badges/main/assets/raster%20examples/aws-certified-ai-practitioner-logo-600px.png" width="120" alt="AWS Certified AI Practitioner" /></a></td>
-      <td align="center" width="200"><a href="https://aws.amazon.com/certification/certified-cloud-practitioner/"><img src="https://raw.githubusercontent.com/turboBasic/aws-certification-badges/main/assets/raster%20examples/aws-certified-cloud-practitioner-logo-600px.png" width="120" alt="AWS Certified Cloud Practitioner" /></a></td>
-    </tr>
-    <tr>
-      <td align="center"><b>AWS Certified<br />AI Practitioner</b></td>
-      <td align="center"><b>AWS Certified<br />Cloud Practitioner</b></td>
+      <td align="center" width="180"><img src="./assets/certifications/aws-cloud-practitioner.webp" width="110" alt="AWS Certified Cloud Practitioner" /><br /><b>AWS Certified<br />Cloud Practitioner</b></td>
+      <td align="center" width="180"><img src="./assets/certifications/aws-ai-practitioner.webp" width="110" alt="AWS Certified AI Practitioner" /><br /><b>AWS Certified<br />AI Practitioner</b></td>
+      <td align="center" width="180"><img src="./assets/certifications/mta-database.webp" width="110" alt="Microsoft MTA Database Fundamentals" /><br /><b>MTA Database<br />Fundamentals</b></td>
+      <td align="center" width="180"><img src="./assets/certifications/mta-networking.webp" width="110" alt="Microsoft MTA Networking Fundamentals" /><br /><b>MTA Networking<br />Fundamentals</b></td>
+      <td align="center" width="180"><img src="./assets/certifications/mta-software-development.webp" width="110" alt="Microsoft MTA Software Development Fundamentals" /><br /><b>MTA Software Development<br />Fundamentals</b></td>
     </tr>
   </table>
 </p>
-
-<p align="center"><sub>Badge assets from <a href="https://github.com/turboBasic/aws-certification-badges">turboBasic/aws-certification-badges</a> · More certifications in progress</sub></p>
 
 ## Work Experience
 
@@ -142,5 +139,14 @@ Responsible for developing and maintaining enterprise applications using Vue.js 
 - **[九重燼 technical series](https://ithelp.ithome.com.tw/users/20183394/ironman/9059)** — A Vue 3 + PixiJS + Ink.js interactive visual novel development record.
 - **[The Nocturne Atlas](https://github.com/malilion/The-Nocturne-Atlas)** — A TypeScript project with English and Traditional Chinese documentation.
 - **[Editorial Photo Poster](https://github.com/malilion/editorial-photo-poster)** — A Codex skill for turning photographs into restrained editorial posters with hand-drawn scene illustrations.
+
+## Open Source Projects
+
+- **[ContextLion](https://github.com/malilion/ContextLion)** — A local-first browser extension that turns webpages into clean, structured, AI-ready Markdown context.
+- **[DevTrace Lion](https://github.com/malilion/devtrace-lion)** — Local-first API debugging inside browser DevTools with zero required permissions.
+- **[The Nocturne Atlas](https://github.com/malilion/The-Nocturne-Atlas)** — A seed-driven 3D wizarding world built with Three.js and TypeScript.
+- **[Editorial Photo Poster](https://github.com/malilion/editorial-photo-poster)** — A Codex skill for turning photographs into independent editorial posters with hand-drawn scene illustrations.
+- **[Haute Jewelry From Photo](https://github.com/malilion/haute-jewelry-from-photo)** — A Codex skill that translates image mood, materials, and forms into original haute joaillerie designs.
+- **[Scenic Bookmark Travel Poster](https://github.com/malilion/scenic-bookmark-travel-poster)** — A Codex skill that turns scenic travel photos into refined Japanese-style souvenir posters and bookmark designs.
 
 <sub>Thanks for stopping by — feel free to explore.</sub>

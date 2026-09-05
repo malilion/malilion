@@ -86,17 +86,14 @@
 <p align="center">
   <table>
     <tr>
-      <td align="center" width="200"><a href="https://aws.amazon.com/certification/certified-ai-practitioner/"><img src="https://raw.githubusercontent.com/turboBasic/aws-certification-badges/main/assets/raster%20examples/aws-certified-ai-practitioner-logo-600px.png" width="120" alt="AWS Certified AI Practitioner" /></a></td>
-      <td align="center" width="200"><a href="https://aws.amazon.com/certification/certified-cloud-practitioner/"><img src="https://raw.githubusercontent.com/turboBasic/aws-certification-badges/main/assets/raster%20examples/aws-certified-cloud-practitioner-logo-600px.png" width="120" alt="AWS Certified Cloud Practitioner" /></a></td>
-    </tr>
-    <tr>
-      <td align="center"><b>AWS Certified<br />AI Practitioner</b></td>
-      <td align="center"><b>AWS Certified<br />Cloud Practitioner</b></td>
+      <td align="center" width="180"><img src="./assets/certifications/aws-cloud-practitioner.webp" width="110" alt="AWS Certified Cloud Practitioner" /><br /><b>AWS Certified<br />Cloud Practitioner</b></td>
+      <td align="center" width="180"><img src="./assets/certifications/aws-ai-practitioner.webp" width="110" alt="AWS Certified AI Practitioner" /><br /><b>AWS Certified<br />AI Practitioner</b></td>
+      <td align="center" width="180"><img src="./assets/certifications/mta-database.webp" width="110" alt="Microsoft MTA Database Fundamentals" /><br /><b>MTA Database<br />Database Fundamentals</b></td>
+      <td align="center" width="180"><img src="./assets/certifications/mta-networking.webp" width="110" alt="Microsoft MTA Networking Fundamentals" /><br /><b>MTA Network<br />Networking Fundamentals</b></td>
+      <td align="center" width="180"><img src="./assets/certifications/mta-software-development.webp" width="110" alt="Microsoft MTA Software Development Fundamentals" /><br /><b>MTA Software Development<br />Fundamentals</b></td>
     </tr>
   </table>
 </p>
-
-<p align="center"><sub>證照徽章來自 <a href="https://github.com/turboBasic/aws-certification-badges">turboBasic/aws-certification-badges</a> · 其他證照持續準備中</sub></p>
 
 ## 工作經歷
 
@@ -142,5 +139,14 @@
 - **[九重燼技術系列](https://ithelp.ithome.com.tw/users/20183394/ironman/9059)** — Vue 3 + PixiJS + Ink.js 互動小說的開發紀錄。
 - **[The Nocturne Atlas](https://github.com/malilion/The-Nocturne-Atlas)** — 提供英文與繁體中文文件的 TypeScript 專案。
 - **[Editorial Photo Poster](https://github.com/malilion/editorial-photo-poster)** — 將照片轉化為簡約編輯風海報與手繪場景插畫的 Codex skill。
+
+## 開源專案
+
+- **[ContextLion](https://github.com/malilion/ContextLion)** — 以 local-first 為核心的瀏覽器擴充功能，一鍵將網頁轉成乾淨、結構化、適合 AI 使用的 Markdown。
+- **[DevTrace Lion](https://github.com/malilion/devtrace-lion)** — 在瀏覽器 DevTools 內進行 API 除錯，免要求額外權限並以 local-first 為核心。
+- **[The Nocturne Atlas](https://github.com/malilion/The-Nocturne-Atlas)** — 使用 Three.js 與 TypeScript 打造、由種子驅動的 3D 魔法世界。
+- **[Editorial Photo Poster](https://github.com/malilion/editorial-photo-poster)** — 將照片轉化為獨立編輯風海報與手繪場景插畫的 Codex skill。
+- **[Haute Jewelry From Photo](https://github.com/malilion/haute-jewelry-from-photo)** — 將圖片的氛圍、材質與形狀轉譯成原創高級珠寶設計的 Codex skill。
+- **[Scenic Bookmark Travel Poster](https://github.com/malilion/scenic-bookmark-travel-poster)** — 將風景旅遊照片轉化為日系紀念海報與書籤設計的 Codex skill。
 
 <sub>謝謝來訪，歡迎探索我的作品。</sub>
