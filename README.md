@@ -52,8 +52,18 @@ I'm MaliLion, a creator building at the intersection of AI, code, and game devel
       <td align="center"><img src="https://techstack-generator.vercel.app/aws-icon.svg" width="42" height="42" alt="AWS" /></td>
       <td align="center"><img src="https://skillicons.dev/icons?i=github" width="42" height="42" alt="GitHub" /></td>
       <td align="center"><img src="https://skillicons.dev/icons?i=git" width="42" height="42" alt="Git" /></td>
-      <td align="center"><img src="https://skillicons.dev/icons?i=mssql" width="42" height="42" alt="SQL Server" /></td>
-      <td align="center"><img src="https://techstack-generator.vercel.app/mysql-icon.svg" width="42" height="42" alt="MySQL" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=cloudflare" width="42" height="42" alt="cloudflare" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=gitlab" width="42" height="42" alt="gitlab" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=laravel" width="42" height="42" alt="laravel" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=obsidian" width="42" height="42" alt="obsidian" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=pnpm" width="42" height="42" alt="pnpm" /></td>  
+      <td align="center"><img src="https://skillicons.dev/icons?i=postgres" width="42" height="42" alt="postgres" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=ts" width="42" height="42" alt="ts" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=threejs" width="42" height="42" alt="threejs" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=supabase" width="42" height="42" alt="supabase" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=tailwind" width="42" height="42" alt="tailwind" /></td>
+      
+      <td align="center"><img src="https://techstack-generator.vercel.app/mysql-icon.svg" width="42" height="42" alt="MySQL" /></td>      
     </tr>
   </table>
 </p>
