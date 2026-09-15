@@ -36,15 +36,18 @@ I'm MaliLion, a creator building at the intersection of AI, code, and game devel
       <td align="center"><img src="https://skillicons.dev/icons?i=php" width="42" height="42" alt="PHP" /></td>
       <td align="center"><img src="https://skillicons.dev/icons?i=cs" width="42" height="42" alt="C#" /></td>
       <td align="center"><img src="https://skillicons.dev/icons?i=vue" width="42" height="42" alt="Vue.js" /></td>
-    </tr>
-    <tr>
       <td align="center"><img src="https://skillicons.dev/icons?i=vite" width="42" height="42" alt="Vite" /></td>
       <td align="center"><img src="https://skillicons.dev/icons?i=pinia" width="42" height="42" alt="Pinia" /></td>
+    </tr>
+    <tr>
       <td align="center"><img src="https://skillicons.dev/icons?i=laravel" width="42" height="42" alt="Laravel" /></td>
       <td align="center"><img src="https://skillicons.dev/icons?i=dotnet" width="42" height="42" alt=".NET" /></td>
       <td align="center"><img src="https://skillicons.dev/icons?i=nextjs" width="42" height="42" alt="Next.js" /></td>
       <td align="center"><img src="https://skillicons.dev/icons?i=react" width="42" height="42" alt="React" /></td>
       <td align="center"><img src="https://skillicons.dev/icons?i=godot" width="42" height="42" alt="Godot" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=threejs" width="42" height="42" alt="threejs" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=supabase" width="42" height="42" alt="supabase" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=tailwind" width="42" height="42" alt="tailwind" /></td> 
     </tr>
     <tr>
       <td align="center"><img src="https://skillicons.dev/icons?i=vercel" width="42" height="42" alt="Vercel" /></td>
@@ -58,11 +61,7 @@ I'm MaliLion, a creator building at the intersection of AI, code, and game devel
       <td align="center"><img src="https://skillicons.dev/icons?i=obsidian" width="42" height="42" alt="obsidian" /></td>
       <td align="center"><img src="https://skillicons.dev/icons?i=pnpm" width="42" height="42" alt="pnpm" /></td>  
       <td align="center"><img src="https://skillicons.dev/icons?i=postgres" width="42" height="42" alt="postgres" /></td>
-      <td align="center"><img src="https://skillicons.dev/icons?i=ts" width="42" height="42" alt="ts" /></td>
-      <td align="center"><img src="https://skillicons.dev/icons?i=threejs" width="42" height="42" alt="threejs" /></td>
-      <td align="center"><img src="https://skillicons.dev/icons?i=supabase" width="42" height="42" alt="supabase" /></td>
-      <td align="center"><img src="https://skillicons.dev/icons?i=tailwind" width="42" height="42" alt="tailwind" /></td>
-      
+      <td align="center"><img src="https://skillicons.dev/icons?i=ts" width="42" height="42" alt="ts" /></td>     
       <td align="center"><img src="https://techstack-generator.vercel.app/mysql-icon.svg" width="42" height="42" alt="MySQL" /></td>      
     </tr>
   </table>
