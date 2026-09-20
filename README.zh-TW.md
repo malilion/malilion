@@ -81,6 +81,7 @@
 
 <p align="center">
   <table>
+    <tr><td colspan="7" align="center"><b>語言與核心技術</b></td></tr>
     <tr>
       <td align="center"><img src="https://skillicons.dev/icons?i=html" width="42" height="42" alt="HTML5" /></td>
       <td align="center"><img src="https://skillicons.dev/icons?i=css" width="42" height="42" alt="CSS" /></td>
@@ -88,34 +89,37 @@
       <td align="center"><img src="https://techstack-generator.vercel.app/ts-icon.svg" width="42" height="42" alt="TypeScript" /></td>
       <td align="center"><img src="https://skillicons.dev/icons?i=php" width="42" height="42" alt="PHP" /></td>
       <td align="center"><img src="https://skillicons.dev/icons?i=cs" width="42" height="42" alt="C#" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=dotnet" width="42" height="42" alt=".NET" /></td>
+    </tr>
+    <tr><td colspan="7" align="center"><b>框架與前端</b></td></tr>
+    <tr>
+      <td align="center"><img src="https://skillicons.dev/icons?i=laravel" width="42" height="42" alt="Laravel" /></td>
       <td align="center"><img src="https://skillicons.dev/icons?i=vue" width="42" height="42" alt="Vue.js" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=react" width="42" height="42" alt="React" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=nextjs" width="42" height="42" alt="Next.js" /></td>
       <td align="center"><img src="https://skillicons.dev/icons?i=vite" width="42" height="42" alt="Vite" /></td>
       <td align="center"><img src="https://skillicons.dev/icons?i=pinia" width="42" height="42" alt="Pinia" /></td>
-    </tr>
-    <tr>
-      <td align="center"><img src="https://skillicons.dev/icons?i=laravel" width="42" height="42" alt="Laravel" /></td>
-      <td align="center"><img src="https://skillicons.dev/icons?i=dotnet" width="42" height="42" alt=".NET" /></td>
-      <td align="center"><img src="https://skillicons.dev/icons?i=nextjs" width="42" height="42" alt="Next.js" /></td>
-      <td align="center"><img src="https://skillicons.dev/icons?i=react" width="42" height="42" alt="React" /></td>
-      <td align="center"><img src="https://skillicons.dev/icons?i=godot" width="42" height="42" alt="Godot" /></td>
-      <td align="center"><img src="https://skillicons.dev/icons?i=threejs" width="42" height="42" alt="Three.js" /></td>
-      <td align="center"><img src="https://skillicons.dev/icons?i=supabase" width="42" height="42" alt="Supabase" /></td>
       <td align="center"><img src="https://skillicons.dev/icons?i=tailwind" width="42" height="42" alt="Tailwind CSS" /></td>
     </tr>
+    <tr><td colspan="7" align="center"><b>雲端與資料</b></td></tr>
     <tr>
-      <td align="center"><img src="https://skillicons.dev/icons?i=vercel" width="42" height="42" alt="Vercel" /></td>
-      <td align="center"><img src="https://skillicons.dev/icons?i=docker" width="42" height="42" alt="Docker" /></td>
       <td align="center"><img src="https://techstack-generator.vercel.app/aws-icon.svg" width="42" height="42" alt="AWS" /></td>
-      <td align="center"><img src="https://skillicons.dev/icons?i=github" width="42" height="42" alt="GitHub" /></td>
-      <td align="center"><img src="https://skillicons.dev/icons?i=git" width="42" height="42" alt="Git" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=docker" width="42" height="42" alt="Docker" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=vercel" width="42" height="42" alt="Vercel" /></td>
       <td align="center"><img src="https://skillicons.dev/icons?i=cloudflare" width="42" height="42" alt="Cloudflare" /></td>
-      <td align="center"><img src="https://skillicons.dev/icons?i=gitlab" width="42" height="42" alt="GitLab" /></td>
-      <td align="center"><img src="https://skillicons.dev/icons?i=laravel" width="42" height="42" alt="Laravel" /></td>
-      <td align="center"><img src="https://skillicons.dev/icons?i=obsidian" width="42" height="42" alt="Obsidian" /></td>
-      <td align="center"><img src="https://skillicons.dev/icons?i=pnpm" width="42" height="42" alt="pnpm" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=supabase" width="42" height="42" alt="Supabase" /></td>
       <td align="center"><img src="https://skillicons.dev/icons?i=postgres" width="42" height="42" alt="PostgreSQL" /></td>
-      <td align="center"><img src="https://skillicons.dev/icons?i=ts" width="42" height="42" alt="TypeScript" /></td>
       <td align="center"><img src="https://techstack-generator.vercel.app/mysql-icon.svg" width="42" height="42" alt="MySQL" /></td>
+    </tr>
+    <tr><td colspan="7" align="center"><b>工具與互動開發</b></td></tr>
+    <tr>
+      <td align="center"><img src="https://skillicons.dev/icons?i=git" width="42" height="42" alt="Git" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=github" width="42" height="42" alt="GitHub" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=gitlab" width="42" height="42" alt="GitLab" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=pnpm" width="42" height="42" alt="pnpm" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=obsidian" width="42" height="42" alt="Obsidian" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=threejs" width="42" height="42" alt="Three.js" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=godot" width="42" height="42" alt="Godot" /></td>
     </tr>
   </table>
 </p>
@@ -126,6 +130,7 @@
   <b>雲端與平台</b> · AWS / Docker / Cloudflare / Vercel / PostgreSQL / MySQL<br />
   <b>互動式開發</b> · Three.js / Godot
 </p>
+
 ## 💼 工作經歷速覽
 
 | 時間 | 角色 | 主要方向 |
@@ -153,6 +158,15 @@
 ## 📊 GitHub 活動
 
 <p align="center">
+  <img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=malilion&theme=github_dark" alt="MaliLion GitHub 統計" />
+  <img height="165" src="https://streak-stats.demolab.com?user=malilion&theme=transparent&hide_border=true" alt="MaliLion GitHub 連續活動" />
+</p>
+
+<p align="center">
+  <img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=malilion&theme=github_dark" alt="MaliLion 常用語言" />
+</p>
+
+<p align="center">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=malilion&theme=github_dark" alt="MaliLion GitHub 活動圖" />
 </p>
 
@@ -163,7 +177,6 @@
     <img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/github-contribution-grid-snake.svg" alt="GitHub 貢獻紀錄蛇形動畫" />
   </picture>
 </p>
-
 ---
 
 <p align="center">
