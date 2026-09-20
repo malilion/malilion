@@ -79,8 +79,7 @@ I build AI experiments, developer tools, interactive games, and learning experie
 
 ## 🧰 Tech Stack
 
-<p align="center">
-  <table>
+<table align="center">
     <tr><td colspan="7" align="center"><b>Languages & Core</b></td></tr>
     <tr>
       <td align="center"><img src="https://skillicons.dev/icons?i=html" width="42" height="42" alt="HTML5" /></td>
@@ -121,8 +120,7 @@ I build AI experiments, developer tools, interactive games, and learning experie
       <td align="center"><img src="https://skillicons.dev/icons?i=threejs" width="42" height="42" alt="Three.js" /></td>
       <td align="center"><img src="https://skillicons.dev/icons?i=godot" width="42" height="42" alt="Godot" /></td>
     </tr>
-  </table>
-</p>
+</table>
 
 <p align="center">
   <b>Backend & enterprise systems</b> · .NET / C# / Laravel<br />
