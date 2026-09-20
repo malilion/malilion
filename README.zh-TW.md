@@ -166,6 +166,15 @@
 ## 📊 GitHub 活動
 
 <p align="center">
+  <img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=malilion&theme=github_dark" alt="MaliLion GitHub 統計" />
+  <img height="165" src="https://streak-stats.demolab.com?user=malilion&theme=transparent&hide_border=true" alt="MaliLion GitHub 連續活動" />
+</p>
+
+<p align="center">
+  <img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=malilion&theme=github_dark" alt="MaliLion 常用語言" />
+</p>
+
+<p align="center">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=malilion&theme=github_dark" alt="MaliLion GitHub 活動圖" />
 </p>
 
@@ -176,7 +185,6 @@
     <img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/github-contribution-grid-snake.svg" alt="GitHub 貢獻紀錄蛇形動畫" />
   </picture>
 </p>
-
 ---
 
 <p align="center">
