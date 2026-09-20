@@ -79,8 +79,9 @@
 
 ## 🧰 技術棧
 
-<p align="center">
-  <table>
+<div align="center">
+
+<table>
     <tr><td colspan="7" align="center"><b>語言與核心技術</b></td></tr>
     <tr>
       <td align="center"><img src="https://skillicons.dev/icons?i=html" width="42" height="42" alt="HTML5" /></td>
@@ -121,15 +122,16 @@
       <td align="center"><img src="https://skillicons.dev/icons?i=threejs" width="42" height="42" alt="Three.js" /></td>
       <td align="center"><img src="https://skillicons.dev/icons?i=godot" width="42" height="42" alt="Godot" /></td>
     </tr>
-  </table>
-</p>
+</table>
 
-<p align="center">
+<p>
   <b>後端與企業系統</b> · .NET / C# / Laravel<br />
   <b>前端與產品開發</b> · Vue / React / TypeScript / Next.js<br />
   <b>雲端與平台</b> · AWS / Docker / Cloudflare / Vercel / PostgreSQL / MySQL<br />
   <b>互動式開發</b> · Three.js / Godot
 </p>
+
+</div>
 
 ## 💼 工作經歷速覽
 
