@@ -79,8 +79,7 @@
 
 ## 🧰 技術棧
 
-<p align="center">
-  <table>
+<table align="center">
     <tr><td colspan="7" align="center"><b>語言與核心技術</b></td></tr>
     <tr>
       <td align="center"><img src="https://skillicons.dev/icons?i=html" width="42" height="42" alt="HTML5" /></td>
@@ -121,8 +120,7 @@
       <td align="center"><img src="https://skillicons.dev/icons?i=threejs" width="42" height="42" alt="Three.js" /></td>
       <td align="center"><img src="https://skillicons.dev/icons?i=godot" width="42" height="42" alt="Godot" /></td>
     </tr>
-  </table>
-</p>
+</table>
 
 <p align="center">
   <b>後端與企業系統</b> · .NET / C# / Laravel<br />
