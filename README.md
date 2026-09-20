@@ -166,6 +166,15 @@ I build AI experiments, developer tools, interactive games, and learning experie
 ## 📊 GitHub Activity
 
 <p align="center">
+  <img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=malilion&theme=github_dark" alt="MaliLion GitHub stats" />
+  <img height="165" src="https://streak-stats.demolab.com?user=malilion&theme=transparent&hide_border=true" alt="MaliLion GitHub streak" />
+</p>
+
+<p align="center">
+  <img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=malilion&theme=github_dark" alt="MaliLion top languages" />
+</p>
+
+<p align="center">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=malilion&theme=github_dark" alt="MaliLion GitHub activity graph" />
 </p>
 
@@ -176,7 +185,6 @@ I build AI experiments, developer tools, interactive games, and learning experie
     <img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/github-contribution-grid-snake.svg" alt="GitHub contribution snake animation" />
   </picture>
 </p>
-
 ---
 
 <p align="center">
