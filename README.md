@@ -14,6 +14,8 @@ Turning learning into projects, and projects into a brand.
 <a href="https://www.threads.com/@malilion.dev"><img src="https://img.shields.io/badge/Threads-000000?style=for-the-badge&logo=threads&logoColor=white" alt="Threads" /></a>
 <a href="https://github.com/malilion?tab=repositories"><img src="https://img.shields.io/badge/Repositories-181717?style=for-the-badge&logo=github&logoColor=white" alt="Repositories" /></a>
 
+<a href="https://github.com/malilion"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=3000&pause=1000&color=F59E0B&center=true&vCenter=true&width=700&lines=MaliLion;AI+%C3%97+Code+%C3%97+Game+Development;Building+small+ideas+into+real+projects" alt="MaliLion typing animation" /></a>
+
 I build AI experiments, developer tools, interactive games, and learning experiences — then turn the process into reusable notes, open-source projects, and a growing MaliLion ecosystem.
 
 </div>
@@ -75,19 +77,55 @@ I build AI experiments, developer tools, interactive games, and learning experie
 - **[Haute Jewelry From Photo](https://github.com/malilion/haute-jewelry-from-photo)** — A Codex skill that translates visual mood and forms into original haute joaillerie concepts.
 - **[Scenic Bookmark Travel Poster](https://github.com/malilion/scenic-bookmark-travel-poster)** — A Codex skill for transforming travel photos into Japanese-inspired souvenir poster and bookmark designs.
 
-## 🧰 Main Stack
+## 🧰 Tech Stack
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=cs,dotnet,vue,ts,nextjs,php,laravel,aws,docker,postgres,threejs,godot" alt="MaliLion main technology stack" />
+  <table>
+    <tr>
+      <td align="center"><img src="https://skillicons.dev/icons?i=html" width="42" height="42" alt="HTML5" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=css" width="42" height="42" alt="CSS" /></td>
+      <td align="center"><img src="https://techstack-generator.vercel.app/js-icon.svg" width="42" height="42" alt="JavaScript" /></td>
+      <td align="center"><img src="https://techstack-generator.vercel.app/ts-icon.svg" width="42" height="42" alt="TypeScript" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=php" width="42" height="42" alt="PHP" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=cs" width="42" height="42" alt="C#" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=vue" width="42" height="42" alt="Vue.js" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=vite" width="42" height="42" alt="Vite" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=pinia" width="42" height="42" alt="Pinia" /></td>
+    </tr>
+    <tr>
+      <td align="center"><img src="https://skillicons.dev/icons?i=laravel" width="42" height="42" alt="Laravel" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=dotnet" width="42" height="42" alt=".NET" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=nextjs" width="42" height="42" alt="Next.js" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=react" width="42" height="42" alt="React" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=godot" width="42" height="42" alt="Godot" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=threejs" width="42" height="42" alt="Three.js" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=supabase" width="42" height="42" alt="Supabase" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=tailwind" width="42" height="42" alt="Tailwind CSS" /></td>
+    </tr>
+    <tr>
+      <td align="center"><img src="https://skillicons.dev/icons?i=vercel" width="42" height="42" alt="Vercel" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=docker" width="42" height="42" alt="Docker" /></td>
+      <td align="center"><img src="https://techstack-generator.vercel.app/aws-icon.svg" width="42" height="42" alt="AWS" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=github" width="42" height="42" alt="GitHub" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=git" width="42" height="42" alt="Git" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=cloudflare" width="42" height="42" alt="Cloudflare" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=gitlab" width="42" height="42" alt="GitLab" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=laravel" width="42" height="42" alt="Laravel" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=obsidian" width="42" height="42" alt="Obsidian" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=pnpm" width="42" height="42" alt="pnpm" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=postgres" width="42" height="42" alt="PostgreSQL" /></td>
+      <td align="center"><img src="https://skillicons.dev/icons?i=ts" width="42" height="42" alt="TypeScript" /></td>
+      <td align="center"><img src="https://techstack-generator.vercel.app/mysql-icon.svg" width="42" height="42" alt="MySQL" /></td>
+    </tr>
+  </table>
 </p>
 
 <p align="center">
   <b>Backend & enterprise systems</b> · .NET / C# / Laravel<br />
-  <b>Frontend & product</b> · Vue / TypeScript / Next.js<br />
-  <b>Cloud & platform</b> · AWS / Docker / PostgreSQL<br />
+  <b>Frontend & product</b> · Vue / React / TypeScript / Next.js<br />
+  <b>Cloud & platform</b> · AWS / Docker / Cloudflare / Vercel / PostgreSQL / MySQL<br />
   <b>Interactive development</b> · Three.js / Godot
 </p>
-
 ## 💼 Experience at a Glance
 
 | Period | Role | Focus |
