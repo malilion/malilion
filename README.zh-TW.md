@@ -190,9 +190,9 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/github-contribution-grid-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/github-contribution-grid-snake.svg">
-    <img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/github-contribution-grid-snake.svg" alt="GitHub 貢獻紀錄蛇形動畫" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/paw-heatmap-dark-zh.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/paw-heatmap-light-zh.svg">
+    <img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/paw-heatmap-light-zh.svg" alt="用 Malilion UI 肉球畫出的碼力獅 GitHub 貢獻紀錄" />
   </picture>
 </p>
 ---
