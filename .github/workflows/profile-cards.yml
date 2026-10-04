@@ -1,4 +1,4 @@
-name: Generate paw-print contribution heatmap
+name: Generate Malilion UI profile cards
 
 on:
   schedule:
@@ -16,22 +16,22 @@ jobs:
     timeout-minutes: 5
     defaults:
       run:
-        working-directory: scripts/paw-heatmap
+        working-directory: scripts/profile-cards
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
-          cache-dependency-path: scripts/paw-heatmap/package-lock.json
+          cache-dependency-path: scripts/profile-cards/package-lock.json
       - name: Install dependencies
         run: npm ci
-      - name: Render paw heatmap with Malilion UI
+      - name: Render profile cards with Malilion UI
         run: node render.mjs ../../dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_USER: ${{ github.repository_owner }}
-      - name: Publish paw heatmap
+      - name: Publish profile cards
         uses: crazy-max/ghaction-github-pages@v4
         with:
           build_dir: dist
