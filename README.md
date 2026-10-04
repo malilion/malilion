@@ -190,9 +190,9 @@ I build AI experiments, developer tools, interactive games, and learning experie
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/github-contribution-grid-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/github-contribution-grid-snake.svg">
-    <img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/github-contribution-grid-snake.svg" alt="GitHub contribution snake animation" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/paw-heatmap-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/paw-heatmap-light.svg">
+    <img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/paw-heatmap-light.svg" alt="MaliLion contribution calendar drawn as paw prints with Malilion UI" />
   </picture>
 </p>
 ---
