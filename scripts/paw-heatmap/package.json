@@ -1,0 +1,14 @@
+{
+  "name": "paw-heatmap",
+  "private": true,
+  "type": "module",
+  "description": "Renders the GitHub contribution calendar as Malilion UI paw-print heatmap SVGs for the profile README.",
+  "scripts": {
+    "render": "node render.mjs"
+  },
+  "dependencies": {
+    "@malilion/ui": "0.13.0",
+    "@vue/server-renderer": "3.5.43",
+    "vue": "3.5.43"
+  }
+}
