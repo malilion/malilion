@@ -1,8 +1,8 @@
 {
-  "name": "paw-heatmap",
+  "name": "profile-cards",
   "private": true,
   "type": "module",
-  "description": "Renders the GitHub contribution calendar as Malilion UI paw-print heatmap SVGs for the profile README.",
+  "description": "Renders the profile README's GitHub stats, streak, languages, monthly and paw heatmap cards as Malilion UI SVGs.",
   "scripts": {
     "render": "node render.mjs"
   },
