@@ -4,17 +4,20 @@
 
 <div align="center">
 
+<img src="./assets/malilion-logo.png" width="120" height="120" alt="MaliLion lion mascot" />
+
 # Hi, I'm MaliLion 🦁
 
 **AI × Code × Game Development**
 
 Turning learning into projects, and projects into a brand.
 
-<a href="https://malilion.com"><img src="https://img.shields.io/badge/Personal_Website-F59E0B?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Personal website" /></a>
+<a href="https://malilion.com"><img src="https://img.shields.io/badge/Personal_Website-F0AD2F?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Personal website" /></a>
 <a href="https://www.threads.com/@malilion.dev"><img src="https://img.shields.io/badge/Threads-000000?style=for-the-badge&logo=threads&logoColor=white" alt="Threads" /></a>
 <a href="https://github.com/malilion?tab=repositories"><img src="https://img.shields.io/badge/Repositories-181717?style=for-the-badge&logo=github&logoColor=white" alt="Repositories" /></a>
+<a href="https://malilion.github.io/MalilionUI/"><img src="https://img.shields.io/badge/Malilion_UI-CD7631?style=for-the-badge&logo=vuedotjs&logoColor=white" alt="Malilion UI" /></a>
 
-<a href="https://github.com/malilion"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=3000&pause=1000&color=F59E0B&center=true&vCenter=true&width=700&lines=MaliLion;AI+%C3%97+Code+%C3%97+Game+Development;Building+small+ideas+into+real+projects" alt="MaliLion typing animation" /></a>
+<a href="https://github.com/malilion"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=3000&pause=1000&color=F0AD2F&center=true&vCenter=true&width=700&lines=MaliLion;AI+%C3%97+Code+%C3%97+Game+Development;Building+small+ideas+into+real+projects;Malilion+UI+%E2%80%94+161+Vue+%26+React+components" alt="MaliLion typing animation" /></a>
 
 I build AI experiments, developer tools, interactive games, and learning experiences — then turn the process into reusable notes, open-source projects, and a growing MaliLion ecosystem.
 
@@ -23,6 +26,20 @@ I build AI experiments, developer tools, interactive games, and learning experie
 ---
 
 ## 🚀 Featured Projects
+
+<p align="center">
+  <a href="https://malilion.github.io/MalilionUI/"><img src="./assets/malilion-ui-hero.png" width="100%" alt="Malilion UI component library" /></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/malilion/MalilionUI"><b>Malilion UI</b></a> — Lion × tech × metal component library with paw prints. 161 components for Vue 3 and React, TypeScript, two themes, Taiwan validators, zero runtime dependencies.
+  <br />
+  <a href="https://www.npmjs.com/package/@malilion/ui"><img src="https://img.shields.io/npm/v/@malilion/ui?style=flat-square&color=cd7631" alt="npm version" /></a>
+  <a href="https://www.npmjs.com/package/@malilion/ui"><img src="https://img.shields.io/npm/dm/@malilion/ui?style=flat-square&color=14cfb2" alt="npm downloads" /></a>
+  <a href="https://github.com/malilion/MalilionUI/stargazers"><img src="https://img.shields.io/github/stars/malilion/MalilionUI?style=flat-square&color=f0ad2f" alt="GitHub stars" /></a>
+  <br />
+  <a href="https://malilion.github.io/MalilionUI/"><b>📖 Docs & live demos</b></a> · <a href="https://www.youtube.com/watch?v=ElXvObJbIFY"><b>▶️ Trailer</b></a>
+</p>
 
 <table>
   <tr>
@@ -70,6 +87,9 @@ I build AI experiments, developer tools, interactive games, and learning experie
 
 ## 🌱 Open Source
 
+- **[Malilion UI](https://github.com/malilion/MalilionUI)** — A lion × tech × metal component library for Vue 3 and React, published as `@malilion/ui`.
+- **[BlockUI](https://malilion.github.io/BlockUI/)** — A block × pixel × crafting game-style React component library with five themes and WCAG 2.2 AA.
+- **[lyricreel](https://github.com/malilion/lyricreel)** — Song and lyrics in, beat-synced lyric music video out; every frame drawn in code.
 - **[ContextLion](https://github.com/malilion/ContextLion)** — Turn webpages into structured, AI-ready Markdown context.
 - **[DevTrace Lion](https://github.com/malilion/devtrace-lion)** — Local-first API debugging directly inside browser DevTools.
 - **[The Nocturne Atlas](https://github.com/malilion/The-Nocturne-Atlas)** — A seed-driven 3D wizarding world.
@@ -178,6 +198,8 @@ I build AI experiments, developer tools, interactive games, and learning experie
 ---
 
 <p align="center">
+  <img src="./assets/malilion-logo.png" width="48" height="48" alt="MaliLion lion mascot" /><br />
+  🐾 &nbsp; 🐾 &nbsp; 🐾<br />
   <b>Build → Learn → Share → Build again.</b><br />
   Thanks for stopping by — explore the projects, follow the experiments, or say hi on Threads. 🦁
 </p>

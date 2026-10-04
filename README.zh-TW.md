@@ -4,17 +4,20 @@
 
 <div align="center">
 
+<img src="./assets/malilion-logo.png" width="120" height="120" alt="碼力獅吉祥物" />
+
 # 嗨，我是碼力獅 MaliLion 🦁
 
 **AI × 程式 × 遊戲開發**
 
 把學習做成作品，把作品做成品牌。
 
-<a href="https://malilion.com"><img src="https://img.shields.io/badge/%E5%80%8B%E4%BA%BA%E7%B6%B2%E7%AB%99-F59E0B?style=for-the-badge&logo=googlechrome&logoColor=white" alt="個人網站" /></a>
+<a href="https://malilion.com"><img src="https://img.shields.io/badge/%E5%80%8B%E4%BA%BA%E7%B6%B2%E7%AB%99-F0AD2F?style=for-the-badge&logo=googlechrome&logoColor=white" alt="個人網站" /></a>
 <a href="https://www.threads.com/@malilion.dev"><img src="https://img.shields.io/badge/Threads-000000?style=for-the-badge&logo=threads&logoColor=white" alt="Threads" /></a>
 <a href="https://github.com/malilion?tab=repositories"><img src="https://img.shields.io/badge/GitHub_%E5%B0%88%E6%A1%88-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub 專案" /></a>
+<a href="https://malilion.github.io/MalilionUI/"><img src="https://img.shields.io/badge/Malilion_UI-CD7631?style=for-the-badge&logo=vuedotjs&logoColor=white" alt="Malilion UI" /></a>
 
-<a href="https://github.com/malilion"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=3000&pause=1000&color=F59E0B&center=true&vCenter=true&width=700&lines=MaliLion;AI+%C3%97+Code+%C3%97+Game+Development;Building+small+ideas+into+real+projects" alt="MaliLion 打字動畫" /></a>
+<a href="https://github.com/malilion"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=3000&pause=1000&color=F0AD2F&center=true&vCenter=true&width=700&lines=MaliLion;AI+%C3%97+Code+%C3%97+Game+Development;Building+small+ideas+into+real+projects;Malilion+UI+%E2%80%94+161+Vue+%26+React+components" alt="MaliLion 打字動畫" /></a>
 
 我持續把 AI 實驗、開發工具、互動遊戲與學習內容做成真正可使用的作品，再把開發過程整理成筆記、開源專案與逐步擴大的 MaliLion 生態系。
 
@@ -23,6 +26,20 @@
 ---
 
 ## 🚀 精選作品
+
+<p align="center">
+  <a href="https://malilion.github.io/MalilionUI/"><img src="./assets/malilion-ui-hero.png" width="100%" alt="Malilion UI 元件庫" /></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/malilion/MalilionUI"><b>Malilion UI</b></a> — 獅子 × 科技 × 金屬風格，帶著可愛肉球腳印的元件庫。161 個元件同時支援 Vue 3 與 React，TypeScript、雙主題、台灣驗證工具，零執行期相依。
+  <br />
+  <a href="https://www.npmjs.com/package/@malilion/ui"><img src="https://img.shields.io/npm/v/@malilion/ui?style=flat-square&color=cd7631" alt="npm version" /></a>
+  <a href="https://www.npmjs.com/package/@malilion/ui"><img src="https://img.shields.io/npm/dm/@malilion/ui?style=flat-square&color=14cfb2" alt="npm downloads" /></a>
+  <a href="https://github.com/malilion/MalilionUI/stargazers"><img src="https://img.shields.io/github/stars/malilion/MalilionUI?style=flat-square&color=f0ad2f" alt="GitHub stars" /></a>
+  <br />
+  <a href="https://malilion.github.io/MalilionUI/"><b>📖 文件與線上展示</b></a> · <a href="https://www.youtube.com/watch?v=ElXvObJbIFY"><b>▶️ 預告片</b></a>
+</p>
 
 <table>
   <tr>
@@ -70,6 +87,9 @@
 
 ## 🌱 開源專案
 
+- **[Malilion UI](https://github.com/malilion/MalilionUI)** — 獅子 × 科技 × 金屬風格的 Vue 3 與 React 元件庫，以 `@malilion/ui` 發佈。
+- **[BlockUI](https://malilion.github.io/BlockUI/)** — 方塊 × 像素 × 合成遊戲風格的 React 元件庫，五種主題，符合 WCAG 2.2 AA。
+- **[lyricreel](https://github.com/malilion/lyricreel)** — 輸入歌曲與歌詞，輸出跟著節拍走的歌詞 MV，每一格畫面都由程式繪製。
 - **[ContextLion](https://github.com/malilion/ContextLion)** — 將網頁內容轉成結構化、AI-ready 的 Markdown。
 - **[DevTrace Lion](https://github.com/malilion/devtrace-lion)** — 直接在瀏覽器 DevTools 內進行 Local-first API 除錯。
 - **[The Nocturne Atlas](https://github.com/malilion/The-Nocturne-Atlas)** — 由種子驅動的 3D 魔法世界。
@@ -178,6 +198,8 @@
 ---
 
 <p align="center">
+  <img src="./assets/malilion-logo.png" width="48" height="48" alt="碼力獅吉祥物" /><br />
+  🐾 &nbsp; 🐾 &nbsp; 🐾<br />
   <b>Build → Learn → Share → Build again.</b><br />
   謝謝來訪，歡迎逛逛作品、追蹤實驗紀錄，或到 Threads 找我聊聊。🦁
 </p>
