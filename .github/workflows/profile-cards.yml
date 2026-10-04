@@ -2,16 +2,24 @@ name: Generate Malilion UI profile cards
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    # Every 6 hours, off the top of the hour (where GitHub's scheduler queues up and delays runs).
+    # Taiwan time: 02:17, 08:17, 14:17, 20:17.
+    - cron: "17 */6 * * *"
   workflow_dispatch:
   push:
     branches:
       - main
 
+# A newer run supersedes one still in progress, so two runs never race to push gh-pages.
+concurrency:
+  group: profile-cards
+  cancel-in-progress: true
+
 jobs:
   generate:
     permissions:
       contents: write
+      actions: write
     runs-on: ubuntu-latest
     timeout-minutes: 5
     defaults:
@@ -37,3 +45,10 @@ jobs:
           build_dir: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # GitHub disables schedules in public repos after 60 days without repository activity.
+      # Re-enabling the workflow resets that clock, so the cards keep updating on quiet months.
+      - name: Keep the schedule alive
+        if: github.event_name == 'schedule'
+        run: gh api -X PUT "repos/${{ github.repository }}/actions/workflows/profile-cards.yml/enable"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
