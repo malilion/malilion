@@ -176,16 +176,32 @@
 ## 📊 GitHub 活動
 
 <p align="center">
-  <img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=malilion&theme=github_dark" alt="MaliLion GitHub 統計" />
-  <img height="165" src="https://streak-stats.demolab.com?user=malilion&theme=transparent&hide_border=true" alt="MaliLion GitHub 連續活動" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/stats-dark-zh.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/stats-light-zh.svg">
+    <img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/stats-light-zh.svg" width="840" alt="碼力獅 GitHub 統計" />
+  </picture>
 </p>
 
 <p align="center">
-  <img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=malilion&theme=github_dark" alt="MaliLion 常用語言" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/streak-dark-zh.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/streak-light-zh.svg">
+    <img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/streak-light-zh.svg" width="412" alt="碼力獅連續貢獻天數" />
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/languages-dark-zh.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/languages-light-zh.svg">
+    <img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/languages-light-zh.svg" width="412" alt="碼力獅常用語言" />
+  </picture>
 </p>
 
 <p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=malilion&theme=github_dark" alt="MaliLion GitHub 活動圖" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/monthly-dark-zh.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/monthly-light-zh.svg">
+    <img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/monthly-light-zh.svg" width="840" alt="碼力獅每月貢獻" />
+  </picture>
 </p>
 
 <p align="center">

@@ -176,16 +176,32 @@ I build AI experiments, developer tools, interactive games, and learning experie
 ## 📊 GitHub Activity
 
 <p align="center">
-  <img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=malilion&theme=github_dark" alt="MaliLion GitHub stats" />
-  <img height="165" src="https://streak-stats.demolab.com?user=malilion&theme=transparent&hide_border=true" alt="MaliLion GitHub streak" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/stats-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/stats-light.svg">
+    <img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/stats-light.svg" width="840" alt="MaliLion GitHub stats" />
+  </picture>
 </p>
 
 <p align="center">
-  <img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=malilion&theme=github_dark" alt="MaliLion top languages" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/streak-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/streak-light.svg">
+    <img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/streak-light.svg" width="412" alt="MaliLion contribution streak" />
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/languages-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/languages-light.svg">
+    <img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/languages-light.svg" width="412" alt="MaliLion top languages" />
+  </picture>
 </p>
 
 <p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=malilion&theme=github_dark" alt="MaliLion GitHub activity graph" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/monthly-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/monthly-light.svg">
+    <img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/monthly-light.svg" width="840" alt="MaliLion contributions per month" />
+  </picture>
 </p>
 
 <p align="center">
