@@ -58,7 +58,7 @@
       <p>互動小說作品與技術系列，實作敘事系統、畫面渲染與遊戲架構。</p>
       <p><b>Vue 3 · PixiJS · Ink.js</b></p>
     </td>
-  </tr>
+    </tr>
   <tr>
     <td width="33%" valign="top">
       <h3><a href="https://github.com/malilion/devtrace-lion">DevTrace Lion</a></h3>
@@ -75,7 +75,7 @@
       <p>整合專案、AI 實驗、開發筆記、遊戲開發與個人品牌的核心網站。</p>
       <p><b>Personal Brand · Projects · Build Notes</b></p>
     </td>
-  </tr>
+    </tr>
 </table>
 
 ## 🔥 最近在做什麼
@@ -161,8 +161,7 @@
 
 ## 🏆 證照
 
-<p align="center">
-  <table>
+<table align="center">
     <tr>
       <td align="center" width="180"><img src="./assets/certifications/aws-cloud-practitioner.webp" width="100" alt="AWS Certified Cloud Practitioner" /><br /><b>AWS Certified<br />Cloud Practitioner</b></td>
       <td align="center" width="180"><img src="./assets/certifications/aws-ai-practitioner.webp" width="100" alt="AWS Certified AI Practitioner" /><br /><b>AWS Certified<br />AI Practitioner</b></td>
@@ -170,8 +169,7 @@
       <td align="center" width="180"><img src="./assets/certifications/mta-networking.webp" width="100" alt="Microsoft MTA Networking Fundamentals" /><br /><b>MTA Networking<br />Fundamentals</b></td>
       <td align="center" width="180"><img src="./assets/certifications/mta-software-development.webp" width="100" alt="Microsoft MTA Software Development Fundamentals" /><br /><b>MTA Software Development<br />Fundamentals</b></td>
     </tr>
-  </table>
-</p>
+</table>
 
 ## 📊 GitHub 活動
 
@@ -211,6 +209,7 @@
     <img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/paw-heatmap-light-zh.svg" alt="用 Malilion UI 肉球畫出的碼力獅 GitHub 貢獻紀錄" />
   </picture>
 </p>
+
 ---
 
 <p align="center">

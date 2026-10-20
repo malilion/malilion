@@ -58,7 +58,7 @@ I build AI experiments, developer tools, interactive games, and learning experie
       <p>An interactive visual-novel project and technical series exploring narrative systems, rendering, and game architecture.</p>
       <p><b>Vue 3 · PixiJS · Ink.js</b></p>
     </td>
-  </tr>
+    </tr>
   <tr>
     <td width="33%" valign="top">
       <h3><a href="https://github.com/malilion/devtrace-lion">DevTrace Lion</a></h3>
@@ -75,7 +75,7 @@ I build AI experiments, developer tools, interactive games, and learning experie
       <p>The home of my projects, experiments, build notes, game development, and creator brand.</p>
       <p><b>Personal Brand · Projects · Build Notes</b></p>
     </td>
-  </tr>
+    </tr>
 </table>
 
 ## 🔥 Currently Building
@@ -154,15 +154,14 @@ I build AI experiments, developer tools, interactive games, and learning experie
 | Period | Role | Focus |
 | --- | --- | --- |
 | 2023 | Software Engineer · Startup Company | Laravel, MySQL, REST APIs, Docker, enterprise systems |
-| 2024—2026 | Software Engineer · Industrial Computer Company | ASP.NET Core, Vue.js, MSSQL / Oracle, architecture, internal platforms |
-| 2026—Present | Software Engineer · Technology Company | Vue.js, .NET Core APIs, enterprise applications, architecture and team practices |
+| 2024–2026 | Software Engineer · Industrial Computer Company | ASP.NET Core, Vue.js, MSSQL / Oracle, architecture, internal platforms |
+| 2026–Present | Software Engineer · Technology Company | Vue.js, .NET Core APIs, enterprise applications, architecture and team practices |
 
 > I care most about turning real operational problems into maintainable systems, then carrying what I learn into side projects and open source.
 
 ## 🏆 Certifications
 
-<p align="center">
-  <table>
+<table align="center">
     <tr>
       <td align="center" width="180"><img src="./assets/certifications/aws-cloud-practitioner.webp" width="100" alt="AWS Certified Cloud Practitioner" /><br /><b>AWS Certified<br />Cloud Practitioner</b></td>
       <td align="center" width="180"><img src="./assets/certifications/aws-ai-practitioner.webp" width="100" alt="AWS Certified AI Practitioner" /><br /><b>AWS Certified<br />AI Practitioner</b></td>
@@ -170,8 +169,7 @@ I build AI experiments, developer tools, interactive games, and learning experie
       <td align="center" width="180"><img src="./assets/certifications/mta-networking.webp" width="100" alt="Microsoft MTA Networking Fundamentals" /><br /><b>MTA Networking<br />Fundamentals</b></td>
       <td align="center" width="180"><img src="./assets/certifications/mta-software-development.webp" width="100" alt="Microsoft MTA Software Development Fundamentals" /><br /><b>MTA Software Development<br />Fundamentals</b></td>
     </tr>
-  </table>
-</p>
+</table>
 
 ## 📊 GitHub Activity
 
@@ -211,6 +209,7 @@ I build AI experiments, developer tools, interactive games, and learning experie
     <img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/paw-heatmap-light.svg" alt="MaliLion contribution calendar drawn as paw prints with Malilion UI" />
   </picture>
 </p>
+
 ---
 
 <p align="center">
