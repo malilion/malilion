@@ -13,9 +13,18 @@ export async function ssr(locale, render) {
 const VOID = 'area|base|br|col|embed|hr|img|input|link|meta|source|track|wbr'
 
 /** Vue's SSR output is HTML; foreignObject content must be well-formed XHTML. */
+function stripHtmlComments(html) {
+  let out = String(html)
+  let prev
+  do {
+    prev = out
+    out = out.replace(/<!--[\s\S]*?-->/g, '')
+  } while (out !== prev)
+  return out
+}
+
 function toXhtml(html) {
-  return html
-    .replace(/<!--[\s\S]*?-->/g, '')
+  return stripHtmlComments(html)
     .replace(new RegExp(`<(${VOID})\\b([^>]*?)\\s*/?>`, 'g'), '<$1$2/>')
     .replace(/<svg(?![^>]*\bxmlns=)/g, '<svg xmlns="http://www.w3.org/2000/svg"')
     .replace(/&nbsp;/g, '&#160;')
