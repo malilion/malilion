@@ -4,6 +4,8 @@
 
 <div align="center">
 
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:CD7631,50:F0AD2F,100:14CFB2&height=140&section=header" width="100%" alt="" />
+
 <img src="./assets/malilion-logo.png" width="120" height="120" alt="MaliLion lion mascot" />
 
 # Hi, I'm MaliLion 🦁
@@ -211,6 +213,7 @@ I build AI experiments, developer tools, interactive games, and learning experie
     <img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/paw-heatmap-light.svg" alt="MaliLion contribution calendar drawn as paw prints with Malilion UI" />
   </picture>
 </p>
+
 ---
 
 <p align="center">
@@ -219,3 +222,5 @@ I build AI experiments, developer tools, interactive games, and learning experie
   <b>Build → Learn → Share → Build again.</b><br />
   Thanks for stopping by — explore the projects, follow the experiments, or say hi on Threads. 🦁
 </p>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:14CFB2,50:F0AD2F,100:CD7631&height=110&section=footer" width="100%" alt="" />

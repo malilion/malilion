@@ -4,6 +4,8 @@
 
 <div align="center">
 
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:CD7631,50:F0AD2F,100:14CFB2&height=140&section=header" width="100%" alt="" />
+
 <img src="./assets/malilion-logo.png" width="120" height="120" alt="碼力獅吉祥物" />
 
 # 嗨，我是碼力獅 MaliLion 🦁
@@ -211,6 +213,7 @@
     <img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/paw-heatmap-light-zh.svg" alt="用 Malilion UI 肉球畫出的碼力獅 GitHub 貢獻紀錄" />
   </picture>
 </p>
+
 ---
 
 <p align="center">
@@ -219,3 +222,5 @@
   <b>Build → Learn → Share → Build again.</b><br />
   謝謝來訪，歡迎逛逛作品、追蹤實驗紀錄，或到 Threads 找我聊聊。🦁
 </p>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:14CFB2,50:F0AD2F,100:CD7631&height=110&section=footer" width="100%" alt="" />
