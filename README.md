@@ -4,15 +4,9 @@
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:CD7631,50:F0AD2F,100:14CFB2&height=140&section=header" width="100%" alt="" />
-
-<img src="./assets/malilion-logo.png" width="120" height="120" alt="MaliLion lion mascot" />
+<img src="./assets/brand/hero.svg" width="100%" alt="MaliLion — AI × Code × Game Development" />
 
 # Hi, I'm MaliLion 🦁
-
-**AI × Code × Game Development**
-
-Turning learning into projects, and projects into a brand.
 
 <a href="https://malilion.com"><img src="https://img.shields.io/badge/Personal_Website-F0AD2F?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Personal website" /></a>
 <a href="https://www.threads.com/@malilion.dev"><img src="https://img.shields.io/badge/Threads-000000?style=for-the-badge&logo=threads&logoColor=white" alt="Threads" /></a>
@@ -46,16 +40,19 @@ I build AI experiments, developer tools, interactive games, and learning experie
 <table>
   <tr>
     <td width="33%" valign="top">
+      <a href="https://malilion.com/world"><img src="./assets/brand/project-3d-world.svg" width="100%" alt="" /></a>
       <h3><a href="https://malilion.com/world">MaliLion 3D World</a></h3>
       <p>An interactive 3D world built around AI × code × game development.</p>
       <p><b>Three.js · TypeScript · Web 3D</b></p>
     </td>
     <td width="33%" valign="top">
+      <a href="https://github.com/malilion/ContextLion"><img src="./assets/brand/project-contextlion.svg" width="100%" alt="" /></a>
       <h3><a href="https://github.com/malilion/ContextLion">ContextLion</a></h3>
       <p>A local-first browser extension that turns webpages into clean, structured, AI-ready Markdown context.</p>
       <p><b>Browser Extension · AI Context · Local-first</b></p>
     </td>
     <td width="33%" valign="top">
+      <a href="https://ithelp.ithome.com.tw/users/20183394/ironman/9059"><img src="./assets/brand/project-ninefold-court.svg" width="100%" alt="" /></a>
       <h3><a href="https://ithelp.ithome.com.tw/users/20183394/ironman/9059">九重燼</a></h3>
       <p>An interactive visual-novel project and technical series exploring narrative systems, rendering, and game architecture.</p>
       <p><b>Vue 3 · PixiJS · Ink.js</b></p>
@@ -63,11 +60,13 @@ I build AI experiments, developer tools, interactive games, and learning experie
   </tr>
   <tr>
     <td width="33%" valign="top">
+      <a href="https://github.com/malilion/devtrace-lion"><img src="./assets/brand/project-devtrace-lion.svg" width="100%" alt="" /></a>
       <h3><a href="https://github.com/malilion/devtrace-lion">DevTrace Lion</a></h3>
       <p>Local-first API debugging inside browser DevTools with zero required permissions.</p>
       <p><b>DevTools · API Debugging · Local-first</b></p>
     </td>
     <td width="33%" valign="top">
+      <a href="https://github.com/malilion/The-Nocturne-Atlas"><img src="./assets/brand/project-nocturne-atlas.svg" width="100%" alt="" /></a>
       <h3><a href="https://github.com/malilion/The-Nocturne-Atlas">The Nocturne Atlas</a></h3>
       <p>A seed-driven 3D wizarding world built with Three.js and TypeScript.</p>
       <p><b>Three.js · TypeScript · Procedural World</b></p>
@@ -86,6 +85,12 @@ I build AI experiments, developer tools, interactive games, and learning experie
 - **Developer tools** — small, focused tools that improve AI-assisted coding and browser workflows.
 - **Interactive games & worlds** — experiments across narrative games, web 3D, and game systems.
 - **The MaliLion ecosystem** — connecting projects, content, open source, and community under one consistent brand.
+
+## 🦁 The MaliLion Ecosystem
+
+<p align="center">
+  <img src="./assets/brand/ecosystem.svg" width="760" alt="MaliLion ecosystem: projects, dev tools, open source and content around one brand" />
+</p>
 
 ## 🌱 Open Source
 

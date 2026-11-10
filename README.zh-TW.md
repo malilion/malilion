@@ -4,9 +4,7 @@
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:CD7631,50:F0AD2F,100:14CFB2&height=140&section=header" width="100%" alt="" />
-
-<img src="./assets/malilion-logo.png" width="120" height="120" alt="碼力獅吉祥物" />
+<img src="./assets/brand/hero.svg" width="100%" alt="碼力獅 MaliLion — AI × 程式 × 遊戲開發" />
 
 # 嗨，我是碼力獅 MaliLion 🦁
 
@@ -46,16 +44,19 @@
 <table>
   <tr>
     <td width="33%" valign="top">
+      <a href="https://malilion.com/world"><img src="./assets/brand/project-3d-world.svg" width="100%" alt="" /></a>
       <h3><a href="https://malilion.com/world">MaliLion 3D World</a></h3>
       <p>以 AI × 程式 × 遊戲開發為核心打造的互動式 3D 世界。</p>
       <p><b>Three.js · TypeScript · Web 3D</b></p>
     </td>
     <td width="33%" valign="top">
+      <a href="https://github.com/malilion/ContextLion"><img src="./assets/brand/project-contextlion.svg" width="100%" alt="" /></a>
       <h3><a href="https://github.com/malilion/ContextLion">ContextLion</a></h3>
       <p>Local-first 瀏覽器擴充功能，一鍵把網頁整理成乾淨、結構化、適合 AI 使用的 Markdown。</p>
       <p><b>Browser Extension · AI Context · Local-first</b></p>
     </td>
     <td width="33%" valign="top">
+      <a href="https://ithelp.ithome.com.tw/users/20183394/ironman/9059"><img src="./assets/brand/project-ninefold-court.svg" width="100%" alt="" /></a>
       <h3><a href="https://ithelp.ithome.com.tw/users/20183394/ironman/9059">九重燼</a></h3>
       <p>互動小說作品與技術系列，實作敘事系統、畫面渲染與遊戲架構。</p>
       <p><b>Vue 3 · PixiJS · Ink.js</b></p>
@@ -63,11 +64,13 @@
   </tr>
   <tr>
     <td width="33%" valign="top">
+      <a href="https://github.com/malilion/devtrace-lion"><img src="./assets/brand/project-devtrace-lion.svg" width="100%" alt="" /></a>
       <h3><a href="https://github.com/malilion/devtrace-lion">DevTrace Lion</a></h3>
       <p>直接在瀏覽器 DevTools 內進行 Local-first API 除錯，且不要求額外權限。</p>
       <p><b>DevTools · API Debugging · Local-first</b></p>
     </td>
     <td width="33%" valign="top">
+      <a href="https://github.com/malilion/The-Nocturne-Atlas"><img src="./assets/brand/project-nocturne-atlas.svg" width="100%" alt="" /></a>
       <h3><a href="https://github.com/malilion/The-Nocturne-Atlas">The Nocturne Atlas</a></h3>
       <p>使用 Three.js 與 TypeScript 打造、由種子驅動的 3D 魔法世界。</p>
       <p><b>Three.js · TypeScript · Procedural World</b></p>
@@ -86,6 +89,12 @@
 - **開發者工具** — 製作小而專注、能改善 AI Coding 與瀏覽器工作流程的工具。
 - **互動遊戲與世界** — 持續實驗敘事遊戲、Web 3D 與各種遊戲系統。
 - **MaliLion 生態系** — 將作品、內容、開源專案與社群逐步整合成一致的碼力獅品牌。
+
+## 🦁 碼力獅生態系
+
+<p align="center">
+  <img src="./assets/brand/ecosystem.svg" width="760" alt="碼力獅生態系：作品、開發工具、開源與內容，圍繞同一個品牌" />
+</p>
 
 ## 🌱 開源專案
 
