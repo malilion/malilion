@@ -72,6 +72,7 @@ I build AI experiments, developer tools, interactive games, and learning experie
       <p><b>Three.js · TypeScript · Procedural World</b></p>
     </td>
     <td width="33%" valign="top">
+      <a href="https://malilion.com"><img src="./assets/brand/project-malilion-com.svg" width="100%" alt="" /></a>
       <h3><a href="https://malilion.com">MaliLion.com</a></h3>
       <p>The home of my projects, experiments, build notes, game development, and creator brand.</p>
       <p><b>Personal Brand · Projects · Build Notes</b></p>

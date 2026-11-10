@@ -95,6 +95,7 @@ const projects = [
   { slug: 'ninefold-court', name: '九重燼', tag: 'Visual novel & game architecture', stack: ['Vue 3', 'PixiJS', 'Ink.js'], art: 'ember' },
   { slug: 'devtrace-lion', name: 'DevTrace Lion', tag: 'API debugging in DevTools', stack: ['DevTools', 'Zero perms'], art: 'trace' },
   { slug: 'nocturne-atlas', name: 'The Nocturne Atlas', tag: 'Seed-driven wizarding world', stack: ['Three.js', 'Procedural'], art: 'moon' },
+  { slug: 'malilion-com', name: 'MaliLion.com', tag: 'Projects, build notes & brand home', stack: ['Website', 'Build Notes'], art: 'web' },
   { slug: 'cow-pasture', name: 'Cow Pasture', tag: '3D Taiwan-stock pasture dashboard', stack: ['3D', 'Dashboard'], art: 'cow' },
   { slug: 'painterly-meadow', name: 'Painterly Meadow', tag: 'Hand-painted NPR nature sandbox', stack: ['Three.js', 'NPR'], art: 'meadow' },
   { slug: 'fuji-sakura-vista', name: 'Fuji Sakura Vista', tag: 'Procedural Blender scene at dawn', stack: ['Blender', 'Three.js'], art: 'fuji' },
@@ -115,6 +116,18 @@ const arts = {
       })
       .join('')}
     ${paw(0, -48, 1.1, C.orange)}</g>`,
+  web: `<g transform="translate(300 84)">
+    <rect x="-74" y="-56" width="148" height="104" rx="10" fill="${C.bg}" stroke="${C.line}" stroke-width="2"/>
+    <path d="M-74 -36 H74" stroke="${C.line}" stroke-width="2"/>
+    <circle cx="-62" cy="-46" r="3" fill="${C.copper}"/><circle cx="-52" cy="-46" r="3" fill="${C.orange}"/><circle cx="-42" cy="-46" r="3" fill="${C.teal}"/>
+    <rect x="-28" y="-50" width="88" height="8" rx="4" fill="${C.panel}"/>
+    <clipPath id="wl"><circle cx="-36" cy="0" r="22"/></clipPath>
+    <circle cx="-36" cy="0" r="24" fill="${C.panel}" stroke="${C.orange}" stroke-width="2"/>
+    <image href="${logo}" x="-62" y="-26" width="52" height="52" clip-path="url(#wl)"/>
+    <rect x="0" y="-16" width="58" height="9" rx="4" fill="${C.orange}"/>
+    <rect x="0" y="0" width="46" height="6" rx="3" fill="${C.muted}" opacity="0.6"/>
+    <rect x="0" y="12" width="52" height="6" rx="3" fill="${C.muted}" opacity="0.6"/>
+    <rect x="-58" y="30" width="34" height="10" rx="3" fill="${C.copper}" opacity="0.7"/><rect x="-18" y="30" width="34" height="10" rx="3" fill="${C.teal}" opacity="0.6"/><rect x="22" y="30" width="34" height="10" rx="3" fill="${C.orange}" opacity="0.7"/></g>`,
   doc: `<g transform="translate(300 92)" fill="none" stroke-width="3">
     <rect x="-40" y="-52" width="80" height="104" rx="8" stroke="${C.orange}"/>
     <text x="-26" y="-18" font-family="${MONO}" font-size="20" font-weight="700" fill="${C.teal}" stroke="none">#</text>

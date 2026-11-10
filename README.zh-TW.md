@@ -76,6 +76,7 @@
       <p><b>Three.js · TypeScript · Procedural World</b></p>
     </td>
     <td width="33%" valign="top">
+      <a href="https://malilion.com"><img src="./assets/brand/project-malilion-com.svg" width="100%" alt="" /></a>
       <h3><a href="https://malilion.com">MaliLion.com</a></h3>
       <p>整合專案、AI 實驗、開發筆記、遊戲開發與個人品牌的核心網站。</p>
       <p><b>Personal Brand · Projects · Build Notes</b></p>
