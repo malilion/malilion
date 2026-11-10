@@ -234,6 +234,8 @@ ${boxes}
 <circle cx="${cx}" cy="${cy}" r="70" fill="${C.panel}" stroke="url(#brand)" stroke-width="4"/>
 <clipPath id="lc"><circle cx="${cx}" cy="${cy}" r="66"/></clipPath><image href="${logo}" x="${cx - 52}" y="${cy - 62}" width="104" height="104" clip-path="url(#lc)"/>
 <text x="${cx}" y="${cy + 52}" text-anchor="middle" font-family="${FONT}" font-size="15" font-weight="800" fill="${C.orange}">MaliLion</text>
+<a href="https://malilion.com"><rect x="${cx - 62}" y="${cy + 84}" width="124" height="28" rx="14" fill="${C.panel}" stroke="url(#brand)" stroke-width="2"/>
+<text x="${cx}" y="${cy + 103}" text-anchor="middle" font-family="${FONT}" font-size="14" font-weight="700" fill="${C.text}">🌐 malilion.com</text></a>
 </svg>
 `
 }
