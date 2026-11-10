@@ -60,8 +60,8 @@ I build AI experiments, developer tools, interactive games, and learning experie
   </tr>
   <tr>
     <td width="33%" valign="top">
-      <a href="https://github.com/malilion/devtrace-lion"><img src="./assets/brand/project-devtrace-lion.svg" width="100%" alt="" /></a>
-      <h3><a href="https://github.com/malilion/devtrace-lion">DevTrace Lion</a></h3>
+      <a href="https://github.com/malilion/DevTraceLion"><img src="./assets/brand/project-devtrace-lion.svg" width="100%" alt="" /></a>
+      <h3><a href="https://github.com/malilion/DevTraceLion">DevTrace Lion</a></h3>
       <p>Local-first API debugging inside browser DevTools with zero required permissions.</p>
       <p><b>DevTools · API Debugging · Local-first</b></p>
     </td>
@@ -75,6 +75,26 @@ I build AI experiments, developer tools, interactive games, and learning experie
       <h3><a href="https://malilion.com">MaliLion.com</a></h3>
       <p>The home of my projects, experiments, build notes, game development, and creator brand.</p>
       <p><b>Personal Brand · Projects · Build Notes</b></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="33%" valign="top">
+      <a href="https://github.com/malilion/cow-pasture"><img src="./assets/brand/project-cow-pasture.svg" width="100%" alt="" /></a>
+      <h3><a href="https://github.com/malilion/cow-pasture">Cow Pasture</a></h3>
+      <p>My holdings are so green there are cows grazing on them — a 3D pasture dashboard for the whole Taiwan stock market.</p>
+      <p><b>3D · Dashboard · Taiwan Stocks</b></p>
+    </td>
+    <td width="33%" valign="top">
+      <a href="https://github.com/malilion/Painterly-Meadow"><img src="./assets/brand/project-painterly-meadow.svg" width="100%" alt="" /></a>
+      <h3><a href="https://github.com/malilion/Painterly-Meadow">Painterly Meadow</a></h3>
+      <p>A hand-painted-style NPR nature sandbox in a single Three.js file.</p>
+      <p><b>Three.js · NPR · Single File</b></p>
+    </td>
+    <td width="33%" valign="top">
+      <a href="https://github.com/malilion/fuji-sakura-vista"><img src="./assets/brand/project-fuji-sakura-vista.svg" width="100%" alt="" /></a>
+      <h3><a href="https://github.com/malilion/fuji-sakura-vista">Fuji Sakura Vista</a></h3>
+      <p>A procedural Blender scene of Arakurayama at dawn — Chureito pagoda, sakura and Mount Fuji — with a real-time Three.js showcase.</p>
+      <p><b>Blender · Python · Three.js</b></p>
     </td>
   </tr>
 </table>
@@ -97,8 +117,13 @@ I build AI experiments, developer tools, interactive games, and learning experie
 - **[Malilion UI](https://github.com/malilion/MalilionUI)** — A lion × tech × metal component library for Vue 3 and React, published as `@malilion/ui`.
 - **[BlockUI](https://malilion.github.io/BlockUI/)** — A block × pixel × crafting game-style React component library with five themes and WCAG 2.2 AA.
 - **[lyricreel](https://github.com/malilion/lyricreel)** — Song and lyrics in, beat-synced lyric music video out; every frame drawn in code.
+- **[riso-mv-kit](https://github.com/malilion/riso-mv-kit)** — Riso-print picture-book music videos, drawn by code and rendered frame by frame.
+- **[oledfx](https://github.com/malilion/oledfx) · [inkfx](https://github.com/malilion/inkfx) · [fx-skill-kit](https://github.com/malilion/fx-skill-kit)** — Procedural FX kits for code-drawn visual effects.
+- **[Cow Pasture](https://github.com/malilion/cow-pasture)** — A 3D pasture dashboard for the Taiwan stock market (red up, green down).
+- **[Painterly Meadow](https://github.com/malilion/Painterly-Meadow)** — A hand-painted-style NPR nature sandbox in one Three.js file.
+- **[Fuji Sakura Vista](https://github.com/malilion/fuji-sakura-vista)** — A procedural Blender scene of Mount Fuji and sakura at dawn.
 - **[ContextLion](https://github.com/malilion/ContextLion)** — Turn webpages into structured, AI-ready Markdown context.
-- **[DevTrace Lion](https://github.com/malilion/devtrace-lion)** — Local-first API debugging directly inside browser DevTools.
+- **[DevTrace Lion](https://github.com/malilion/DevTraceLion)** — Local-first API debugging directly inside browser DevTools.
 - **[The Nocturne Atlas](https://github.com/malilion/The-Nocturne-Atlas)** — A seed-driven 3D wizarding world.
 - **[Editorial Photo Poster](https://github.com/malilion/editorial-photo-poster)** — A Codex skill for turning photographs into restrained editorial posters.
 - **[Haute Jewelry From Photo](https://github.com/malilion/haute-jewelry-from-photo)** — A Codex skill that translates visual mood and forms into original haute joaillerie concepts.

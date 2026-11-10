@@ -64,8 +64,8 @@
   </tr>
   <tr>
     <td width="33%" valign="top">
-      <a href="https://github.com/malilion/devtrace-lion"><img src="./assets/brand/project-devtrace-lion.svg" width="100%" alt="" /></a>
-      <h3><a href="https://github.com/malilion/devtrace-lion">DevTrace Lion</a></h3>
+      <a href="https://github.com/malilion/DevTraceLion"><img src="./assets/brand/project-devtrace-lion.svg" width="100%" alt="" /></a>
+      <h3><a href="https://github.com/malilion/DevTraceLion">DevTrace Lion</a></h3>
       <p>直接在瀏覽器 DevTools 內進行 Local-first API 除錯，且不要求額外權限。</p>
       <p><b>DevTools · API Debugging · Local-first</b></p>
     </td>
@@ -79,6 +79,26 @@
       <h3><a href="https://malilion.com">MaliLion.com</a></h3>
       <p>整合專案、AI 實驗、開發筆記、遊戲開發與個人品牌的核心網站。</p>
       <p><b>Personal Brand · Projects · Build Notes</b></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="33%" valign="top">
+      <a href="https://github.com/malilion/cow-pasture"><img src="./assets/brand/project-cow-pasture.svg" width="100%" alt="" /></a>
+      <h3><a href="https://github.com/malilion/cow-pasture">Cow Pasture</a></h3>
+      <p>「我的持股已經綠到上面有牛在吃草了」— 全台股 3D 牧場儀表板（紅漲綠跌）。</p>
+      <p><b>3D · Dashboard · Taiwan Stocks</b></p>
+    </td>
+    <td width="33%" valign="top">
+      <a href="https://github.com/malilion/Painterly-Meadow"><img src="./assets/brand/project-painterly-meadow.svg" width="100%" alt="" /></a>
+      <h3><a href="https://github.com/malilion/Painterly-Meadow">風之草原 Painterly Meadow</a></h3>
+      <p>單一 Three.js 檔案完成的手繪風 NPR 自然沙盒。</p>
+      <p><b>Three.js · NPR · Single File</b></p>
+    </td>
+    <td width="33%" valign="top">
+      <a href="https://github.com/malilion/fuji-sakura-vista"><img src="./assets/brand/project-fuji-sakura-vista.svg" width="100%" alt="" /></a>
+      <h3><a href="https://github.com/malilion/fuji-sakura-vista">Fuji Sakura Vista</a></h3>
+      <p>用 Blender 程式生成的新倉山黎明場景：忠靈塔、櫻花與富士山，並附 Three.js 即時展示。</p>
+      <p><b>Blender · Python · Three.js</b></p>
     </td>
   </tr>
 </table>
@@ -101,8 +121,13 @@
 - **[Malilion UI](https://github.com/malilion/MalilionUI)** — 獅子 × 科技 × 金屬風格的 Vue 3 與 React 元件庫，以 `@malilion/ui` 發佈。
 - **[BlockUI](https://malilion.github.io/BlockUI/)** — 方塊 × 像素 × 合成遊戲風格的 React 元件庫，五種主題，符合 WCAG 2.2 AA。
 - **[lyricreel](https://github.com/malilion/lyricreel)** — 輸入歌曲與歌詞，輸出跟著節拍走的歌詞 MV，每一格畫面都由程式繪製。
+- **[riso-mv-kit](https://github.com/malilion/riso-mv-kit)** — 用程式繪製、逐格算圖的 Riso 印刷風繪本 MV。
+- **[oledfx](https://github.com/malilion/oledfx) · [inkfx](https://github.com/malilion/inkfx) · [fx-skill-kit](https://github.com/malilion/fx-skill-kit)** — 以程式生成視覺特效的 Procedural FX 工具組。
+- **[Cow Pasture](https://github.com/malilion/cow-pasture)** — 全台股 3D 牧場儀表板（紅漲綠跌）。
+- **[風之草原 Painterly Meadow](https://github.com/malilion/Painterly-Meadow)** — 單一 Three.js 檔案的手繪風 NPR 自然沙盒。
+- **[Fuji Sakura Vista](https://github.com/malilion/fuji-sakura-vista)** — 用 Blender 程式生成的富士山與櫻花黎明場景。
 - **[ContextLion](https://github.com/malilion/ContextLion)** — 將網頁內容轉成結構化、AI-ready 的 Markdown。
-- **[DevTrace Lion](https://github.com/malilion/devtrace-lion)** — 直接在瀏覽器 DevTools 內進行 Local-first API 除錯。
+- **[DevTrace Lion](https://github.com/malilion/DevTraceLion)** — 直接在瀏覽器 DevTools 內進行 Local-first API 除錯。
 - **[The Nocturne Atlas](https://github.com/malilion/The-Nocturne-Atlas)** — 由種子驅動的 3D 魔法世界。
 - **[Editorial Photo Poster](https://github.com/malilion/editorial-photo-poster)** — 將照片轉化為簡約編輯風海報與手繪場景插畫的 Codex skill。
 - **[Haute Jewelry From Photo](https://github.com/malilion/haute-jewelry-from-photo)** — 把圖片氛圍、材質與造型轉譯為原創高級珠寶概念的 Codex skill。

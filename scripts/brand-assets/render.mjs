@@ -95,6 +95,9 @@ const projects = [
   { slug: 'ninefold-court', name: '九重燼', tag: 'Visual novel & game architecture', stack: ['Vue 3', 'PixiJS', 'Ink.js'], art: 'ember' },
   { slug: 'devtrace-lion', name: 'DevTrace Lion', tag: 'API debugging in DevTools', stack: ['DevTools', 'Zero perms'], art: 'trace' },
   { slug: 'nocturne-atlas', name: 'The Nocturne Atlas', tag: 'Seed-driven wizarding world', stack: ['Three.js', 'Procedural'], art: 'moon' },
+  { slug: 'cow-pasture', name: 'Cow Pasture', tag: '3D Taiwan-stock pasture dashboard', stack: ['3D', 'Dashboard'], art: 'cow' },
+  { slug: 'painterly-meadow', name: 'Painterly Meadow', tag: 'Hand-painted NPR nature sandbox', stack: ['Three.js', 'NPR'], art: 'meadow' },
+  { slug: 'fuji-sakura-vista', name: 'Fuji Sakura Vista', tag: 'Procedural Blender scene at dawn', stack: ['Blender', 'Three.js'], art: 'fuji' },
 ]
 
 const arts = {
@@ -119,6 +122,26 @@ const arts = {
     <circle r="44" fill="${C.orange}"/><circle cx="18" cy="-12" r="40" fill="${C.panel}"/>
     <path d="M44 -44 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3z" fill="${C.teal}"/>
     <circle cx="-50" cy="34" r="2.5" fill="${C.copper}"/><circle cx="56" cy="30" r="2" fill="${C.orange}"/></g>`,
+  cow: `<g transform="translate(300 78) scale(0.85)">
+    <path d="M-70 52 Q-20 30 30 44 T80 50 V64 H-70 Z" fill="${C.teal}" opacity="0.35"/>
+    <path d="M-48 -34 l20 26 -14 4 z M14 -34 l-20 26 14 4 z" fill="${C.copper}"/>
+    <rect x="-40" y="-20" width="48" height="58" rx="22" fill="${C.text}"/>
+    <ellipse cx="-16" cy="26" rx="20" ry="13" fill="${C.copper}"/>
+    <circle cx="-22" cy="26" r="2.5" fill="${C.bg}"/><circle cx="-10" cy="26" r="2.5" fill="${C.bg}"/>
+    <circle cx="-26" cy="0" r="3.5" fill="${C.bg}"/><circle cx="-6" cy="0" r="3.5" fill="${C.bg}"/>
+    <path d="M30 -40 L48 -20 L60 -30 L76 -6" fill="none" stroke="${C.teal}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g>`,
+  meadow: `<g transform="translate(300 78) scale(0.85)" stroke-linecap="round">
+    <circle cx="30" cy="-30" r="20" fill="${C.orange}"/>
+    <path d="M-80 50 Q-40 10 0 30 T80 22 V60 H-80 Z" fill="${C.copper}" opacity="0.55"/>
+    <path d="M-80 60 Q-30 30 20 46 T80 44 V64 H-80 Z" fill="${C.teal}" opacity="0.45"/>
+    <path d="M-50 56 q4 -24 10 -34 M-40 58 q0 -20 -6 -30 M10 56 q4 -18 12 -26 M22 58 q-2 -16 -8 -24" fill="none" stroke="${C.orange}" stroke-width="3"/></g>`,
+  fuji: `<g transform="translate(300 78) scale(0.85)">
+    <path d="M-80 56 L-14 -36 Q0 -48 14 -36 L80 56 Z" fill="${C.copper}"/>
+    <path d="M-14 -36 Q0 -48 14 -36 L28 -16 L14 -22 L4 -12 L-6 -22 L-28 -16 Z" fill="${C.text}"/>
+    <rect x="38" y="6" width="22" height="50" fill="${C.bg}" opacity="0.6"/>
+    <path d="M34 8 h30 M36 24 h26 M38 40 h22" stroke="${C.orange}" stroke-width="3"/>
+    <circle cx="-56" cy="-30" r="5" fill="${C.orange}"/><circle cx="-44" cy="-40" r="4" fill="${C.orange}" opacity="0.8"/><circle cx="-62" cy="-46" r="3" fill="${C.copper}"/>
+    <circle cx="60" cy="-44" r="4" fill="${C.orange}" opacity="0.8"/></g>`,
 }
 
 function card(p) {
