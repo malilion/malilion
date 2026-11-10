@@ -90,7 +90,7 @@ function hero() {
 
 // ---------- Featured project cards ----------
 const projects = [
-  { slug: '3d-world', name: 'MaliLion 3D World', tag: 'Interactive Web 3D', stack: ['Three.js', 'TypeScript'], art: 'cube' },
+  { slug: 'project-island', name: 'MaliLion Project Island', tag: 'Interactive 3D portfolio island', stack: ['Three.js', 'Web 3D'], art: 'island' },
   { slug: 'contextlion', name: 'ContextLion', tag: 'Web → AI-ready Markdown', stack: ['Extension', 'Local-first'], art: 'doc' },
   { slug: 'ninefold-court', name: '九重燼', tag: 'Visual novel & game architecture', stack: ['Vue 3', 'PixiJS', 'Ink.js'], art: 'ember' },
   { slug: 'devtrace-lion', name: 'DevTrace Lion', tag: 'API debugging in DevTools', stack: ['DevTools', 'Zero perms'], art: 'trace' },
@@ -105,6 +105,16 @@ const arts = {
     <path d="M0 -50 L48 -24 L48 30 L0 56 L-48 30 L-48 -24 Z" stroke="${C.orange}"/>
     <path d="M-48 -24 L0 2 L48 -24 M0 2 V56" stroke="${C.copper}"/>
     <path d="M0 -50 L48 -24 L0 2 L-48 -24 Z" fill="${C.orange}" fill-opacity="0.18" stroke="none"/></g>`,
+  island: `<g transform="translate(300 84)">
+    <ellipse cx="0" cy="44" rx="86" ry="10" fill="${C.teal}" opacity="0.25"/>
+    ${[[0,0],[-1,1],[1,1],[0,2],[-2,0],[2,0],[-1,-1],[1,-1],[0,-2],[-2,2],[2,2],[-3,1],[3,1]].sort((a, b) => a[1] - b[1] || a[0] - b[0])
+      .map(([q, r], i) => {
+        const x = q * 22, y = r * 13 + (i % 3) * -2
+        const top = [C.orange, C.copper, C.teal][i % 3]
+        return `<g transform="translate(${x} ${y})"><path d="M0 -12 L22 0 L0 12 L-22 0 Z" fill="${top}"/><path d="M-22 0 L0 12 V22 L-22 10 Z" fill="${C.bg}" opacity="0.55"/><path d="M22 0 L0 12 V22 L22 10 Z" fill="${C.bg}" opacity="0.35"/></g>`
+      })
+      .join('')}
+    ${paw(0, -48, 1.1, C.orange)}</g>`,
   doc: `<g transform="translate(300 92)" fill="none" stroke-width="3">
     <rect x="-40" y="-52" width="80" height="104" rx="8" stroke="${C.orange}"/>
     <text x="-26" y="-18" font-family="${MONO}" font-size="20" font-weight="700" fill="${C.teal}" stroke="none">#</text>
@@ -178,7 +188,7 @@ ${chips}
 function ecosystem() {
   const W = 900, H = 360, cx = 450, cy = 180
   const nodes = [
-    { label: 'Projects', sub: ['3D World · 九重燼 · Atlas', 'Cow Pasture · Meadow · Fuji'], x: 170, y: 84 },
+    { label: 'Projects', sub: ['Project Island · 九重燼 · Atlas', 'Cow Pasture · Meadow · Fuji'], x: 170, y: 84 },
     { label: 'Dev Tools', sub: ['ContextLion · DevTraceLion', 'FX kits · Codex skills'], x: 170, y: 276 },
     { label: 'Open Source', sub: ['Malilion UI · BlockUI', 'lyricreel · riso-mv-kit'], x: 730, y: 84 },
     { label: 'Content', sub: ['Build notes · Courses', 'Threads · iThome series'], x: 730, y: 276 },

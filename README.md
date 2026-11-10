@@ -40,10 +40,10 @@ I build AI experiments, developer tools, interactive games, and learning experie
 <table>
   <tr>
     <td width="33%" valign="top">
-      <a href="https://malilion.com/world"><img src="./assets/brand/project-3d-world.svg" width="100%" alt="" /></a>
-      <h3><a href="https://malilion.com/world">MaliLion 3D World</a></h3>
-      <p>An interactive 3D world built around AI × code × game development.</p>
-      <p><b>Three.js · TypeScript · Web 3D</b></p>
+      <a href="https://www.malilion.com/world"><img src="./assets/brand/project-project-island.svg" width="100%" alt="" /></a>
+      <h3><a href="https://www.malilion.com/world">MaliLion Project Island</a></h3>
+      <p>An interactive 3D portfolio: every side project is a tile on a lion-shaped island you can rotate and explore.</p>
+      <p><b>Three.js · Web 3D · Interactive Portfolio</b></p>
     </td>
     <td width="33%" valign="top">
       <a href="https://github.com/malilion/ContextLion"><img src="./assets/brand/project-contextlion.svg" width="100%" alt="" /></a>

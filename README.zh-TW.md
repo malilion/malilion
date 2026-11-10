@@ -44,10 +44,10 @@
 <table>
   <tr>
     <td width="33%" valign="top">
-      <a href="https://malilion.com/world"><img src="./assets/brand/project-3d-world.svg" width="100%" alt="" /></a>
-      <h3><a href="https://malilion.com/world">MaliLion 3D World</a></h3>
-      <p>以 AI × 程式 × 遊戲開發為核心打造的互動式 3D 世界。</p>
-      <p><b>Three.js · TypeScript · Web 3D</b></p>
+      <a href="https://www.malilion.com/world"><img src="./assets/brand/project-project-island.svg" width="100%" alt="" /></a>
+      <h3><a href="https://www.malilion.com/world">碼力獅專案島 MaliLion Project Island</a></h3>
+      <p>互動式 3D 作品集：每個 Side Project 都是一格地塊，拼成一座可以旋轉、點擊探索的碼力獅形狀專案島。</p>
+      <p><b>Three.js · Web 3D · Interactive Portfolio</b></p>
     </td>
     <td width="33%" valign="top">
       <a href="https://github.com/malilion/ContextLion"><img src="./assets/brand/project-contextlion.svg" width="100%" alt="" /></a>
