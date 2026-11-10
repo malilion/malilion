@@ -178,20 +178,20 @@ ${chips}
 function ecosystem() {
   const W = 900, H = 360, cx = 450, cy = 180
   const nodes = [
-    { label: 'Projects', sub: '3D World · 九重燼 · Atlas', x: 170, y: 90 },
-    { label: 'Dev Tools', sub: 'ContextLion · DevTrace', x: 170, y: 270 },
-    { label: 'Open Source', sub: 'Malilion UI · BlockUI', x: 730, y: 90 },
-    { label: 'Content', sub: 'Build notes · Courses', x: 730, y: 270 },
+    { label: 'Projects', sub: ['3D World · 九重燼 · Atlas', 'Cow Pasture · Meadow · Fuji'], x: 170, y: 84 },
+    { label: 'Dev Tools', sub: ['ContextLion · DevTraceLion', 'FX kits · Codex skills'], x: 170, y: 276 },
+    { label: 'Open Source', sub: ['Malilion UI · BlockUI', 'lyricreel · riso-mv-kit'], x: 730, y: 84 },
+    { label: 'Content', sub: ['Build notes · Courses', 'Threads · iThome series'], x: 730, y: 276 },
   ]
   const links = nodes
     .map((n) => `<path d="M${cx} ${cy} C${(cx + n.x) / 2} ${cy} ${(cx + n.x) / 2} ${n.y} ${n.x} ${n.y}" fill="none" stroke="url(#brand)" stroke-width="2.5" stroke-dasharray="6 6" class="flow"/>`)
     .join('')
   const boxes = nodes
     .map((n) => `<g transform="translate(${n.x} ${n.y})">
-    <rect x="-120" y="-38" width="240" height="76" rx="14" fill="${C.panel}" stroke="${C.line}"/>
-    <rect x="-120" y="-38" width="5" height="76" rx="2" fill="${C.orange}"/>
-    <text y="-4" text-anchor="middle" font-family="${FONT}" font-size="20" font-weight="700" fill="${C.text}">${esc(n.label)}</text>
-    <text y="20" text-anchor="middle" font-family="${FONT}" font-size="13" fill="${C.muted}">${esc(n.sub)}</text></g>`)
+    <rect x="-130" y="-48" width="260" height="96" rx="14" fill="${C.panel}" stroke="${C.line}"/>
+    <rect x="-130" y="-48" width="5" height="96" rx="2" fill="${C.orange}"/>
+    <text y="-14" text-anchor="middle" font-family="${FONT}" font-size="20" font-weight="700" fill="${C.text}">${esc(n.label)}</text>
+    ${n.sub.map((t, i) => `<text y="${12 + i * 20}" text-anchor="middle" font-family="${FONT}" font-size="13" fill="${C.muted}">${esc(t)}</text>`).join('')}</g>`)
     .join('')
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="MaliLion ecosystem: projects, dev tools, open source and content around one brand">
 <title>MaliLion ecosystem</title>
