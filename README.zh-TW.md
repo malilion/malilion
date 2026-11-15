@@ -2,6 +2,16 @@
   <a href="https://github.com/malilion/malilion/blob/main/README.md">English</a> · <a href="https://github.com/malilion/malilion/blob/main/README.zh-TW.md">繁體中文</a>
 </div>
 
+<p align="center">
+  <a href="https://malilion.com"><img src="./assets/brand/logo-160.png" width="32" height="32" alt="malilion.com" /></a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://www.threads.com/@malilion.dev"><picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.simpleicons.org/threads/F1EDE6"><img src="https://cdn.simpleicons.org/threads/111111" width="32" height="32" alt="Threads @malilion.dev" /></picture></a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/malilion?tab=repositories"><picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.simpleicons.org/github/F1EDE6"><img src="https://cdn.simpleicons.org/github/111111" width="32" height="32" alt="GitHub 全部 repo" /></picture></a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://www.npmjs.com/package/@malilion/ui"><picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.simpleicons.org/npm/CB3837"><img src="https://cdn.simpleicons.org/npm/CB3837" width="32" height="32" alt="npm @malilion/ui" /></picture></a>
+</p>
+
 <p>
 <a href="https://malilion.com"><picture><source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/brand/bento/hero-m-zh-dark.svg"><source media="(max-width: 600px)" srcset="./assets/brand/bento/hero-m-zh-light.svg"><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/hero-zh-dark.svg"><img src="./assets/brand/bento/hero-zh-light.svg" width="100%" alt="碼力獅 MaliLion：把小點子做成真的作品。白天是軟體工程師，晚上做元件庫、開發工具和 3D 世界。" /></picture></a><br />
 <picture><source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/brand/bento/ticker-m-zh-dark.svg"><source media="(max-width: 600px)" srcset="./assets/brand/bento/ticker-m-zh-light.svg"><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/ticker-zh-dark.svg"><img src="./assets/brand/bento/ticker-zh-light.svg" width="100%" alt="碼力獅標語：公開開發、創意程式、開源、Local-first 工具、3D 世界" /></picture><br />
@@ -105,14 +115,4 @@
 
 <p>
 <a href="https://malilion.com"><picture><source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/brand/bento/footer-m-zh-dark.svg"><source media="(max-width: 600px)" srcset="./assets/brand/bento/footer-m-zh-light.svg"><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/footer-zh-dark.svg"><img src="./assets/brand/bento/footer-zh-light.svg" width="100%" alt="Build、Learn、Share、Build again。謝謝你逛到這裡：malilion.com、Threads @malilion.dev、github.com/malilion" /></picture></a>
-</p>
-
-<p align="center">
-  <a href="https://malilion.com"><img src="./assets/brand/logo-160.png" width="32" height="32" alt="malilion.com" /></a>
-  &nbsp;&nbsp;&nbsp;
-  <a href="https://www.threads.com/@malilion.dev"><picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.simpleicons.org/threads/F1EDE6"><img src="https://cdn.simpleicons.org/threads/111111" width="32" height="32" alt="Threads @malilion.dev" /></picture></a>
-  &nbsp;&nbsp;&nbsp;
-  <a href="https://github.com/malilion?tab=repositories"><picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.simpleicons.org/github/F1EDE6"><img src="https://cdn.simpleicons.org/github/111111" width="32" height="32" alt="GitHub 全部 repo" /></picture></a>
-  &nbsp;&nbsp;&nbsp;
-  <a href="https://www.npmjs.com/package/@malilion/ui"><picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.simpleicons.org/npm/CB3837"><img src="https://cdn.simpleicons.org/npm/CB3837" width="32" height="32" alt="npm @malilion/ui" /></picture></a>
 </p>
