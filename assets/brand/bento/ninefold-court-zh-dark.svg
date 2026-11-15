@@ -3,15 +3,32 @@
 <defs><clipPath id="tile"><rect x="8" y="8" width="384" height="304" rx="24"/></clipPath></defs>
 
 
-<g clip-path="url(#tile)"><rect width="400" height="320" fill="#171A1F"/></g>
-<text x="36" y="58" font-family="'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace" font-size="13" font-weight="600" fill="#9C968D" text-anchor="start" letter-spacing="1.6">視覺小說 · 鐵人賽</text>
-<g transform="translate(330 86) scale(0.8)">
-    <path d="M0 -58 C24 -24 40 -6 30 22 C22 46 -22 46 -30 22 C-40 -6 -18 -18 -10 -40 C-4 -24 4 -20 0 -58 Z" fill="#CD7631"/>
-    <path d="M0 -14 C14 4 18 14 12 28 C6 40 -8 40 -12 28 C-16 16 -6 6 0 -14 Z" fill="#F0AD2F"/>
-    <circle cx="-38" cy="-40" r="3" fill="#F0AD2F"/><circle cx="40" cy="-30" r="2.5" fill="#F0AD2F"/></g>
-<text x="34" y="178" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="29" font-weight="800" fill="#F1EDE6" text-anchor="start" letter-spacing="-0.6">一款公開開發的</text>
-<text x="34" y="214" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="29" font-weight="800" fill="#F1EDE6" text-anchor="start" letter-spacing="-0.6">視覺小說</text>
-<rect x="36" y="238" width="328" height="1" fill="#2A2E35"/>
-<text x="36" y="270" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="16" font-weight="700" fill="#F1EDE6" text-anchor="start">九重燼</text>
-<text x="36" y="292" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="13.5" font-weight="400" fill="#9C968D" text-anchor="start">Vue 3 · PixiJS · Ink.js</text>
+<g clip-path="url(#tile)">
+  <rect width="400" height="320" fill="#171A1F"/>
+  <g transform="translate(0 8)">
+    <defs><linearGradient id="pa-nc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2A0F22"/><stop offset="1" stop-color="#8A3424"/></linearGradient></defs>
+    <rect width="400" height="150" fill="url(#pa-nc)"/>
+    <circle cx="300" cy="46" r="26" fill="#F0AD2F" opacity="0.9"/><circle cx="300" cy="46" r="40" fill="#F0AD2F" opacity="0.15"/>
+    <g fill="#14060D">
+      <rect x="150" y="96" width="100" height="40"/>
+      <path d="M128 100 Q200 84 272 100 L262 92 Q200 78 138 92 Z"/>
+      <rect x="166" y="70" width="68" height="24"/>
+      <path d="M146 74 Q200 60 254 74 L246 66 Q200 54 154 66 Z"/>
+      <rect x="182" y="48" width="36" height="20"/>
+      <path d="M166 52 Q200 40 234 52 L228 44 Q200 34 172 44 Z"/>
+      <rect x="198" y="26" width="4" height="12"/>
+      <rect x="40" y="110" width="60" height="26"/><path d="M30 112 Q70 102 110 112 L104 106 Q70 98 36 106 Z"/>
+      <rect x="300" y="108" width="64" height="28"/><path d="M290 110 Q332 100 374 110 L368 104 Q332 96 296 104 Z"/>
+    </g>
+    <circle cx="96" cy="60" r="3" fill="#F0AD2F"/><circle cx="120" cy="34" r="2" fill="#CD7631"/><circle cx="262" cy="98" r="2.5" fill="#F0AD2F"/><circle cx="338" cy="80" r="3" fill="#CD7631"/><circle cx="70" cy="88" r="2" fill="#F0AD2F"/><circle cx="236" cy="26" r="2" fill="#CD7631"/>
+    <rect x="36" y="112" width="328" height="30" rx="8" fill="#FFF7EC" opacity="0.94"/>
+    <rect x="48" y="104" width="54" height="16" rx="5" fill="#CD7631"/>
+    <rect x="54" y="110" width="42" height="4" rx="2" fill="#FFF7EC"/>
+    <rect x="50" y="126" width="180" height="5" rx="2.5" fill="#8A6A5A"/><rect x="50" y="134" width="120" height="4" rx="2" fill="#B89A88"/>
+    <path d="M346 128 l6 6 6 -6 z" fill="#CD7631"/></g>
+</g>
+<text x="32" y="192" font-family="'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace" font-size="13" font-weight="600" fill="#9C968D" text-anchor="start" letter-spacing="1.6">視覺小說 · 鐵人賽</text>
+<text x="30" y="226" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="25" font-weight="800" fill="#F1EDE6" text-anchor="start" letter-spacing="-0.5">一款公開開發的</text>
+<text x="30" y="256" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="25" font-weight="800" fill="#F1EDE6" text-anchor="start" letter-spacing="-0.5">視覺小說</text>
+<text x="32" y="290" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="14" font-weight="700" fill="#F1EDE6">九重燼<tspan font-weight="400" font-size="13" fill="#9C968D">  ·  Vue 3 · PixiJS · Ink.js</tspan></text>
 </svg>
