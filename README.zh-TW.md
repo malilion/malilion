@@ -26,7 +26,7 @@
 --><a href="https://www.youtube.com/watch?v=ElXvObJbIFY"><picture><source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/brand/bento/ui-trailer-m-zh-dark.svg"><source media="(max-width: 600px)" srcset="./assets/brand/bento/ui-trailer-m-zh-light.svg"><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/ui-trailer-zh-dark.svg"><img src="./assets/brand/bento/ui-trailer-zh-light.svg" width="49.9%" alt="在 YouTube 觀看 Malilion UI 預告片" /></picture></a>
 </p>
 
-## 其他作品
+## 探索碼力獅宇宙
 
 <p>
 <picture><source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/brand/bento/band-ai-tools-m-zh-dark.svg"><source media="(max-width: 600px)" srcset="./assets/brand/bento/band-ai-tools-m-zh-light.svg"><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/band-ai-tools-zh-dark.svg"><img src="./assets/brand/bento/band-ai-tools-zh-light.svg" width="100%" alt="AI 與開發工具" /></picture><br />
