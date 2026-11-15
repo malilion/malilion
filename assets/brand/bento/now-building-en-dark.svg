@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 260" width="720" height="260" role="img" aria-label="NOW BUILDING: AI learning experiences, Small, focused dev tools, Narrative games &amp; web 3D, The MaliLion ecosystem">
+<title>NOW BUILDING: AI learning experiences, Small, focused dev tools, Narrative games &amp; web 3D, The MaliLion ecosystem</title>
+<defs><clipPath id="tile"><rect x="8" y="8" width="704" height="244" rx="24"/></clipPath></defs>
+
+
+<g clip-path="url(#tile)"><rect width="720" height="260" fill="#171A1F"/></g>
+<circle cx="49" cy="55" r="5" fill="#14CFB2"><animate attributeName="opacity" values="1;.25;1" dur="2s" repeatCount="indefinite"/></circle>
+<text x="64" y="60" font-family="'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace" font-size="13" font-weight="600" fill="#9C968D" text-anchor="start" letter-spacing="1.6">NOW BUILDING</text>
+<circle cx="50" cy="112" r="6" fill="#14CFB2"/><text x="68" y="118" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="18" font-weight="600" fill="#F1EDE6" text-anchor="start">AI learning experiences</text><circle cx="370" cy="112" r="6" fill="#14CFB2"/><text x="388" y="118" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="18" font-weight="600" fill="#F1EDE6" text-anchor="start">Small, focused dev tools</text><circle cx="50" cy="158" r="6" fill="#14CFB2"/><text x="68" y="164" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="18" font-weight="600" fill="#F1EDE6" text-anchor="start">Narrative games &amp; web 3D</text><circle cx="370" cy="158" r="6" fill="#14CFB2"/><text x="388" y="164" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="18" font-weight="600" fill="#F1EDE6" text-anchor="start">The MaliLion ecosystem</text>
+<text x="44" y="226" font-family="'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace" font-size="14" font-weight="400" fill="#9C968D" text-anchor="start">Build → Learn → Share → Build again.</text>
+</svg>
