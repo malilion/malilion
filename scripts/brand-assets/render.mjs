@@ -793,6 +793,64 @@ ${badge(CERTS[2], 110, 414)}${badge(CERTS[3], 300, 414)}${badge(CERTS[4], 490, 4
   return svg(W, H, `${e.certLabel}: AWS Cloud Practitioner, AWS AI Practitioner, MTA Database, MTA Networking, MTA Software Development`, body)
 }
 
+// ---------- Footer ----------
+const FOOT = {
+  en: {
+    sub: ['Thanks for stopping by. Explore the projects, follow', 'the experiments, or say hi on Threads.'],
+    subM: ['Thanks for stopping by. Explore the', 'projects, follow the experiments,', 'or say hi on Threads.'],
+    made: 'Made in Taiwan',
+    aria: 'Build, learn, share, build again. Thanks for stopping by. malilion.com · Threads @malilion.dev · github.com/malilion',
+  },
+  zh: {
+    sub: ['謝謝你逛到這裡。看看作品、追蹤實驗，', '或到 Threads 打聲招呼。'],
+    subM: ['謝謝你逛到這裡。', '看看作品、追蹤實驗，', '或到 Threads 打聲招呼。'],
+    made: '在台灣製作',
+    aria: 'Build、Learn、Share、Build again。謝謝你逛到這裡。malilion.com · Threads @malilion.dev · github.com/malilion',
+  },
+}
+const CONTACTS = [['WEB', 'malilion.com'], ['THREADS', '@malilion.dev'], ['GITHUB', 'github.com/malilion']]
+const sloganSpans = (parts) =>
+  parts.map((w, i) => (i ? `<tspan fill="${GOLD}"> → </tspan>${esc(w)}` : esc(w))).join('')
+
+function footer(f, t) {
+  const W = 1200, H = 300
+  const trail = [0, 1, 2, 3, 4, 5, 6, 7]
+    .map((i) => `<g class="p" style="animation-delay:${(i * 0.35).toFixed(2)}s">${paw(330 + i * 70, 262 - (i % 2) * 10, 0.7, GOLD)}</g>`)
+    .join('')
+  const contacts = CONTACTS.map(([k, v], i) => `${text(912, 104 + i * 46, k, { size: 12, weight: 700, fill: t.heroMuted, font: MONO, ls: 2 })}${text(912, 124 + i * 46, v, { size: 17, weight: 700, fill: t.heroInk })}`).join('')
+  const body = `
+<rect x="8" y="8" width="${W - 16}" height="${H - 16}" rx="28" fill="${t.hero}"/>
+<circle cx="150" cy="140" r="82" fill="${GOLD}"/>
+<clipPath id="fl"><circle cx="150" cy="140" r="72"/></clipPath>
+<image href="${logo}" x="78" y="68" width="144" height="144" clip-path="url(#fl)"/>
+<text x="268" y="124" font-family="${FONT}" font-size="31" font-weight="800" fill="${t.heroInk}" letter-spacing="-0.6">${sloganSpans(['Build', 'Learn', 'Share', 'Build again.'])}</text>
+${text(270, 162, esc(f.sub[0]), { size: 17, fill: t.heroMuted })}
+${text(270, 188, esc(f.sub[1]), { size: 17, fill: t.heroMuted })}
+<line x1="884" y1="80" x2="884" y2="220" stroke="${GOLD}" stroke-opacity="0.35" stroke-width="2"/>
+${contacts}
+${trail}
+${text(W - 48, 268, `© 2026 MaliLion · ${esc(f.made)}`, { size: 13, fill: t.heroMuted, font: MONO, anchor: 'end' })}`
+  return svg(W, H, f.aria, body, {
+    style: `.p{opacity:0;animation:walk 4.2s ease-in-out infinite}@keyframes walk{0%,5%{opacity:0}15%,60%{opacity:.6}80%,100%{opacity:0}}@media (prefers-reduced-motion:reduce){.p{animation:none;opacity:.4}}`,
+  })
+}
+
+function footerM(f, t) {
+  const W = 600, H = 740
+  const contacts = CONTACTS.map(([k, v], i) => `${text(300, 476 + i * 62, k, { size: 17, weight: 700, fill: t.heroMuted, font: MONO, ls: 2, anchor: 'middle' })}${text(300, 504 + i * 62, v, { size: 24, weight: 700, fill: t.heroInk, anchor: 'middle' })}`).join('')
+  const body = `
+<rect x="8" y="8" width="${W - 16}" height="${H - 16}" rx="28" fill="${t.hero}"/>
+<circle cx="300" cy="122" r="74" fill="${GOLD}"/>
+<clipPath id="fl"><circle cx="300" cy="122" r="65"/></clipPath>
+<image href="${logo}" x="235" y="57" width="130" height="130" clip-path="url(#fl)"/>
+<text x="300" y="262" text-anchor="middle" font-family="${FONT}" font-size="40" font-weight="800" fill="${t.heroInk}">${sloganSpans(['Build', 'Learn'])}<tspan fill="${GOLD}"> →</tspan></text>
+<text x="300" y="312" text-anchor="middle" font-family="${FONT}" font-size="40" font-weight="800" fill="${t.heroInk}">${sloganSpans(['Share', 'Build again.'])}</text>
+${f.subM.map((l, i) => text(300, 362 + i * 30, esc(l), { size: 22, fill: t.heroMuted, anchor: 'middle' })).join('')}
+${contacts}
+${text(300, 698, `© 2026 MaliLion · ${esc(f.made)}`, { size: 18, fill: t.heroMuted, font: MONO, anchor: 'middle' })}`
+  return svg(W, H, f.aria, body)
+}
+
 // Stack row labels. Each sits inline beside a skillicons.dev strip of the
 // same rendered height (the README sets height="56" on both).
 const STACK = {
@@ -848,6 +906,8 @@ for (const [lang, c] of Object.entries(COPY)) {
       'threads-m': threadsM(c, m),
       'experience-m': experienceM(EXP[lang], m, t),
       'certifications-m': certificationsM(EXP[lang], t),
+      footer: footer(FOOT[lang], t),
+      'footer-m': footerM(FOOT[lang], t),
     })
     for (const [slug, p] of Object.entries(c.row3)) files[`${slug}-m`] = rowM(slug, p, m, t)
     for (const [name, data] of Object.entries(files)) {

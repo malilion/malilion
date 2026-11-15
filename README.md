@@ -103,7 +103,10 @@
   </picture>
 </p>
 
+<p>
+<a href="https://malilion.com"><picture><source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/brand/bento/footer-m-en-dark.svg"><source media="(max-width: 600px)" srcset="./assets/brand/bento/footer-m-en-light.svg"><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/footer-en-dark.svg"><img src="./assets/brand/bento/footer-en-light.svg" width="100%" alt="Build, learn, share, build again. Thanks for stopping by: malilion.com, Threads @malilion.dev, github.com/malilion" /></picture></a>
+</p>
+
 <p align="center">
-  <img src="./assets/brand/logo-160.png" width="40" height="40" alt="MaliLion lion mascot" /><br />
-  <sub><b>Build → Learn → Share → Build again.</b></sub>
+  <a href="https://malilion.com"><b>malilion.com</b></a> · <a href="https://www.threads.com/@malilion.dev"><b>Threads</b></a> · <a href="https://github.com/malilion?tab=repositories"><b>Repositories</b></a> · <a href="https://www.npmjs.com/package/@malilion/ui"><b>npm</b></a>
 </p>
