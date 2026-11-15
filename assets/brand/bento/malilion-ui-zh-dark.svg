@@ -6,7 +6,7 @@
 <defs><linearGradient id="ui" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1B1611"/><stop offset="1" stop-color="#3D2A14"/></linearGradient></defs>
 <g clip-path="url(#tile)">
   <rect width="720" height="420" fill="url(#ui)"/>
-  <g transform="translate(650 370) scale(2.4)" fill="#F0AD2F" opacity="0.1">
+  <g transform="translate(340 380) scale(2.4)" fill="#F0AD2F" opacity="0.08">
     <ellipse cx="0" cy="8" rx="9" ry="7.5"/><ellipse cx="-10" cy="-4" rx="3.6" ry="4.6"/><ellipse cx="-3.6" cy="-10" rx="3.6" ry="4.8"/><ellipse cx="3.6" cy="-10" rx="3.6" ry="4.8"/><ellipse cx="10" cy="-4" rx="3.6" ry="4.6"/></g>
 </g>
 <text x="44" y="64" font-family="'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace" font-size="13" font-weight="600" fill="#D9B27A" text-anchor="start" letter-spacing="1.6">主力作品 · NPM @malilion/ui</text>
@@ -14,7 +14,36 @@
 <text x="44" y="150" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="20" font-weight="600" fill="#F0AD2F" text-anchor="start">做了 161 個元件之後</text>
 <text x="44" y="184" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="15" font-weight="400" fill="#CDBDA9" text-anchor="start">獅子 × 科技 × 金屬風，Vue 3 與 React 通用。</text>
 <text x="44" y="208" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="15" font-weight="400" fill="#CDBDA9" text-anchor="start">TypeScript · 雙主題 · 零執行期相依</text>
-<text x="38" y="352" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="136" font-weight="800" fill="#F0AD2F" text-anchor="start" letter-spacing="-6">161</text>
-<text x="258" y="352" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="18" font-weight="600" fill="#CDBDA9" text-anchor="start">個元件</text>
-<rect x="430" y="66" width="116" height="60" rx="14" fill="#F0AD2F" fill-opacity="0.12" stroke="#F0AD2F" stroke-opacity="0.45"/><text x="446" y="102" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="15" font-weight="600" fill="#F3DDB6" text-anchor="start">Button</text><rect x="558" y="66" width="116" height="60" rx="14" fill="#F0AD2F" fill-opacity="0.12" stroke="#F0AD2F" stroke-opacity="0.45"/><text x="574" y="102" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="15" font-weight="600" fill="#F3DDB6" text-anchor="start">Switch</text><rect x="430" y="140" width="116" height="60" rx="14" fill="#F0AD2F" fill-opacity="0.12" stroke="#F0AD2F" stroke-opacity="0.45"/><text x="446" y="176" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="15" font-weight="600" fill="#F3DDB6" text-anchor="start">Input</text><rect x="558" y="140" width="116" height="60" rx="14" fill="#F0AD2F" fill-opacity="0.12" stroke="#F0AD2F" stroke-opacity="0.45"/><text x="574" y="176" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="15" font-weight="600" fill="#F3DDB6" text-anchor="start">Badge</text><rect x="430" y="214" width="116" height="60" rx="14" fill="#F0AD2F" fill-opacity="0.12" stroke="#F0AD2F" stroke-opacity="0.45"/><text x="446" y="250" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="15" font-weight="600" fill="#F3DDB6" text-anchor="start">Tabs</text><rect x="558" y="214" width="116" height="60" rx="14" fill="#F0AD2F" fill-opacity="0.12" stroke="#F0AD2F" stroke-opacity="0.45"/><text x="574" y="250" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="15" font-weight="600" fill="#F3DDB6" text-anchor="start">Modal</text>
+<text x="38" y="344" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="128" font-weight="800" fill="#F0AD2F" text-anchor="start" letter-spacing="-6">161</text>
+<text x="44" y="376" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="18" font-weight="600" fill="#CDBDA9" text-anchor="start">個元件</text>
+
+<defs><linearGradient id="metal" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3A2C1C"/><stop offset="1" stop-color="#1E1610"/></linearGradient></defs>
+<rect x="404" y="40" width="286" height="344" rx="20" fill="url(#metal)" stroke="#F0AD2F" stroke-opacity="0.55" stroke-width="2"/>
+<circle cx="420" cy="56" r="4.5" fill="#E9C77E"/><circle cx="418.8" cy="54.8" r="1.6" fill="#FFF3D1"/><circle cx="674" cy="56" r="4.5" fill="#E9C77E"/><circle cx="672.8" cy="54.8" r="1.6" fill="#FFF3D1"/><circle cx="420" cy="368" r="4.5" fill="#E9C77E"/><circle cx="418.8" cy="366.8" r="1.6" fill="#FFF3D1"/><circle cx="674" cy="368" r="4.5" fill="#E9C77E"/><circle cx="672.8" cy="366.8" r="1.6" fill="#FFF3D1"/>
+<!-- tabs -->
+<text x="432" y="92" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="14" font-weight="700" fill="#F0AD2F" text-anchor="start">Vue</text><text x="506" y="92" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="14" font-weight="700" fill="#9C8665" text-anchor="start">React</text><text x="580" y="92" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="14" font-weight="700" fill="#9C8665" text-anchor="start">Docs</text>
+<rect x="426" y="102" width="242" height="2" fill="#4A3922"/>
+<rect x="426" y="101" width="46" height="4" rx="2" fill="#F0AD2F"/>
+<!-- buttons -->
+<rect x="426" y="122" width="112" height="38" rx="10" fill="#F0AD2F"/>
+<g transform="translate(448 141) scale(0.55)" fill="#3A2A06" opacity="1">
+    <ellipse cx="0" cy="8" rx="9" ry="7.5"/><ellipse cx="-10" cy="-4" rx="3.6" ry="4.6"/><ellipse cx="-3.6" cy="-10" rx="3.6" ry="4.8"/><ellipse cx="3.6" cy="-10" rx="3.6" ry="4.8"/><ellipse cx="10" cy="-4" rx="3.6" ry="4.6"/></g>
+<text x="464" y="146" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="15" font-weight="700" fill="#1A1206" text-anchor="start">Button</text>
+<rect x="550" y="122" width="118" height="38" rx="10" fill="none" stroke="#F0AD2F" stroke-width="2"/>
+<text x="609" y="146" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="15" font-weight="700" fill="#F0AD2F" text-anchor="middle">Outline</text>
+<!-- input -->
+<rect x="426" y="176" width="242" height="40" rx="10" fill="#241B12" stroke="#4A3922" stroke-width="2"/>
+<circle cx="446" cy="195" r="7" fill="none" stroke="#9C8665" stroke-width="2.5"/><path d="M451 200 l6 6" stroke="#9C8665" stroke-width="2.5" stroke-linecap="round"/>
+<text x="466" y="201" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="14" font-weight="400" fill="#9C8665" text-anchor="start">Search 161 components</text>
+<!-- switch + checkbox -->
+<rect x="426" y="236" width="52" height="28" rx="14" fill="#F0AD2F"/><circle cx="464" cy="250" r="10" fill="#FFF8E8"/>
+<text x="488" y="255" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="14" font-weight="600" fill="#F3DDB6" text-anchor="start">Dark</text>
+<rect x="554" y="237" width="26" height="26" rx="7" fill="#14CFB2"/><path d="M560 250 l5 5 9 -10" fill="none" stroke="#0B2E28" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="588" y="255" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="14" font-weight="600" fill="#F3DDB6" text-anchor="start">Taiwan ID</text>
+<!-- slider -->
+<rect x="426" y="288" width="242" height="8" rx="4" fill="#4A3922"/>
+<rect x="426" y="288" width="160" height="8" rx="4" fill="#F0AD2F"/>
+<circle cx="586" cy="292" r="11" fill="#FFF8E8" stroke="#F0AD2F" stroke-width="3"/>
+<!-- badges -->
+<rect x="426" y="320" width="92" height="26" rx="13" fill="#14CFB2"/><text x="472" y="337" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="12" font-weight="700" fill="#0B2E28" text-anchor="middle">TypeScript</text><rect x="526" y="320" width="78" height="26" rx="13" fill="#B6AFF1"/><text x="565" y="337" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="12" font-weight="700" fill="#211C4A" text-anchor="middle">2 themes</text><rect x="612" y="320" width="64" height="26" rx="13" fill="#CD7631"/><text x="644" y="337" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="12" font-weight="700" fill="#2A1406" text-anchor="middle">0 deps</text>
 </svg>
