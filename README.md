@@ -64,14 +64,6 @@
 --><picture><source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=git%2Cgithub%2Cgitlab%2Cpnpm%2Cobsidian%2Cthreejs%2Cgodot&theme=dark"><img src="https://skillicons.dev/icons?i=git%2Cgithub%2Cgitlab%2Cpnpm%2Cobsidian%2Cthreejs%2Cgodot&theme=light" height="56" alt="Git, GitHub, GitLab, pnpm, Obsidian, Three.js, Godot" /></picture>
 </p>
 
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/paw-heatmap-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/paw-heatmap-light.svg">
-    <img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/paw-heatmap-light.svg" alt="MaliLion contribution calendar drawn as paw prints with Malilion UI" />
-  </picture>
-</p>
-
 ## Experience
 
 <p>
@@ -79,41 +71,22 @@
 <picture><source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/brand/bento/certifications-m-en-dark.svg"><source media="(max-width: 600px)" srcset="./assets/brand/bento/certifications-m-en-light.svg"><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/certifications-en-dark.svg"><img src="./assets/brand/bento/certifications-en-light.svg" width="100%" alt="Certifications: AWS Certified Cloud Practitioner, AWS Certified AI Practitioner, Microsoft MTA Database, Networking and Software Development Fundamentals" /></picture>
 </p>
 
-<details>
-<summary><b>GitHub stats</b></summary>
+## Activity
 
-<br />
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/stats-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/stats-light.svg">
-    <img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/stats-light.svg" width="840" alt="MaliLion GitHub stats" />
-  </picture>
+<p>
+<picture><source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/activity-year-m-dark.svg"><source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/activity-year-m-light.svg"><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/activity-year-dark.svg"><img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/activity-year-light.svg" width="59.9%" alt="Contributions in the past year, by month" /></picture><!--
+--><picture><source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/activity-streak-m-dark.svg"><source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/activity-streak-m-light.svg"><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/activity-streak-dark.svg"><img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/activity-streak-light.svg" width="39.9%" alt="Current and longest contribution streak" /></picture><!--
+--><picture><source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/activity-languages-m-dark.svg"><source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/activity-languages-m-light.svg"><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/activity-languages-dark.svg"><img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/activity-languages-light.svg" width="39.9%" alt="Top languages across public repositories" /></picture><!--
+--><picture><source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/activity-numbers-m-dark.svg"><source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/activity-numbers-m-light.svg"><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/activity-numbers-dark.svg"><img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/activity-numbers-light.svg" width="59.9%" alt="Commits, pull requests, issues, stars, public repos and followers" /></picture>
 </p>
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/streak-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/streak-light.svg">
-    <img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/streak-light.svg" width="412" alt="MaliLion contribution streak" />
-  </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/languages-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/languages-light.svg">
-    <img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/languages-light.svg" width="412" alt="MaliLion top languages" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/paw-heatmap-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/paw-heatmap-light.svg">
+    <img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/paw-heatmap-light.svg" alt="MaliLion contribution calendar drawn as paw prints with Malilion UI" />
   </picture>
 </p>
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/monthly-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/monthly-light.svg">
-    <img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/monthly-light.svg" width="840" alt="MaliLion contributions per month" />
-  </picture>
-</p>
-
-</details>
 
 <p align="center">
   <img src="./assets/brand/logo-160.png" width="40" height="40" alt="MaliLion lion mascot" /><br />
