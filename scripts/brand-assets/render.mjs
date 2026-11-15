@@ -7,8 +7,9 @@
 // when the README sets their widths as percentages of the row.
 //   hero          1200 × 380
 //   ticker        1200 × 120  (two slanted animated tapes)
-//   malilion-ui    720 × 420  |  project-island 480 × 420
-//   contextlion    400 × 320  |  ninefold-court 400 × 320  |  cow-pasture 400 × 320
+//   malilion-ui   1200 × 420  (full width)
+//   project-island 1200 × 380 (full width)
+//   contextlion / ninefold-court / cow-pasture  1200 × 280 each (full width)
 //   now-building   720 × 260  |  threads        480 × 260
 //   stack-*        600 × 240  (2 × 2 grid, icons embedded from assets/brand/icons)
 //   band-*        1200 × 128  |  proj-* 400 × 200 (project index: one banner per category, one card per project)
@@ -194,8 +195,8 @@ ${pills(54, 296, [
 // A sheet of Malilion UI components on a riveted metal panel.
 const rivet = (x, y) => `<circle cx="${x}" cy="${y}" r="4.5" fill="#E9C77E"/><circle cx="${x - 1.2}" cy="${y - 1.2}" r="1.6" fill="#FFF3D1"/>`
 
-function uiSheet() {
-  const P = { x: 404, y: 40, w: 286, h: 344 }
+function uiSheet(px = 404, py = 40) {
+  const P = { x: px, y: py, w: 286, h: 344 }
   const ink = '#F3DDB6', dim = '#9C8665', panel = '#241B12', line = '#4A3922'
   const x0 = P.x + 22
   return `
@@ -235,21 +236,22 @@ ${[['TypeScript', TEAL, '#0B2E28'], ['2 themes', '#B6AFF1', '#211C4A'], ['0 deps
 }
 
 function malilionUi(c) {
-  const W = 720, H = 420
+  const W = 1200, H = 420
   const body = `
 <defs><linearGradient id="ui" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1B1611"/><stop offset="1" stop-color="#3D2A14"/></linearGradient></defs>
 <g clip-path="url(#tile)">
   <rect width="${W}" height="${H}" fill="url(#ui)"/>
-  ${paw(340, 380, 2.4, GOLD, 0.08)}
+  ${paw(600, 372, 2.6, GOLD, 0.08)}
 </g>
-${label(44, 64, c.uiLabel, '#D9B27A')}
-${text(42, 114, 'Malilion UI', { size: 42, weight: 800, fill: '#FFFFFF', ls: -1 })}
-${text(44, 150, esc(c.uiHead), { size: 20, weight: 600, fill: GOLD })}
-${text(44, 184, esc(c.uiSub[0]), { size: 15, fill: '#CDBDA9' })}
-${text(44, 208, esc(c.uiSub[1]), { size: 15, fill: '#CDBDA9' })}
-${text(38, 344, '161', { size: 128, weight: 800, fill: GOLD, ls: -6 })}
-${text(44, 376, esc(c.uiUnit), { size: 18, weight: 600, fill: '#CDBDA9' })}
-${uiSheet()}`
+${label(48, 70, c.uiLabel, '#D9B27A')}
+${text(44, 136, 'Malilion UI', { size: 58, weight: 800, fill: '#FFFFFF', ls: -1.5 })}
+${text(48, 180, esc(c.uiHead), { size: 24, weight: 600, fill: GOLD })}
+${text(48, 222, esc(c.uiSub[0]), { size: 18, fill: '#CDBDA9' })}
+${text(48, 250, esc(c.uiSub[1]), { size: 18, fill: '#CDBDA9' })}
+${pills(48, 290, [{ t: 'Vue 3', bg: '#2E2418', fg: '#F3DDB6' }, { t: 'React', bg: '#2E2418', fg: '#F3DDB6' }, { t: 'TypeScript', bg: '#2E2418', fg: '#F3DDB6' }, { t: '0 deps', bg: '#2E2418', fg: '#F3DDB6' }])}
+${text(600, 246, '161', { size: 138, weight: 800, fill: GOLD, ls: -6 })}
+${text(608, 288, esc(c.uiUnit), { size: 22, weight: 600, fill: '#CDBDA9' })}
+${uiSheet(870, 38)}`
   return svg(W, H, `Malilion UI — ${c.uiHead}`, body)
 }
 
@@ -305,17 +307,17 @@ const ISLAND = (() => {
 })()
 
 function island(c) {
-  const W = 480, H = 420
+  const W = 1200, H = 380
   const body = `
 ${ISLAND.defs}
 <g clip-path="url(#tile)">
   <rect width="${W}" height="${H}" fill="url(#sky)"/>
-  ${ISLAND.art}
+  <g transform="translate(${780 - 240 * 1.25} ${190 - 168 * 1.25}) scale(1.25)">${ISLAND.art}</g>
 </g>
-${label(40, 64, c.islandLabel, '#0B4A58')}
-${text(38, 316, esc(c.islandName), { size: 34, weight: 800, fill: '#FFFFFF', ls: -0.8 })}
-${text(40, 350, esc(c.islandSub[0]), { size: 15, fill: '#E3FCF7' })}
-${text(40, 374, esc(c.islandSub[1]), { size: 15, fill: '#E3FCF7' })}`
+${label(48, 70, c.islandLabel, '#0B4A58')}
+${text(44, 210, esc(c.islandName), { size: 56, weight: 800, fill: '#FFFFFF', ls: -1.5 })}
+${text(48, 256, esc(c.islandSub[0]), { size: 21, fill: '#E3FCF7' })}
+${text(48, 286, esc(c.islandSub[1]), { size: 21, fill: '#E3FCF7' })}`
   return svg(W, H, `${c.islandName} — ${c.islandSub.join(' ')}`, body)
 }
 
@@ -389,16 +391,17 @@ const projArt = {
 }
 
 function rowTile(slug, p, t) {
-  const W = 400, H = 320
+  const W = 1200, H = 280
   const body = `
+<defs><clipPath id="band"><rect x="560" y="8" width="632" height="${H - 16}" rx="0"/></clipPath></defs>
 <g clip-path="url(#tile)">
   <rect width="${W}" height="${H}" fill="${t.tile}"/>
-  <g transform="translate(0 8)">${projArt[slug]()}</g>
+  <g clip-path="url(#band)"><g transform="translate(560 8) scale(1.76)">${projArt[slug]()}</g></g>
 </g>
-${label(32, 192, p.label, t.muted)}
-${text(30, 226, esc(p.head[0]), { size: 25, weight: 800, fill: t.ink, ls: -0.5 })}
-${text(30, 256, esc(p.head[1]), { size: 25, weight: 800, fill: t.ink, ls: -0.5 })}
-<text x="32" y="290" font-family="${FONT}" font-size="14" font-weight="700" fill="${t.ink}">${esc(p.name)}<tspan font-weight="400" font-size="13" fill="${t.muted}">  ·  ${esc(p.meta)}</tspan></text>`
+${label(48, 70, p.label, t.muted)}
+${text(44, 132, esc(p.head[0]), { size: 40, weight: 800, fill: t.ink, ls: -1 })}
+${text(44, 180, esc(p.head[1]), { size: 40, weight: 800, fill: t.ink, ls: -1 })}
+<text x="48" y="232" font-family="${FONT}" font-size="19" font-weight="700" fill="${t.ink}">${esc(p.name)}<tspan font-weight="400" font-size="17" fill="${t.muted}">  ·  ${esc(p.meta)}</tspan></text>`
   return svg(W, H, `${p.name} — ${p.head.join(' ')}`, body)
 }
 
@@ -685,28 +688,31 @@ ${text(32, 382, esc(c.uiUnit), { size: 24, weight: 600, fill: '#CDBDA9' })}`
 }
 
 function islandM(c, m) {
-  const W = 240, H = 420, k = 0.62
+  const W = 480, H = 420, k = 0.86
   const body = `
 ${ISLAND.defs}
 <g clip-path="url(#tile)">
   <rect width="${W}" height="${H}" fill="url(#sky)"/>
-  <g transform="translate(${120 - 240 * k} ${168 - 168 * k}) scale(${k})">${ISLAND.art}</g>
+  <g transform="translate(${240 - 240 * k} ${150 - 168 * k}) scale(${k})">${ISLAND.art}</g>
 </g>
-${text(28, 56, 'WEB 3D', { size: 18, weight: 700, fill: '#0B4A58', font: MONO, ls: 2 })}
-${text(26, 330, esc(m.island[0]), { size: 34, weight: 800, fill: '#FFFFFF', ls: -0.8 })}
-${text(26, 372, esc(m.island[1]), { size: 34, weight: 800, fill: '#FFFFFF', ls: -0.8 })}`
+${text(28, 56, 'WEB 3D · THREE.JS', { size: 18, weight: 700, fill: '#0B4A58', font: MONO, ls: 2 })}
+${text(26, 316, esc(c.islandName), { size: 38, weight: 800, fill: '#FFFFFF', ls: -1 })}
+${text(28, 354, esc(c.islandSub[0]), { size: 20, fill: '#E3FCF7' })}
+${text(28, 382, esc(c.islandSub[1]), { size: 20, fill: '#E3FCF7' })}`
   return svg(W, H, `${c.islandName} — ${c.islandSub.join(' ')}`, body)
 }
 
 function rowM(slug, p, m, t) {
-  const W = 200, H = 240
+  const W = 480, H = 400
   const body = `
 <g clip-path="url(#tile)">
   <rect width="${W}" height="${H}" fill="${t.tile}"/>
-  <g transform="translate(-24 8) scale(0.62)">${projArt[slug]()}</g>
+  <g transform="translate(0 8) scale(1.2)">${projArt[slug]()}</g>
 </g>
-${text(20, 152, esc(p.name), { size: 25, weight: 800, fill: t.ink, ls: -0.5 })}
-${text(20, 186, esc(m.kinds[slug]), { size: 20, fill: t.muted })}`
+${text(28, 232, esc(p.label), { size: 17, weight: 700, fill: t.muted, font: MONO, ls: 1.5 })}
+${text(26, 276, esc(p.head[0]), { size: 32, weight: 800, fill: t.ink, ls: -0.6 })}
+${text(26, 316, esc(p.head[1]), { size: 32, weight: 800, fill: t.ink, ls: -0.6 })}
+${text(28, 362, esc(p.name), { size: 20, weight: 700, fill: t.ink })}`
   return svg(W, H, `${p.name} — ${p.head.join(' ')}`, body)
 }
 
