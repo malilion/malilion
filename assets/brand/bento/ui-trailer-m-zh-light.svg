@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="300" height="200" role="img" aria-label="預告片: 看 Malilion UI 動起來">
+<title>預告片: 看 Malilion UI 動起來</title>
+<defs><clipPath id="tile"><rect x="8" y="8" width="284" height="184" rx="24"/></clipPath></defs>
+
+<rect x="8" y="8" width="284" height="184" rx="24" fill="#0E0E10"/><rect x="24" y="28" width="150" height="86" rx="12" fill="#2A2420" stroke="#F0AD2F" stroke-opacity="0.4"/>
+  <g transform="translate(57 88.19999999999999) scale(0.8)" fill="#F0AD2F" opacity="0.25">
+    <ellipse cx="0" cy="8" rx="9" ry="7.5"/><ellipse cx="-10" cy="-4" rx="3.6" ry="4.6"/><ellipse cx="-3.6" cy="-10" rx="3.6" ry="4.8"/><ellipse cx="3.6" cy="-10" rx="3.6" ry="4.8"/><ellipse cx="10" cy="-4" rx="3.6" ry="4.6"/></g><circle cx="99" cy="71" r="22.36" fill="#F0AD2F"/>
+  <path d="M92.12 60.68 L110.18 71 L92.12 81.32 Z" fill="#1A1206"/><text x="26" y="160" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="30" font-weight="800" fill="#FFFFFF" text-anchor="start">預告片 ▶</text>
+</svg>
