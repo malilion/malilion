@@ -27,20 +27,20 @@
 <table>
 <tr>
 <td width="33%" valign="top">
-<b>AI 與開發工具</b><br /><br />
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/cat-ai-tools-zh-dark.svg"><img src="./assets/brand/bento/cat-ai-tools-zh-light.svg" width="100%" alt="AI 與開發工具" /></picture><br /><br />
 <a href="https://github.com/malilion/DevTraceLion"><b>DevTrace Lion</b></a><br /><sub>在 DevTools 內做 Local-first API 除錯，不需任何權限</sub><br /><br />
 <a href="https://github.com/malilion/editorial-photo-poster"><b>Editorial Photo Poster</b></a><br /><sub>Codex skill：照片轉成簡約編輯風海報</sub><br /><br />
 <a href="https://github.com/malilion/haute-jewelry-from-photo"><b>Haute Jewelry From Photo</b></a><br /><sub>Codex skill：圖片氛圍轉成高級珠寶概念</sub><br /><br />
 <a href="https://github.com/malilion/scenic-bookmark-travel-poster"><b>Scenic Bookmark Travel Poster</b></a><br /><sub>Codex skill：旅遊照片轉成日系紀念海報與書籤</sub><br /><br />
 </td>
 <td width="33%" valign="top">
-<b>互動世界</b><br /><br />
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/cat-worlds-zh-dark.svg"><img src="./assets/brand/bento/cat-worlds-zh-light.svg" width="100%" alt="互動世界" /></picture><br /><br />
 <a href="https://github.com/malilion/The-Nocturne-Atlas"><b>The Nocturne Atlas</b></a><br /><sub>由種子驅動的 3D 魔法世界，Three.js + TypeScript</sub><br /><br />
 <a href="https://github.com/malilion/Painterly-Meadow"><b>風之草原 Painterly Meadow</b></a><br /><sub>單一 Three.js 檔案的手繪風 NPR 自然沙盒</sub><br /><br />
 <a href="https://github.com/malilion/fuji-sakura-vista"><b>Fuji Sakura Vista</b></a><br /><sub>Blender 程式生成的富士山黎明場景，附 Three.js 展示</sub><br /><br />
 </td>
 <td width="33%" valign="top">
-<b>設計與創意程式</b><br /><br />
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/cat-creative-zh-dark.svg"><img src="./assets/brand/bento/cat-creative-zh-light.svg" width="100%" alt="設計與創意程式" /></picture><br /><br />
 <a href="https://malilion.github.io/BlockUI/"><b>BlockUI</b></a><br /><sub>像素合成遊戲風 React 元件庫，五種主題，WCAG 2.2 AA</sub><br /><br />
 <a href="https://github.com/malilion/lyricreel"><b>lyricreel</b></a><br /><sub>輸入歌曲與歌詞，輸出跟著節拍走的歌詞 MV</sub><br /><br />
 <a href="https://github.com/malilion/riso-mv-kit"><b>riso-mv-kit</b></a><br /><sub>用程式繪製的 Riso 印刷風繪本 MV</sub><br /><br />

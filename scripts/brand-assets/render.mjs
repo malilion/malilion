@@ -11,6 +11,7 @@
 //   contextlion    400 × 320  |  ninefold-court 400 × 320  |  cow-pasture 400 × 320
 //   now-building   720 × 260  |  threads        480 × 260
 //   stack-*        400 × 64   (label beside a skillicons.dev strip)
+//   cat-*          400 × 280  (heads each column of the project index)
 // Each SVG keeps an 8-unit transparent margin, which becomes the gutter
 // between tiles that sit side by side.
 
@@ -326,6 +327,69 @@ function ticker(c, t) {
   })
 }
 
+// Category cards that head each column of the "Everything else" index.
+const CATS = {
+  en: [
+    { slug: 'ai-tools', label: 'AI & DEV TOOLS', head: 'Tools that stay local.', sub: 'DevTools · Codex skills' },
+    { slug: 'worlds', label: 'INTERACTIVE WORLDS', head: 'Worlds to walk into.', sub: 'Three.js · Blender · NPR' },
+    { slug: 'creative', label: 'DESIGN & CREATIVE CODE', head: 'Code that draws.', sub: 'React UI · lyric MV · FX' },
+  ],
+  zh: [
+    { slug: 'ai-tools', label: 'AI 與開發工具', head: '留在本機的工具', sub: 'DevTools · Codex skills' },
+    { slug: 'worlds', label: '互動世界', head: '走得進去的世界', sub: 'Three.js · Blender · NPR' },
+    { slug: 'creative', label: '設計與創意程式', head: '會畫畫的程式', sub: 'React UI · 歌詞 MV · FX' },
+  ],
+}
+
+const catArt = {
+  // Terminal window with a sparkle: local dev tools and AI skills.
+  'ai-tools': `<rect width="400" height="150" fill="#B6AFF1"/>
+    <g transform="translate(200 78)">
+      <rect x="-96" y="-52" width="192" height="108" rx="12" fill="#15131F"/>
+      <circle cx="-80" cy="-38" r="4" fill="#FF6B6B"/><circle cx="-66" cy="-38" r="4" fill="${GOLD}"/><circle cx="-52" cy="-38" r="4" fill="${TEAL}"/>
+      <text x="-80" y="-6" font-family="${MONO}" font-size="15" font-weight="700" fill="${TEAL}">❯</text>
+      <rect x="-60" y="-16" width="86" height="10" rx="5" fill="#CFCAFF"/>
+      <rect x="-80" y="6" width="120" height="8" rx="4" fill="#5A5490"/>
+      <rect x="-80" y="22" width="92" height="8" rx="4" fill="#5A5490"/>
+      <rect x="-80" y="38" width="12" height="8" rx="2" fill="${GOLD}"/>
+      <path d="M86 -66 l6 16 16 6 -16 6 -6 16 -6 -16 -16 -6 16 -6z" fill="${GOLD}"/>
+      <path d="M-112 30 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3z" fill="#FFFFFF"/>
+    </g>`,
+  // Night sky, moon and layered hills: the 3D worlds.
+  worlds: `<defs><linearGradient id="night" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1B2A5C"/><stop offset="1" stop-color="#3C6FA8"/></linearGradient></defs>
+    <rect width="400" height="150" fill="url(#night)"/>
+    <circle cx="300" cy="50" r="24" fill="#FFE3A3"/><circle cx="312" cy="42" r="21" fill="#26396F"/>
+    <circle cx="80" cy="34" r="2" fill="#FFFFFF"/><circle cx="140" cy="58" r="1.6" fill="#FFFFFF"/><circle cx="220" cy="26" r="2" fill="#FFFFFF"/><circle cx="360" cy="96" r="1.6" fill="#FFFFFF"/>
+    <path d="M0 150 L0 110 L70 64 L120 96 L190 42 L260 104 L310 80 L400 120 L400 150 Z" fill="#2A4E7E"/>
+    <path d="M190 42 L176 60 L190 56 L204 62 Z" fill="#FFFFFF"/>
+    <path d="M0 150 L0 126 Q100 96 200 122 T400 116 L400 150 Z" fill="${TEAL}" opacity="0.85"/>
+    <path d="M330 150 v-26 M330 120 l-10 14 h20 Z" stroke="#0E5A50" stroke-width="3" fill="#0E5A50"/>`,
+  // Pixel blocks, a waveform and a brush stroke: UI kits, music videos, FX.
+  creative: `<rect width="400" height="150" fill="${GOLD}"/>
+    <g transform="translate(70 40)">
+      <rect x="0" y="0" width="22" height="22" fill="#15131F"/><rect x="24" y="0" width="22" height="22" fill="${COPPER}"/>
+      <rect x="0" y="24" width="22" height="22" fill="#FFFFFF"/><rect x="24" y="24" width="22" height="22" fill="#15131F"/>
+      <rect x="48" y="24" width="22" height="22" fill="${TEAL}"/><rect x="24" y="48" width="22" height="22" fill="#FFFFFF"/>
+    </g>
+    <g fill="#15131F">${[14, 30, 52, 38, 64, 44, 26, 56, 34, 18, 42, 24].map((h, i) => `<rect x="${178 + i * 11}" y="${78 - h / 2}" width="6" height="${h}" rx="3"/>`).join('')}</g>
+    <path d="M60 124 C140 96 220 140 340 108" fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" opacity="0.9"/>
+    <circle cx="344" cy="106" r="9" fill="${COPPER}"/>`,
+}
+
+function categoryCard(p, t) {
+  const W = 400, H = 280
+  const body = `
+<defs><clipPath id="card"><rect x="8" y="8" width="${W - 16}" height="${H - 16}" rx="24"/></clipPath></defs>
+<g clip-path="url(#card)">
+  <rect width="${W}" height="${H}" fill="${t.tile}"/>
+  <g transform="translate(0 8)">${catArt[p.slug]}</g>
+</g>
+${label(32, 192, p.label, t.muted)}
+${text(30, 228, esc(p.head), { size: 25, weight: 800, fill: t.ink, ls: -0.5 })}
+${text(32, 254, esc(p.sub), { size: 13, fill: t.muted, font: MONO })}`
+  return svg(W, H, `${p.label}: ${p.head}`, body)
+}
+
 // Stack row labels. Each sits inline beside a skillicons.dev strip of the
 // same rendered height (the README sets height="56" on both).
 const STACK = {
@@ -368,6 +432,7 @@ for (const [lang, c] of Object.entries(COPY)) {
     }
     for (const [slug, p] of Object.entries(c.row3)) files[slug] = rowTile(slug, p, t)
     for (const st of STACK[lang]) files[`stack-${st.slug}`] = stackLabel(st, t)
+    for (const cat of CATS[lang]) files[`cat-${cat.slug}`] = categoryCard(cat, t)
     for (const [name, data] of Object.entries(files)) {
       writeFileSync(join(out, `${name}-${lang}-${theme}.svg`), data)
       n++
