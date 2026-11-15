@@ -32,6 +32,7 @@ const MONO = "'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospa
 const GOLD = '#F0AD2F'
 const COPPER = '#CD7631'
 const TEAL = '#14CFB2'
+const LAVENDER_C = '#B6AFF1'
 
 // Neutral tiles follow the theme; the feature tiles (Malilion UI, Island,
 // Threads) keep their own colors in both themes.
@@ -258,52 +259,119 @@ ${text(40, 374, esc(c.islandSub[1]), { size: 15, fill: '#E3FCF7' })}`
   return svg(W, H, `${c.islandName} — ${c.islandSub.join(' ')}`, body)
 }
 
-const smallArt = {
-  contextlion: (t) => `<g transform="translate(330 84)" fill="none" stroke-width="3">
-    <rect x="-30" y="-38" width="60" height="78" rx="8" stroke="${t.ink}" opacity="0.85"/>
-    <text x="-19" y="-12" font-family="${MONO}" font-size="17" font-weight="700" fill="${TEAL}" stroke="none">#</text>
-    <path d="M-4 -17 H20 M-19 2 H20 M-19 16 H10 M-19 30 H16" stroke="${GOLD}" stroke-linecap="round"/></g>`,
-  'ninefold-court': () => `<g transform="translate(330 86) scale(0.8)">
-    <path d="M0 -58 C24 -24 40 -6 30 22 C22 46 -22 46 -30 22 C-40 -6 -18 -18 -10 -40 C-4 -24 4 -20 0 -58 Z" fill="${COPPER}"/>
-    <path d="M0 -14 C14 4 18 14 12 28 C6 40 -8 40 -12 28 C-16 16 -6 6 0 -14 Z" fill="${GOLD}"/>
-    <circle cx="-38" cy="-40" r="3" fill="${GOLD}"/><circle cx="40" cy="-30" r="2.5" fill="${GOLD}"/></g>`,
-  'cow-pasture': (t) => `<g transform="translate(330 84) scale(0.72)">
+// Illustration bands for the three project tiles, drawn in a 400 × 150 box.
+const cowFigure = (fill) => `
     <path d="M-48 -34 l20 26 -14 4 z M14 -34 l-20 26 14 4 z" fill="${COPPER}"/>
-    <rect x="-40" y="-20" width="48" height="58" rx="22" fill="${t === THEMES.dark ? '#F1EDE6' : '#FFFFFF'}" stroke="${t.ink}" stroke-opacity="0.2"/>
-    <ellipse cx="-16" cy="26" rx="20" ry="13" fill="${COPPER}"/>
+    <rect x="-40" y="-20" width="48" height="58" rx="22" fill="${fill}" stroke="#1A1410" stroke-opacity="0.15"/>
+    <ellipse cx="-16" cy="26" rx="20" ry="13" fill="#E9A07A"/>
     <circle cx="-22" cy="26" r="2.5" fill="#1A1410"/><circle cx="-10" cy="26" r="2.5" fill="#1A1410"/>
-    <circle cx="-26" cy="0" r="3.5" fill="#1A1410"/><circle cx="-6" cy="0" r="3.5" fill="#1A1410"/>
-    <path d="M30 -40 L48 -20 L60 -30 L76 -6" fill="none" stroke="#2BA84A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>`,
+    <circle cx="-26" cy="0" r="3.5" fill="#1A1410"/><circle cx="-6" cy="0" r="3.5" fill="#1A1410"/>`
+
+const projArt = {
+  // A web page turning into a Markdown file.
+  contextlion: () => `
+    <defs><linearGradient id="pa-cl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2B2F6B"/><stop offset="1" stop-color="#3E3A8C"/></linearGradient></defs>
+    <rect width="400" height="150" fill="url(#pa-cl)"/>
+    <g transform="translate(36 26)">
+      <rect width="132" height="98" rx="10" fill="#4A4FA0"/>
+      <rect width="132" height="18" rx="9" fill="#5A60B8"/><rect y="9" width="132" height="9" fill="#5A60B8"/>
+      <circle cx="12" cy="9" r="3" fill="#FF8A80"/><circle cx="22" cy="9" r="3" fill="${GOLD}"/><circle cx="32" cy="9" r="3" fill="${TEAL}"/>
+      <rect x="12" y="28" width="46" height="34" rx="4" fill="#8B91E3"/>
+      <path d="M16 58 l12 -14 9 9 7 -6 10 11 z" fill="#C9CCFF"/>
+      <rect x="66" y="30" width="54" height="7" rx="3.5" fill="#C9CCFF"/><rect x="66" y="44" width="40" height="6" rx="3" fill="#8B91E3"/><rect x="66" y="56" width="48" height="6" rx="3" fill="#8B91E3"/>
+      <rect x="12" y="72" width="108" height="6" rx="3" fill="#8B91E3"/><rect x="12" y="84" width="80" height="6" rx="3" fill="#8B91E3"/>
+    </g>
+    <path d="M180 75 h30" stroke="${GOLD}" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 9"/>
+    <path d="M210 64 l14 11 -14 11" fill="none" stroke="${GOLD}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M196 34 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4z" fill="#FFFFFF" opacity="0.85"/>
+    <g transform="translate(238 18)">
+      <rect width="128" height="114" rx="12" fill="#F5F3FF"/>
+      <text x="14" y="34" font-family="${MONO}" font-size="22" font-weight="700" fill="${TEAL}">#</text>
+      <rect x="34" y="20" width="66" height="10" rx="5" fill="${GOLD}"/>
+      <rect x="14" y="48" width="100" height="6" rx="3" fill="#B9B5D8"/><rect x="14" y="60" width="82" height="6" rx="3" fill="#B9B5D8"/>
+      <text x="14" y="86" font-family="${MONO}" font-size="14" font-weight="700" fill="${COPPER}">-</text><rect x="26" y="78" width="70" height="6" rx="3" fill="#B9B5D8"/>
+      <text x="14" y="102" font-family="${MONO}" font-size="14" font-weight="700" fill="${COPPER}">-</text><rect x="26" y="94" width="56" height="6" rx="3" fill="#B9B5D8"/>
+      ${paw(110, 98, 0.55, COPPER, 0.8)}
+    </g>`,
+  // A tiered palace at dusk, rising embers and a visual-novel dialogue box.
+  'ninefold-court': () => `
+    <defs><linearGradient id="pa-nc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2A0F22"/><stop offset="1" stop-color="#8A3424"/></linearGradient></defs>
+    <rect width="400" height="150" fill="url(#pa-nc)"/>
+    <circle cx="300" cy="46" r="26" fill="${GOLD}" opacity="0.9"/><circle cx="300" cy="46" r="40" fill="${GOLD}" opacity="0.15"/>
+    <g fill="#14060D">
+      <rect x="150" y="96" width="100" height="40"/>
+      <path d="M128 100 Q200 84 272 100 L262 92 Q200 78 138 92 Z"/>
+      <rect x="166" y="70" width="68" height="24"/>
+      <path d="M146 74 Q200 60 254 74 L246 66 Q200 54 154 66 Z"/>
+      <rect x="182" y="48" width="36" height="20"/>
+      <path d="M166 52 Q200 40 234 52 L228 44 Q200 34 172 44 Z"/>
+      <rect x="198" y="26" width="4" height="12"/>
+      <rect x="40" y="110" width="60" height="26"/><path d="M30 112 Q70 102 110 112 L104 106 Q70 98 36 106 Z"/>
+      <rect x="300" y="108" width="64" height="28"/><path d="M290 110 Q332 100 374 110 L368 104 Q332 96 296 104 Z"/>
+    </g>
+    ${[[96, 60, 3], [120, 34, 2], [262, 98, 2.5], [338, 80, 3], [70, 88, 2], [236, 26, 2]].map(([x, y, r], i) => `<circle cx="${x}" cy="${y}" r="${r}" fill="${i % 2 ? COPPER : GOLD}"/>`).join('')}
+    <rect x="36" y="112" width="328" height="30" rx="8" fill="#FFF7EC" opacity="0.94"/>
+    <rect x="48" y="104" width="54" height="16" rx="5" fill="${COPPER}"/>
+    <rect x="54" y="110" width="42" height="4" rx="2" fill="#FFF7EC"/>
+    <rect x="50" y="126" width="180" height="5" rx="2.5" fill="#8A6A5A"/><rect x="50" y="134" width="120" height="4" rx="2" fill="#B89A88"/>
+    <path d="M346 128 l6 6 6 -6 z" fill="${COPPER}"/>`,
+  // Green hills that fall like a losing chart, with a cow grazing on the dip.
+  'cow-pasture': () => `
+    <defs><linearGradient id="pa-cp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#BDE8FF"/><stop offset="1" stop-color="#EAF8FF"/></linearGradient></defs>
+    <rect width="400" height="150" fill="url(#pa-cp)"/>
+    <g>${[[40, 30, 22, 1], [66, 40, 18, 1], [92, 44, 26, 1], [118, 62, 14, 0], [144, 58, 24, 1], [170, 74, 18, 1]].map(([x, y, h, down]) => `<rect x="${x - 1}" y="${y - 6}" width="2" height="${h + 12}" fill="${down ? '#2BA84A' : '#E5484D'}"/><rect x="${x - 6}" y="${y}" width="12" height="${h}" rx="2" fill="${down ? '#2BA84A' : '#E5484D'}"/>`).join('')}</g>
+    <path d="M0 150 L0 70 L60 82 L110 76 L160 98 L210 92 L260 116 L310 110 L400 124 L400 150 Z" fill="#5BC46A"/>
+    <path d="M0 70 L60 82 L110 76 L160 98 L210 92 L260 116 L310 110 L400 124" fill="none" stroke="#2E8B3E" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M0 150 L0 112 Q120 96 240 128 T400 136 L400 150 Z" fill="#3FA653"/>
+    <g stroke="#8A5A3A" stroke-width="3" stroke-linecap="round"><path d="M28 132 v-18 M52 128 v-18 M76 126 v-18"/><path d="M24 118 h56" stroke-width="2"/></g>
+    <g transform="translate(316 104) scale(0.62)">${cowFigure('#FFFFFF')}</g>
+    <path d="M286 126 q4 -10 8 0 M296 128 q3 -8 6 0" fill="none" stroke="#2E8B3E" stroke-width="2"/>`,
 }
 
 function rowTile(slug, p, t) {
   const W = 400, H = 320
   const body = `
-<g clip-path="url(#tile)"><rect width="${W}" height="${H}" fill="${t.tile}"/></g>
-${label(36, 58, p.label, t.muted)}
-${smallArt[slug](t)}
-${text(34, 178, esc(p.head[0]), { size: 29, weight: 800, fill: t.ink, ls: -0.6 })}
-${text(34, 214, esc(p.head[1]), { size: 29, weight: 800, fill: t.ink, ls: -0.6 })}
-<rect x="36" y="238" width="328" height="1" fill="${t.line}"/>
-${text(36, 270, esc(p.name), { size: 16, weight: 700, fill: t.ink })}
-${text(36, 292, esc(p.meta), { size: 13.5, fill: t.muted })}`
+<g clip-path="url(#tile)">
+  <rect width="${W}" height="${H}" fill="${t.tile}"/>
+  <g transform="translate(0 8)">${projArt[slug]()}</g>
+</g>
+${label(32, 192, p.label, t.muted)}
+${text(30, 226, esc(p.head[0]), { size: 25, weight: 800, fill: t.ink, ls: -0.5 })}
+${text(30, 256, esc(p.head[1]), { size: 25, weight: 800, fill: t.ink, ls: -0.5 })}
+<text x="32" y="290" font-family="${FONT}" font-size="14" font-weight="700" fill="${t.ink}">${esc(p.name)}<tspan font-weight="400" font-size="13" fill="${t.muted}">  ·  ${esc(p.meta)}</tspan></text>`
   return svg(W, H, `${p.name} — ${p.head.join(' ')}`, body)
 }
+
+// Isometric block for the "now building" construction scene.
+const cube = (x, y, s, top, left, right) => `<g transform="translate(${x} ${y})">
+    <path d="M0 ${-s / 2} L${s} 0 L0 ${s / 2} L${-s} 0 Z" fill="${top}"/>
+    <path d="M${-s} 0 L0 ${s / 2} V${s * 1.1} L${-s} ${s * 0.6} Z" fill="${left}"/>
+    <path d="M${s} 0 L0 ${s / 2} V${s * 1.1} L${s} ${s * 0.6} Z" fill="${right}"/></g>`
 
 function nowBuilding(c, t) {
   const W = 720, H = 260
   const items = c.now
-    .map((s, i) => {
-      const x = 44 + (i % 2) * 320, y = 118 + Math.floor(i / 2) * 46
-      return `<circle cx="${x + 6}" cy="${y - 6}" r="6" fill="${TEAL}"/>${text(x + 24, y, esc(s), { size: 18, weight: 600, fill: t.ink })}`
-    })
+    .map((s, i) => `<circle cx="50" cy="${110 + i * 36 - 6}" r="6" fill="${TEAL}"/>${text(68, 110 + i * 36, esc(s), { size: 18, weight: 600, fill: t.ink })}`)
     .join('')
   const body = `
-<g clip-path="url(#tile)"><rect width="${W}" height="${H}" fill="${t.tile}"/></g>
+<g clip-path="url(#tile)">
+  <rect width="${W}" height="${H}" fill="${t.tile}"/>
+  <rect x="420" y="8" width="292" height="${H - 16}" fill="${t === THEMES.dark ? '#1F2430' : '#E6E8F0'}"/>
+  <g transform="translate(0 0)">
+    <rect x="652" y="40" width="8" height="186" fill="${COPPER}"/>
+    <path d="M652 48 H500 M652 48 L620 30 L652 30 Z" stroke="${COPPER}" stroke-width="6" fill="${COPPER}" stroke-linejoin="round"/>
+    <path d="M520 48 V96" stroke="${t.muted}" stroke-width="2"/>
+    ${cube(520, 112, 22, '#FFD27A', GOLD, '#C98A18')}
+    ${paw(520, 112, 0.5, '#7A4A0A', 0.8)}
+    ${cube(500, 196, 26, '#9FF0E2', TEAL, '#0E9C88')}
+    ${cube(552, 196, 26, '#D9D5FF', LAVENDER_C, '#8E86D6')}
+    ${cube(526, 168, 26, '#F2B58C', COPPER, '#A85A22')}
+    <rect x="440" y="226" width="252" height="8" rx="4" fill="${t.muted}" opacity="0.35"/>
+  </g>
+</g>
 <circle cx="49" cy="55" r="5" fill="${TEAL}"><animate attributeName="opacity" values="1;.25;1" dur="2s" repeatCount="indefinite"/></circle>
 ${label(64, 60, c.nowLabel, t.muted)}
-${items}
-${text(44, 226, esc(c.nowNote), { size: 14, fill: t.muted, font: MONO })}`
+${items}`
   return svg(W, H, `${c.nowLabel}: ${c.now.join(', ')}`, body)
 }
 
@@ -312,13 +380,22 @@ function threads(c) {
   const body = `
 <g clip-path="url(#tile)">
   <rect width="${W}" height="${H}" fill="${GOLD}"/>
-  ${paw(400, 196, 3.2, '#111', 0.1)}
+  <g transform="translate(318 44)">
+    <rect width="124" height="56" rx="20" fill="#FFFFFF"/>
+    <path d="M24 54 l-6 16 20 -14 z" fill="#FFFFFF"/>
+    <circle cx="40" cy="28" r="6" fill="#111"/><circle cx="62" cy="28" r="6" fill="#111"/><circle cx="84" cy="28" r="6" fill="#111"/>
+  </g>
+  <g transform="translate(296 116)">
+    <rect width="112" height="60" rx="20" fill="#111"/>
+    <path d="M90 58 l10 16 -24 -14 z" fill="#111"/>
+    ${paw(56, 32, 1.1, GOLD)}
+  </g>
 </g>
 ${label(40, 60, c.ctaLabel, '#5A3F08')}
 ${text(38, 120, esc(c.ctaHead[0]), { size: 36, weight: 800, fill: '#111', ls: -0.8 })}
 ${text(38, 162, esc(c.ctaHead[1]), { size: 36, weight: 800, fill: '#111', ls: -0.8 })}
-<rect x="40" y="188" width="${Math.round(textWidth(c.ctaSub, 16) + 36)}" height="40" rx="20" fill="#111"/>
-${text(58, 214, esc(c.ctaSub), { size: 16, weight: 700, fill: '#FFFFFF' })}`
+<rect x="40" y="194" width="${Math.round(textWidth(c.ctaSub, 16) + 36)}" height="40" rx="20" fill="#111"/>
+${text(58, 220, esc(c.ctaSub), { size: 16, weight: 700, fill: '#FFFFFF' })}`
   return svg(W, H, `${c.ctaHead.join(' ')} ${c.ctaSub}`, body)
 }
 
@@ -581,10 +658,12 @@ ${text(26, 372, esc(m.island[1]), { size: 34, weight: 800, fill: '#FFFFFF', ls: 
 function rowM(slug, p, m, t) {
   const W = 200, H = 240
   const body = `
-<g clip-path="url(#tile)"><rect width="${W}" height="${H}" fill="${t.tile}"/></g>
-<g transform="translate(-230 6)">${smallArt[slug](t)}</g>
-${text(24, 176, esc(p.name), { size: 25, weight: 800, fill: t.ink, ls: -0.5 })}
-${text(24, 208, esc(m.kinds[slug]), { size: 20, fill: t.muted })}`
+<g clip-path="url(#tile)">
+  <rect width="${W}" height="${H}" fill="${t.tile}"/>
+  <g transform="translate(-24 8) scale(0.62)">${projArt[slug]()}</g>
+</g>
+${text(20, 152, esc(p.name), { size: 25, weight: 800, fill: t.ink, ls: -0.5 })}
+${text(20, 186, esc(m.kinds[slug]), { size: 20, fill: t.muted })}`
   return svg(W, H, `${p.name} — ${p.head.join(' ')}`, body)
 }
 

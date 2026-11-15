@@ -3,9 +3,35 @@
 <defs><clipPath id="tile"><rect x="8" y="8" width="704" height="244" rx="24"/></clipPath></defs>
 
 
-<g clip-path="url(#tile)"><rect width="720" height="260" fill="#F2F3F5"/></g>
+<g clip-path="url(#tile)">
+  <rect width="720" height="260" fill="#F2F3F5"/>
+  <rect x="420" y="8" width="292" height="244" fill="#E6E8F0"/>
+  <g transform="translate(0 0)">
+    <rect x="652" y="40" width="8" height="186" fill="#CD7631"/>
+    <path d="M652 48 H500 M652 48 L620 30 L652 30 Z" stroke="#CD7631" stroke-width="6" fill="#CD7631" stroke-linejoin="round"/>
+    <path d="M520 48 V96" stroke="#62666E" stroke-width="2"/>
+    <g transform="translate(520 112)">
+    <path d="M0 -11 L22 0 L0 11 L-22 0 Z" fill="#FFD27A"/>
+    <path d="M-22 0 L0 11 V24.200000000000003 L-22 13.2 Z" fill="#F0AD2F"/>
+    <path d="M22 0 L0 11 V24.200000000000003 L22 13.2 Z" fill="#C98A18"/></g>
+    <g transform="translate(520 112) scale(0.5)" fill="#7A4A0A" opacity="0.8">
+    <ellipse cx="0" cy="8" rx="9" ry="7.5"/><ellipse cx="-10" cy="-4" rx="3.6" ry="4.6"/><ellipse cx="-3.6" cy="-10" rx="3.6" ry="4.8"/><ellipse cx="3.6" cy="-10" rx="3.6" ry="4.8"/><ellipse cx="10" cy="-4" rx="3.6" ry="4.6"/></g>
+    <g transform="translate(500 196)">
+    <path d="M0 -13 L26 0 L0 13 L-26 0 Z" fill="#9FF0E2"/>
+    <path d="M-26 0 L0 13 V28.6 L-26 15.6 Z" fill="#14CFB2"/>
+    <path d="M26 0 L0 13 V28.6 L26 15.6 Z" fill="#0E9C88"/></g>
+    <g transform="translate(552 196)">
+    <path d="M0 -13 L26 0 L0 13 L-26 0 Z" fill="#D9D5FF"/>
+    <path d="M-26 0 L0 13 V28.6 L-26 15.6 Z" fill="#B6AFF1"/>
+    <path d="M26 0 L0 13 V28.6 L26 15.6 Z" fill="#8E86D6"/></g>
+    <g transform="translate(526 168)">
+    <path d="M0 -13 L26 0 L0 13 L-26 0 Z" fill="#F2B58C"/>
+    <path d="M-26 0 L0 13 V28.6 L-26 15.6 Z" fill="#CD7631"/>
+    <path d="M26 0 L0 13 V28.6 L26 15.6 Z" fill="#A85A22"/></g>
+    <rect x="440" y="226" width="252" height="8" rx="4" fill="#62666E" opacity="0.35"/>
+  </g>
+</g>
 <circle cx="49" cy="55" r="5" fill="#14CFB2"><animate attributeName="opacity" values="1;.25;1" dur="2s" repeatCount="indefinite"/></circle>
 <text x="64" y="60" font-family="'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace" font-size="13" font-weight="600" fill="#62666E" text-anchor="start" letter-spacing="1.6">最近在做</text>
-<circle cx="50" cy="112" r="6" fill="#14CFB2"/><text x="68" y="118" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="18" font-weight="600" fill="#0E0E10" text-anchor="start">AI 互動學習體驗</text><circle cx="370" cy="112" r="6" fill="#14CFB2"/><text x="388" y="118" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="18" font-weight="600" fill="#0E0E10" text-anchor="start">小而專注的開發工具</text><circle cx="50" cy="158" r="6" fill="#14CFB2"/><text x="68" y="164" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="18" font-weight="600" fill="#0E0E10" text-anchor="start">敘事遊戲與 Web 3D</text><circle cx="370" cy="158" r="6" fill="#14CFB2"/><text x="388" y="164" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="18" font-weight="600" fill="#0E0E10" text-anchor="start">碼力獅品牌生態系</text>
-<text x="44" y="226" font-family="'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace" font-size="14" font-weight="400" fill="#62666E" text-anchor="start">Build → Learn → Share → Build again.</text>
+<circle cx="50" cy="104" r="6" fill="#14CFB2"/><text x="68" y="110" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="18" font-weight="600" fill="#0E0E10" text-anchor="start">AI 互動學習體驗</text><circle cx="50" cy="140" r="6" fill="#14CFB2"/><text x="68" y="146" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="18" font-weight="600" fill="#0E0E10" text-anchor="start">小而專注的開發工具</text><circle cx="50" cy="176" r="6" fill="#14CFB2"/><text x="68" y="182" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="18" font-weight="600" fill="#0E0E10" text-anchor="start">敘事遊戲與 Web 3D</text><circle cx="50" cy="212" r="6" fill="#14CFB2"/><text x="68" y="218" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="18" font-weight="600" fill="#0E0E10" text-anchor="start">碼力獅品牌生態系</text>
 </svg>
