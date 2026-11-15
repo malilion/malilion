@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 150" width="600" height="150" role="img" aria-label="文件與展示: 161 個元件的線上文件">
+<title>文件與展示: 161 個元件的線上文件</title>
+<defs><clipPath id="tile"><rect x="8" y="8" width="584" height="134" rx="24"/></clipPath></defs>
+
+<rect x="8" y="8" width="584" height="134" rx="24" fill="#171A1F"/>
+<g transform="translate(82 76) scale(1.2)">
+  <path d="M-30 -20 Q-15 -26 0 -18 V24 Q-15 16 -30 22 Z" fill="#F0AD2F"/>
+  <path d="M30 -20 Q15 -26 0 -18 V24 Q15 16 30 22 Z" fill="#F6D28B"/>
+  <path d="M-24 -10 Q-14 -14 -6 -9 M-24 0 Q-14 -4 -6 1 M-24 10 Q-14 6 -6 11" stroke="#7A4E0A" stroke-width="2" fill="none" opacity="0.6"/>
+  <path d="M6 -9 Q14 -14 24 -10 M6 1 Q14 -4 24 0 M6 11 Q14 6 24 10" stroke="#7A4E0A" stroke-width="2" fill="none" opacity="0.4"/></g>
+<text x="150" y="50" font-family="'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace" font-size="13" font-weight="600" fill="#9C968D" text-anchor="start" letter-spacing="1.6">文件與展示</text>
+<text x="148" y="88" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="23" font-weight="800" fill="#F1EDE6" text-anchor="start" letter-spacing="-0.4">161 個元件的線上文件</text>
+<text x="150" y="116" font-family="'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace" font-size="14" font-weight="400" fill="#9C968D" text-anchor="start">malilion.github.io/MalilionUI ↗</text>
+</svg>

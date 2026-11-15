@@ -1041,6 +1041,46 @@ ${phone ? '' : `${paw(60, H - 46, 0.7, GOLD, 0.7)}${paw(96, H - 56, 0.7, GOLD, 0
   return svg(W, H, `${f.thanks} ${f.sign.join(' ')} malilion.com · @malilion.dev · github.com/malilion`, body)
 }
 
+// Malilion UI docs + trailer link tiles (sit next to the live npm tiles).
+const UI_LINKS = {
+  en: { docsLabel: 'DOCS & DEMOS', docsHead: 'Live docs for all 161 components', docsUrl: 'malilion.github.io/MalilionUI ↗', docsShort: 'Docs ↗',
+        tLabel: 'TRAILER', tHead: 'Watch Malilion UI in motion', tUrl: 'YouTube ↗', tShort: 'Trailer ▶' },
+  zh: { docsLabel: '文件與展示', docsHead: '161 個元件的線上文件', docsUrl: 'malilion.github.io/MalilionUI ↗', docsShort: '文件 ↗',
+        tLabel: '預告片', tHead: '看 Malilion UI 動起來', tUrl: 'YouTube ↗', tShort: '預告片 ▶' },
+}
+const bookIcon = (x, y, s) => `<g transform="translate(${x} ${y}) scale(${s})">
+  <path d="M-30 -20 Q-15 -26 0 -18 V24 Q-15 16 -30 22 Z" fill="${GOLD}"/>
+  <path d="M30 -20 Q15 -26 0 -18 V24 Q15 16 30 22 Z" fill="#F6D28B"/>
+  <path d="M-24 -10 Q-14 -14 -6 -9 M-24 0 Q-14 -4 -6 1 M-24 10 Q-14 6 -6 11" stroke="#7A4E0A" stroke-width="2" fill="none" opacity="0.6"/>
+  <path d="M6 -9 Q14 -14 24 -10 M6 1 Q14 -4 24 0 M6 11 Q14 6 24 10" stroke="#7A4E0A" stroke-width="2" fill="none" opacity="0.4"/></g>`
+const playFrame = (x, y, w, h) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="12" fill="#2A2420" stroke="${GOLD}" stroke-opacity="0.4"/>
+  ${paw(x + w * 0.22, y + h * 0.7, 0.8, GOLD, 0.25)}<circle cx="${x + w / 2}" cy="${y + h / 2}" r="${h * 0.26}" fill="${GOLD}"/>
+  <path d="M${x + w / 2 - h * 0.08} ${y + h / 2 - h * 0.12} L${x + w / 2 + h * 0.13} ${y + h / 2} L${x + w / 2 - h * 0.08} ${y + h / 2 + h * 0.12} Z" fill="#1A1206"/>`
+
+function docsTile(u, t, phone = false) {
+  const W = phone ? 300 : 600, H = phone ? 200 : 150
+  const body = phone
+    ? `<rect x="8" y="8" width="${W - 16}" height="${H - 16}" rx="24" fill="${t.tile}"/>${bookIcon(76, 82, 1.1)}${text(26, 160, esc(u.docsShort), { size: 30, weight: 800, fill: t.ink })}`
+    : `<rect x="8" y="8" width="${W - 16}" height="${H - 16}" rx="24" fill="${t.tile}"/>
+${bookIcon(82, 76, 1.2)}
+${label(150, 50, u.docsLabel, t.muted)}
+${text(148, 88, esc(u.docsHead), { size: 23, weight: 800, fill: t.ink, ls: -0.4 })}
+${text(150, 116, esc(u.docsUrl), { size: 14, fill: t.muted, font: MONO })}`
+  return svg(W, H, `${u.docsLabel}: ${u.docsHead}`, body)
+}
+
+function trailerTile(u, t, phone = false) {
+  const W = phone ? 300 : 600, H = phone ? 200 : 150
+  const body = phone
+    ? `<rect x="8" y="8" width="${W - 16}" height="${H - 16}" rx="24" fill="${t.hero}"/>${playFrame(24, 28, 150, 86)}${text(26, 160, esc(u.tShort), { size: 30, weight: 800, fill: t.heroInk })}`
+    : `<rect x="8" y="8" width="${W - 16}" height="${H - 16}" rx="24" fill="${t.hero}"/>
+${label(36, 50, u.tLabel, GOLD)}
+${text(34, 88, esc(u.tHead), { size: 23, weight: 800, fill: t.heroInk, ls: -0.4 })}
+${text(36, 116, esc(u.tUrl), { size: 14, fill: t.heroMuted, font: MONO })}
+${playFrame(418, 28, 150, 94)}`
+  return svg(W, H, `${u.tLabel}: ${u.tHead}`, body)
+}
+
 // Stack tiles: one per group, with the Skill Icons (assets/brand/icons,
 // MIT) embedded as data URIs so the tile is a single self-contained image.
 const STACK_ICONS = {
@@ -1123,6 +1163,10 @@ for (const [lang, c] of Object.entries(COPY)) {
       'project-island-m': islandM(c, m),
       'now-building-m': nowM(c, t),
       'threads-m': threadsM(c, m),
+      'ui-docs': docsTile(UI_LINKS[lang], t),
+      'ui-docs-m': docsTile(UI_LINKS[lang], t, true),
+      'ui-trailer': trailerTile(UI_LINKS[lang], t),
+      'ui-trailer-m': trailerTile(UI_LINKS[lang], t, true),
       'foot-loop': loopTile(FOOT[lang], t),
       'foot-loop-m': loopTile(FOOT[lang], t, true),
       'foot-sign': signTile(FOOT[lang], t),

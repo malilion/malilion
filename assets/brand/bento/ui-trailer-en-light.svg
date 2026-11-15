@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 150" width="600" height="150" role="img" aria-label="TRAILER: Watch Malilion UI in motion">
+<title>TRAILER: Watch Malilion UI in motion</title>
+<defs><clipPath id="tile"><rect x="8" y="8" width="584" height="134" rx="24"/></clipPath></defs>
+
+<rect x="8" y="8" width="584" height="134" rx="24" fill="#0E0E10"/>
+<text x="36" y="50" font-family="'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace" font-size="13" font-weight="600" fill="#F0AD2F" text-anchor="start" letter-spacing="1.6">TRAILER</text>
+<text x="34" y="88" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="23" font-weight="800" fill="#FFFFFF" text-anchor="start" letter-spacing="-0.4">Watch Malilion UI in motion</text>
+<text x="36" y="116" font-family="'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace" font-size="14" font-weight="400" fill="#A6A8AD" text-anchor="start">YouTube ↗</text>
+<rect x="418" y="28" width="150" height="94" rx="12" fill="#2A2420" stroke="#F0AD2F" stroke-opacity="0.4"/>
+  <g transform="translate(451 93.8) scale(0.8)" fill="#F0AD2F" opacity="0.25">
+    <ellipse cx="0" cy="8" rx="9" ry="7.5"/><ellipse cx="-10" cy="-4" rx="3.6" ry="4.6"/><ellipse cx="-3.6" cy="-10" rx="3.6" ry="4.8"/><ellipse cx="3.6" cy="-10" rx="3.6" ry="4.8"/><ellipse cx="10" cy="-4" rx="3.6" ry="4.6"/></g><circle cx="493" cy="75" r="24.44" fill="#F0AD2F"/>
+  <path d="M485.48 63.72 L505.22 75 L485.48 86.28 Z" fill="#1A1206"/>
+</svg>

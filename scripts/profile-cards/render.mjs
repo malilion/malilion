@@ -1,6 +1,6 @@
 // Renders the profile README's GitHub cards with Malilion UI and writes standalone SVGs
 // (dark / light × en / zh-TW): stats, streak, languages, monthly bars and the paw heatmap,
-// plus the bento activity tiles (cards/bento.mjs) the README now uses.
+// plus the bento activity tiles (cards/bento.mjs) and the live npm tiles (cards/npm.mjs) the README uses.
 //
 // Usage: GITHUB_TOKEN=... GITHUB_USER=malilion node render.mjs [outDir]
 
@@ -11,6 +11,8 @@ import { fetchProfile } from './lib/github.mjs'
 import { composeHeatmap, renderHeatmap } from './cards/heatmap.mjs'
 import { renderStatCards } from './cards/stats.mjs'
 import { renderBentoCards } from './cards/bento.mjs'
+import { renderNpmCards } from './cards/npm.mjs'
+import { fetchNpm } from './lib/npm.mjs'
 
 const token = process.env.GITHUB_TOKEN
 const user = process.env.GITHUB_USER
@@ -18,6 +20,7 @@ const outDir = process.argv[2] ?? 'dist'
 if (!token || !user) throw new Error('GITHUB_TOKEN and GITHUB_USER are required')
 
 const profile = await fetchProfile(token, user)
+const npm = await fetchNpm('@malilion/ui')
 mkdirSync(outDir, { recursive: true })
 
 const write = (name, svg) => {
@@ -33,4 +36,6 @@ for (const [lang, suffix, locale] of [['en', '', en], ['zh', '-zh', zhTW]]) {
     for (const [name, svg] of Object.entries(cards)) write(`${name}-${theme}${suffix}.svg`, svg)
     for (const [name, svg] of Object.entries(renderBentoCards(profile, lang, theme))) write(`${name}-${theme}${suffix}.svg`, svg)
   }
+  // The npm tiles use their own warm-metal look, the same in both themes.
+  for (const [name, svg] of Object.entries(renderNpmCards(npm, lang))) write(`${name}${suffix}.svg`, svg)
 }

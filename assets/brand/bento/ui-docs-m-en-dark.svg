@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="300" height="200" role="img" aria-label="DOCS &amp; DEMOS: Live docs for all 161 components">
+<title>DOCS &amp; DEMOS: Live docs for all 161 components</title>
+<defs><clipPath id="tile"><rect x="8" y="8" width="284" height="184" rx="24"/></clipPath></defs>
+
+<rect x="8" y="8" width="284" height="184" rx="24" fill="#171A1F"/><g transform="translate(76 82) scale(1.1)">
+  <path d="M-30 -20 Q-15 -26 0 -18 V24 Q-15 16 -30 22 Z" fill="#F0AD2F"/>
+  <path d="M30 -20 Q15 -26 0 -18 V24 Q15 16 30 22 Z" fill="#F6D28B"/>
+  <path d="M-24 -10 Q-14 -14 -6 -9 M-24 0 Q-14 -4 -6 1 M-24 10 Q-14 6 -6 11" stroke="#7A4E0A" stroke-width="2" fill="none" opacity="0.6"/>
+  <path d="M6 -9 Q14 -14 24 -10 M6 1 Q14 -4 24 0 M6 11 Q14 6 24 10" stroke="#7A4E0A" stroke-width="2" fill="none" opacity="0.4"/></g><text x="26" y="160" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="30" font-weight="800" fill="#F1EDE6" text-anchor="start">Docs ↗</text>
+</svg>

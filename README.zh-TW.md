@@ -19,12 +19,11 @@
 --><a href="https://www.threads.com/@malilion.dev"><picture><source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/brand/bento/threads-m-zh-dark.svg"><source media="(max-width: 600px)" srcset="./assets/brand/bento/threads-m-zh-light.svg"><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/threads-zh-dark.svg"><img src="./assets/brand/bento/threads-zh-light.svg" width="39.9%" alt="追蹤我的開發筆記：Threads @malilion.dev" /></picture></a>
 </p>
 
-<p align="center">
-  <a href="https://www.npmjs.com/package/@malilion/ui"><img src="https://img.shields.io/npm/v/@malilion/ui?style=flat-square&label=%40malilion%2Fui&color=cd7631" alt="npm version" /></a>
-  <a href="https://www.npmjs.com/package/@malilion/ui"><img src="https://img.shields.io/npm/dm/@malilion/ui?style=flat-square&color=14cfb2" alt="npm downloads" /></a>
-  <a href="https://github.com/malilion/MalilionUI/stargazers"><img src="https://img.shields.io/github/stars/malilion/MalilionUI?style=flat-square&color=f0ad2f" alt="GitHub stars" /></a>
-  <br />
-  <a href="https://malilion.github.io/MalilionUI/"><b>Malilion UI 文件</b></a> · <a href="https://www.youtube.com/watch?v=ElXvObJbIFY"><b>預告片</b></a> · <a href="https://malilion.com"><b>malilion.com</b></a> · <a href="https://www.threads.com/@malilion.dev"><b>Threads</b></a>
+<p>
+<a href="https://www.npmjs.com/package/@malilion/ui"><picture><source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/npm-version-m-zh.svg"><img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/npm-version-zh.svg" width="49.9%" alt="@malilion/ui 的 npm 最新版本" /></picture></a><!--
+--><a href="https://www.npmjs.com/package/@malilion/ui"><picture><source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/npm-downloads-m-zh.svg"><img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/npm-downloads-zh.svg" width="49.9%" alt="@malilion/ui 近 30 天下載次數" /></picture></a><!--
+--><a href="https://malilion.github.io/MalilionUI/"><picture><source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/brand/bento/ui-docs-m-zh-dark.svg"><source media="(max-width: 600px)" srcset="./assets/brand/bento/ui-docs-m-zh-light.svg"><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/ui-docs-zh-dark.svg"><img src="./assets/brand/bento/ui-docs-zh-light.svg" width="49.9%" alt="Malilion UI 161 個元件的線上文件與展示" /></picture></a><!--
+--><a href="https://www.youtube.com/watch?v=ElXvObJbIFY"><picture><source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/brand/bento/ui-trailer-m-zh-dark.svg"><source media="(max-width: 600px)" srcset="./assets/brand/bento/ui-trailer-m-zh-light.svg"><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/ui-trailer-zh-dark.svg"><img src="./assets/brand/bento/ui-trailer-zh-light.svg" width="49.9%" alt="在 YouTube 觀看 Malilion UI 預告片" /></picture></a>
 </p>
 
 ## 其他作品
