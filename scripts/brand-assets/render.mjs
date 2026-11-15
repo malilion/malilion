@@ -1081,6 +1081,26 @@ ${playFrame(418, 28, 150, 94)}`
   return svg(W, H, `${u.tLabel}: ${u.tHead}`, body)
 }
 
+// Two call-to-action buttons right under the hero.
+const CTA = {
+  en: { exploreK: 'PROJECTS · GAMES · TOOLS', explore: 'Explore my work →', uiK: '161 COMPONENTS · VUE & REACT', ui: 'Try Malilion UI →' },
+  zh: { exploreK: '作品 · 遊戲 · 工具', explore: '看我的作品 →', uiK: '161 個元件 · VUE & REACT', ui: '試用 Malilion UI →' },
+}
+function ctaTile(kind, c, t, phone = false) {
+  const W = phone ? 300 : 600, H = phone ? 130 : 120
+  const primary = kind === 'explore'
+  const bg = primary ? GOLD : t.hero
+  const ink = primary ? '#111' : t.heroInk
+  const k = primary ? c.exploreK : c.uiK
+  const main = primary ? c.explore : c.ui
+  const body = `
+<rect x="8" y="8" width="${W - 16}" height="${H - 16}" rx="${phone ? 22 : 26}" fill="${bg}" ${primary ? '' : `stroke="${GOLD}" stroke-width="2"`}/>
+${phone ? '' : text(36, 48, esc(k), { size: 13, weight: 700, fill: primary ? '#5A3F08' : GOLD, font: MONO, ls: 1.8 })}
+${text(phone ? 24 : 34, phone ? 76 : 90, esc(main), { size: phone ? 28 : 34, weight: 800, fill: ink, ls: -0.6 })}
+${phone ? '' : (primary ? paw(W - 64, 64, 1.6, '#111', 0.14) : paw(W - 64, 64, 1.6, GOLD, 0.25))}`
+  return svg(W, H, `${main.replace(' →', '')}: ${k}`, body)
+}
+
 // Stack tiles: one per group, with the Skill Icons (assets/brand/icons,
 // MIT) embedded as data URIs so the tile is a single self-contained image.
 const STACK_ICONS = {
@@ -1163,6 +1183,10 @@ for (const [lang, c] of Object.entries(COPY)) {
       'project-island-m': islandM(c, m),
       'now-building-m': nowM(c, t),
       'threads-m': threadsM(c, m),
+      'cta-explore': ctaTile('explore', CTA[lang], t),
+      'cta-explore-m': ctaTile('explore', CTA[lang], t, true),
+      'cta-ui': ctaTile('ui', CTA[lang], t),
+      'cta-ui-m': ctaTile('ui', CTA[lang], t, true),
       'ui-docs': docsTile(UI_LINKS[lang], t),
       'ui-docs-m': docsTile(UI_LINKS[lang], t, true),
       'ui-trailer': trailerTile(UI_LINKS[lang], t),
