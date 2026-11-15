@@ -4,6 +4,7 @@
 
 <p>
 <a href="https://malilion.com"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/hero-zh-dark.svg"><img src="./assets/brand/bento/hero-zh-light.svg" width="100%" alt="碼力獅 MaliLion：把小點子做成真的作品。白天是軟體工程師，晚上做元件庫、開發工具和 3D 世界。" /></picture></a><br />
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/ticker-zh-dark.svg"><img src="./assets/brand/bento/ticker-zh-light.svg" width="100%" alt="碼力獅標語：公開開發、創意程式、開源、Local-first 工具、3D 世界" /></picture><br />
 <a href="https://malilion.github.io/MalilionUI/"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/malilion-ui-zh-dark.svg"><img src="./assets/brand/bento/malilion-ui-zh-light.svg" width="59.9%" alt="Malilion UI：161 個 Vue 3 與 React 元件，雙主題，零執行期相依" /></picture></a><!--
 --><a href="https://www.malilion.com/world"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/project-island-zh-dark.svg"><img src="./assets/brand/bento/project-island-zh-light.svg" width="39.9%" alt="碼力獅專案島：獅子形狀的互動式 3D 作品集" /></picture></a><br />
 <a href="https://github.com/malilion/ContextLion"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/contextlion-zh-dark.svg"><img src="./assets/brand/bento/contextlion-zh-light.svg" width="33.2%" alt="ContextLion：把網頁轉成 AI-ready 的 Markdown" /></picture></a><!--
@@ -23,20 +24,32 @@
 
 ## 其他作品
 
-| 作品 | 簡介 |
-| --- | --- |
-| **[DevTrace Lion](https://github.com/malilion/DevTraceLion)** | 直接在瀏覽器 DevTools 內進行 Local-first API 除錯，不需要任何權限 |
-| **[The Nocturne Atlas](https://github.com/malilion/The-Nocturne-Atlas)** | 由種子驅動的 3D 魔法世界，Three.js + TypeScript |
-| **[BlockUI](https://malilion.github.io/BlockUI/)** | 方塊 × 像素 × 合成遊戲風格的 React 元件庫，五種主題，符合 WCAG 2.2 AA |
-| **[MaliLion.com](https://malilion.com)** | 整合專案、AI 實驗、開發筆記、遊戲開發與個人品牌的核心網站 |
-| **[風之草原 Painterly Meadow](https://github.com/malilion/Painterly-Meadow)** | 單一 Three.js 檔案的手繪風 NPR 自然沙盒 |
-| **[Fuji Sakura Vista](https://github.com/malilion/fuji-sakura-vista)** | 用 Blender 程式生成的富士山與櫻花黎明場景，附 Three.js 即時展示 |
-| **[lyricreel](https://github.com/malilion/lyricreel)** | 輸入歌曲與歌詞，輸出跟著節拍走的歌詞 MV，每一格畫面都由程式繪製 |
-| **[riso-mv-kit](https://github.com/malilion/riso-mv-kit)** | 用程式繪製、逐格算圖的 Riso 印刷風繪本 MV |
-| **[oledfx](https://github.com/malilion/oledfx) · [inkfx](https://github.com/malilion/inkfx) · [fx-skill-kit](https://github.com/malilion/fx-skill-kit)** | 以程式生成視覺特效的 Procedural FX 工具組 |
-| **[Editorial Photo Poster](https://github.com/malilion/editorial-photo-poster)** | Codex skill：將照片轉化為簡約編輯風海報 |
-| **[Haute Jewelry From Photo](https://github.com/malilion/haute-jewelry-from-photo)** | Codex skill：把圖片氛圍與造型轉譯為原創高級珠寶概念 |
-| **[Scenic Bookmark Travel Poster](https://github.com/malilion/scenic-bookmark-travel-poster)** | Codex skill：將旅遊照片轉化為日系紀念海報與書籤 |
+<table>
+<tr>
+<td width="33%" valign="top">
+<b>AI 與開發工具</b><br /><br />
+<a href="https://github.com/malilion/DevTraceLion"><b>DevTrace Lion</b></a><br /><sub>在 DevTools 內做 Local-first API 除錯，不需任何權限</sub><br /><br />
+<a href="https://github.com/malilion/editorial-photo-poster"><b>Editorial Photo Poster</b></a><br /><sub>Codex skill：照片轉成簡約編輯風海報</sub><br /><br />
+<a href="https://github.com/malilion/haute-jewelry-from-photo"><b>Haute Jewelry From Photo</b></a><br /><sub>Codex skill：圖片氛圍轉成高級珠寶概念</sub><br /><br />
+<a href="https://github.com/malilion/scenic-bookmark-travel-poster"><b>Scenic Bookmark Travel Poster</b></a><br /><sub>Codex skill：旅遊照片轉成日系紀念海報與書籤</sub><br /><br />
+</td>
+<td width="33%" valign="top">
+<b>互動世界</b><br /><br />
+<a href="https://github.com/malilion/The-Nocturne-Atlas"><b>The Nocturne Atlas</b></a><br /><sub>由種子驅動的 3D 魔法世界，Three.js + TypeScript</sub><br /><br />
+<a href="https://github.com/malilion/Painterly-Meadow"><b>風之草原 Painterly Meadow</b></a><br /><sub>單一 Three.js 檔案的手繪風 NPR 自然沙盒</sub><br /><br />
+<a href="https://github.com/malilion/fuji-sakura-vista"><b>Fuji Sakura Vista</b></a><br /><sub>Blender 程式生成的富士山黎明場景，附 Three.js 展示</sub><br /><br />
+</td>
+<td width="33%" valign="top">
+<b>設計與創意程式</b><br /><br />
+<a href="https://malilion.github.io/BlockUI/"><b>BlockUI</b></a><br /><sub>像素合成遊戲風 React 元件庫，五種主題，WCAG 2.2 AA</sub><br /><br />
+<a href="https://github.com/malilion/lyricreel"><b>lyricreel</b></a><br /><sub>輸入歌曲與歌詞，輸出跟著節拍走的歌詞 MV</sub><br /><br />
+<a href="https://github.com/malilion/riso-mv-kit"><b>riso-mv-kit</b></a><br /><sub>用程式繪製的 Riso 印刷風繪本 MV</sub><br /><br />
+<a href="https://github.com/malilion/oledfx"><b>oledfx</b></a> · <a href="https://github.com/malilion/inkfx"><b>inkfx</b></a> · <a href="https://github.com/malilion/fx-skill-kit"><b>fx-skill-kit</b></a><br /><sub>以程式生成視覺特效的 FX 工具組</sub><br /><br />
+</td>
+</tr>
+</table>
+
+<p align="right"><a href="https://github.com/malilion?tab=repositories"><b>看全部 repo →</b></a> · <a href="https://malilion.com"><b>更多內容在 malilion.com →</b></a></p>
 
 **技術棧** · .NET / C# / Laravel · Vue / React / TypeScript / Next.js · AWS / Docker / Cloudflare / Vercel · PostgreSQL / MySQL · Three.js / Godot
 

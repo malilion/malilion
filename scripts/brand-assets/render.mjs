@@ -6,6 +6,7 @@
 // Layout: every row is 1200 viewBox units wide, so all tiles share one scale
 // when the README sets their widths as percentages of the row.
 //   hero          1200 × 380
+//   ticker        1200 × 60   (animated slogan band)
 //   malilion-ui    720 × 420  |  project-island 480 × 420
 //   contextlion    400 × 320  |  ninefold-court 400 × 320  |  cow-pasture 400 × 320
 //   now-building   720 × 260  |  threads        480 × 260
@@ -31,8 +32,8 @@ const TEAL = '#14CFB2'
 // Neutral tiles follow the theme; the feature tiles (Malilion UI, Island,
 // Threads) keep their own colors in both themes.
 const THEMES = {
-  light: { tile: '#F2F3F5', ink: '#0E0E10', muted: '#62666E', line: '#E1E3E7', hero: '#0E0E10', heroInk: '#FFFFFF', heroMuted: '#A6A8AD', chip: '#26262B' },
-  dark: { tile: '#171A1F', ink: '#F1EDE6', muted: '#9C968D', line: '#2A2E35', hero: '#1E1A15', heroInk: '#F6F1E9', heroMuted: '#A89D8F', chip: '#2E2821' },
+  light: { tile: '#F2F3F5', ink: '#0E0E10', muted: '#62666E', line: '#E1E3E7', hero: '#0E0E10', heroInk: '#FFFFFF', heroMuted: '#A6A8AD', chip: '#26262B', ticker: '#B6AFF1', tickerInk: '#15131F' },
+  dark: { tile: '#171A1F', ink: '#F1EDE6', muted: '#9C968D', line: '#2A2E35', hero: '#1E1A15', heroInk: '#F6F1E9', heroMuted: '#A89D8F', chip: '#2E2821', ticker: '#2A2650', tickerInk: '#CFCAFF' },
 }
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
@@ -80,6 +81,7 @@ const COPY = {
     heroSub: 'Software engineer by day. Component libraries, dev tools and 3D worlds by night.',
     heroPills: ['malilion.com ↗', 'Threads @malilion.dev', '161 Vue & React components'],
     heroAria: 'MaliLion: I turn small ideas into real projects',
+    ticker: ['BUILD IN PUBLIC', 'CREATIVE CODING', 'OPEN SOURCE', 'AI × CODE × GAME', 'LOCAL-FIRST TOOLS', '3D WORLDS'],
     uiLabel: 'FLAGSHIP · NPM @malilion/ui',
     uiHead: '161 components later.',
     uiSub: ['Lion × tech × metal UI for Vue 3 and React.', 'TypeScript · 2 themes · 0 runtime deps'],
@@ -107,6 +109,7 @@ const COPY = {
     heroSub: '白天是軟體工程師，晚上做元件庫、開發工具和 3D 世界。',
     heroPills: ['malilion.com ↗', 'Threads @malilion.dev', '161 個 Vue / React 元件'],
     heroAria: '碼力獅 MaliLion：把小點子做成真的作品',
+    ticker: ['公開開發', '創意程式', '開源', 'AI × 程式 × 遊戲', 'LOCAL-FIRST 工具', '3D 世界'],
     uiLabel: '主力作品 · NPM @malilion/ui',
     uiHead: '做了 161 個元件之後',
     uiSub: ['獅子 × 科技 × 金屬風，Vue 3 與 React 通用。', 'TypeScript · 雙主題 · 零執行期相依'],
@@ -273,12 +276,30 @@ ${text(58, 214, esc(c.ctaSub), { size: 16, weight: 700, fill: '#FFFFFF' })}`
   return svg(W, H, `${c.ctaHead.join(' ')} ${c.ctaSub}`, body)
 }
 
+// Slogan ticker between the hero and the tiles. One copy of the slogans is
+// forced to a fixed length with textLength, so two copies side by side loop
+// seamlessly when the group slides left by exactly that length.
+function ticker(c, t) {
+  const W = 1200, H = 60
+  const line = c.ticker.map((s) => `${s}  ✳  `).join('')
+  const L = Math.round(textWidth(line, 15) + 40)
+  const copy = (x) => `<text x="${x}" y="36" font-family="${MONO}" font-size="15" font-weight="600" letter-spacing="1.5" fill="${t.tickerInk}" textLength="${L}" lengthAdjust="spacing" xml:space="preserve">${esc(line)}</text>`
+  const body = `
+<defs><clipPath id="band"><rect x="8" y="6" width="${W - 16}" height="${H - 12}" rx="24"/></clipPath></defs>
+<rect x="8" y="6" width="${W - 16}" height="${H - 12}" rx="24" fill="${t.ticker}"/>
+<g clip-path="url(#band)"><g class="run">${copy(24)}${copy(24 + L)}${copy(24 + 2 * L)}</g></g>`
+  return svg(W, H, c.ticker.join(' · '), body, {
+    style: `.run{animation:run ${Math.round(L / 40)}s linear infinite}@keyframes run{to{transform:translateX(-${L}px)}}@media (prefers-reduced-motion:reduce){.run{animation:none}}`,
+  })
+}
+
 // ---------- Write ----------
 let n = 0
 for (const [lang, c] of Object.entries(COPY)) {
   for (const [theme, t] of Object.entries(THEMES)) {
     const files = {
       hero: hero(c, t),
+      ticker: ticker(c, t),
       'malilion-ui': malilionUi(c),
       'project-island': island(c),
       'now-building': nowBuilding(c, t),
