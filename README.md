@@ -27,20 +27,20 @@
 <table>
 <tr>
 <td width="33%" valign="top">
-<b>AI & dev tools</b><br /><br />
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/cat-ai-tools-en-dark.svg"><img src="./assets/brand/bento/cat-ai-tools-en-light.svg" width="100%" alt="AI & dev tools" /></picture><br /><br />
 <a href="https://github.com/malilion/DevTraceLion"><b>DevTrace Lion</b></a><br /><sub>Local-first API debugging inside DevTools, zero permissions</sub><br /><br />
 <a href="https://github.com/malilion/editorial-photo-poster"><b>Editorial Photo Poster</b></a><br /><sub>Codex skill: photos into restrained editorial posters</sub><br /><br />
 <a href="https://github.com/malilion/haute-jewelry-from-photo"><b>Haute Jewelry From Photo</b></a><br /><sub>Codex skill: visual mood into haute joaillerie concepts</sub><br /><br />
 <a href="https://github.com/malilion/scenic-bookmark-travel-poster"><b>Scenic Bookmark Travel Poster</b></a><br /><sub>Codex skill: travel photos into souvenir posters</sub><br /><br />
 </td>
 <td width="33%" valign="top">
-<b>Interactive worlds</b><br /><br />
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/cat-worlds-en-dark.svg"><img src="./assets/brand/bento/cat-worlds-en-light.svg" width="100%" alt="Interactive worlds" /></picture><br /><br />
 <a href="https://github.com/malilion/The-Nocturne-Atlas"><b>The Nocturne Atlas</b></a><br /><sub>Seed-driven 3D wizarding world, Three.js + TypeScript</sub><br /><br />
 <a href="https://github.com/malilion/Painterly-Meadow"><b>Painterly Meadow</b></a><br /><sub>Hand-painted NPR nature sandbox in one Three.js file</sub><br /><br />
 <a href="https://github.com/malilion/fuji-sakura-vista"><b>Fuji Sakura Vista</b></a><br /><sub>Procedural Blender scene of Fuji at dawn, with a Three.js showcase</sub><br /><br />
 </td>
 <td width="33%" valign="top">
-<b>Design & creative coding</b><br /><br />
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/cat-creative-en-dark.svg"><img src="./assets/brand/bento/cat-creative-en-light.svg" width="100%" alt="Design & creative coding" /></picture><br /><br />
 <a href="https://malilion.github.io/BlockUI/"><b>BlockUI</b></a><br /><sub>Pixel-crafting React UI, five themes, WCAG 2.2 AA</sub><br /><br />
 <a href="https://github.com/malilion/lyricreel"><b>lyricreel</b></a><br /><sub>Song + lyrics in, beat-synced lyric video out</sub><br /><br />
 <a href="https://github.com/malilion/riso-mv-kit"><b>riso-mv-kit</b></a><br /><sub>Riso-print picture-book music videos drawn in code</sub><br /><br />
