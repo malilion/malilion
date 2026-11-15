@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" width="400" height="320" role="img" aria-label="ContextLion — 讓整個網路 變得 AI-ready">
+<title>ContextLion — 讓整個網路 變得 AI-ready</title>
+<defs><clipPath id="tile"><rect x="8" y="8" width="384" height="304" rx="24"/></clipPath></defs>
+
+
+<g clip-path="url(#tile)"><rect width="400" height="320" fill="#171A1F"/></g>
+<text x="36" y="58" font-family="'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace" font-size="13" font-weight="600" fill="#9C968D" text-anchor="start" letter-spacing="1.6">瀏覽器擴充功能</text>
+<g transform="translate(330 84)" fill="none" stroke-width="3">
+    <rect x="-30" y="-38" width="60" height="78" rx="8" stroke="#F1EDE6" opacity="0.85"/>
+    <text x="-19" y="-12" font-family="'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace" font-size="17" font-weight="700" fill="#14CFB2" stroke="none">#</text>
+    <path d="M-4 -17 H20 M-19 2 H20 M-19 16 H10 M-19 30 H16" stroke="#F0AD2F" stroke-linecap="round"/></g>
+<text x="34" y="178" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="29" font-weight="800" fill="#F1EDE6" text-anchor="start" letter-spacing="-0.6">讓整個網路</text>
+<text x="34" y="214" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="29" font-weight="800" fill="#F1EDE6" text-anchor="start" letter-spacing="-0.6">變得 AI-ready</text>
+<rect x="36" y="238" width="328" height="1" fill="#2A2E35"/>
+<text x="36" y="270" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="16" font-weight="700" fill="#F1EDE6" text-anchor="start">ContextLion</text>
+<text x="36" y="292" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="13.5" font-weight="400" fill="#9C968D" text-anchor="start">網頁 → Markdown · Local-first</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" width="400" height="320" role="img" aria-label="九重燼 — A visual novel, built in public.">
+<title>九重燼 — A visual novel, built in public.</title>
+<defs><clipPath id="tile"><rect x="8" y="8" width="384" height="304" rx="24"/></clipPath></defs>
+
+
+<g clip-path="url(#tile)"><rect width="400" height="320" fill="#F2F3F5"/></g>
+<text x="36" y="58" font-family="'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace" font-size="13" font-weight="600" fill="#62666E" text-anchor="start" letter-spacing="1.6">VISUAL NOVEL · SERIES</text>
+<g transform="translate(330 86) scale(0.8)">
+    <path d="M0 -58 C24 -24 40 -6 30 22 C22 46 -22 46 -30 22 C-40 -6 -18 -18 -10 -40 C-4 -24 4 -20 0 -58 Z" fill="#CD7631"/>
+    <path d="M0 -14 C14 4 18 14 12 28 C6 40 -8 40 -12 28 C-16 16 -6 6 0 -14 Z" fill="#F0AD2F"/>
+    <circle cx="-38" cy="-40" r="3" fill="#F0AD2F"/><circle cx="40" cy="-30" r="2.5" fill="#F0AD2F"/></g>
+<text x="34" y="178" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="29" font-weight="800" fill="#0E0E10" text-anchor="start" letter-spacing="-0.6">A visual novel,</text>
+<text x="34" y="214" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="29" font-weight="800" fill="#0E0E10" text-anchor="start" letter-spacing="-0.6">built in public.</text>
+<rect x="36" y="238" width="328" height="1" fill="#E1E3E7"/>
+<text x="36" y="270" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="16" font-weight="700" fill="#0E0E10" text-anchor="start">九重燼</text>
+<text x="36" y="292" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="13.5" font-weight="400" fill="#62666E" text-anchor="start">Vue 3 · PixiJS · Ink.js</text>
+</svg>
