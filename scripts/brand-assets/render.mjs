@@ -12,7 +12,7 @@
 //   now-building   720 × 260  |  threads        480 × 260
 //   stack-*        600 × 240  (2 × 2 grid, icons embedded from assets/brand/icons)
 //   cat-*          400 × 280  (heads each column of the project index)
-//   experience    1200 × 400  |  certifications 1200 × 330
+//   role-1..3      400 × 300 each  |  exp-quote 480 × 280  |  certs 720 × 280
 //   *-m           phone versions, swapped in under 600px (see MOBILE below)
 // Each SVG keeps an 8-unit transparent margin, which becomes the gutter
 // between tiles that sit side by side.
@@ -580,11 +580,12 @@ const EXP = {
     now: 'NOW',
     role: 'Software Engineer',
     stops: [
-      { years: '2023', org: 'Startup company', tech: ['Laravel · MySQL · REST APIs', 'Docker · enterprise systems'] },
-      { years: '2024 — 2026', org: 'Industrial computer company', tech: ['ASP.NET Core · Vue.js', 'MSSQL / Oracle · internal platforms'] },
-      { years: '2026 — now', org: 'Technology company', tech: ['Vue.js · .NET Core APIs', 'Architecture · team practices'] },
+      { years: '2023', org: 'Startup company', short: 'Startup', tech: ['Laravel · MySQL · REST APIs', 'Docker · enterprise systems'] },
+      { years: '2024 — 2026', org: 'Industrial computer company', short: 'Industrial PC', tech: ['ASP.NET Core · Vue.js', 'MSSQL / Oracle · internal platforms'] },
+      { years: '2026 — now', org: 'Technology company', short: 'Tech company', tech: ['Vue.js · .NET Core APIs', 'Architecture · team practices'] },
     ],
     quote: ['I turn real operational problems into maintainable systems,', 'then carry what I learn into side projects and open source.'],
+    quote4: ['I turn real operational problems', 'into maintainable systems, then', 'carry what I learn into side', 'projects and open source.'],
     certLabel: 'CERTIFICATIONS',
     aria: 'Experience: 2023 startup, 2024–2026 industrial computer company, 2026–now technology company',
   },
@@ -593,45 +594,17 @@ const EXP = {
     now: '現在',
     role: '軟體工程師',
     stops: [
-      { years: '2023', org: '新創公司', tech: ['Laravel · MySQL · REST API', 'Docker · 企業內部系統'] },
-      { years: '2024～2026', org: '工業電腦公司', tech: ['ASP.NET Core · Vue.js', 'MSSQL / Oracle · 內部平台'] },
-      { years: '2026～現在', org: '科技業', tech: ['Vue.js · .NET Core API', '系統架構 · 團隊開發規範'] },
+      { years: '2023', org: '新創公司', short: '新創公司', tech: ['Laravel · MySQL · REST API', 'Docker · 企業內部系統'] },
+      { years: '2024～2026', org: '工業電腦公司', short: '工業電腦', tech: ['ASP.NET Core · Vue.js', 'MSSQL / Oracle · 內部平台'] },
+      { years: '2026～現在', org: '科技業', short: '科技業', tech: ['Vue.js · .NET Core API', '系統架構 · 團隊開發規範'] },
     ],
     quote: ['把真實營運問題轉成可維護的系統，', '再把學到的東西帶進 Side Project 與開源作品。'],
+    quote4: ['把真實營運問題', '轉成可維護的系統，', '再把學到的東西帶進', 'Side Project 與開源作品。'],
     certLabel: '證照',
     aria: '工作經歷：2023 新創公司、2024～2026 工業電腦公司、2026～現在 科技業',
   },
 }
 
-function experience(e, t) {
-  const W = 1200, H = 400
-  const xs = [56, 436, 816]
-  const stops = e.stops
-    .map((s, i) => {
-      const x = xs[i], cur = i === e.stops.length - 1
-      const node = cur
-        ? `<circle cx="${x + 10}" cy="112" r="16" fill="${GOLD}" opacity="0.25"><animate attributeName="r" values="12;20;12" dur="2.4s" repeatCount="indefinite"/></circle><circle cx="${x + 10}" cy="112" r="10" fill="${GOLD}"/>`
-        : `<circle cx="${x + 10}" cy="112" r="9" fill="${t.tile}" stroke="${t.ink}" stroke-width="3"/>`
-      const nowPill = cur ? `<rect x="${x + 34}" y="100" width="${Math.round(textWidth(e.now, 12) + 22)}" height="24" rx="12" fill="${GOLD}"/>${text(x + 45, 117, esc(e.now), { size: 12, weight: 700, fill: '#111', font: MONO, ls: 1 })}` : ''
-      return `${node}${nowPill}
-${text(x, 176, esc(s.years), { size: 30, weight: 800, fill: cur ? GOLD : t.ink, ls: -0.6 })}
-${text(x, 208, esc(e.role), { size: 18, weight: 700, fill: t.ink })}
-${text(x, 232, esc(s.org), { size: 16, fill: t.muted })}
-${text(x, 268, esc(s.tech[0]), { size: 13, fill: t.muted, font: MONO })}
-${text(x, 290, esc(s.tech[1]), { size: 13, fill: t.muted, font: MONO })}`
-    })
-    .join('')
-  const body = `
-<rect x="8" y="8" width="${W - 16}" height="${H - 16}" rx="24" fill="${t.tile}"/>
-${label(56, 62, e.label, t.muted)}
-<line x1="66" y1="112" x2="${xs[2] + 10}" y2="112" stroke="${t.line}" stroke-width="4" stroke-linecap="round"/>
-<line x1="${xs[1] + 10}" y1="112" x2="${xs[2] + 10}" y2="112" stroke="${GOLD}" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
-${stops}
-<rect x="56" y="318" width="4" height="48" rx="2" fill="${GOLD}"/>
-${text(76, 337, esc(e.quote[0]), { size: 17, fill: t.ink })}
-${text(76, 361, esc(e.quote[1]), { size: 17, fill: t.ink })}`
-  return svg(W, H, e.aria, body, { style: '@media (prefers-reduced-motion:reduce){animate{display:none}}' })
-}
 
 const CERTS = [
   { file: 'aws-cloud-practitioner', group: 0, name: ['AWS Certified', 'Cloud Practitioner'] },
@@ -644,26 +617,6 @@ const certImg = Object.fromEntries(
   CERTS.map((c) => [c.file, `data:image/webp;base64,${readFileSync(join(root, 'assets', 'certifications', `${c.file}.webp`)).toString('base64')}`]),
 )
 
-function certifications(e, t) {
-  const W = 1200, H = 330
-  const xs = [150, 360, 660, 870, 1080]
-  const badges = CERTS.map((c, i) => {
-    const x = xs[i]
-    return `<circle cx="${x}" cy="168" r="66" fill="${t.heroInk}" opacity="0.06"/>
-<image href="${certImg[c.file]}" x="${x - 58}" y="110" width="116" height="116"/>
-${text(x, 260, esc(c.name[0]), { size: 14, weight: 600, fill: t.heroMuted, anchor: 'middle' })}
-${text(x, 281, esc(c.name[1]), { size: 15, weight: 700, fill: t.heroInk, anchor: 'middle' })}`
-  }).join('')
-  const group = (x1, x2, s) => `<line x1="${x1}" y1="90" x2="${x2}" y2="90" stroke="${GOLD}" stroke-opacity="0.35" stroke-width="2"/>
-${text((x1 + x2) / 2, 84, s, { size: 13, weight: 700, fill: GOLD, font: MONO, anchor: 'middle', ls: 2 })}`
-  const body = `
-<rect x="8" y="8" width="${W - 16}" height="${H - 16}" rx="24" fill="${t.hero}"/>
-${label(56, 56, e.certLabel, t.heroMuted)}
-${group(84, 426, 'AWS')}
-${group(594, 1146, 'MICROSOFT MTA')}
-${badges}`
-  return svg(W, H, `${e.certLabel}: AWS Cloud Practitioner, AWS AI Practitioner, MTA Database, MTA Networking, MTA Software Development`, body)
-}
 
 
 // ---------- Phone tiles ----------
@@ -680,6 +633,7 @@ const MOBILE = {
     kinds: { contextlion: 'Extension', 'ninefold-court': 'Visual novel', 'cow-pasture': '3D dashboard' },
     cta: ['Follow', 'the build', 'notes.'],
     quote: ['I turn real operational problems into', 'maintainable systems, then carry what I', 'learn into side projects and open source.'],
+    quoteShort: ['Real problems →', 'maintainable', 'systems →', 'open source.'],
   },
   zh: {
     heroA: '把小點子，', heroB: '做成', heroC: '真的作品。',
@@ -689,6 +643,7 @@ const MOBILE = {
     kinds: { contextlion: '擴充功能', 'ninefold-court': '視覺小說', 'cow-pasture': '3D 儀表板' },
     cta: ['追蹤我的', '開發筆記'],
     quote: ['把真實營運問題轉成可維護的系統，', '再把學到的東西帶進', 'Side Project 與開源作品。'],
+    quoteShort: ['真實問題 →', '可維護的', '系統 →', '開源作品。'],
   },
 }
 
@@ -792,52 +747,7 @@ ${text(120, 292, '@malilion.dev', { size: 20, weight: 700, fill: '#FFFFFF', anch
   return svg(W, H, `${c.ctaHead.join(' ')} ${c.ctaSub}`, body)
 }
 
-function experienceM(e, m, t) {
-  const W = 600, H = 910
-  const stops = e.stops
-    .map((s, i) => {
-      const y = 132 + i * 214, cur = i === e.stops.length - 1
-      const node = cur
-        ? `<circle cx="56" cy="${y}" r="18" fill="${GOLD}" opacity="0.25"/><circle cx="56" cy="${y}" r="12" fill="${GOLD}"/>`
-        : `<circle cx="56" cy="${y}" r="11" fill="${t.tile}" stroke="${t.ink}" stroke-width="4"/>`
-      const yw = Math.round(textWidth(s.years, 36) + 104)
-      const pill = cur ? `<rect x="${yw}" y="${y - 18}" width="${Math.round(textWidth(e.now, 18) + 30)}" height="34" rx="17" fill="${GOLD}"/>${text(yw + 15, y + 5, esc(e.now), { size: 18, weight: 700, fill: '#111', font: MONO })}` : ''
-      return `${node}${pill}
-${text(92, y + 12, esc(s.years), { size: 36, weight: 800, fill: cur ? GOLD : t.ink, ls: -0.8 })}
-${text(92, y + 52, esc(e.role), { size: 23, weight: 700, fill: t.ink })}
-${text(92, y + 82, esc(s.org), { size: 21, fill: t.muted })}
-${text(92, y + 118, esc(s.tech[0]), { size: 19, fill: t.muted, font: MONO })}
-${text(92, y + 146, esc(s.tech[1]), { size: 19, fill: t.muted, font: MONO })}`
-    })
-    .join('')
-  const q = m.quote.map((s, i) => text(66, 806 + i * 34, esc(s), { size: 23, fill: t.ink })).join('')
-  const body = `
-<rect x="8" y="8" width="${W - 16}" height="${H - 16}" rx="28" fill="${t.tile}"/>
-${text(40, 70, esc(e.label), { size: 18, weight: 700, fill: t.muted, font: MONO, ls: 2 })}
-<line x1="56" y1="132" x2="56" y2="560" stroke="${t.line}" stroke-width="5" stroke-linecap="round"/>
-<line x1="56" y1="346" x2="56" y2="560" stroke="${GOLD}" stroke-width="5" stroke-linecap="round" opacity="0.6"/>
-${stops}
-<rect x="40" y="782" width="5" height="${m.quote.length * 34 + 4}" rx="2.5" fill="${GOLD}"/>
-${q}`
-  return svg(W, H, e.aria, body)
-}
 
-function certificationsM(e, t) {
-  const W = 600, H = 660
-  const badge = (c, x, y) => `<circle cx="${x}" cy="${y + 64}" r="72" fill="${t.heroInk}" opacity="0.06"/>
-<image href="${certImg[c.file]}" x="${x - 62}" y="${y + 2}" width="124" height="124"/>
-${text(x, y + 166, esc(c.name[0]), { size: 20, weight: 600, fill: t.heroMuted, anchor: 'middle' })}
-${text(x, y + 194, esc(c.name[1]), { size: 21, weight: 700, fill: t.heroInk, anchor: 'middle' })}`
-  const group = (y, s) => `${text(300, y, s, { size: 18, weight: 700, fill: GOLD, font: MONO, anchor: 'middle', ls: 3 })}<line x1="60" y1="${y + 12}" x2="540" y2="${y + 12}" stroke="${GOLD}" stroke-opacity="0.35" stroke-width="2"/>`
-  const body = `
-<rect x="8" y="8" width="${W - 16}" height="${H - 16}" rx="28" fill="${t.hero}"/>
-${text(40, 62, esc(e.certLabel), { size: 18, weight: 700, fill: t.heroMuted, font: MONO, ls: 2 })}
-${group(110, 'AWS')}
-${badge(CERTS[0], 180, 138)}${badge(CERTS[1], 420, 138)}
-${group(386, 'MICROSOFT MTA')}
-${badge(CERTS[2], 110, 414)}${badge(CERTS[3], 300, 414)}${badge(CERTS[4], 490, 414)}`
-  return svg(W, H, `${e.certLabel}: AWS Cloud Practitioner, AWS AI Practitioner, MTA Database, MTA Networking, MTA Software Development`, body)
-}
 
 // ---------- Footer ----------
 const FOOT = {
@@ -915,6 +825,90 @@ const STACK = {
 }
 const STACK_DOT = { core: GOLD, frontend: TEAL, cloud: '#B6AFF1', tools: COPPER }
 
+// ---------- Experience: three role tiles, a quote and certifications ----------
+// The role tiles share one timeline track drawn edge to edge at the same
+// height, so it reads as one line running through all three images.
+function chipsWrap(items, x0, y0, maxW, fs, bg, fg) {
+  let x = x0, y = y0
+  const h = Math.round(fs * 2)
+  return items
+    .map((it) => {
+      const w = Math.round(textWidth(it, fs) + fs * 1.6)
+      if (x + w > x0 + maxW) { x = x0; y += h + 8 }
+      const g = `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${h / 2}" fill="${bg}"/>${text(x + w / 2, y + h / 2 + fs * 0.36, esc(it), { size: fs, weight: 600, fill: fg, anchor: 'middle' })}`
+      x += w + 8
+      return g
+    })
+    .join('')
+}
+
+function roleTile(e, i, t) {
+  const W = 400, H = 300
+  const s = e.stops[i], cur = i === e.stops.length - 1
+  const bg = cur ? GOLD : t.tile, ink = cur ? '#111' : t.ink, mut = cur ? '#4A3508' : t.muted
+  const tech = s.tech.flatMap((l) => l.split(' · '))
+  const node = cur
+    ? `<circle cx="44" cy="40" r="15" fill="#111" opacity="0.15"><animate attributeName="r" values="11;17;11" dur="2.4s" repeatCount="indefinite"/></circle><circle cx="44" cy="40" r="9" fill="#111"/>`
+    : `<circle cx="44" cy="40" r="8" fill="${t.tile}" stroke="${t.ink}" stroke-width="3"/>`
+  const body = `
+<line x1="0" y1="40" x2="${W}" y2="40" stroke="${cur ? GOLD : t.line}" stroke-width="4"/>
+<rect x="8" y="8" width="${W - 16}" height="${H - 16}" rx="24" fill="${bg}"/>
+<line x1="8" y1="40" x2="${W - 8}" y2="40" stroke="${cur ? '#111' : t.line}" stroke-opacity="${cur ? 0.18 : 1}" stroke-width="4"/>
+${node}
+${cur ? `<rect x="${W - 32 - Math.round(textWidth(e.now, 12) + 24)}" y="28" width="${Math.round(textWidth(e.now, 12) + 24)}" height="24" rx="12" fill="#111"/>${text(W - 32 - Math.round(textWidth(e.now, 12) + 24) / 2, 45, esc(e.now), { size: 12, weight: 700, fill: GOLD, font: MONO, anchor: 'middle' })}` : ''}
+${text(34, 112, esc(s.years), { size: 38, weight: 800, fill: ink, ls: -1 })}
+${text(36, 146, esc(e.role), { size: 18, weight: 700, fill: ink })}
+${text(36, 170, esc(s.org), { size: 15, fill: mut })}
+${chipsWrap(tech, 36, 194, 328, 12.5, cur ? 'rgba(17,17,17,0.12)' : t.line, ink)}`
+  return svg(W, H, `${s.years}: ${e.role}, ${s.org} — ${tech.join(', ')}`, body, { style: '@media (prefers-reduced-motion:reduce){animate{display:none}}' })
+}
+
+function roleTileM(e, i, t) {
+  const W = 200, H = 220
+  const s = e.stops[i], cur = i === e.stops.length - 1
+  const bg = cur ? GOLD : t.tile, ink = cur ? '#111' : t.ink, mut = cur ? '#4A3508' : t.muted
+  const body = `
+<line x1="0" y1="36" x2="${W}" y2="36" stroke="${cur ? GOLD : t.line}" stroke-width="5"/>
+<rect x="6" y="6" width="${W - 12}" height="${H - 12}" rx="20" fill="${bg}"/>
+<circle cx="32" cy="36" r="9" fill="${cur ? '#111' : t.tile}" stroke="${cur ? '#111' : t.ink}" stroke-width="3"/>
+${text(22, 104, esc(s.years.split(/\s*[—～]\s*/)[0]), { size: 40, weight: 800, fill: ink, ls: -1 })}
+${text(24, 140, esc(cur ? e.now : s.years.split(/\s*[—～]\s*/)[1] ? `→ ${s.years.split(/\s*[—～]\s*/)[1]}` : ''), { size: 19, weight: 700, fill: cur ? ink : mut })}
+${text(24, 180, esc(s.short), { size: 20, weight: 600, fill: mut })}`
+  return svg(W, H, `${s.years}: ${e.role}, ${s.org}`, body)
+}
+
+function quoteTile(e, m, t, phone = false) {
+  const W = phone ? 240 : 480, H = phone ? 300 : 280
+  const lines = phone ? m.quoteShort : e.quote4
+  const fs = phone ? 22 : 20
+  const body = `
+<rect x="8" y="8" width="${W - 16}" height="${H - 16}" rx="24" fill="${t.hero}"/>
+${text(phone ? 22 : 36, phone ? 92 : 96, '“', { size: phone ? 90 : 110, weight: 800, fill: GOLD })}
+${lines.map((l, i) => text(phone ? 24 : 40, (phone ? 122 : 134) + i * (fs + 9), esc(l), { size: fs, weight: 600, fill: t.heroInk })).join('')}
+${text(phone ? 24 : 40, H - (phone ? 32 : 36), '— MaliLion', { size: phone ? 16 : 14, weight: 700, fill: GOLD, font: MONO })}`
+  return svg(W, H, lines.join(' '), body)
+}
+
+function certTile(e, t, phone = false) {
+  const W = phone ? 360 : 720, H = phone ? 300 : 280
+  const names = [['AWS Cloud', 'Practitioner'], ['AWS AI', 'Practitioner'], ['MTA', 'Database'], ['MTA', 'Networking'], ['MTA', 'Software Dev']]
+  const pos = phone
+    ? [[100, 88], [260, 88], [70, 198], [180, 198], [290, 198]]
+    : [[92, 104], [212, 104], [380, 104], [500, 104], [620, 104]]
+  const size = phone ? 76 : 92
+  const badges = CERTS.map((c, i) => {
+    const [x, y] = pos[i]
+    return `<image href="${certImg[c.file]}" x="${x - size / 2}" y="${y}" width="${size}" height="${size}"/>${phone ? '' : `${text(x, y + size + 26, names[i][0], { size: 12.5, fill: t.muted, anchor: 'middle' })}${text(x, y + size + 44, names[i][1], { size: 13.5, weight: 700, fill: t.ink, anchor: 'middle' })}`}`
+  }).join('')
+  const group = (x1, x2, y, label) => `${text((x1 + x2) / 2, y, label, { size: phone ? 15 : 12, weight: 700, fill: GOLD, font: MONO, anchor: 'middle', ls: 2 })}<line x1="${x1}" y1="${y + 10}" x2="${x2}" y2="${y + 10}" stroke="${GOLD}" stroke-opacity="0.4" stroke-width="2"/>`
+  const body = `
+<rect x="8" y="8" width="${W - 16}" height="${H - 16}" rx="24" fill="${t.tile}"/>
+${label(phone ? 26 : 36, phone ? 46 : 52, e.certLabel, t.muted, phone ? 16 : 13)}
+${phone ? `${group(40, 320, 70, 'AWS')}${group(30, 330, 178, 'MICROSOFT MTA')}` : `${group(40, 264, 82, 'AWS')}${group(320, 680, 82, 'MICROSOFT MTA')}`}
+${badges}`
+  return svg(W, H, `${e.certLabel}: AWS Cloud Practitioner, AWS AI Practitioner, MTA Database, MTA Networking, MTA Software Development`, body)
+}
+
 // Stack tiles: one per group, with the Skill Icons (assets/brand/icons,
 // MIT) embedded as data URIs so the tile is a single self-contained image.
 const STACK_ICONS = {
@@ -973,8 +967,14 @@ for (const [lang, c] of Object.entries(COPY)) {
       files[`stack-${st.slug}-m`] = stackTileM(st, t, theme)
     }
     for (const cat of CATS[lang]) files[`cat-${cat.slug}`] = categoryCard(cat, t)
-    files.experience = experience(EXP[lang], t)
-    files.certifications = certifications(EXP[lang], t)
+    EXP[lang].stops.forEach((_, i) => {
+      files[`role-${i + 1}`] = roleTile(EXP[lang], i, t)
+      files[`role-${i + 1}-m`] = roleTileM(EXP[lang], i, t)
+    })
+    files['exp-quote'] = quoteTile(EXP[lang], MOBILE[lang], t)
+    files['exp-quote-m'] = quoteTile(EXP[lang], MOBILE[lang], t, true)
+    files.certs = certTile(EXP[lang], t)
+    files['certs-m'] = certTile(EXP[lang], t, true)
     const m = MOBILE[lang]
     Object.assign(files, {
       'hero-m': heroM(c, m, t),
@@ -983,8 +983,6 @@ for (const [lang, c] of Object.entries(COPY)) {
       'project-island-m': islandM(c, m),
       'now-building-m': nowM(c, t),
       'threads-m': threadsM(c, m),
-      'experience-m': experienceM(EXP[lang], m, t),
-      'certifications-m': certificationsM(EXP[lang], t),
       footer: footer(FOOT[lang], t),
       'footer-m': footerM(FOOT[lang], t),
     })
