@@ -72,30 +72,12 @@
   </picture>
 </p>
 
-<details>
-<summary><b>Experience & certifications</b></summary>
+## Experience
 
-<br />
-
-| Period | Role | Focus |
-| --- | --- | --- |
-| 2023 | Software Engineer · Startup Company | Laravel, MySQL, REST APIs, Docker, enterprise systems |
-| 2024—2026 | Software Engineer · Industrial Computer Company | ASP.NET Core, Vue.js, MSSQL / Oracle, architecture, internal platforms |
-| 2026—Present | Software Engineer · Technology Company | Vue.js, .NET Core APIs, enterprise applications, architecture and team practices |
-
-> I care most about turning real operational problems into maintainable systems, then carrying what I learn into side projects and open source.
-
-<table>
-  <tr>
-    <td align="center" width="180"><img src="./assets/certifications/aws-cloud-practitioner.webp" width="100" alt="AWS Certified Cloud Practitioner" /><br /><b>AWS Certified<br />Cloud Practitioner</b></td>
-    <td align="center" width="180"><img src="./assets/certifications/aws-ai-practitioner.webp" width="100" alt="AWS Certified AI Practitioner" /><br /><b>AWS Certified<br />AI Practitioner</b></td>
-    <td align="center" width="180"><img src="./assets/certifications/mta-database.webp" width="100" alt="Microsoft MTA Database Fundamentals" /><br /><b>MTA Database<br />Fundamentals</b></td>
-    <td align="center" width="180"><img src="./assets/certifications/mta-networking.webp" width="100" alt="Microsoft MTA Networking Fundamentals" /><br /><b>MTA Networking<br />Fundamentals</b></td>
-    <td align="center" width="180"><img src="./assets/certifications/mta-software-development.webp" width="100" alt="Microsoft MTA Software Development Fundamentals" /><br /><b>MTA Software Development<br />Fundamentals</b></td>
-  </tr>
-</table>
-
-</details>
+<p>
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/experience-en-dark.svg"><img src="./assets/brand/bento/experience-en-light.svg" width="100%" alt="Experience: Software Engineer at a startup (2023; Laravel, MySQL, REST APIs, Docker), an industrial computer company (2024–2026; ASP.NET Core, Vue.js, MSSQL / Oracle) and a technology company (2026–now; Vue.js, .NET Core APIs, architecture)" /></picture><br />
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/certifications-en-dark.svg"><img src="./assets/brand/bento/certifications-en-light.svg" width="100%" alt="Certifications: AWS Certified Cloud Practitioner, AWS Certified AI Practitioner, Microsoft MTA Database, Networking and Software Development Fundamentals" /></picture>
+</p>
 
 <details>
 <summary><b>GitHub stats</b></summary>
