@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 170" width="200" height="170" role="img" aria-label="lyricreel: 輸入歌曲與歌詞，輸出跟著節拍走的歌詞 MV。">
+<title>lyricreel: 輸入歌曲與歌詞，輸出跟著節拍走的歌詞 MV。</title>
+<defs><clipPath id="tile"><rect x="8" y="8" width="184" height="154" rx="24"/></clipPath></defs>
+
+
+<g clip-path="url(#tile)"><rect width="200" height="170" fill="#F2F3F5"/><rect x="8" y="8" width="184" height="6" fill="#F0AD2F" opacity="1"/></g>
+<text x="20" y="54" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="22" font-weight="800" fill="#0E0E10" text-anchor="start" letter-spacing="-0.3">lyricreel</text>
+<rect x="20" y="120" width="59" height="30" rx="15" fill="#F0AD2F" opacity="0.22"/>
+<text x="49.5" y="140" font-family="'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace" font-size="16" font-weight="700" fill="#0E0E10" text-anchor="middle">REPO</text>
+</svg>

@@ -11,7 +11,7 @@
 //   contextlion    400 × 320  |  ninefold-court 400 × 320  |  cow-pasture 400 × 320
 //   now-building   720 × 260  |  threads        480 × 260
 //   stack-*        600 × 240  (2 × 2 grid, icons embedded from assets/brand/icons)
-//   cat-*          400 × 280  (heads each column of the project index)
+//   band-*        1200 × 128  |  proj-* 400 × 200 (project index: one banner per category, one card per project)
 //   role-1..3      400 × 300 each  |  exp-quote 480 × 280  |  certs 720 × 280
 //   *-m           phone versions, swapped in under 600px (see MOBILE below)
 // Each SVG keeps an 8-unit transparent margin, which becomes the gutter
@@ -559,19 +559,6 @@ const catArt = {
     <circle cx="344" cy="106" r="9" fill="${COPPER}"/>`,
 }
 
-function categoryCard(p, t) {
-  const W = 400, H = 280
-  const body = `
-<defs><clipPath id="card"><rect x="8" y="8" width="${W - 16}" height="${H - 16}" rx="24"/></clipPath></defs>
-<g clip-path="url(#card)">
-  <rect width="${W}" height="${H}" fill="${t.tile}"/>
-  <g transform="translate(0 8)">${catArt[p.slug]}</g>
-</g>
-${label(32, 192, p.label, t.muted)}
-${text(30, 228, esc(p.head), { size: 25, weight: 800, fill: t.ink, ls: -0.5 })}
-${text(32, 254, esc(p.sub), { size: 13, fill: t.muted, font: MONO })}`
-  return svg(W, H, `${p.label}: ${p.head}`, body)
-}
 
 // ---------- Experience timeline + certifications ----------
 const EXP = {
@@ -825,6 +812,122 @@ const STACK = {
 }
 const STACK_DOT = { core: GOLD, frontend: TEAL, cloud: '#B6AFF1', tools: COPPER }
 
+// ---------- Project index: category banners + one card per project ----------
+const GHU = 'https://github.com/malilion/'
+const PG = 'https://malilion.github.io/'
+const CAT_COLOR = { 'ai-tools': '#B6AFF1', games: TEAL, worlds: '#3C6FA8', creative: GOLD }
+const INDEX = {
+  'ai-tools': [
+    { slug: 'aura-rec', name: 'AURA REC', href: `${PG}AURA-REC/`, act: 'site', en: 'Free, privacy-first screen recorder and tutorial editor for macOS, Windows and the browser.', zh: '免費開源、隱私優先的螢幕錄影與教學剪輯工具，桌面與瀏覽器都能用。' },
+    { slug: 'stocklion', name: 'StockLion 股力獅', href: `${GHU}StockLion`, act: 'repo', en: 'Browser extension: Taiwan stock quotes and watchlists on any page.', zh: '瀏覽器擴充功能：在任何網頁看台股報價與自選清單。' },
+    { slug: 'ai-radar', name: 'Malilion AI Radar', href: `${PG}Malilion-AI-Radar/`, act: 'site', en: 'Hourly news and AI intelligence site, built and updated automatically.', zh: '每小時自動更新的新聞與 AI 情報網站。' },
+    { slug: 'devtrace', name: 'DevTrace Lion', href: `${GHU}DevTraceLion`, act: 'repo', en: 'Local-first API debugging inside DevTools, zero permissions.', zh: '在 DevTools 內做 Local-first API 除錯，不需任何權限。' },
+    { slug: 'landing-skill', name: 'Repo Landing Page Skill', href: `${PG}github-repo-landing-page-skill/`, act: 'site', en: 'Agent skill that turns any GitHub repo into a landing page.', zh: '把任何 GitHub repo 變成形象頁的 agent skill。' },
+    { slug: 'photo-skills', name: 'Codex photo skills', href: `${GHU}editorial-photo-poster`, act: 'repo', en: 'Photos into editorial posters, jewelry concepts and travel bookmarks.', zh: '照片轉成編輯風海報、珠寶概念與旅行書籤。' },
+  ],
+  games: [
+    { slug: 'powder-rush', name: 'POWDER RUSH 粉雪狂飆', href: `${PG}Snowboarding/`, act: 'play', en: '3D snowboarding: a 3,200 m run, 18 kickers, tricks and gates.', zh: '單板滑雪 3D 動作遊戲：3,200 公尺賽道、18 個跳台。' },
+    { slug: 'neon-taipei', name: 'Neon Taipei Overdrive', href: `${PG}neon-taipei-overdrive/`, act: 'play', en: 'Cyberpunk action on a rainy Taipei night, in one HTML file.', zh: '雨夜台北的賽博龐克動作遊戲，只有一個 HTML 檔。' },
+    { slug: 'shuangyue', name: '霜月問劍', href: `${PG}shuangyue-wenjian/`, act: 'play', en: 'Top-down wuxia action: three stages, two-phase bosses.', zh: '俯視角武俠動作，三關，每關有兩階段 Boss。' },
+    { slug: 'cloud-dive', name: 'Cloud Dive 雲海跳傘', href: `${PG}prachute/`, act: 'play', en: 'Skydive from 4,000 m through golden clouds onto the target.', zh: '從 4,000 公尺穿越金色雲海，降落在靶心。' },
+    { slug: 'star-garden', name: 'Star Garden Rumble', href: `${PG}star-garden-rumble/`, act: 'play', en: 'Low-poly physics defence on a floating island.', zh: '浮島上的低面數 3D 物理防守遊戲。' },
+    { slug: 'polar-bbq', name: 'Polar Bear BBQ 3D', href: `${PG}Polar-Bear-BBQ-Game/`, act: 'play', en: 'A grill-shop game modelled in Blender, played in Three.js.', zh: 'Blender 建模、Three.js 呈現的北極熊烤肉店。' },
+  ],
+  worlds: [
+    { slug: 'nocturne', name: 'The Nocturne Atlas', href: `${PG}The-Nocturne-Atlas/`, act: 'site', en: 'Seed-driven 3D wizarding world in Three.js and TypeScript.', zh: '由種子驅動的 3D 魔法世界，Three.js + TypeScript。' },
+    { slug: 'meadow', name: 'Painterly Meadow', zhName: '風之草原', href: `${PG}Painterly-Meadow/`, act: 'site', en: 'Hand-painted NPR nature sandbox in one Three.js file.', zh: '單一 Three.js 檔案的手繪風 NPR 自然沙盒。' },
+    { slug: 'fuji', name: 'Fuji Sakura Vista', href: `${PG}fuji-sakura-vista/`, act: 'site', en: 'Procedural Blender scene of Fuji at dawn, with a Three.js showcase.', zh: 'Blender 程式生成的富士山黎明場景，附 Three.js 展示。' },
+    { slug: 'bee', name: 'Realistic Bee & Flowers', href: `${PG}bee_scene/`, act: 'site', en: 'A honeybee forages a 3D meadow, in one offline HTML file.', zh: '蜜蜂在草原採花的互動 3D 場景，單一離線 HTML 檔。' },
+    { slug: 'gummy', name: 'Gummy/Bears.', href: `${PG}my-bear-jelly/`, act: 'site', en: 'Wobbly gummy bears, every pixel raymarched in one shader.', zh: '會晃動的軟糖熊，每個像素都由 shader 算出。' },
+    { slug: 'all-repos', name: 'All 32 repos', zhName: '全部 32 個 repo', href: 'https://github.com/malilion?tab=repositories', act: 'more', en: 'Everything else, from experiments to tools.', zh: '其他實驗、工具與作品都在這裡。' },
+  ],
+  creative: [
+    { slug: 'blockui', name: 'BlockUI', href: 'https://malilion.github.io/BlockUI/', act: 'site', en: 'Pixel-crafting React UI, five themes, WCAG 2.2 AA.', zh: '像素合成遊戲風 React 元件庫，五種主題，WCAG 2.2 AA。' },
+    { slug: 'lyricreel', name: 'lyricreel', href: `${GHU}lyricreel`, act: 'repo', en: 'Song + lyrics in, beat-synced lyric video out.', zh: '輸入歌曲與歌詞，輸出跟著節拍走的歌詞 MV。' },
+    { slug: 'riso', name: 'riso-mv-kit', href: `${GHU}riso-mv-kit`, act: 'repo', en: 'Riso-print picture-book music videos drawn in code.', zh: '用程式繪製的 Riso 印刷風繪本 MV。' },
+    { slug: 'inkfx', name: 'InkFX', href: `${PG}inkfx/`, act: 'site', en: 'Procedural ink and wuxia effects: 132 seeded effects.', zh: '程式生成的水墨武俠特效：132 種可重現效果。' },
+    { slug: 'oledfx', name: 'oledfx', href: `${PG}oledfx/`, act: 'site', en: 'Small-screen animations exported as C headers for OLEDs.', zh: '小螢幕動畫，匯出成 OLED 可用的 C 標頭檔。' },
+    { slug: 'fx-skill-kit', name: 'fx-skill-kit', href: `${PG}fx-skill-kit/`, act: 'site', en: 'Zero-dependency FX suite with quality gates and MCP tools.', zh: '零依賴特效套件，含品質檢查與 MCP 工具。' },
+  ],
+}
+const ACT = {
+  en: { play: '▶ PLAY', site: '↗ SITE', repo: 'REPO', more: 'VIEW ALL →', count: (n) => `${n} PROJECTS` },
+  zh: { play: '▶ 試玩', site: '↗ 網站', repo: 'REPO', more: '看全部 →', count: (n) => `${n} 個作品` },
+}
+
+function wrapLines(str, size, maxW, maxLines) {
+  // Words stay whole; a word wider than the line (long CJK text) breaks
+  // between characters instead.
+  const tokens = []
+  str.split(' ').forEach((word, wi) => {
+    if (textWidth(word, size) > maxW) [...word].forEach((ch, ci) => tokens.push({ t: ch, sp: wi > 0 && ci === 0 }))
+    else tokens.push({ t: word, sp: wi > 0 })
+  })
+  const lines = []
+  let cur = ''
+  for (const { t: tok, sp } of tokens) {
+    const next = cur ? cur + (sp ? ' ' : '') + tok : tok
+    if (textWidth(next, size) > maxW && cur) {
+      lines.push(cur)
+      cur = tok
+    } else cur = next
+  }
+  if (cur) lines.push(cur)
+  if (lines.length > maxLines) {
+    const kept = lines.slice(0, maxLines)
+    kept[maxLines - 1] = kept[maxLines - 1].replace(/[\s,，、]*\S?$/, '') + '…'
+    return kept
+  }
+  return lines
+}
+
+function catBanner(cat, count, lang, t, phone = false) {
+  const W = phone ? 600 : 1200, H = phone ? 150 : 128
+  const k = phone ? 0.6 : 0.75
+  const artW = 400 * k
+  const body = `
+<defs><clipPath id="art"><rect x="8" y="8" width="${artW}" height="${H - 16}" rx="0"/></clipPath></defs>
+<g clip-path="url(#tile)">
+  <rect width="${W}" height="${H}" fill="${t.tile}"/>
+  <g clip-path="url(#art)"><g transform="translate(8 ${(H - 150 * k) / 2}) scale(${k})">${catArt[cat.slug]}</g></g>
+</g>
+${phone
+  ? `${text(artW + 32, 66, esc(cat.label), { size: 18, weight: 700, fill: t.muted, font: MONO, ls: 2 })}${text(artW + 30, 108, ACT[lang].count(count), { size: 26, weight: 800, fill: t.ink })}`
+  : `${label(artW + 36, 50, cat.label, t.muted)}${text(artW + 34, 92, esc(cat.head), { size: 30, weight: 800, fill: t.ink, ls: -0.6 })}
+${text(W - 44, 50, ACT[lang].count(count), { size: 13, weight: 700, fill: CAT_COLOR[cat.slug] === GOLD ? '#B97A0F' : t.muted, font: MONO, anchor: 'end', ls: 2 })}
+${text(W - 44, 92, esc(cat.sub), { size: 15, fill: t.muted, font: MONO, anchor: 'end' })}`}`
+  return svg(W, H, `${cat.label}: ${cat.head}`, body)
+}
+
+function projectCard(item, cat, lang, t, phone = false) {
+  const W = phone ? 200 : 400, H = phone ? 170 : 200
+  const color = CAT_COLOR[cat]
+  const name = lang === 'zh' && item.zhName ? item.zhName : item.name
+  const more = item.act === 'more'
+  const bg = more ? GOLD : t.tile
+  const ink = more ? '#111' : t.ink
+  const mut = more ? '#3A2A06' : t.muted
+  const tag = ACT[lang][item.act]
+  const tagW = Math.round(textWidth(tag, phone ? 16 : 12) + (phone ? 22 : 20))
+  if (phone) {
+    const nl = wrapLines(name, 22, 160, 3)
+    const body = `
+<g clip-path="url(#tile)"><rect width="${W}" height="${H}" fill="${bg}"/><rect x="8" y="8" width="${W - 16}" height="6" fill="${more ? '#111' : color}" opacity="${more ? 0.2 : 1}"/></g>
+${nl.map((l, i) => text(20, 54 + i * 28, esc(l), { size: 22, weight: 800, fill: ink, ls: -0.3 })).join('')}
+<rect x="20" y="${H - 50}" width="${tagW}" height="30" rx="15" fill="${more ? '#111' : color}" opacity="${more ? 1 : 0.22}"/>
+${text(20 + tagW / 2, H - 30, esc(tag), { size: 16, weight: 700, fill: more ? GOLD : ink, font: MONO, anchor: 'middle' })}`
+    return svg(W, H, `${name}: ${item[lang]}`, body)
+  }
+  const dl = wrapLines(item[lang], 14.5, 330, 2)
+  const body = `
+<g clip-path="url(#tile)"><rect width="${W}" height="${H}" fill="${bg}"/><rect x="8" y="8" width="6" height="${H - 16}" fill="${more ? '#111' : color}" opacity="${more ? 0.2 : 1}"/></g>
+${text(36, 64, esc(name), { size: 23, weight: 800, fill: ink, ls: -0.4 })}
+${dl.map((l, i) => text(36, 98 + i * 22, esc(l), { size: 14.5, fill: mut })).join('')}
+<rect x="36" y="${H - 54}" width="${tagW}" height="26" rx="13" fill="${more ? '#111' : color}" opacity="${more ? 1 : 0.22}"/>
+${text(36 + tagW / 2, H - 36, esc(tag), { size: 12, weight: 700, fill: more ? GOLD : ink, font: MONO, anchor: 'middle', ls: 1 })}`
+  return svg(W, H, `${name}: ${item[lang]}`, body)
+}
+
 // ---------- Experience: three role tiles, a quote and certifications ----------
 // The role tiles share one timeline track drawn edge to edge at the same
 // height, so it reads as one line running through all three images.
@@ -966,7 +1069,15 @@ for (const [lang, c] of Object.entries(COPY)) {
       files[`stack-${st.slug}`] = stackTile(st, t, theme)
       files[`stack-${st.slug}-m`] = stackTileM(st, t, theme)
     }
-    for (const cat of CATS[lang]) files[`cat-${cat.slug}`] = categoryCard(cat, t)
+    for (const cat of CATS[lang]) {
+      const items = INDEX[cat.slug]
+      files[`band-${cat.slug}`] = catBanner(cat, items.filter((i) => i.act !== 'more').length, lang, t)
+      files[`band-${cat.slug}-m`] = catBanner(cat, items.filter((i) => i.act !== 'more').length, lang, t, true)
+      for (const item of items) {
+        files[`proj-${item.slug}`] = projectCard(item, cat.slug, lang, t)
+        files[`proj-${item.slug}-m`] = projectCard(item, cat.slug, lang, t, true)
+      }
+    }
     EXP[lang].stops.forEach((_, i) => {
       files[`role-${i + 1}`] = roleTile(EXP[lang], i, t)
       files[`role-${i + 1}-m`] = roleTileM(EXP[lang], i, t)

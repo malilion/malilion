@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 170" width="200" height="170" role="img" aria-label="Cloud Dive 雲海跳傘: Skydive from 4,000 m through golden clouds onto the target.">
+<title>Cloud Dive 雲海跳傘: Skydive from 4,000 m through golden clouds onto the target.</title>
+<defs><clipPath id="tile"><rect x="8" y="8" width="184" height="154" rx="24"/></clipPath></defs>
+
+
+<g clip-path="url(#tile)"><rect width="200" height="170" fill="#171A1F"/><rect x="8" y="8" width="184" height="6" fill="#14CFB2" opacity="1"/></g>
+<text x="20" y="54" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="22" font-weight="800" fill="#F1EDE6" text-anchor="start" letter-spacing="-0.3">Cloud Dive</text><text x="20" y="82" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="22" font-weight="800" fill="#F1EDE6" text-anchor="start" letter-spacing="-0.3">雲海跳傘</text>
+<rect x="20" y="120" width="78" height="30" rx="15" fill="#14CFB2" opacity="0.22"/>
+<text x="59" y="140" font-family="'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace" font-size="16" font-weight="700" fill="#F1EDE6" text-anchor="middle">▶ PLAY</text>
+</svg>
