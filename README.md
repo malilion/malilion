@@ -108,5 +108,11 @@
 </p>
 
 <p align="center">
-  <a href="https://malilion.com"><b>malilion.com</b></a> · <a href="https://www.threads.com/@malilion.dev"><b>Threads</b></a> · <a href="https://github.com/malilion?tab=repositories"><b>Repositories</b></a> · <a href="https://www.npmjs.com/package/@malilion/ui"><b>npm</b></a>
+  <a href="https://malilion.com"><img src="./assets/brand/logo-160.png" width="32" height="32" alt="malilion.com" /></a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://www.threads.com/@malilion.dev"><picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.simpleicons.org/threads/F1EDE6"><img src="https://cdn.simpleicons.org/threads/111111" width="32" height="32" alt="Threads @malilion.dev" /></picture></a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/malilion?tab=repositories"><picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.simpleicons.org/github/F1EDE6"><img src="https://cdn.simpleicons.org/github/111111" width="32" height="32" alt="GitHub Repositories" /></picture></a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://www.npmjs.com/package/@malilion/ui"><picture><source media="(prefers-color-scheme: dark)" srcset="https://cdn.simpleicons.org/npm/CB3837"><img src="https://cdn.simpleicons.org/npm/CB3837" width="32" height="32" alt="npm @malilion/ui" /></picture></a>
 </p>
