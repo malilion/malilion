@@ -72,30 +72,12 @@
   </picture>
 </p>
 
-<details>
-<summary><b>工作經歷與證照</b></summary>
+## 經歷與證照
 
-<br />
-
-| 時間 | 角色 | 主要方向 |
-| --- | --- | --- |
-| 2023 | 軟體工程師 · 新創公司 | Laravel、MySQL、REST API、Docker、企業內部系統 |
-| 2024～2026 | 軟體工程師 · 工業電腦公司 | ASP.NET Core、Vue.js、MSSQL / Oracle、系統架構、內部平台 |
-| 2026～現在 | 軟體工程師 · 科技業 | Vue.js、.NET Core API、企業應用、系統架構與團隊開發規範 |
-
-> 我最在意的是把真實營運問題轉成可維護的系統，再把工作中學到的東西延伸到 Side Project 與開源作品。
-
-<table>
-  <tr>
-    <td align="center" width="180"><img src="./assets/certifications/aws-cloud-practitioner.webp" width="100" alt="AWS Certified Cloud Practitioner" /><br /><b>AWS Certified<br />Cloud Practitioner</b></td>
-    <td align="center" width="180"><img src="./assets/certifications/aws-ai-practitioner.webp" width="100" alt="AWS Certified AI Practitioner" /><br /><b>AWS Certified<br />AI Practitioner</b></td>
-    <td align="center" width="180"><img src="./assets/certifications/mta-database.webp" width="100" alt="Microsoft MTA Database Fundamentals" /><br /><b>MTA Database<br />Fundamentals</b></td>
-    <td align="center" width="180"><img src="./assets/certifications/mta-networking.webp" width="100" alt="Microsoft MTA Networking Fundamentals" /><br /><b>MTA Networking<br />Fundamentals</b></td>
-    <td align="center" width="180"><img src="./assets/certifications/mta-software-development.webp" width="100" alt="Microsoft MTA Software Development Fundamentals" /><br /><b>MTA Software Development<br />Fundamentals</b></td>
-  </tr>
-</table>
-
-</details>
+<p>
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/experience-zh-dark.svg"><img src="./assets/brand/bento/experience-zh-light.svg" width="100%" alt="工作經歷：軟體工程師，2023 新創公司（Laravel、MySQL、REST API、Docker）、2024～2026 工業電腦公司（ASP.NET Core、Vue.js、MSSQL / Oracle）、2026～現在 科技業（Vue.js、.NET Core API、系統架構）" /></picture><br />
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/certifications-zh-dark.svg"><img src="./assets/brand/bento/certifications-zh-light.svg" width="100%" alt="證照：AWS Certified Cloud Practitioner、AWS Certified AI Practitioner、Microsoft MTA 資料庫、網路、軟體開發基礎" /></picture>
+</p>
 
 <details>
 <summary><b>GitHub 統計</b></summary>

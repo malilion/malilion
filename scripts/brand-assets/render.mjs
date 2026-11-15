@@ -12,6 +12,7 @@
 //   now-building   720 × 260  |  threads        480 × 260
 //   stack-*        400 × 64   (label beside a skillicons.dev strip)
 //   cat-*          400 × 280  (heads each column of the project index)
+//   experience    1200 × 400  |  certifications 1200 × 330
 // Each SVG keeps an 8-unit transparent margin, which becomes the gutter
 // between tiles that sit side by side.
 
@@ -390,6 +391,98 @@ ${text(32, 254, esc(p.sub), { size: 13, fill: t.muted, font: MONO })}`
   return svg(W, H, `${p.label}: ${p.head}`, body)
 }
 
+// ---------- Experience timeline + certifications ----------
+const EXP = {
+  en: {
+    label: 'EXPERIENCE · 2023 → NOW',
+    now: 'NOW',
+    role: 'Software Engineer',
+    stops: [
+      { years: '2023', org: 'Startup company', tech: ['Laravel · MySQL · REST APIs', 'Docker · enterprise systems'] },
+      { years: '2024 — 2026', org: 'Industrial computer company', tech: ['ASP.NET Core · Vue.js', 'MSSQL / Oracle · internal platforms'] },
+      { years: '2026 — now', org: 'Technology company', tech: ['Vue.js · .NET Core APIs', 'Architecture · team practices'] },
+    ],
+    quote: ['I turn real operational problems into maintainable systems,', 'then carry what I learn into side projects and open source.'],
+    certLabel: 'CERTIFICATIONS',
+    aria: 'Experience: 2023 startup, 2024–2026 industrial computer company, 2026–now technology company',
+  },
+  zh: {
+    label: '工作經歷 · 2023 → 現在',
+    now: '現在',
+    role: '軟體工程師',
+    stops: [
+      { years: '2023', org: '新創公司', tech: ['Laravel · MySQL · REST API', 'Docker · 企業內部系統'] },
+      { years: '2024～2026', org: '工業電腦公司', tech: ['ASP.NET Core · Vue.js', 'MSSQL / Oracle · 內部平台'] },
+      { years: '2026～現在', org: '科技業', tech: ['Vue.js · .NET Core API', '系統架構 · 團隊開發規範'] },
+    ],
+    quote: ['把真實營運問題轉成可維護的系統，', '再把學到的東西帶進 Side Project 與開源作品。'],
+    certLabel: '證照',
+    aria: '工作經歷：2023 新創公司、2024～2026 工業電腦公司、2026～現在 科技業',
+  },
+}
+
+function experience(e, t) {
+  const W = 1200, H = 400
+  const xs = [56, 436, 816]
+  const stops = e.stops
+    .map((s, i) => {
+      const x = xs[i], cur = i === e.stops.length - 1
+      const node = cur
+        ? `<circle cx="${x + 10}" cy="112" r="16" fill="${GOLD}" opacity="0.25"><animate attributeName="r" values="12;20;12" dur="2.4s" repeatCount="indefinite"/></circle><circle cx="${x + 10}" cy="112" r="10" fill="${GOLD}"/>`
+        : `<circle cx="${x + 10}" cy="112" r="9" fill="${t.tile}" stroke="${t.ink}" stroke-width="3"/>`
+      const nowPill = cur ? `<rect x="${x + 34}" y="100" width="${Math.round(textWidth(e.now, 12) + 22)}" height="24" rx="12" fill="${GOLD}"/>${text(x + 45, 117, esc(e.now), { size: 12, weight: 700, fill: '#111', font: MONO, ls: 1 })}` : ''
+      return `${node}${nowPill}
+${text(x, 176, esc(s.years), { size: 30, weight: 800, fill: cur ? GOLD : t.ink, ls: -0.6 })}
+${text(x, 208, esc(e.role), { size: 18, weight: 700, fill: t.ink })}
+${text(x, 232, esc(s.org), { size: 16, fill: t.muted })}
+${text(x, 268, esc(s.tech[0]), { size: 13, fill: t.muted, font: MONO })}
+${text(x, 290, esc(s.tech[1]), { size: 13, fill: t.muted, font: MONO })}`
+    })
+    .join('')
+  const body = `
+<rect x="8" y="8" width="${W - 16}" height="${H - 16}" rx="24" fill="${t.tile}"/>
+${label(56, 62, e.label, t.muted)}
+<line x1="66" y1="112" x2="${xs[2] + 10}" y2="112" stroke="${t.line}" stroke-width="4" stroke-linecap="round"/>
+<line x1="${xs[1] + 10}" y1="112" x2="${xs[2] + 10}" y2="112" stroke="${GOLD}" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+${stops}
+<rect x="56" y="318" width="4" height="48" rx="2" fill="${GOLD}"/>
+${text(76, 337, esc(e.quote[0]), { size: 17, fill: t.ink })}
+${text(76, 361, esc(e.quote[1]), { size: 17, fill: t.ink })}`
+  return svg(W, H, e.aria, body, { style: '@media (prefers-reduced-motion:reduce){animate{display:none}}' })
+}
+
+const CERTS = [
+  { file: 'aws-cloud-practitioner', group: 0, name: ['AWS Certified', 'Cloud Practitioner'] },
+  { file: 'aws-ai-practitioner', group: 0, name: ['AWS Certified', 'AI Practitioner'] },
+  { file: 'mta-database', group: 1, name: ['MTA', 'Database'] },
+  { file: 'mta-networking', group: 1, name: ['MTA', 'Networking'] },
+  { file: 'mta-software-development', group: 1, name: ['MTA Software', 'Development'] },
+]
+const certImg = Object.fromEntries(
+  CERTS.map((c) => [c.file, `data:image/webp;base64,${readFileSync(join(root, 'assets', 'certifications', `${c.file}.webp`)).toString('base64')}`]),
+)
+
+function certifications(e, t) {
+  const W = 1200, H = 330
+  const xs = [150, 360, 660, 870, 1080]
+  const badges = CERTS.map((c, i) => {
+    const x = xs[i]
+    return `<circle cx="${x}" cy="168" r="66" fill="${t.heroInk}" opacity="0.06"/>
+<image href="${certImg[c.file]}" x="${x - 58}" y="110" width="116" height="116"/>
+${text(x, 260, esc(c.name[0]), { size: 14, weight: 600, fill: t.heroMuted, anchor: 'middle' })}
+${text(x, 281, esc(c.name[1]), { size: 15, weight: 700, fill: t.heroInk, anchor: 'middle' })}`
+  }).join('')
+  const group = (x1, x2, s) => `<line x1="${x1}" y1="90" x2="${x2}" y2="90" stroke="${GOLD}" stroke-opacity="0.35" stroke-width="2"/>
+${text((x1 + x2) / 2, 84, s, { size: 13, weight: 700, fill: GOLD, font: MONO, anchor: 'middle', ls: 2 })}`
+  const body = `
+<rect x="8" y="8" width="${W - 16}" height="${H - 16}" rx="24" fill="${t.hero}"/>
+${label(56, 56, e.certLabel, t.heroMuted)}
+${group(84, 426, 'AWS')}
+${group(594, 1146, 'MICROSOFT MTA')}
+${badges}`
+  return svg(W, H, `${e.certLabel}: AWS Cloud Practitioner, AWS AI Practitioner, MTA Database, MTA Networking, MTA Software Development`, body)
+}
+
 // Stack row labels. Each sits inline beside a skillicons.dev strip of the
 // same rendered height (the README sets height="56" on both).
 const STACK = {
@@ -433,6 +526,8 @@ for (const [lang, c] of Object.entries(COPY)) {
     for (const [slug, p] of Object.entries(c.row3)) files[slug] = rowTile(slug, p, t)
     for (const st of STACK[lang]) files[`stack-${st.slug}`] = stackLabel(st, t)
     for (const cat of CATS[lang]) files[`cat-${cat.slug}`] = categoryCard(cat, t)
+    files.experience = experience(EXP[lang], t)
+    files.certifications = certifications(EXP[lang], t)
     for (const [name, data] of Object.entries(files)) {
       writeFileSync(join(out, `${name}-${lang}-${theme}.svg`), data)
       n++
