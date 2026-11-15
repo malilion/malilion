@@ -191,65 +191,77 @@ ${pills(54, 296, [
   return svg(W, H, c.heroAria, body, { style: heroStyle })
 }
 
-// A sheet of Malilion UI components on a riveted metal panel.
-const rivet = (x, y) => `<circle cx="${x}" cy="${y}" r="4.5" fill="#E9C77E"/><circle cx="${x - 1.2}" cy="${y - 1.2}" r="1.6" fill="#FFF3D1"/>`
 
-function uiSheet() {
-  const P = { x: 404, y: 40, w: 286, h: 344 }
-  const ink = '#F3DDB6', dim = '#9C8665', panel = '#241B12', line = '#4A3922'
-  const x0 = P.x + 22
-  return `
-<defs><linearGradient id="metal" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3A2C1C"/><stop offset="1" stop-color="#1E1610"/></linearGradient></defs>
-<rect x="${P.x}" y="${P.y}" width="${P.w}" height="${P.h}" rx="20" fill="url(#metal)" stroke="${GOLD}" stroke-opacity="0.55" stroke-width="2"/>
-${rivet(P.x + 16, P.y + 16)}${rivet(P.x + P.w - 16, P.y + 16)}${rivet(P.x + 16, P.y + P.h - 16)}${rivet(P.x + P.w - 16, P.y + P.h - 16)}
-<!-- tabs -->
-${['Vue', 'React', 'Docs'].map((tab, i) => text(x0 + 6 + i * 74, P.y + 52, tab, { size: 14, weight: 700, fill: i === 0 ? GOLD : dim })).join('')}
-<rect x="${x0}" y="${P.y + 62}" width="${P.w - 44}" height="2" fill="${line}"/>
-<rect x="${x0}" y="${P.y + 61}" width="46" height="4" rx="2" fill="${GOLD}"/>
-<!-- buttons -->
-<rect x="${x0}" y="${P.y + 82}" width="112" height="38" rx="10" fill="${GOLD}"/>
-${paw(x0 + 22, P.y + 101, 0.55, '#3A2A06')}
-${text(x0 + 38, P.y + 106, 'Button', { size: 15, weight: 700, fill: '#1A1206' })}
-<rect x="${x0 + 124}" y="${P.y + 82}" width="118" height="38" rx="10" fill="none" stroke="${GOLD}" stroke-width="2"/>
-${text(x0 + 183, P.y + 106, 'Outline', { size: 15, weight: 700, fill: GOLD, anchor: 'middle' })}
-<!-- input -->
-<rect x="${x0}" y="${P.y + 136}" width="${P.w - 44}" height="40" rx="10" fill="${panel}" stroke="${line}" stroke-width="2"/>
-<circle cx="${x0 + 20}" cy="${P.y + 155}" r="7" fill="none" stroke="${dim}" stroke-width="2.5"/><path d="M${x0 + 25} ${P.y + 160} l6 6" stroke="${dim}" stroke-width="2.5" stroke-linecap="round"/>
-${text(x0 + 40, P.y + 161, 'Search 161 components', { size: 14, fill: dim })}
-<!-- switch + checkbox -->
-<rect x="${x0}" y="${P.y + 196}" width="52" height="28" rx="14" fill="${GOLD}"/><circle cx="${x0 + 38}" cy="${P.y + 210}" r="10" fill="#FFF8E8"/>
-${text(x0 + 62, P.y + 215, 'Dark', { size: 14, weight: 600, fill: ink })}
-<rect x="${x0 + 128}" y="${P.y + 197}" width="26" height="26" rx="7" fill="${TEAL}"/><path d="M${x0 + 134} ${P.y + 210} l5 5 9 -10" fill="none" stroke="#0B2E28" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-${text(x0 + 162, P.y + 215, 'Taiwan ID', { size: 14, weight: 600, fill: ink })}
-<!-- slider -->
-<rect x="${x0}" y="${P.y + 248}" width="${P.w - 44}" height="8" rx="4" fill="${line}"/>
-<rect x="${x0}" y="${P.y + 248}" width="160" height="8" rx="4" fill="${GOLD}"/>
-<circle cx="${x0 + 160}" cy="${P.y + 252}" r="11" fill="#FFF8E8" stroke="${GOLD}" stroke-width="3"/>
-<!-- badges -->
-${[['TypeScript', TEAL, '#0B2E28'], ['2 themes', '#B6AFF1', '#211C4A'], ['0 deps', COPPER, '#2A1406']].reduce((acc, [b, bg, fg]) => {
-    const w = Math.round(textWidth(b, 12) + 22)
-    acc.out += `<rect x="${acc.x}" y="${P.y + 280}" width="${w}" height="26" rx="13" fill="${bg}"/>${text(acc.x + w / 2, P.y + 297, b, { size: 12, weight: 700, fill: fg, anchor: 'middle' })}`
-    acc.x += w + 8
-    return acc
-  }, { x: x0, out: '' }).out}`
+
+// Malilion UI: all 161 components as a 23 × 7 mosaic (23 × 7 = 161), each
+// cell coloured by a component family, a few drawn as tiny components.
+const UI_FAMILIES = [
+  { c: GOLD, w: 5 },        // forms
+  { c: '#F6D28B', w: 3 },   // inputs
+  { c: TEAL, w: 3 },        // layout
+  { c: '#B6AFF1', w: 2 },   // feedback
+  { c: COPPER, w: 2 },      // data display
+  { c: '#5A4630', w: 3 },   // navigation
+]
+const FAMILY_WEIGHT = UI_FAMILIES.reduce((n, f) => n + f.w, 0)
+function familyAt(i) {
+  let h = Math.imul(i + 1, 2654435761) >>> 0
+  h = (h ^ (h >>> 13)) % FAMILY_WEIGHT
+  for (const f of UI_FAMILIES) {
+    if (h < f.w) return f.c
+    h -= f.w
+  }
+  return GOLD
 }
+// Cells that show a miniature component instead of a plain swatch.
+const UI_GLYPHS = { 3: 'toggle', 27: 'paw', 52: 'check', 77: 'button', 101: 'paw', 118: 'toggle', 140: 'check', 158: 'button' }
+function uiGlyph(kind, x, y, s) {
+  const c = s / 2
+  if (kind === 'toggle') return `<rect x="${x + s * 0.14}" y="${y + s * 0.3}" width="${s * 0.72}" height="${s * 0.4}" rx="${s * 0.2}" fill="#1A1206" opacity="0.55"/><circle cx="${x + s * 0.64}" cy="${y + c}" r="${s * 0.15}" fill="#FFF8E8"/>`
+  if (kind === 'check') return `<path d="M${x + s * 0.26} ${y + c} l${s * 0.16} ${s * 0.16} ${s * 0.32} -${s * 0.34}" fill="none" stroke="#1A1206" stroke-width="${s * 0.12}" stroke-linecap="round" stroke-linejoin="round"/>`
+  if (kind === 'button') return `<rect x="${x + s * 0.16}" y="${y + s * 0.34}" width="${s * 0.68}" height="${s * 0.32}" rx="${s * 0.1}" fill="#1A1206" opacity="0.55"/>`
+  return paw(x + c, y + c + s * 0.04, s / 34, '#1A1206', 0.6)
+}
+function mosaic(x0, y0, cell, gap, shimmer = true, cellH = cell) {
+  let out = ''
+  for (let i = 0; i < 161; i++) {
+    const col = i % 23, row = Math.floor(i / 23)
+    const x = x0 + col * (cell + gap), y = y0 + row * (cellH + gap)
+    const glyph = UI_GLYPHS[i]
+    const fill = glyph ? GOLD : familyAt(i)
+    const cls = shimmer && i % 17 === 5 ? ` class="sh" style="animation-delay:${((i * 0.37) % 4).toFixed(2)}s"` : ''
+    out += `<rect x="${x}" y="${y}" width="${cell}" height="${cellH}" rx="${Math.round(Math.min(cell, cellH) * 0.24)}" fill="${fill}"${cls}/>`
+    if (glyph) out += uiGlyph(glyph, x + (cell - Math.min(cell, cellH)) / 2, y + (cellH - Math.min(cell, cellH)) / 2, Math.min(cell, cellH))
+  }
+  return out
+}
+const uiDefs = `<defs><linearGradient id="ui" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1B1611"/><stop offset="1" stop-color="#3D2A14"/></linearGradient></defs>`
+const uiStyle = `.sh{animation:sh 4s ease-in-out infinite}@keyframes sh{0%,100%{opacity:1}50%{opacity:.35}}@media (prefers-reduced-motion:reduce){.sh{animation:none}}`
 
 function malilionUi(c) {
   const W = 720, H = 420
-  const body = `
-<defs><linearGradient id="ui" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1B1611"/><stop offset="1" stop-color="#3D2A14"/></linearGradient></defs>
-<g clip-path="url(#tile)">
-  <rect width="${W}" height="${H}" fill="url(#ui)"/>
-  ${paw(340, 380, 2.4, GOLD, 0.08)}
-</g>
-${label(44, 64, c.uiLabel, '#D9B27A')}
-${text(42, 114, 'Malilion UI', { size: 42, weight: 800, fill: '#FFFFFF', ls: -1 })}
-${text(44, 150, esc(c.uiHead), { size: 20, weight: 600, fill: GOLD })}
-${text(44, 184, esc(c.uiSub[0]), { size: 15, fill: '#CDBDA9' })}
-${text(44, 208, esc(c.uiSub[1]), { size: 15, fill: '#CDBDA9' })}
-${text(38, 344, '161', { size: 128, weight: 800, fill: GOLD, ls: -6 })}
-${text(44, 376, esc(c.uiUnit), { size: 18, weight: 600, fill: '#CDBDA9' })}
-${uiSheet()}`
+  const body = `${uiDefs}
+<g clip-path="url(#tile)"><rect width="${W}" height="${H}" fill="url(#ui)"/></g>
+${label(40, 58, c.uiLabel, '#D9B27A')}
+${text(38, 108, 'Malilion UI', { size: 42, weight: 800, fill: '#FFFFFF', ls: -1 })}
+${text(40, 142, esc(c.uiHead), { size: 19, weight: 600, fill: GOLD })}
+${text(40, 172, esc(c.uiSub[0]), { size: 14.5, fill: '#CDBDA9' })}
+${pills(40, 188, [{ t: 'Vue 3', bg: '#2E2418', fg: '#F3DDB6' }, { t: 'React', bg: '#2E2418', fg: '#F3DDB6' }, { t: 'TypeScript', bg: '#2E2418', fg: '#F3DDB6' }])}
+${text(W - 36, 150, '161', { size: 132, weight: 800, fill: GOLD, anchor: 'end', ls: -6 })}
+${text(W - 40, 182, esc(c.uiUnit), { size: 17, weight: 600, fill: '#CDBDA9', anchor: 'end' })}
+${mosaic(40, 236, 24, 4, true, 20)}`
+  return svg(W, H, `Malilion UI — ${c.uiHead} ${c.uiSub.join(' ')}`, body, { style: uiStyle })
+}
+
+function uiM(c, m) {
+  const W = 360, H = 420
+  const body = `${uiDefs}
+<g clip-path="url(#tile)"><rect width="${W}" height="${H}" fill="url(#ui)"/></g>
+${text(30, 62, 'NPM @malilion/ui', { size: 17, weight: 600, fill: '#D9B27A', font: MONO })}
+${text(28, 110, 'Malilion UI', { size: 38, weight: 800, fill: '#FFFFFF', ls: -1 })}
+${text(24, 250, '161', { size: 130, weight: 800, fill: GOLD, ls: -6 })}
+${text(30, 284, esc(c.uiUnit), { size: 22, weight: 600, fill: '#CDBDA9' })}
+${mosaic(24, 310, 12, 2, false)}`
   return svg(W, H, `Malilion UI — ${c.uiHead}`, body)
 }
 
@@ -665,24 +677,6 @@ ${pillRow(42, 634, [{ t: 'malilion.com ↗', bg: GOLD, fg: '#111' }, { t: 'Threa
   return svg(W, H, c.heroAria, body, { style: heroStyle })
 }
 
-function uiM(c, m) {
-  const W = 360, H = 420
-  const body = `
-<defs><linearGradient id="ui" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1B1611"/><stop offset="1" stop-color="#3D2A14"/></linearGradient></defs>
-<g clip-path="url(#tile)"><rect width="${W}" height="${H}" fill="url(#ui)"/>${paw(300, 370, 2.6, GOLD, 0.08)}</g>
-${rivet(26, 26)}${rivet(W - 26, 26)}
-${text(32, 70, 'NPM @malilion/ui', { size: 18, weight: 600, fill: '#D9B27A', font: MONO })}
-${text(30, 120, 'Malilion UI', { size: 40, weight: 800, fill: '#FFFFFF', ls: -1 })}
-${text(32, 156, esc(m.uiHead), { size: 22, weight: 600, fill: GOLD })}
-<rect x="32" y="180" width="118" height="40" rx="11" fill="${GOLD}"/>
-${paw(54, 200, 0.6, '#3A2A06')}
-${text(70, 206, 'Button', { size: 17, weight: 700, fill: '#1A1206' })}
-<rect x="166" y="186" width="54" height="28" rx="14" fill="${GOLD}"/><circle cx="206" cy="200" r="10" fill="#FFF8E8"/>
-<rect x="236" y="187" width="26" height="26" rx="7" fill="${TEAL}"/><path d="M242 200 l5 5 9 -10" fill="none" stroke="#0B2E28" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-${text(24, 344, '161', { size: 130, weight: 800, fill: GOLD, ls: -6 })}
-${text(32, 382, esc(c.uiUnit), { size: 24, weight: 600, fill: '#CDBDA9' })}`
-  return svg(W, H, `Malilion UI — ${c.uiHead}`, body)
-}
 
 function islandM(c, m) {
   const W = 240, H = 420, k = 0.62
