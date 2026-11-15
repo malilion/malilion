@@ -2,10 +2,10 @@
 // (scripts/brand-assets/render.mjs): plain SVG, no fonts or components to embed.
 //
 // Desktop rows are 1200 viewBox units wide:
-//   year      720 × 300  |  streak   480 × 300
-//   languages 480 × 300  |  numbers  720 × 300
+//   pulse      1200 × 320   (the year at a glance: total, streaks, best day, weekly chart)
+//   languages   400 × 300  |  shipped 400 × 300  |  community 400 × 300
 // Phone versions (*-m) are drawn for the width each tile gets on a ~360px
-// screen (60% → 360 units, 40% → 240) and swapped in with
+// screen (100% → 600 units, 33% → 200) and swapped in with
 // <source media="(max-width: 600px)">.
 
 const FONT = "'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif"
@@ -17,8 +17,8 @@ const LAVENDER = '#B6AFF1'
 const SKY = '#7FA6E8'
 
 const THEMES = {
-  light: { tile: '#F2F3F5', ink: '#0E0E10', muted: '#62666E', line: '#E1E3E7', bar: '#C9CCD2' },
-  dark: { tile: '#171A1F', ink: '#F1EDE6', muted: '#9C968D', line: '#2A2E35', bar: '#3A3F47' },
+  light: { tile: '#F2F3F5', ink: '#0E0E10', muted: '#62666E', line: '#E1E3E7', hero: '#0E0E10', heroInk: '#FFFFFF', heroMuted: '#A6A8AD' },
+  dark: { tile: '#171A1F', ink: '#F1EDE6', muted: '#9C968D', line: '#2A2E35', hero: '#1E1A15', heroInk: '#F6F1E9', heroMuted: '#A89D8F' },
 }
 
 const strings = {
@@ -26,44 +26,56 @@ const strings = {
     year: 'PAST YEAR',
     contributions: 'contributions',
     allTime: (n, y) => `All time ${n} · since ${y}`,
-    streak: 'CURRENT STREAK',
-    streakShort: 'STREAK',
-    days: (n) => (n === 1 ? 'day' : 'days'),
-    longest: (n) => `Longest: ${n} ${n === 1 ? 'day' : 'days'}`,
-    languages: (n) => `TOP LANGUAGES · ${n}`,
-    languagesShort: 'LANGUAGES',
+    current: 'Current streak',
+    longest: 'Longest streak',
+    best: 'Best day',
+    days: (n) => `${n} ${n === 1 ? 'day' : 'days'}`,
+    weekly: 'Contributions per week',
+    languages: 'LANGUAGES',
     other: 'Other',
-    numbers: 'BY THE NUMBERS',
-    numbersShort: 'NUMBERS',
-    stats: ['Commits', 'Pull requests', 'Issues', 'Stars earned', 'Public repos', 'Followers'],
+    shipped: 'SHIPPED THIS YEAR',
+    shippedShort: 'SHIPPED',
+    commits: 'Commits',
+    prs: 'Pull requests',
+    issues: 'Issues',
+    community: 'COMMUNITY',
+    stars: 'Stars earned',
+    repos: 'Public repos',
+    followers: 'Followers',
     numberLocale: 'en-US',
+    dateFmt: { month: 'short', day: 'numeric' },
   },
   zh: {
     year: '近一年',
     contributions: '次貢獻',
     allTime: (n, y) => `累計 ${n} · ${y} 年加入`,
-    streak: '目前連續貢獻',
-    streakShort: '連續貢獻',
-    days: () => '天',
-    longest: (n) => `最長 ${n} 天`,
-    languages: (n) => `常用語言 · ${n} 種`,
-    languagesShort: '常用語言',
+    current: '目前連續',
+    longest: '最長連續',
+    best: '單日最多',
+    days: (n) => `${n} 天`,
+    weekly: '每週貢獻',
+    languages: '常用語言',
     other: '其他',
-    numbers: '數字一覽',
-    numbersShort: '數字一覽',
-    stats: ['Commits', 'Pull Requests', 'Issues', '獲得星星', '公開專案', '追蹤者'],
+    shipped: '今年產出',
+    shippedShort: '今年產出',
+    commits: 'Commits',
+    prs: 'Pull Requests',
+    issues: 'Issues',
+    community: '社群',
+    stars: '獲得星星',
+    repos: '公開專案',
+    followers: '追蹤者',
     numberLocale: 'zh-TW',
+    dateFmt: { month: 'numeric', day: 'numeric' },
   },
 }
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
-// Digits run narrower than letters; commas narrower still.
 const numWidth = (s, size, ls = 0) => [...String(s)].reduce((w, ch) => w + (/[,.]/.test(ch) ? size * 0.28 : size * 0.6) + ls, 0)
-const textWidth = (s, size) => [...String(s)].reduce((w, ch) => w + (/[　-鿿＀-￯]/.test(ch) ? size : size * 0.58), 0)
 
 const text = (x, y, s, { size = 16, weight = 400, fill, font = FONT, anchor = 'start', ls = 0 } = {}) =>
   `<text x="${x}" y="${y}" font-family="${font}" font-size="${size}" font-weight="${weight}" fill="${fill}" text-anchor="${anchor}"${ls ? ` letter-spacing="${ls}"` : ''}>${esc(s)}</text>`
-const label = (x, y, s, fill, size = 13) => text(x, y, s, { size, weight: 600, fill, font: MONO, ls: size / 8 })
+const label = (x, y, s, fill, size = 13) => text(x, y, s, { size, weight: 700, fill, font: MONO, ls: size / 7 })
 
 function svg(W, H, aria, body) {
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${esc(aria)}">
@@ -73,30 +85,36 @@ ${body}
 </svg>
 `
 }
-
 const tileBg = (W, H, fill) => `<rect x="8" y="8" width="${W - 16}" height="${H - 16}" rx="24" fill="${fill}"/>`
 
-function months(days, numberLocale) {
-  const byMonth = new Map()
-  for (const d of days) byMonth.set(d.date.slice(0, 7), (byMonth.get(d.date.slice(0, 7)) ?? 0) + d.count)
-  const fmt = new Intl.DateTimeFormat(numberLocale, { month: 'short', timeZone: 'UTC' })
-  return [...byMonth].slice(-12).map(([key, value]) => ({ label: fmt.format(new Date(`${key}-01T00:00:00Z`)), value }))
+/** Sum the daily counts into weeks (Sunday-start, as GitHub's calendar). */
+function weeks(days) {
+  const out = []
+  for (const d of days) {
+    const dow = new Date(`${d.date}T00:00:00Z`).getUTCDay()
+    if (dow === 0 || out.length === 0) out.push(0)
+    out[out.length - 1] += d.count
+  }
+  return out
 }
 
-function bars(data, x0, x1, top, bottom, t, { labels = true, labelSize = 11 } = {}) {
-  const max = Math.max(1, ...data.map((d) => d.value))
-  const step = (x1 - x0) / data.length
-  const w = Math.max(4, step * 0.58)
-  const peak = data.findIndex((d) => d.value === max)
-  return data
-    .map((d, i) => {
-      const h = Math.max(3, ((bottom - top) * d.value) / max)
-      const x = x0 + i * step + (step - w) / 2
-      const bar = `<rect x="${x.toFixed(1)}" y="${(bottom - h).toFixed(1)}" width="${w.toFixed(1)}" height="${h.toFixed(1)}" rx="${Math.min(4, w / 2)}" fill="${i === peak ? GOLD : t.bar}"/>`
-      const lbl = labels ? text(x + w / 2, bottom + labelSize + 8, d.label, { size: labelSize, fill: t.muted, anchor: 'middle' }) : ''
-      return bar + lbl
-    })
-    .join('')
+/** Smooth area chart through the weekly totals, peak marked in gold. */
+function areaChart(values, x0, x1, top, bottom, id) {
+  const max = Math.max(1, ...values)
+  const step = (x1 - x0) / Math.max(1, values.length - 1)
+  const pts = values.map((v, i) => [x0 + i * step, bottom - ((bottom - top) * v) / max])
+  const path = pts.reduce((d, [x, y], i) => {
+    if (i === 0) return `M${x.toFixed(1)} ${y.toFixed(1)}`
+    const [px, py] = pts[i - 1]
+    const cx = (px + x) / 2
+    return `${d} C${cx.toFixed(1)} ${py.toFixed(1)} ${cx.toFixed(1)} ${y.toFixed(1)} ${x.toFixed(1)} ${y.toFixed(1)}`
+  }, '')
+  const peak = values.indexOf(max)
+  const [pxp, pyp] = pts[peak]
+  return `<defs><linearGradient id="${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${GOLD}" stop-opacity="0.55"/><stop offset="1" stop-color="${GOLD}" stop-opacity="0"/></linearGradient></defs>
+<path d="${path} L${x1} ${bottom} L${x0} ${bottom} Z" fill="url(#${id})"/>
+<path d="${path}" fill="none" stroke="${GOLD}" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="${pxp.toFixed(1)}" cy="${pyp.toFixed(1)}" r="10" fill="${GOLD}" opacity="0.25"/><circle cx="${pxp.toFixed(1)}" cy="${pyp.toFixed(1)}" r="5" fill="${GOLD}"/>`
 }
 
 function languageSegments(profile, s) {
@@ -107,121 +125,138 @@ function languageSegments(profile, s) {
   const total = list.reduce((sum, l) => sum + l.value, 0) || 1
   return list.map((l) => ({ ...l, pct: (l.value / total) * 100 }))
 }
+const pctText = (p) => `${p < 10 ? p.toFixed(1) : Math.round(p)}%`
 
-function stackedBar(segs, x, y, w, h) {
-  let cx = x
-  const parts = segs
+/** Donut made of stroked arcs; gaps between segments keep it readable. */
+function donut(segs, cx, cy, r, w, t) {
+  const C = 2 * Math.PI * r
+  let offset = 0
+  const arcs = segs
     .map((sg) => {
-      const sw = (w * sg.pct) / 100
-      const r = `<rect x="${cx.toFixed(1)}" y="${y}" width="${Math.max(0, sw - 2).toFixed(1)}" height="${h}" fill="${sg.color}"/>`
-      cx += sw
-      return r
+      const len = (C * sg.pct) / 100
+      const a = `<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="${sg.color}" stroke-width="${w}" stroke-dasharray="${Math.max(0, len - 3).toFixed(2)} ${(C - Math.max(0, len - 3)).toFixed(2)}" stroke-dashoffset="${(-offset).toFixed(2)}" transform="rotate(-90 ${cx} ${cy})"/>`
+      offset += len
+      return a
     })
     .join('')
-  return `<clipPath id="lb"><rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${h / 2}"/></clipPath><g clip-path="url(#lb)">${parts}</g>`
+  return `<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="${t.line}" stroke-width="${w}"/>${arcs}`
 }
 
-const pctText = (p) => `${p < 10 ? p.toFixed(1) : Math.round(p)}%`
+// Small line icons for the community tile.
+const icons = {
+  star: (c) => `<path d="M0 -11 L3.2 -3.4 L11 -3 L5 2.2 L6.9 10 L0 5.6 L-6.9 10 L-5 2.2 L-11 -3 L-3.2 -3.4 Z" fill="${c}"/>`,
+  repo: (c) => `<rect x="-9" y="-10" width="18" height="20" rx="3" fill="none" stroke="${c}" stroke-width="2.5"/><path d="M-9 4 H9 M-4 10 V14 L-1.5 12.5 L1 14 V10" stroke="${c}" stroke-width="2.5" fill="none"/>`,
+  people: (c) => `<circle cx="-4" cy="-4" r="5" fill="${c}"/><path d="M-13 10 Q-13 2 -4 2 Q5 2 5 10 Z" fill="${c}"/><circle cx="7" cy="-6" r="4" fill="${c}" opacity="0.6"/><path d="M4 2 Q13 0 13 9 H7" fill="${c}" opacity="0.6"/>`,
+}
 
 export function renderBentoCards(profile, lang, theme) {
   const s = strings[lang]
   const t = THEMES[theme]
   const n = (v) => Number(v).toLocaleString(s.numberLocale)
-  const year = new Date(profile.since).getUTCFullYear()
-  const monthly = months(profile.yearDays, s.numberLocale)
+  const since = new Date(profile.since).getUTCFullYear()
+  const wk = weeks(profile.yearDays)
+  const bestDay = profile.yearDays.reduce((b, d) => (d.count > b.count ? d : b), { count: 0, date: profile.yearDays[0]?.date ?? '1970-01-01' })
+  const bestDate = new Intl.DateTimeFormat(s.numberLocale, { ...s.dateFmt, timeZone: 'UTC' }).format(new Date(`${bestDay.date}T00:00:00Z`))
   const { current, longest } = profile.streak
   const segs = languageSegments(profile, s)
-  const stats = [profile.year.commits, profile.year.pullRequests, profile.year.issues, profile.stars, profile.repos, profile.followers]
-  const yearAria = `${s.year}: ${n(profile.year.contributions)} ${s.contributions}. ${s.allTime(n(profile.allTime), year)}`
-  const streakAria = `${s.streak}: ${n(current)} ${s.days(current)}. ${s.longest(n(longest))}`
-  const langAria = `${s.languages(profile.languages.count)}: ${segs.map((l) => `${l.label} ${pctText(l.pct)}`).join(', ')}`
-  const numAria = s.stats.map((l, i) => `${l} ${n(stats[i])}`).join(', ')
+  const total = n(profile.year.contributions)
+
+  const pulseAria = `${s.year}: ${total} ${s.contributions}. ${s.current} ${s.days(current)}, ${s.longest} ${s.days(longest)}, ${s.best} ${n(bestDay.count)} (${bestDate}).`
+  const langAria = `${s.languages}: ${segs.map((l) => `${l.label} ${pctText(l.pct)}`).join(', ')}`
+  const shipAria = `${s.commits} ${n(profile.year.commits)}, ${s.prs} ${n(profile.year.pullRequests)}, ${s.issues} ${n(profile.year.issues)}`
+  const commAria = `${s.stars} ${n(profile.stars)}, ${s.repos} ${n(profile.repos)}, ${s.followers} ${n(profile.followers)}`
 
   // ---------- desktop ----------
-  const yearBig = n(profile.year.contributions)
-  const yearTile = svg(720, 300, yearAria, `
-${tileBg(720, 300, t.tile)}
-${label(40, 56, s.year, t.muted)}
-${text(36, 140, yearBig, { size: 84, weight: 800, fill: t.ink, ls: -3 })}
-${text(36 + numWidth(yearBig, 84, -3) + 14, 140, s.contributions, { size: 20, weight: 600, fill: t.muted })}
-${text(40, 176, s.allTime(n(profile.allTime), year), { size: 14, fill: t.muted, font: MONO })}
-${bars(monthly, 40, 680, 196, 254, t)}`)
-
-  const streakTile = svg(480, 300, streakAria, `
-<g clip-path="url(#tile)">${tileBg(480, 300, GOLD)}</g>
-${label(40, 56, s.streak, '#5A3F08')}
-${text(36, 156, n(current), { size: 96, weight: 800, fill: '#111', ls: -3 })}
-${text(36 + numWidth(n(current), 96, -3) + 14, 156, s.days(current), { size: 24, weight: 700, fill: '#3A2A06' })}
-<rect x="40" y="198" width="400" height="12" rx="6" fill="#111" opacity="0.15"/>
-<rect x="40" y="198" width="${Math.max(12, (400 * current) / Math.max(1, longest)).toFixed(1)}" height="12" rx="6" fill="#111"/>
-${text(40, 248, s.longest(n(longest)), { size: 18, weight: 600, fill: '#3A2A06' })}`)
+  const statBlock = (x, k, v, accent) => `${text(x, 82, k, { size: 14, fill: t.heroMuted })}${text(x, 122, v, { size: 32, weight: 800, fill: accent ? GOLD : t.heroInk, ls: -0.6 })}`
+  const pulse = svg(1200, 320, pulseAria, `
+${tileBg(1200, 320, t.hero)}
+<g clip-path="url(#tile)">${areaChart(wk, 8, 1192, 190, 312, 'pa')}</g>
+${label(48, 60, s.year, GOLD)}
+${text(44, 142, total, { size: 88, weight: 800, fill: t.heroInk, ls: -3 })}
+${text(44 + numWidth(total, 88, -3) + 16, 142, s.contributions, { size: 22, weight: 600, fill: t.heroMuted })}
+${text(48, 176, s.allTime(n(profile.allTime), since), { size: 14, fill: t.heroMuted, font: MONO })}
+<line x1="660" y1="58" x2="660" y2="136" stroke="${GOLD}" stroke-opacity="0.35" stroke-width="2"/>
+${statBlock(690, s.current, s.days(current), true)}
+${statBlock(860, s.longest, s.days(longest))}
+${statBlock(1030, s.best, n(bestDay.count))}
+${text(1030, 146, bestDate, { size: 13, fill: t.heroMuted, font: MONO })}`)
 
   const legend = segs
-    .map((sg, i) => {
-      const x = 40 + (i % 2) * 210, y = 158 + Math.floor(i / 2) * 38
-      return `<circle cx="${x + 6}" cy="${y - 5}" r="6" fill="${sg.color}"/>${text(x + 20, y, sg.label, { size: 16, weight: 600, fill: t.ink })}${text(x + 190, y, pctText(sg.pct), { size: 14, fill: t.muted, font: MONO, anchor: 'end' })}`
-    })
+    .slice(0, 5)
+    .map((sg, i) => `<circle cx="226" cy="${92 + i * 34 - 5}" r="6" fill="${sg.color}"/>${text(240, 92 + i * 34, sg.label, { size: 15, weight: 600, fill: t.ink })}${text(366, 92 + i * 34, pctText(sg.pct), { size: 13, fill: t.muted, font: MONO, anchor: 'end' })}`)
     .join('')
-  const langTile = svg(480, 300, langAria, `
-${tileBg(480, 300, t.tile)}
-${label(40, 56, s.languages(profile.languages.count), t.muted)}
-${stackedBar(segs, 40, 88, 400, 22)}
+  const languages = svg(400, 300, langAria, `
+${tileBg(400, 300, t.tile)}
+${label(36, 52, s.languages, t.muted)}
+${donut(segs, 116, 170, 62, 22, t)}
+${text(116, 178, String(profile.languages.count), { size: 30, weight: 800, fill: t.ink, anchor: 'middle' })}
 ${legend}`)
 
-  const cells = s.stats
-    .map((l, i) => {
-      const x = 40 + (i % 3) * 220, y = 136 + Math.floor(i / 3) * 104
-      return `${text(x, y, n(stats[i]), { size: 44, weight: 800, fill: i === 3 ? GOLD : t.ink, ls: -1.2 })}${text(x + 2, y + 30, l, { size: 15, fill: t.muted })}`
-    })
-    .join('')
-  const numTile = svg(720, 300, numAria, `
-${tileBg(720, 300, t.tile)}
-${label(40, 56, s.numbers, t.muted)}
-${cells}`)
-
-  // ---------- phone ----------
-  const yearM = svg(360, 300, yearAria, `
-${tileBg(360, 300, t.tile)}
-${label(30, 54, s.year, t.muted, 18)}
-${text(26, 134, yearBig, { size: 72, weight: 800, fill: t.ink, ls: -2.5 })}
-${text(30, 168, s.contributions, { size: 21, weight: 600, fill: t.muted })}
-${bars(monthly, 30, 330, 196, 262, t, { labels: false })}`)
-
-  const streakM = svg(240, 300, streakAria, `
-<g clip-path="url(#tile)">${tileBg(240, 300, GOLD)}</g>
-${label(28, 54, s.streakShort, '#5A3F08', 18)}
-${text(24, 150, n(current), { size: 80, weight: 800, fill: '#111', ls: -2.5 })}
-${text(28, 186, s.days(current), { size: 24, weight: 700, fill: '#3A2A06' })}
-${text(28, 252, s.longest(n(longest)), { size: 19, weight: 600, fill: '#3A2A06' })}`)
-
-  const langM = svg(240, 300, langAria, `
-${tileBg(240, 300, t.tile)}
-${label(28, 54, s.languagesShort, t.muted, 18)}
-${stackedBar(segs, 28, 76, 184, 18)}
-${segs
-  .slice(0, 4)
-  .map((sg, i) => `<circle cx="34" cy="${136 + i * 40 - 7}" r="7" fill="${sg.color}"/>${text(50, 136 + i * 40, sg.label, { size: 20, weight: 600, fill: t.ink })}`)
-  .join('')}`)
-
-  const numM = svg(360, 300, numAria, `
-${tileBg(360, 300, t.tile)}
-${label(30, 54, s.numbersShort, t.muted, 18)}
-${s.stats
-  .slice(0, 4)
-  .map((l, i) => {
-    const x = 30 + (i % 2) * 165, y = 128 + Math.floor(i / 2) * 104
-    return `${text(x, y, n(stats[i]), { size: 42, weight: 800, fill: t.ink, ls: -1.2 })}${text(x + 2, y + 30, l, { size: 19, fill: t.muted })}`
+  const shipRows = [[s.commits, profile.year.commits, GOLD], [s.prs, profile.year.pullRequests, TEAL], [s.issues, profile.year.issues, LAVENDER]]
+  const shipMax = Math.max(1, ...shipRows.map((r) => r[1]))
+  const shipped = svg(400, 300, shipAria, `
+${tileBg(400, 300, t.tile)}
+${label(36, 52, s.shipped, t.muted)}
+${shipRows
+  .map(([k, v, c], i) => {
+    const y = 108 + i * 64
+    const w = Math.max(10, (328 * Math.log10(v + 1)) / Math.log10(shipMax + 1))
+    return `${text(36, y, n(v), { size: 30, weight: 800, fill: t.ink, ls: -0.8 })}${text(364, y, k, { size: 14, fill: t.muted, anchor: 'end' })}<rect x="36" y="${y + 12}" width="328" height="8" rx="4" fill="${t.line}"/><rect x="36" y="${y + 12}" width="${w.toFixed(1)}" height="8" rx="4" fill="${c}"/>`
   })
   .join('')}`)
 
+  const commRows = [['star', s.stars, profile.stars, GOLD], ['repo', s.repos, profile.repos, TEAL], ['people', s.followers, profile.followers, LAVENDER]]
+  const community = svg(400, 300, commAria, `
+${tileBg(400, 300, t.tile)}
+${label(36, 52, s.community, t.muted)}
+${commRows
+  .map(([ic, k, v, c], i) => {
+    const y = 104 + i * 64
+    return `<circle cx="58" cy="${y - 10}" r="22" fill="${c}" opacity="0.18"/><g transform="translate(58 ${y - 10})">${icons[ic](c)}</g>${text(98, y, n(v), { size: 30, weight: 800, fill: t.ink, ls: -0.8 })}${text(364, y - 2, k, { size: 14, fill: t.muted, anchor: 'end' })}`
+  })
+  .join('')}`)
+
+  // ---------- phone ----------
+  const pulseM = svg(600, 440, pulseAria, `
+${tileBg(600, 440, t.hero)}
+<g clip-path="url(#tile)">${areaChart(wk, 8, 592, 320, 432, 'pm')}</g>
+${label(40, 60, s.year, GOLD, 18)}
+${text(36, 140, total, { size: 84, weight: 800, fill: t.heroInk, ls: -3 })}
+${text(40, 180, s.contributions, { size: 24, weight: 600, fill: t.heroMuted })}
+${[[s.current, s.days(current), true], [s.longest, s.days(longest)], [s.best, n(bestDay.count)]]
+  .map(([k, v, a], i) => `${text(40 + i * 186, 232, k, { size: 19, fill: t.heroMuted })}${text(40 + i * 186, 270, v, { size: 30, weight: 800, fill: a ? GOLD : t.heroInk })}`)
+  .join('')}`)
+
+  const languagesM = svg(200, 240, langAria, `
+${tileBg(200, 240, t.tile)}
+${label(22, 44, s.languages, t.muted, 16)}
+${donut(segs, 100, 130, 52, 20, t)}
+${text(100, 140, String(profile.languages.count), { size: 30, weight: 800, fill: t.ink, anchor: 'middle' })}
+${text(100, 216, segs[0]?.label ?? '', { size: 19, weight: 700, fill: t.ink, anchor: 'middle' })}`)
+
+  const shippedM = svg(200, 240, shipAria, `
+${tileBg(200, 240, t.tile)}
+${label(22, 44, s.shippedShort, t.muted, 16)}
+${text(22, 106, n(profile.year.commits), { size: 40, weight: 800, fill: t.ink, ls: -1 })}
+${text(22, 134, s.commits, { size: 19, fill: t.muted })}
+${text(22, 186, n(profile.year.pullRequests), { size: 30, weight: 800, fill: TEAL })}
+${text(22, 212, 'PRs', { size: 19, fill: t.muted })}`)
+
+  const communityM = svg(200, 240, commAria, `
+${tileBg(200, 240, t.tile)}
+${label(22, 44, s.community, t.muted, 16)}
+${commRows
+  .map(([ic, , v, c], i) => `<g transform="translate(40 ${92 + i * 52})">${icons[ic](c)}</g>${text(68, 102 + i * 52, n(v), { size: 30, weight: 800, fill: t.ink })}`)
+  .join('')}`)
+
   return {
-    'activity-year': yearTile,
-    'activity-streak': streakTile,
-    'activity-languages': langTile,
-    'activity-numbers': numTile,
-    'activity-year-m': yearM,
-    'activity-streak-m': streakM,
-    'activity-languages-m': langM,
-    'activity-numbers-m': numM,
+    'activity-pulse': pulse,
+    'activity-languages': languages,
+    'activity-shipped': shipped,
+    'activity-community': community,
+    'activity-pulse-m': pulseM,
+    'activity-languages-m': languagesM,
+    'activity-shipped-m': shippedM,
+    'activity-community-m': communityM,
   }
 }
