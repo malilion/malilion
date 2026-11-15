@@ -6,7 +6,7 @@
 // Layout: every row is 1200 viewBox units wide, so all tiles share one scale
 // when the README sets their widths as percentages of the row.
 //   hero          1200 × 380
-//   ticker        1200 × 60   (animated slogan band)
+//   ticker        1200 × 120  (two slanted animated tapes)
 //   malilion-ui    720 × 420  |  project-island 480 × 420
 //   contextlion    400 × 320  |  ninefold-court 400 × 320  |  cow-pasture 400 × 320
 //   now-building   720 × 260  |  threads        480 × 260
@@ -459,19 +459,38 @@ ${text(58, 220, esc(c.ctaSub), { size: 16, weight: 700, fill: '#FFFFFF' })}`
   return svg(W, H, `${c.ctaHead.join(' ')} ${c.ctaSub}`, body)
 }
 
-// Slogan ticker between the hero and the tiles. One copy of the slogans is
-// forced to a fixed length with textLength, so two copies side by side loop
-// seamlessly when the group slides left by exactly that length.
-function ticker(c, t, { W = 1200, H = 60, fs = 15 } = {}) {
-  const line = c.ticker.map((s) => `${s}  ✳  `).join('')
-  const L = Math.round(textWidth(line, fs) + fs * 2.6)
-  const copy = (x) => `<text x="${x}" y="${Math.round(H / 2 + fs * 0.4)}" font-family="${MONO}" font-size="${fs}" font-weight="600" letter-spacing="1.5" fill="${t.tickerInk}" textLength="${L}" lengthAdjust="spacing" xml:space="preserve">${esc(line)}</text>`
+// Two slanted tapes between the hero and the tiles, scrolling in opposite
+// directions: a gold one with the slogans and a dark one with the stack.
+// Each line is forced to a fixed length with textLength, so two copies side
+// by side loop seamlessly when the group slides by exactly that length.
+const TECH = ['VUE 3', 'REACT', 'TYPESCRIPT', 'THREE.JS', '.NET', 'LARAVEL', 'BLENDER', 'GODOT', 'AWS']
+
+function ticker(c, t, { W = 1200, H = 120, fs = 16 } = {}) {
+  const tape = ({ y, h, angle, bg, fg, sep, items, dir, id }) => {
+    const plain = items.map((s) => `${s}   ✦   `).join('')
+    const L = Math.round(textWidth(plain, fs) * 1.08 + fs * 3)
+    const line = items.map((s) => `${esc(s)}<tspan fill="${sep}">   ✦   </tspan>`).join('')
+    const copy = (x) => `<text x="${x}" y="${Math.round(y + fs * 0.36)}" font-family="${FONT}" font-size="${fs}" font-weight="800" letter-spacing="${(fs / 8).toFixed(1)}" fill="${fg}" textLength="${L}" lengthAdjust="spacing" xml:space="preserve">${line}</text>`
+    const dur = Math.round(L / (fs * 2.4))
+    return {
+      style: `.${id}{animation:${id} ${dur}s linear infinite}@keyframes ${id}{from{transform:translateX(${dir < 0 ? 0 : -L}px)}to{transform:translateX(${dir < 0 ? -L : 0}px)}}`,
+      svg: `<g transform="rotate(${angle} ${W / 2} ${y})">
+  <rect x="-40" y="${y - h / 2}" width="${W + 80}" height="${h}" fill="${bg}"/>
+  <rect x="-40" y="${y - h / 2}" width="${W + 80}" height="2" fill="#FFFFFF" opacity="0.18"/>
+  <g class="${id}">${copy(0)}${copy(L)}${copy(2 * L)}${copy(3 * L)}</g>
+</g>`,
+    }
+  }
+  const back = tape({ y: H - fs * 2.15, h: fs * 2.5, angle: -1.2, bg: '#15131F', fg: '#F1EDE6', sep: '#B6AFF1', items: TECH, dir: 1, id: 'tb' })
+  const front = tape({ y: fs * 2.1, h: fs * 2.75, angle: -1.2, bg: GOLD, fg: '#15131F', sep: '#8A5A0A', items: c.ticker, dir: -1, id: 'tf' })
   const body = `
-<defs><clipPath id="band"><rect x="8" y="6" width="${W - 16}" height="${H - 12}" rx="24"/></clipPath></defs>
-<rect x="8" y="6" width="${W - 16}" height="${H - 12}" rx="24" fill="${t.ticker}"/>
-<g clip-path="url(#band)"><g class="run">${copy(24)}${copy(24 + L)}${copy(24 + 2 * L)}</g></g>`
-  return svg(W, H, c.ticker.join(' · '), body, {
-    style: `.run{animation:run ${Math.round(L / (fs * 2.7))}s linear infinite}@keyframes run{to{transform:translateX(-${L}px)}}@media (prefers-reduced-motion:reduce){.run{animation:none}}`,
+<defs><clipPath id="band"><rect x="8" y="0" width="${W - 16}" height="${H}" rx="20"/></clipPath></defs>
+<g clip-path="url(#band)">
+${back.svg}
+${front.svg}
+</g>`
+  return svg(W, H, `${c.ticker.join(' · ')} — ${TECH.join(' · ')}`, body, {
+    style: `${back.style}${front.style}@media (prefers-reduced-motion:reduce){.tb,.tf{animation:none}}`,
   })
 }
 
@@ -926,7 +945,7 @@ for (const [lang, c] of Object.entries(COPY)) {
     const m = MOBILE[lang]
     Object.assign(files, {
       'hero-m': heroM(c, m, t),
-      'ticker-m': ticker(c, t, { W: 600, H: 64, fs: 22 }),
+      'ticker-m': ticker(c, t, { W: 600, H: 150, fs: 21 }),
       'malilion-ui-m': uiM(c, m),
       'project-island-m': islandM(c, m),
       'now-building-m': nowM(c, t),
