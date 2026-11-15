@@ -137,15 +137,48 @@ const COPY = {
 }
 
 // ---------- Tiles ----------
+// The mascot at the centre of an orbit, with AI, CODE and GAME cards
+// circling it: the "AI × Code × Game" line drawn as a picture.
+function orbitScene(cx, cy, k = 1) {
+  const card = (x, y, bg, fg, labelText, icon, delay) => `<g transform="translate(${x} ${y})"><g class="f" style="animation-delay:${delay}s">
+    <rect x="-54" y="-36" width="108" height="72" rx="18" fill="${bg}"/>
+    <g transform="translate(0 -8)">${icon}</g>
+    <text x="0" y="26" text-anchor="middle" font-family="${MONO}" font-size="13" font-weight="700" letter-spacing="2" fill="${fg}">${labelText}</text></g></g>`
+  const ai = `<g stroke="#211C4A" stroke-width="2.5" fill="none"><path d="M-16 6 L0 -10 L16 6 M-16 6 L16 6"/></g>
+    <circle cx="-16" cy="6" r="5" fill="#211C4A"/><circle cx="0" cy="-10" r="5" fill="#211C4A"/><circle cx="16" cy="6" r="5" fill="#211C4A"/>
+    <path d="M24 -18 l3 7 7 3 -7 3 -3 7 -3 -7 -7 -3 7 -3z" fill="#FFFFFF"/>`
+  const code = `<text x="0" y="8" text-anchor="middle" font-family="${MONO}" font-size="24" font-weight="800" fill="#0B2E28">&lt;/&gt;</text>`
+  const game = `<path d="M-22 -6 Q-22 -12 -15 -12 H15 Q22 -12 22 -6 L25 8 Q26 15 20 15 Q16 15 13 10 L10 6 H-10 L-13 10 Q-16 15 -20 15 Q-26 15 -25 8 Z" fill="#FFF3E6"/>
+    <rect x="-16" y="-3" width="10" height="3.5" rx="1" fill="${COPPER}"/><rect x="-12.7" y="-6.3" width="3.5" height="10" rx="1" fill="${COPPER}"/>
+    <circle cx="11" cy="-4" r="2.6" fill="${COPPER}"/><circle cx="15" cy="1" r="2.6" fill="${COPPER}"/>`
+  return `<g transform="translate(${cx} ${cy}) scale(${k})">
+  <circle r="150" fill="url(#halo)"/>
+  <ellipse rx="176" ry="122" fill="none" stroke="${GOLD}" stroke-opacity="0.45" stroke-width="2" stroke-dasharray="4 10" class="orbit"/>
+  <circle r="104" fill="none" stroke="${GOLD}" stroke-opacity="0.2" stroke-width="2"/>
+  <circle r="88" fill="${GOLD}"/>
+  <clipPath id="lc"><circle r="78"/></clipPath>
+  <image href="${logo}" x="-78" y="-78" width="156" height="156" clip-path="url(#lc)"/>
+  <circle cx="-150" cy="-64" r="5" fill="${GOLD}"/><circle cx="140" cy="-74" r="5" fill="${GOLD}"/><circle cx="56" cy="118" r="5" fill="${GOLD}"/>
+  ${card(-172, -70, '#B6AFF1', '#211C4A', 'AI', ai, 0)}
+  ${card(150, -96, TEAL, '#0B2E28', 'CODE', code, 0.8)}
+  ${card(64, 124, COPPER, '#FFF3E6', 'GAME', game, 1.6)}
+</g>`
+}
+
+const heroDefs = `<defs>
+  <radialGradient id="halo"><stop offset="0" stop-color="${GOLD}" stop-opacity="0.28"/><stop offset="1" stop-color="${GOLD}" stop-opacity="0"/></radialGradient>
+  <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.3" fill="${GOLD}" fill-opacity="0.18"/></pattern>
+</defs>`
+const heroStyle = `.f{animation:float 5s ease-in-out infinite}@keyframes float{50%{transform:translateY(-6px)}}.orbit{animation:spin 30s linear infinite}@keyframes spin{to{stroke-dashoffset:-280}}@media (prefers-reduced-motion:reduce){.f,.orbit{animation:none}}`
+
 function hero(c, t) {
   const W = 1200, H = 380
-  const trail = [0, 1, 2, 3, 4]
-    .map((i) => `<g class="p" style="animation-delay:${i * 0.4}s">${paw(700 + i * 46, 150 - (i % 2) * 22 - i * 16, 0.9, GOLD)}</g>`)
-    .join('')
-  const body = `
-<rect x="8" y="8" width="${W - 280}" height="${H - 16}" rx="24" fill="${t.hero}"/>
-<rect x="${W - 256}" y="8" width="248" height="${H - 16}" rx="24" fill="${GOLD}"/>
-${trail}
+  const body = `${heroDefs}
+<g clip-path="url(#tile)">
+  <rect width="${W}" height="${H}" fill="${t.hero}"/>
+  <rect x="700" width="500" height="${H}" fill="url(#dots)"/>
+  ${orbitScene(966, 196)}
+</g>
 ${label(56, 74, c.heroLabel, GOLD)}
 ${text(52, 152, esc(c.heroA), { size: 60, weight: 800, fill: t.heroInk, ls: -1.5 })}
 ${text(52, 222, `${esc(c.heroB)}<tspan fill="${GOLD}">${esc(c.heroC)}</tspan>`, { size: 60, weight: 800, fill: t.heroInk, ls: -1.5 })}
@@ -154,14 +187,8 @@ ${pills(54, 296, [
   { t: c.heroPills[0], bg: GOLD, fg: '#111' },
   { t: c.heroPills[1], bg: t.chip, fg: t.heroInk },
   { t: c.heroPills[2], bg: t.chip, fg: t.heroInk },
-])}
-<circle cx="${W - 132}" cy="176" r="94" fill="#111" opacity="0.12"/>
-<clipPath id="lc"><circle cx="${W - 132}" cy="170" r="88"/></clipPath>
-<image href="${logo}" x="${W - 220}" y="82" width="176" height="176" clip-path="url(#lc)"/>
-${text(W - 132, 320, 'EST. 2023', { size: 13, weight: 700, fill: '#3A2A06', font: MONO, anchor: 'middle', ls: 2 })}`
-  return svg(W, H, c.heroAria, body, {
-    style: `.p{opacity:0;animation:step 4s ease-in-out infinite}@keyframes step{0%,5%{opacity:0}15%,60%{opacity:.5}80%,100%{opacity:0}}@media (prefers-reduced-motion:reduce){.p{animation:none;opacity:.35}}`,
-  })
+])}`
+  return svg(W, H, c.heroAria, body, { style: heroStyle })
 }
 
 // A sheet of Malilion UI components on a riveted metal panel.
@@ -660,21 +687,21 @@ function pillRow(x, y, items, fs) {
 }
 
 function heroM(c, m, t) {
-  const W = 600, H = 600
-  const body = `
-<rect x="8" y="8" width="${W - 16}" height="${H - 16}" rx="28" fill="${t.hero}"/>
-<circle cx="490" cy="118" r="76" fill="${GOLD}"/>
-<clipPath id="lc"><circle cx="490" cy="118" r="66"/></clipPath>
-<image href="${logo}" x="424" y="52" width="132" height="132" clip-path="url(#lc)"/>
-${text(44, 70, 'MALILION', { size: 20, weight: 700, fill: GOLD, font: MONO, ls: 3 })}
-${text(44, 100, 'AI × CODE × GAME', { size: 18, weight: 600, fill: t.heroMuted, font: MONO, ls: 2 })}
-${text(40, 262, esc(m.heroA), { size: 56, weight: 800, fill: t.heroInk, ls: -1.5 })}
-${text(40, 326, esc(m.heroB), { size: 56, weight: 800, fill: t.heroInk, ls: -1.5 })}
-${text(40, 390, esc(m.heroC), { size: 56, weight: 800, fill: GOLD, ls: -1.5 })}
-${text(42, 440, esc(m.heroSub[0]), { size: 23, fill: t.heroMuted })}
-${text(42, 472, esc(m.heroSub[1]), { size: 23, fill: t.heroMuted })}
-${pillRow(42, 506, [{ t: 'malilion.com ↗', bg: GOLD, fg: '#111' }, { t: 'Threads @malilion.dev', bg: t.chip, fg: t.heroInk }], 20)}`
-  return svg(W, H, c.heroAria, body)
+  const W = 600, H = 720
+  const body = `${heroDefs}
+<g clip-path="url(#tile)">
+  <rect width="${W}" height="${H}" fill="${t.hero}"/>
+  <rect width="${W}" height="300" fill="url(#dots)"/>
+  ${orbitScene(300, 160, 0.86)}
+</g>
+${text(44, 340, 'MALILION · AI × CODE × GAME', { size: 18, weight: 700, fill: GOLD, font: MONO, ls: 2 })}
+${text(40, 404, esc(m.heroA), { size: 54, weight: 800, fill: t.heroInk, ls: -1.5 })}
+${text(40, 466, esc(m.heroB), { size: 54, weight: 800, fill: t.heroInk, ls: -1.5 })}
+${text(40, 528, esc(m.heroC), { size: 54, weight: 800, fill: GOLD, ls: -1.5 })}
+${text(42, 576, esc(m.heroSub[0]), { size: 23, fill: t.heroMuted })}
+${text(42, 608, esc(m.heroSub[1]), { size: 23, fill: t.heroMuted })}
+${pillRow(42, 634, [{ t: 'malilion.com ↗', bg: GOLD, fg: '#111' }, { t: 'Threads @malilion.dev', bg: t.chip, fg: t.heroInk }], 20)}`
+  return svg(W, H, c.heroAria, body, { style: heroStyle })
 }
 
 function uiM(c, m) {
