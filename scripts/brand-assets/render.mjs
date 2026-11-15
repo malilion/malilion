@@ -189,24 +189,56 @@ ${comps}`
   return svg(W, H, `Malilion UI — ${c.uiHead}`, body)
 }
 
+// Island outline: a squashed blob, so the top reads as seen from above at an angle.
+function blob(cx, cy, rx, ry, k = 1) {
+  const pts = []
+  for (let i = 0; i < 64; i++) {
+    const a = (i / 64) * Math.PI * 2
+    const r = 1 + 0.07 * Math.sin(3 * a + 0.6) + 0.045 * Math.cos(5 * a) + 0.03 * Math.sin(7 * a + 1.3)
+    pts.push(`${(cx + Math.cos(a) * rx * r * k).toFixed(1)} ${(cy + Math.sin(a) * ry * r * k).toFixed(1)}`)
+  }
+  return `M${pts.join(' L')} Z`
+}
+
 function island(c) {
   const W = 480, H = 420
-  const cells = [[0, 0], [-1, 1], [1, 1], [0, 2], [-2, 0], [2, 0], [-1, -1], [1, -1], [0, -2], [-2, 2], [2, 2], [-3, 1], [3, 1]]
-    .sort((a, b) => a[1] - b[1] || a[0] - b[0])
-    .map(([q, r], i) => {
-      const x = q * 22, y = r * 13 + (i % 3) * -2
-      const top = ['#FFE3A3', GOLD, '#7FE3D3'][i % 3]
-      return `<g transform="translate(${x} ${y})"><path d="M0 -12 L22 0 L0 12 L-22 0 Z" fill="${top}"/><path d="M-22 0 L0 12 V22 L-22 10 Z" fill="#06404E" opacity="0.55"/><path d="M22 0 L0 12 V22 L22 10 Z" fill="#06404E" opacity="0.3"/></g>`
-    })
-    .join('')
+  const cx = 240, cy = 168, rx = 150, ry = 58
+  const tree = (x, y, s = 1) => `<g transform="translate(${x} ${y}) scale(${s})">
+    <ellipse cx="0" cy="2" rx="12" ry="4" fill="#2C6E3F" opacity="0.35"/>
+    <rect x="-2.5" y="-14" width="5" height="16" rx="2" fill="#7A4A2A"/>
+    <circle cx="0" cy="-22" r="13" fill="#2F8F5B"/><circle cx="-7" cy="-17" r="9" fill="#3FA86A"/><circle cx="6" cy="-27" r="7" fill="#58BE7B"/></g>`
+  const pine = (x, y, s = 1) => `<g transform="translate(${x} ${y}) scale(${s})">
+    <ellipse cx="0" cy="2" rx="9" ry="3" fill="#2C6E3F" opacity="0.35"/>
+    <rect x="-2" y="-8" width="4" height="10" fill="#7A4A2A"/>
+    <path d="M0 -40 L13 -14 H-13 Z" fill="#256F4A"/><path d="M0 -30 L15 -6 H-15 Z" fill="#2F8F5B"/></g>`
+  // Project plots: small tilled tiles on the grass, one per kind of project.
+  const plot = (x, y, fill) => `<path d="M${x} ${y - 9} L${x + 18} ${y} L${x} ${y + 9} L${x - 18} ${y} Z" fill="${fill}" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="1.5"/>`
+  const cloud = (x, y, s) => `<g transform="translate(${x} ${y}) scale(${s})" fill="#FFFFFF"><ellipse cx="0" cy="0" rx="26" ry="10"/><circle cx="-8" cy="-6" r="10"/><circle cx="8" cy="-9" r="13"/></g>`
+  const wave = (x, y) => `<path d="M${x} ${y} q6 -5 12 0 t12 0" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.45"/>`
   const body = `
-<defs><radialGradient id="sea" cx="0.5" cy="0.38" r="0.75"><stop offset="0" stop-color="#3FE0C6"/><stop offset="0.55" stop-color="#0E9C9A"/><stop offset="1" stop-color="#0A5A72"/></radialGradient></defs>
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9FE7F0"/><stop offset="0.42" stop-color="#4FD1C5"/><stop offset="1" stop-color="#0B6A80"/></linearGradient>
+  <linearGradient id="cliff" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B07442"/><stop offset="1" stop-color="#6B3F22"/></linearGradient>
+  <clipPath id="mc"><circle cx="${cx + 52}" cy="${cy - 8}" r="17"/></clipPath>
+</defs>
 <g clip-path="url(#tile)">
-  <rect width="${W}" height="${H}" fill="url(#sea)"/>
-  <ellipse cx="240" cy="200" rx="150" ry="34" fill="#FFFFFF" opacity="0.12"/>
-  <g transform="translate(240 150) scale(1.7)">${cells}${paw(0, -46, 1, '#FFFFFF')}</g>
+  <rect width="${W}" height="${H}" fill="url(#sky)"/>
+  ${cloud(392, 58, 1)}${cloud(330, 92, 0.6)}${cloud(120, 104, 0.7)}
+  <ellipse cx="${cx}" cy="${cy + 52}" rx="${rx + 34}" ry="${ry - 8}" fill="#FFFFFF" opacity="0.18"/>
+  ${wave(64, 250)}${wave(400, 236)}${wave(96, 286)}${wave(372, 278)}
+  <path d="${blob(cx, cy + 40, rx * 0.96, ry)}" fill="url(#cliff)"/>
+  <path d="${blob(cx, cy + 20, rx * 0.99, ry)}" fill="#A86E3E"/>
+  <path d="${blob(cx, cy + 4, rx, ry, 1.03)}" fill="#F6D99A"/>
+  <path d="${blob(cx, cy, rx, ry, 0.95)}" fill="#6CC36A"/>
+  <path d="${blob(cx - 18, cy - 6, rx * 0.62, ry * 0.6)}" fill="#86D27A"/>
+  ${plot(cx - 62, cy + 6, GOLD)}${plot(cx - 26, cy + 22, '#7FE3D3')}${plot(cx - 26, cy - 10, COPPER)}${plot(cx + 10, cy + 6, '#B6AFF1')}
+  ${pine(cx - 112, cy + 4, 0.9)}${tree(cx - 92, cy - 18, 0.85)}${pine(cx + 118, cy + 10, 0.8)}${tree(cx + 96, cy + 30, 0.95)}${tree(cx + 112, cy - 16, 0.7)}${tree(cx - 70, cy + 34, 0.7)}
+  <rect x="${cx + 51}" y="${cy - 62}" width="2.5" height="40" fill="#5A3A22"/>
+  <path d="M${cx + 53.5} ${cy - 62} h22 l-6 7 l6 7 h-22 Z" fill="${GOLD}"/>
+  <circle cx="${cx + 52}" cy="${cy - 8}" r="20" fill="#FFFFFF"/>
+  <image href="${logo}" x="${cx + 33}" y="${cy - 27}" width="38" height="38" clip-path="url(#mc)"/>
 </g>
-${label(40, 64, c.islandLabel, '#D6FBF4')}
+${label(40, 64, c.islandLabel, '#0B4A58')}
 ${text(38, 316, esc(c.islandName), { size: 34, weight: 800, fill: '#FFFFFF', ls: -0.8 })}
 ${text(40, 350, esc(c.islandSub[0]), { size: 15, fill: '#E3FCF7' })}
 ${text(40, 374, esc(c.islandSub[1]), { size: 15, fill: '#E3FCF7' })}`
