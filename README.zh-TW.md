@@ -64,14 +64,6 @@
 --><picture><source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=git%2Cgithub%2Cgitlab%2Cpnpm%2Cobsidian%2Cthreejs%2Cgodot&theme=dark"><img src="https://skillicons.dev/icons?i=git%2Cgithub%2Cgitlab%2Cpnpm%2Cobsidian%2Cthreejs%2Cgodot&theme=light" height="56" alt="Git, GitHub, GitLab, pnpm, Obsidian, Three.js, Godot" /></picture>
 </p>
 
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/paw-heatmap-dark-zh.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/paw-heatmap-light-zh.svg">
-    <img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/paw-heatmap-light-zh.svg" alt="用 Malilion UI 肉球畫出的碼力獅 GitHub 貢獻紀錄" />
-  </picture>
-</p>
-
 ## 經歷與證照
 
 <p>
@@ -79,41 +71,22 @@
 <picture><source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/brand/bento/certifications-m-zh-dark.svg"><source media="(max-width: 600px)" srcset="./assets/brand/bento/certifications-m-zh-light.svg"><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/certifications-zh-dark.svg"><img src="./assets/brand/bento/certifications-zh-light.svg" width="100%" alt="證照：AWS Certified Cloud Practitioner、AWS Certified AI Practitioner、Microsoft MTA 資料庫、網路、軟體開發基礎" /></picture>
 </p>
 
-<details>
-<summary><b>GitHub 統計</b></summary>
+## GitHub 活動
 
-<br />
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/stats-dark-zh.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/stats-light-zh.svg">
-    <img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/stats-light-zh.svg" width="840" alt="碼力獅 GitHub 統計" />
-  </picture>
+<p>
+<picture><source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/activity-year-m-dark-zh.svg"><source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/activity-year-m-light-zh.svg"><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/activity-year-dark-zh.svg"><img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/activity-year-light-zh.svg" width="59.9%" alt="近一年每月貢獻" /></picture><!--
+--><picture><source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/activity-streak-m-dark-zh.svg"><source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/activity-streak-m-light-zh.svg"><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/activity-streak-dark-zh.svg"><img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/activity-streak-light-zh.svg" width="39.9%" alt="目前與最長連續貢獻天數" /></picture><!--
+--><picture><source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/activity-languages-m-dark-zh.svg"><source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/activity-languages-m-light-zh.svg"><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/activity-languages-dark-zh.svg"><img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/activity-languages-light-zh.svg" width="39.9%" alt="公開專案常用語言" /></picture><!--
+--><picture><source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/activity-numbers-m-dark-zh.svg"><source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/activity-numbers-m-light-zh.svg"><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/activity-numbers-dark-zh.svg"><img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/activity-numbers-light-zh.svg" width="59.9%" alt="Commits、Pull Requests、Issues、星星、公開專案與追蹤者" /></picture>
 </p>
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/streak-dark-zh.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/streak-light-zh.svg">
-    <img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/streak-light-zh.svg" width="412" alt="碼力獅連續貢獻天數" />
-  </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/languages-dark-zh.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/languages-light-zh.svg">
-    <img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/languages-light-zh.svg" width="412" alt="碼力獅常用語言" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/paw-heatmap-dark-zh.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/paw-heatmap-light-zh.svg">
+    <img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/paw-heatmap-light-zh.svg" alt="用 Malilion UI 肉球畫出的碼力獅 GitHub 貢獻紀錄" />
   </picture>
 </p>
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/monthly-dark-zh.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/malilion/malilion/gh-pages/monthly-light-zh.svg">
-    <img src="https://raw.githubusercontent.com/malilion/malilion/gh-pages/monthly-light-zh.svg" width="840" alt="碼力獅每月貢獻" />
-  </picture>
-</p>
-
-</details>
 
 <p align="center">
   <img src="./assets/brand/logo-160.png" width="40" height="40" alt="碼力獅吉祥物" /><br />

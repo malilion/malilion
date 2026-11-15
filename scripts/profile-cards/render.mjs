@@ -1,5 +1,6 @@
 // Renders the profile README's GitHub cards with Malilion UI and writes standalone SVGs
-// (dark / light × en / zh-TW): stats, streak, languages, monthly bars and the paw heatmap.
+// (dark / light × en / zh-TW): stats, streak, languages, monthly bars and the paw heatmap,
+// plus the bento activity tiles (cards/bento.mjs) the README now uses.
 //
 // Usage: GITHUB_TOKEN=... GITHUB_USER=malilion node render.mjs [outDir]
 
@@ -9,6 +10,7 @@ import { en, zhTW } from '@malilion/ui'
 import { fetchProfile } from './lib/github.mjs'
 import { composeHeatmap, renderHeatmap } from './cards/heatmap.mjs'
 import { renderStatCards } from './cards/stats.mjs'
+import { renderBentoCards } from './cards/bento.mjs'
 
 const token = process.env.GITHUB_TOKEN
 const user = process.env.GITHUB_USER
@@ -29,5 +31,6 @@ for (const [lang, suffix, locale] of [['en', '', en], ['zh', '-zh', zhTW]]) {
     write(`paw-heatmap-${theme}${suffix}.svg`, composeHeatmap(heatmap, locale, theme))
     const cards = await renderStatCards(profile, locale, lang, theme)
     for (const [name, svg] of Object.entries(cards)) write(`${name}-${theme}${suffix}.svg`, svg)
+    for (const [name, svg] of Object.entries(renderBentoCards(profile, lang, theme))) write(`${name}-${theme}${suffix}.svg`, svg)
   }
 }
