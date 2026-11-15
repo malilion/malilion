@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 170" width="200" height="170" role="img" aria-label="全部 32 個 repo: 其他實驗、工具與作品都在這裡。">
+<title>全部 32 個 repo: 其他實驗、工具與作品都在這裡。</title>
+<defs><clipPath id="tile"><rect x="8" y="8" width="184" height="154" rx="24"/></clipPath></defs>
+
+
+<g clip-path="url(#tile)"><rect width="200" height="170" fill="#F0AD2F"/><rect x="8" y="8" width="184" height="6" fill="#111" opacity="0.2"/></g>
+<text x="20" y="54" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="22" font-weight="800" fill="#111" text-anchor="start" letter-spacing="-0.3">全部 32 個</text><text x="20" y="82" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="22" font-weight="800" fill="#111" text-anchor="start" letter-spacing="-0.3">repo</text>
+<rect x="20" y="120" width="89" height="30" rx="15" fill="#111" opacity="1"/>
+<text x="64.5" y="140" font-family="'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace" font-size="16" font-weight="700" fill="#F0AD2F" text-anchor="middle">看全部 →</text>
+</svg>

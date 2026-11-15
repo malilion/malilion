@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200" role="img" aria-label="霜月問劍: Top-down wuxia action: three stages, two-phase bosses.">
+<title>霜月問劍: Top-down wuxia action: three stages, two-phase bosses.</title>
+<defs><clipPath id="tile"><rect x="8" y="8" width="384" height="184" rx="24"/></clipPath></defs>
+
+
+<g clip-path="url(#tile)"><rect width="400" height="200" fill="#171A1F"/><rect x="8" y="8" width="6" height="184" fill="#14CFB2" opacity="1"/></g>
+<text x="36" y="64" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="23" font-weight="800" fill="#F1EDE6" text-anchor="start" letter-spacing="-0.4">霜月問劍</text>
+<text x="36" y="98" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="14.5" font-weight="400" fill="#9C968D" text-anchor="start">Top-down wuxia action: three stages,</text><text x="36" y="120" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="14.5" font-weight="400" fill="#9C968D" text-anchor="start">two-phase bosses.</text>
+<rect x="36" y="146" width="62" height="26" rx="13" fill="#14CFB2" opacity="0.22"/>
+<text x="67" y="164" font-family="'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace" font-size="12" font-weight="700" fill="#F1EDE6" text-anchor="middle" letter-spacing="1">▶ PLAY</text>
+</svg>

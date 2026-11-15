@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 128" width="1200" height="128" role="img" aria-label="GAMES: Games to play right now.">
+<title>GAMES: Games to play right now.</title>
+<defs><clipPath id="tile"><rect x="8" y="8" width="1184" height="112" rx="24"/></clipPath></defs>
+
+
+<defs><clipPath id="art"><rect x="8" y="8" width="300" height="112" rx="0"/></clipPath></defs>
+<g clip-path="url(#tile)">
+  <rect width="1200" height="128" fill="#F2F3F5"/>
+  <g clip-path="url(#art)"><g transform="translate(8 7.75) scale(0.75)"><defs><linearGradient id="gm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#123B4A"/><stop offset="1" stop-color="#1F6E7A"/></linearGradient></defs>
+    <rect width="400" height="150" fill="url(#gm)"/>
+    <path d="M0 150 L0 104 L120 70 L250 112 L400 84 L400 150 Z" fill="#EAF6FA"/>
+    <path d="M120 70 L104 80 L136 78 Z M400 84 L380 92 L400 96 Z" fill="#FFFFFF"/>
+    <path d="M0 150 L0 128 Q160 108 400 134 L400 150 Z" fill="#CFE7EF"/>
+    <circle cx="52" cy="44" r="9" fill="#F0AD2F"/><circle cx="52" cy="44" r="5" fill="none" stroke="#B97A0F" stroke-width="2"/><circle cx="84" cy="30" r="9" fill="#F0AD2F"/><circle cx="84" cy="30" r="5" fill="none" stroke="#B97A0F" stroke-width="2"/><circle cx="334" cy="38" r="9" fill="#F0AD2F"/><circle cx="334" cy="38" r="5" fill="none" stroke="#B97A0F" stroke-width="2"/>
+    <g transform="translate(200 70)">
+      <path d="M-74 -26 Q-74 -40 -58 -40 H58 Q74 -40 74 -26 L84 22 Q88 44 68 44 Q56 44 48 30 L38 16 H-38 L-48 30 Q-56 44 -68 44 Q-88 44 -84 22 Z" fill="#F0AD2F"/>
+      <rect x="-50" y="-14" width="28" height="9" rx="3" fill="#3A2A06"/><rect x="-40" y="-24" width="9" height="28" rx="3" fill="#3A2A06"/>
+      <circle cx="36" cy="-18" r="7" fill="#14CFB2"/><circle cx="52" cy="-4" r="7" fill="#CD7631"/><circle cx="20" cy="-4" r="7" fill="#B6AFF1"/><circle cx="36" cy="10" r="7" fill="#FFFFFF"/>
+      <g transform="translate(0 4) scale(0.55)" fill="#3A2A06" opacity="0.7">
+    <ellipse cx="0" cy="8" rx="9" ry="7.5"/><ellipse cx="-10" cy="-4" rx="3.6" ry="4.6"/><ellipse cx="-3.6" cy="-10" rx="3.6" ry="4.8"/><ellipse cx="3.6" cy="-10" rx="3.6" ry="4.8"/><ellipse cx="10" cy="-4" rx="3.6" ry="4.6"/></g>
+    </g>
+    <g transform="translate(318 104)"><circle r="16" fill="#E5484D"/><path d="M-5 -8 L9 0 L-5 8 Z" fill="#FFFFFF"/></g></g></g>
+</g>
+<text x="336" y="50" font-family="'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace" font-size="13" font-weight="600" fill="#62666E" text-anchor="start" letter-spacing="1.6">GAMES</text><text x="334" y="92" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="30" font-weight="800" fill="#0E0E10" text-anchor="start" letter-spacing="-0.6">Games to play right now.</text>
+<text x="1156" y="50" font-family="'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace" font-size="13" font-weight="700" fill="#62666E" text-anchor="end" letter-spacing="2">6 PROJECTS</text>
+<text x="1156" y="92" font-family="'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace" font-size="15" font-weight="400" fill="#62666E" text-anchor="end">Three.js · Rapier · Blender</text>
+</svg>
