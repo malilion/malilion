@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 340" width="240" height="340" role="img" aria-label="追蹤我的 開發筆記 Threads @malilion.dev →">
+<title>追蹤我的 開發筆記 Threads @malilion.dev →</title>
+<defs><clipPath id="tile"><rect x="8" y="8" width="224" height="324" rx="24"/></clipPath></defs>
+
+
+<g clip-path="url(#tile)"><rect width="240" height="340" fill="#F0AD2F"/><g transform="translate(190 230) scale(3)" fill="#111" opacity="0.1">
+    <ellipse cx="0" cy="8" rx="9" ry="7.5"/><ellipse cx="-10" cy="-4" rx="3.6" ry="4.6"/><ellipse cx="-3.6" cy="-10" rx="3.6" ry="4.8"/><ellipse cx="3.6" cy="-10" rx="3.6" ry="4.8"/><ellipse cx="10" cy="-4" rx="3.6" ry="4.6"/></g></g>
+<text x="28" y="60" font-family="'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace" font-size="18" font-weight="700" fill="#5A3F08" text-anchor="start" letter-spacing="2">THREADS</text>
+<text x="26" y="112" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="36" font-weight="800" fill="#111" text-anchor="start" letter-spacing="-0.8">追蹤我的</text><text x="26" y="156" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="36" font-weight="800" fill="#111" text-anchor="start" letter-spacing="-0.8">開發筆記</text>
+<rect x="24" y="262" width="192" height="46" rx="23" fill="#111"/>
+<text x="120" y="292" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">@malilion.dev</text>
+</svg>
