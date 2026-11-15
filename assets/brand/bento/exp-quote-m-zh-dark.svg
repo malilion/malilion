@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 300" width="240" height="300" role="img" aria-label="真實問題 → 可維護的 系統 → 開源作品。">
+<title>真實問題 → 可維護的 系統 → 開源作品。</title>
+<defs><clipPath id="tile"><rect x="8" y="8" width="224" height="284" rx="24"/></clipPath></defs>
+
+
+<rect x="8" y="8" width="224" height="284" rx="24" fill="#1E1A15"/>
+<text x="22" y="92" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="90" font-weight="800" fill="#F0AD2F" text-anchor="start">“</text>
+<text x="24" y="122" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="22" font-weight="600" fill="#F6F1E9" text-anchor="start">真實問題 →</text><text x="24" y="153" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="22" font-weight="600" fill="#F6F1E9" text-anchor="start">可維護的</text><text x="24" y="184" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="22" font-weight="600" fill="#F6F1E9" text-anchor="start">系統 →</text><text x="24" y="215" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="22" font-weight="600" fill="#F6F1E9" text-anchor="start">開源作品。</text>
+<text x="24" y="268" font-family="'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace" font-size="16" font-weight="700" fill="#F0AD2F" text-anchor="start">— MaliLion</text>
+</svg>

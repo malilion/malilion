@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" role="img" aria-label="2024～2026: 軟體工程師, 工業電腦公司 — ASP.NET Core, Vue.js, MSSQL / Oracle, 內部平台">
+<title>2024～2026: 軟體工程師, 工業電腦公司 — ASP.NET Core, Vue.js, MSSQL / Oracle, 內部平台</title>
+<defs><clipPath id="tile"><rect x="8" y="8" width="384" height="284" rx="24"/></clipPath></defs>
+<style>@media (prefers-reduced-motion:reduce){animate{display:none}}</style>
+
+<line x1="0" y1="40" x2="400" y2="40" stroke="#2A2E35" stroke-width="4"/>
+<rect x="8" y="8" width="384" height="284" rx="24" fill="#171A1F"/>
+<line x1="8" y1="40" x2="392" y2="40" stroke="#2A2E35" stroke-opacity="1" stroke-width="4"/>
+<circle cx="44" cy="40" r="8" fill="#171A1F" stroke="#F1EDE6" stroke-width="3"/>
+
+<text x="34" y="112" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="38" font-weight="800" fill="#F1EDE6" text-anchor="start" letter-spacing="-1">2024～2026</text>
+<text x="36" y="146" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="18" font-weight="700" fill="#F1EDE6" text-anchor="start">軟體工程師</text>
+<text x="36" y="170" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="15" font-weight="400" fill="#9C968D" text-anchor="start">工業電腦公司</text>
+<rect x="36" y="194" width="107" height="25" rx="12.5" fill="#2A2E35"/><text x="89.5" y="211" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="12.5" font-weight="600" fill="#F1EDE6" text-anchor="middle">ASP.NET Core</text><rect x="151" y="194" width="63" height="25" rx="12.5" fill="#2A2E35"/><text x="182.5" y="211" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="12.5" font-weight="600" fill="#F1EDE6" text-anchor="middle">Vue.js</text><rect x="222" y="194" width="121" height="25" rx="12.5" fill="#2A2E35"/><text x="282.5" y="211" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="12.5" font-weight="600" fill="#F1EDE6" text-anchor="middle">MSSQL / Oracle</text><rect x="36" y="227" width="70" height="25" rx="12.5" fill="#2A2E35"/><text x="71" y="244" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="12.5" font-weight="600" fill="#F1EDE6" text-anchor="middle">內部平台</text>
+</svg>

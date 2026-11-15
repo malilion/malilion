@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 300" width="240" height="300" role="img" aria-label="Real problems → maintainable systems → open source.">
+<title>Real problems → maintainable systems → open source.</title>
+<defs><clipPath id="tile"><rect x="8" y="8" width="224" height="284" rx="24"/></clipPath></defs>
+
+
+<rect x="8" y="8" width="224" height="284" rx="24" fill="#0E0E10"/>
+<text x="22" y="92" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="90" font-weight="800" fill="#F0AD2F" text-anchor="start">“</text>
+<text x="24" y="122" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="22" font-weight="600" fill="#FFFFFF" text-anchor="start">Real problems →</text><text x="24" y="153" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="22" font-weight="600" fill="#FFFFFF" text-anchor="start">maintainable</text><text x="24" y="184" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="22" font-weight="600" fill="#FFFFFF" text-anchor="start">systems →</text><text x="24" y="215" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="22" font-weight="600" fill="#FFFFFF" text-anchor="start">open source.</text>
+<text x="24" y="268" font-family="'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace" font-size="16" font-weight="700" fill="#F0AD2F" text-anchor="start">— MaliLion</text>
+</svg>
