@@ -26,7 +26,7 @@
 --><a href="https://www.youtube.com/watch?v=ElXvObJbIFY"><picture><source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/brand/bento/ui-trailer-m-en-dark.svg"><source media="(max-width: 600px)" srcset="./assets/brand/bento/ui-trailer-m-en-light.svg"><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/ui-trailer-en-dark.svg"><img src="./assets/brand/bento/ui-trailer-en-light.svg" width="49.9%" alt="Watch the Malilion UI trailer on YouTube" /></picture></a>
 </p>
 
-## Everything else
+## Explore the MaliLion Universe
 
 <p>
 <picture><source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/brand/bento/band-ai-tools-m-en-dark.svg"><source media="(max-width: 600px)" srcset="./assets/brand/bento/band-ai-tools-m-en-light.svg"><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/band-ai-tools-en-dark.svg"><img src="./assets/brand/bento/band-ai-tools-en-light.svg" width="100%" alt="AI &amp; dev tools" /></picture><br />
