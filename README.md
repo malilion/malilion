@@ -4,6 +4,7 @@
 
 <p>
 <a href="https://malilion.com"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/hero-en-dark.svg"><img src="./assets/brand/bento/hero-en-light.svg" width="100%" alt="MaliLion: I turn small ideas into real projects. Software engineer by day; component libraries, dev tools and 3D worlds by night." /></picture></a><br />
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/ticker-en-dark.svg"><img src="./assets/brand/bento/ticker-en-light.svg" width="100%" alt="AI × CODE × GAME slogans: build in public, creative coding, open source, local-first tools, 3D worlds" /></picture><br />
 <a href="https://malilion.github.io/MalilionUI/"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/malilion-ui-en-dark.svg"><img src="./assets/brand/bento/malilion-ui-en-light.svg" width="59.9%" alt="Malilion UI: 161 Vue 3 and React components, two themes, zero runtime dependencies" /></picture></a><!--
 --><a href="https://www.malilion.com/world"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/project-island-en-dark.svg"><img src="./assets/brand/bento/project-island-en-light.svg" width="39.9%" alt="Project Island: an interactive 3D portfolio shaped like a lion" /></picture></a><br />
 <a href="https://github.com/malilion/ContextLion"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/contextlion-en-dark.svg"><img src="./assets/brand/bento/contextlion-en-light.svg" width="33.2%" alt="ContextLion: turn webpages into AI-ready Markdown" /></picture></a><!--
@@ -23,20 +24,32 @@
 
 ## Everything else
 
-| Project | What it is |
-| --- | --- |
-| **[DevTrace Lion](https://github.com/malilion/DevTraceLion)** | Local-first API debugging inside browser DevTools, zero required permissions |
-| **[The Nocturne Atlas](https://github.com/malilion/The-Nocturne-Atlas)** | A seed-driven 3D wizarding world in Three.js and TypeScript |
-| **[BlockUI](https://malilion.github.io/BlockUI/)** | Block × pixel × crafting React component library, five themes, WCAG 2.2 AA |
-| **[MaliLion.com](https://malilion.com)** | Home of my projects, build notes, game development and creator brand |
-| **[Painterly Meadow](https://github.com/malilion/Painterly-Meadow)** | A hand-painted-style NPR nature sandbox in a single Three.js file |
-| **[Fuji Sakura Vista](https://github.com/malilion/fuji-sakura-vista)** | A procedural Blender scene of Mount Fuji and sakura at dawn, with a Three.js showcase |
-| **[lyricreel](https://github.com/malilion/lyricreel)** | Song and lyrics in, beat-synced lyric music video out, every frame drawn in code |
-| **[riso-mv-kit](https://github.com/malilion/riso-mv-kit)** | Riso-print picture-book music videos, drawn by code and rendered frame by frame |
-| **[oledfx](https://github.com/malilion/oledfx) · [inkfx](https://github.com/malilion/inkfx) · [fx-skill-kit](https://github.com/malilion/fx-skill-kit)** | Procedural FX kits for code-drawn visual effects |
-| **[Editorial Photo Poster](https://github.com/malilion/editorial-photo-poster)** | Codex skill: photographs into restrained editorial posters |
-| **[Haute Jewelry From Photo](https://github.com/malilion/haute-jewelry-from-photo)** | Codex skill: visual mood and forms into original haute joaillerie concepts |
-| **[Scenic Bookmark Travel Poster](https://github.com/malilion/scenic-bookmark-travel-poster)** | Codex skill: travel photos into Japanese-inspired souvenir posters and bookmarks |
+<table>
+<tr>
+<td width="33%" valign="top">
+<b>AI & dev tools</b><br /><br />
+<a href="https://github.com/malilion/DevTraceLion"><b>DevTrace Lion</b></a><br /><sub>Local-first API debugging inside DevTools, zero permissions</sub><br /><br />
+<a href="https://github.com/malilion/editorial-photo-poster"><b>Editorial Photo Poster</b></a><br /><sub>Codex skill: photos into restrained editorial posters</sub><br /><br />
+<a href="https://github.com/malilion/haute-jewelry-from-photo"><b>Haute Jewelry From Photo</b></a><br /><sub>Codex skill: visual mood into haute joaillerie concepts</sub><br /><br />
+<a href="https://github.com/malilion/scenic-bookmark-travel-poster"><b>Scenic Bookmark Travel Poster</b></a><br /><sub>Codex skill: travel photos into souvenir posters</sub><br /><br />
+</td>
+<td width="33%" valign="top">
+<b>Interactive worlds</b><br /><br />
+<a href="https://github.com/malilion/The-Nocturne-Atlas"><b>The Nocturne Atlas</b></a><br /><sub>Seed-driven 3D wizarding world, Three.js + TypeScript</sub><br /><br />
+<a href="https://github.com/malilion/Painterly-Meadow"><b>Painterly Meadow</b></a><br /><sub>Hand-painted NPR nature sandbox in one Three.js file</sub><br /><br />
+<a href="https://github.com/malilion/fuji-sakura-vista"><b>Fuji Sakura Vista</b></a><br /><sub>Procedural Blender scene of Fuji at dawn, with a Three.js showcase</sub><br /><br />
+</td>
+<td width="33%" valign="top">
+<b>Design & creative coding</b><br /><br />
+<a href="https://malilion.github.io/BlockUI/"><b>BlockUI</b></a><br /><sub>Pixel-crafting React UI, five themes, WCAG 2.2 AA</sub><br /><br />
+<a href="https://github.com/malilion/lyricreel"><b>lyricreel</b></a><br /><sub>Song + lyrics in, beat-synced lyric video out</sub><br /><br />
+<a href="https://github.com/malilion/riso-mv-kit"><b>riso-mv-kit</b></a><br /><sub>Riso-print picture-book music videos drawn in code</sub><br /><br />
+<a href="https://github.com/malilion/oledfx"><b>oledfx</b></a> · <a href="https://github.com/malilion/inkfx"><b>inkfx</b></a> · <a href="https://github.com/malilion/fx-skill-kit"><b>fx-skill-kit</b></a><br /><sub>Procedural FX kits for code-drawn effects</sub><br /><br />
+</td>
+</tr>
+</table>
+
+<p align="right"><a href="https://github.com/malilion?tab=repositories"><b>View all repositories →</b></a> · <a href="https://malilion.com"><b>More on malilion.com →</b></a></p>
 
 **Stack** · .NET / C# / Laravel · Vue / React / TypeScript / Next.js · AWS / Docker / Cloudflare / Vercel · PostgreSQL / MySQL · Three.js / Godot
 
