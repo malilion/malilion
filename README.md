@@ -51,7 +51,18 @@
 
 <p align="right"><a href="https://github.com/malilion?tab=repositories"><b>View all repositories →</b></a> · <a href="https://malilion.com"><b>More on malilion.com →</b></a></p>
 
-**Stack** · .NET / C# / Laravel · Vue / React / TypeScript / Next.js · AWS / Docker / Cloudflare / Vercel · PostgreSQL / MySQL · Three.js / Godot
+## Stack
+
+<p>
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/stack-core-en-dark.svg"><img src="./assets/brand/bento/stack-core-en-light.svg" height="56" alt="Languages & core" /></picture><!--
+--><picture><source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=html,css,js,ts,php,cs,dotnet"><img src="https://skillicons.dev/icons?i=html,css,js,ts,php,cs,dotnet&theme=light" height="56" alt="HTML, CSS, JavaScript, TypeScript, PHP, C#, .NET" /></picture><br />
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/stack-frontend-en-dark.svg"><img src="./assets/brand/bento/stack-frontend-en-light.svg" height="56" alt="Frameworks & frontend" /></picture><!--
+--><picture><source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=laravel,vue,react,nextjs,vite,pinia,tailwind"><img src="https://skillicons.dev/icons?i=laravel,vue,react,nextjs,vite,pinia,tailwind&theme=light" height="56" alt="Laravel, Vue, React, Next.js, Vite, Pinia, Tailwind CSS" /></picture><br />
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/stack-cloud-en-dark.svg"><img src="./assets/brand/bento/stack-cloud-en-light.svg" height="56" alt="Cloud & data" /></picture><!--
+--><picture><source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=aws,docker,vercel,cloudflare,supabase,postgres,mysql"><img src="https://skillicons.dev/icons?i=aws,docker,vercel,cloudflare,supabase,postgres,mysql&theme=light" height="56" alt="AWS, Docker, Vercel, Cloudflare, Supabase, PostgreSQL, MySQL" /></picture><br />
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/stack-tools-en-dark.svg"><img src="./assets/brand/bento/stack-tools-en-light.svg" height="56" alt="Tools & interactive" /></picture><!--
+--><picture><source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=git,github,gitlab,pnpm,obsidian,threejs,godot"><img src="https://skillicons.dev/icons?i=git,github,gitlab,pnpm,obsidian,threejs,godot&theme=light" height="56" alt="Git, GitHub, GitLab, pnpm, Obsidian, Three.js, Godot" /></picture>
+</p>
 
 <p align="center">
   <picture>

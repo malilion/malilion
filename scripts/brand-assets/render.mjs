@@ -10,6 +10,7 @@
 //   malilion-ui    720 × 420  |  project-island 480 × 420
 //   contextlion    400 × 320  |  ninefold-court 400 × 320  |  cow-pasture 400 × 320
 //   now-building   720 × 260  |  threads        480 × 260
+//   stack-*        400 × 64   (label beside a skillicons.dev strip)
 // Each SVG keeps an 8-unit transparent margin, which becomes the gutter
 // between tiles that sit side by side.
 
@@ -293,6 +294,34 @@ function ticker(c, t) {
   })
 }
 
+// Stack row labels. Each sits inline beside a skillicons.dev strip of the
+// same rendered height (the README sets height="56" on both).
+const STACK = {
+  en: [
+    { slug: 'core', name: 'Languages & core', sub: '.NET · C# · PHP · TypeScript' },
+    { slug: 'frontend', name: 'Frameworks & frontend', sub: 'Vue · React · Next.js · Laravel' },
+    { slug: 'cloud', name: 'Cloud & data', sub: 'AWS · Docker · Cloudflare · Postgres' },
+    { slug: 'tools', name: 'Tools & interactive', sub: 'Three.js · Godot · Git · pnpm' },
+  ],
+  zh: [
+    { slug: 'core', name: '語言與核心', sub: '.NET · C# · PHP · TypeScript' },
+    { slug: 'frontend', name: '框架與前端', sub: 'Vue · React · Next.js · Laravel' },
+    { slug: 'cloud', name: '雲端與資料', sub: 'AWS · Docker · Cloudflare · Postgres' },
+    { slug: 'tools', name: '工具與互動開發', sub: 'Three.js · Godot · Git · pnpm' },
+  ],
+}
+const STACK_DOT = { core: GOLD, frontend: TEAL, cloud: '#B6AFF1', tools: COPPER }
+
+function stackLabel(s, t) {
+  const W = 400, H = 64
+  const body = `
+<rect x="2" y="4" width="${W - 16}" height="${H - 8}" rx="18" fill="${t.tile}"/>
+<circle cx="28" cy="${H / 2}" r="7" fill="${STACK_DOT[s.slug]}"/>
+${text(48, 29, esc(s.name), { size: 18, weight: 800, fill: t.ink })}
+${text(48, 49, esc(s.sub), { size: 12.5, fill: t.muted, font: MONO })}`
+  return svg(W, H, `${s.name}: ${s.sub}`, body)
+}
+
 // ---------- Write ----------
 let n = 0
 for (const [lang, c] of Object.entries(COPY)) {
@@ -306,6 +335,7 @@ for (const [lang, c] of Object.entries(COPY)) {
       threads: threads(c),
     }
     for (const [slug, p] of Object.entries(c.row3)) files[slug] = rowTile(slug, p, t)
+    for (const st of STACK[lang]) files[`stack-${st.slug}`] = stackLabel(st, t)
     for (const [name, data] of Object.entries(files)) {
       writeFileSync(join(out, `${name}-${lang}-${theme}.svg`), data)
       n++

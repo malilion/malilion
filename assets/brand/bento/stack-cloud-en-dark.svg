@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 64" width="400" height="64" role="img" aria-label="Cloud &amp; data: AWS · Docker · Cloudflare · Postgres">
+<title>Cloud &amp; data: AWS · Docker · Cloudflare · Postgres</title>
+<defs><clipPath id="tile"><rect x="8" y="8" width="384" height="48" rx="24"/></clipPath></defs>
+
+
+<rect x="2" y="4" width="384" height="56" rx="18" fill="#171A1F"/>
+<circle cx="28" cy="32" r="7" fill="#B6AFF1"/>
+<text x="48" y="29" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="18" font-weight="800" fill="#F1EDE6" text-anchor="start">Cloud &amp; data</text>
+<text x="48" y="49" font-family="'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace" font-size="12.5" font-weight="400" fill="#9C968D" text-anchor="start">AWS · Docker · Cloudflare · Postgres</text>
+</svg>
