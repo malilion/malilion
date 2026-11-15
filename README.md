@@ -26,22 +26,37 @@
 
 <table>
 <tr>
-<td width="33%" valign="top">
+<td width="50%" valign="top">
 <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/cat-ai-tools-en-dark.svg"><img src="./assets/brand/bento/cat-ai-tools-en-light.svg" width="100%" alt="AI & dev tools" /></picture><br /><br />
+<a href="https://github.com/malilion/AURA-REC"><b>AURA REC</b></a> · <a href="https://malilion.github.io/AURA-REC/">↗ Site</a><br /><sub>Free, privacy-first screen recorder and tutorial editor for macOS, Windows and the browser</sub><br /><br />
+<a href="https://github.com/malilion/StockLion"><b>StockLion 股力獅</b></a><br /><sub>Browser extension: Taiwan stock quotes and watchlists on any page</sub><br /><br />
+<a href="https://github.com/malilion/Malilion-AI-Radar"><b>Malilion AI Radar</b></a> · <a href="https://malilion.github.io/Malilion-AI-Radar/">↗ Site</a><br /><sub>Hourly news and AI intelligence site, built and updated automatically</sub><br /><br />
 <a href="https://github.com/malilion/DevTraceLion"><b>DevTrace Lion</b></a><br /><sub>Local-first API debugging inside DevTools, zero permissions</sub><br /><br />
-<a href="https://github.com/malilion/editorial-photo-poster"><b>Editorial Photo Poster</b></a><br /><sub>Codex skill: photos into restrained editorial posters</sub><br /><br />
-<a href="https://github.com/malilion/haute-jewelry-from-photo"><b>Haute Jewelry From Photo</b></a><br /><sub>Codex skill: visual mood into haute joaillerie concepts</sub><br /><br />
-<a href="https://github.com/malilion/scenic-bookmark-travel-poster"><b>Scenic Bookmark Travel Poster</b></a><br /><sub>Codex skill: travel photos into souvenir posters</sub><br /><br />
+<a href="https://github.com/malilion/github-repo-landing-page-skill"><b>GitHub Repo Landing Page Skill</b></a> · <a href="https://malilion.github.io/github-repo-landing-page-skill/">↗ Site</a><br /><sub>Agent skill that turns any GitHub repo into a landing page</sub><br /><br />
+<a href="https://github.com/malilion/editorial-photo-poster"><b>Editorial Photo Poster</b></a> · <a href="https://github.com/malilion/haute-jewelry-from-photo"><b>Haute Jewelry From Photo</b></a> · <a href="https://github.com/malilion/scenic-bookmark-travel-poster"><b>Scenic Bookmark Travel Poster</b></a><br /><sub>Codex skills: photos into posters, jewelry concepts and bookmarks</sub><br /><br />
 </td>
-<td width="33%" valign="top">
+<td width="50%" valign="top">
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/cat-games-en-dark.svg"><img src="./assets/brand/bento/cat-games-en-light.svg" width="100%" alt="Games" /></picture><br /><br />
+<a href="https://github.com/malilion/Snowboarding"><b>POWDER RUSH 粉雪狂飆</b></a> · <a href="https://malilion.github.io/Snowboarding/">▶ Play</a><br /><sub>3D snowboarding: 3,200 m run, 18 kickers, tricks and gates</sub><br /><br />
+<a href="https://github.com/malilion/neon-taipei-overdrive"><b>Neon Taipei Overdrive</b></a> · <a href="https://malilion.github.io/neon-taipei-overdrive/">▶ Play</a><br /><sub>Cyberpunk action on a rainy Taipei night, in one HTML file</sub><br /><br />
+<a href="https://github.com/malilion/shuangyue-wenjian"><b>霜月問劍</b></a> · <a href="https://malilion.github.io/shuangyue-wenjian/">▶ Play</a><br /><sub>Top-down wuxia action: three stages, two-phase bosses</sub><br /><br />
+<a href="https://github.com/malilion/prachute"><b>Cloud Dive 雲海跳傘</b></a> · <a href="https://malilion.github.io/prachute/">▶ Play</a><br /><sub>Skydive from 4,000 m through golden clouds onto the target</sub><br /><br />
+<a href="https://github.com/malilion/star-garden-rumble"><b>Star Garden Rumble</b></a> · <a href="https://malilion.github.io/star-garden-rumble/">▶ Play</a><br /><sub>Low-poly physics defence on a floating island (Rapier)</sub><br /><br />
+<a href="https://github.com/malilion/Polar-Bear-BBQ-Game"><b>Polar Bear BBQ 3D</b></a> · <a href="https://malilion.github.io/Polar-Bear-BBQ-Game/">▶ Play</a><br /><sub>A grill-shop game modelled in Blender, played in Three.js</sub><br /><br />
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
 <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/cat-worlds-en-dark.svg"><img src="./assets/brand/bento/cat-worlds-en-light.svg" width="100%" alt="Interactive worlds" /></picture><br /><br />
 <a href="https://github.com/malilion/The-Nocturne-Atlas"><b>The Nocturne Atlas</b></a><br /><sub>Seed-driven 3D wizarding world, Three.js + TypeScript</sub><br /><br />
 <a href="https://github.com/malilion/Painterly-Meadow"><b>Painterly Meadow</b></a><br /><sub>Hand-painted NPR nature sandbox in one Three.js file</sub><br /><br />
 <a href="https://github.com/malilion/fuji-sakura-vista"><b>Fuji Sakura Vista</b></a><br /><sub>Procedural Blender scene of Fuji at dawn, with a Three.js showcase</sub><br /><br />
+<a href="https://github.com/malilion/bee_scene"><b>Realistic Bee & Flowers</b></a> · <a href="https://malilion.github.io/bee_scene/">↗ Site</a><br /><sub>A honeybee foraging a meadow, in one offline HTML file</sub><br /><br />
 </td>
-<td width="33%" valign="top">
+<td width="50%" valign="top">
 <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/cat-creative-en-dark.svg"><img src="./assets/brand/bento/cat-creative-en-light.svg" width="100%" alt="Design & creative coding" /></picture><br /><br />
 <a href="https://malilion.github.io/BlockUI/"><b>BlockUI</b></a><br /><sub>Pixel-crafting React UI, five themes, WCAG 2.2 AA</sub><br /><br />
+<a href="https://github.com/malilion/my-bear-jelly"><b>Gummy/Bears.</b></a> · <a href="https://malilion.github.io/my-bear-jelly/">↗ Site</a><br /><sub>Wobbly gummy bears, every pixel raymarched in one shader</sub><br /><br />
 <a href="https://github.com/malilion/lyricreel"><b>lyricreel</b></a><br /><sub>Song + lyrics in, beat-synced lyric video out</sub><br /><br />
 <a href="https://github.com/malilion/riso-mv-kit"><b>riso-mv-kit</b></a><br /><sub>Riso-print picture-book music videos drawn in code</sub><br /><br />
 <a href="https://github.com/malilion/oledfx"><b>oledfx</b></a> · <a href="https://github.com/malilion/inkfx"><b>inkfx</b></a> · <a href="https://github.com/malilion/fx-skill-kit"><b>fx-skill-kit</b></a><br /><sub>Procedural FX kits for code-drawn effects</sub><br /><br />

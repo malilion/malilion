@@ -26,22 +26,37 @@
 
 <table>
 <tr>
-<td width="33%" valign="top">
+<td width="50%" valign="top">
 <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/cat-ai-tools-zh-dark.svg"><img src="./assets/brand/bento/cat-ai-tools-zh-light.svg" width="100%" alt="AI 與開發工具" /></picture><br /><br />
+<a href="https://github.com/malilion/AURA-REC"><b>AURA REC</b></a> · <a href="https://malilion.github.io/AURA-REC/">↗ 網站</a><br /><sub>免費開源、隱私優先的螢幕錄影與教學剪輯工具，macOS、Windows 和瀏覽器都能用</sub><br /><br />
+<a href="https://github.com/malilion/StockLion"><b>StockLion 股力獅</b></a><br /><sub>瀏覽器擴充功能：在任何網頁看台股報價與自選清單</sub><br /><br />
+<a href="https://github.com/malilion/Malilion-AI-Radar"><b>Malilion AI Radar</b></a> · <a href="https://malilion.github.io/Malilion-AI-Radar/">↗ 網站</a><br /><sub>每小時自動更新的新聞與 AI 情報網站</sub><br /><br />
 <a href="https://github.com/malilion/DevTraceLion"><b>DevTrace Lion</b></a><br /><sub>在 DevTools 內做 Local-first API 除錯，不需任何權限</sub><br /><br />
-<a href="https://github.com/malilion/editorial-photo-poster"><b>Editorial Photo Poster</b></a><br /><sub>Codex skill：照片轉成簡約編輯風海報</sub><br /><br />
-<a href="https://github.com/malilion/haute-jewelry-from-photo"><b>Haute Jewelry From Photo</b></a><br /><sub>Codex skill：圖片氛圍轉成高級珠寶概念</sub><br /><br />
-<a href="https://github.com/malilion/scenic-bookmark-travel-poster"><b>Scenic Bookmark Travel Poster</b></a><br /><sub>Codex skill：旅遊照片轉成日系紀念海報與書籤</sub><br /><br />
+<a href="https://github.com/malilion/github-repo-landing-page-skill"><b>GitHub Repo Landing Page Skill</b></a> · <a href="https://malilion.github.io/github-repo-landing-page-skill/">↗ 網站</a><br /><sub>把任何 GitHub repo 變成形象頁的 agent skill</sub><br /><br />
+<a href="https://github.com/malilion/editorial-photo-poster"><b>Editorial Photo Poster</b></a> · <a href="https://github.com/malilion/haute-jewelry-from-photo"><b>Haute Jewelry From Photo</b></a> · <a href="https://github.com/malilion/scenic-bookmark-travel-poster"><b>Scenic Bookmark Travel Poster</b></a><br /><sub>Codex skills：照片轉成海報、珠寶概念與書籤</sub><br /><br />
 </td>
-<td width="33%" valign="top">
+<td width="50%" valign="top">
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/cat-games-zh-dark.svg"><img src="./assets/brand/bento/cat-games-zh-light.svg" width="100%" alt="遊戲" /></picture><br /><br />
+<a href="https://github.com/malilion/Snowboarding"><b>POWDER RUSH 粉雪狂飆</b></a> · <a href="https://malilion.github.io/Snowboarding/">▶ 試玩</a><br /><sub>單板滑雪 3D 動作遊戲：3,200 公尺賽道、18 個跳台</sub><br /><br />
+<a href="https://github.com/malilion/neon-taipei-overdrive"><b>Neon Taipei Overdrive</b></a> · <a href="https://malilion.github.io/neon-taipei-overdrive/">▶ 試玩</a><br /><sub>雨夜台北的賽博龐克動作遊戲，只有一個 HTML 檔</sub><br /><br />
+<a href="https://github.com/malilion/shuangyue-wenjian"><b>霜月問劍</b></a> · <a href="https://malilion.github.io/shuangyue-wenjian/">▶ 試玩</a><br /><sub>俯視角武俠動作，三關，每關有兩階段 Boss</sub><br /><br />
+<a href="https://github.com/malilion/prachute"><b>Cloud Dive 雲海跳傘</b></a> · <a href="https://malilion.github.io/prachute/">▶ 試玩</a><br /><sub>從 4,000 公尺穿越金色雲海，降落在靶心</sub><br /><br />
+<a href="https://github.com/malilion/star-garden-rumble"><b>Star Garden Rumble</b></a> · <a href="https://malilion.github.io/star-garden-rumble/">▶ 試玩</a><br /><sub>浮島上的低面數 3D 物理防守遊戲（Rapier）</sub><br /><br />
+<a href="https://github.com/malilion/Polar-Bear-BBQ-Game"><b>Polar Bear BBQ 3D</b></a> · <a href="https://malilion.github.io/Polar-Bear-BBQ-Game/">▶ 試玩</a><br /><sub>Blender 建模、Three.js 呈現的北極熊烤肉店</sub><br /><br />
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
 <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/cat-worlds-zh-dark.svg"><img src="./assets/brand/bento/cat-worlds-zh-light.svg" width="100%" alt="互動世界" /></picture><br /><br />
 <a href="https://github.com/malilion/The-Nocturne-Atlas"><b>The Nocturne Atlas</b></a><br /><sub>由種子驅動的 3D 魔法世界，Three.js + TypeScript</sub><br /><br />
 <a href="https://github.com/malilion/Painterly-Meadow"><b>風之草原 Painterly Meadow</b></a><br /><sub>單一 Three.js 檔案的手繪風 NPR 自然沙盒</sub><br /><br />
 <a href="https://github.com/malilion/fuji-sakura-vista"><b>Fuji Sakura Vista</b></a><br /><sub>Blender 程式生成的富士山黎明場景，附 Three.js 展示</sub><br /><br />
+<a href="https://github.com/malilion/bee_scene"><b>Realistic Bee & Flowers</b></a> · <a href="https://malilion.github.io/bee_scene/">↗ 網站</a><br /><sub>蜜蜂在草原採花的互動 3D 場景，單一離線 HTML 檔</sub><br /><br />
 </td>
-<td width="33%" valign="top">
+<td width="50%" valign="top">
 <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/cat-creative-zh-dark.svg"><img src="./assets/brand/bento/cat-creative-zh-light.svg" width="100%" alt="設計與創意程式" /></picture><br /><br />
 <a href="https://malilion.github.io/BlockUI/"><b>BlockUI</b></a><br /><sub>像素合成遊戲風 React 元件庫，五種主題，WCAG 2.2 AA</sub><br /><br />
+<a href="https://github.com/malilion/my-bear-jelly"><b>Gummy/Bears.</b></a> · <a href="https://malilion.github.io/my-bear-jelly/">↗ 網站</a><br /><sub>會晃動的軟糖熊，每個像素都由 shader 算出</sub><br /><br />
 <a href="https://github.com/malilion/lyricreel"><b>lyricreel</b></a><br /><sub>輸入歌曲與歌詞，輸出跟著節拍走的歌詞 MV</sub><br /><br />
 <a href="https://github.com/malilion/riso-mv-kit"><b>riso-mv-kit</b></a><br /><sub>用程式繪製的 Riso 印刷風繪本 MV</sub><br /><br />
 <a href="https://github.com/malilion/oledfx"><b>oledfx</b></a> · <a href="https://github.com/malilion/inkfx"><b>inkfx</b></a> · <a href="https://github.com/malilion/fx-skill-kit"><b>fx-skill-kit</b></a><br /><sub>以程式生成視覺特效的 FX 工具組</sub><br /><br />

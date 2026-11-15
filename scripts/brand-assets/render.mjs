@@ -451,12 +451,14 @@ function ticker(c, t, { W = 1200, H = 60, fs = 15 } = {}) {
 // Category cards that head each column of the "Everything else" index.
 const CATS = {
   en: [
-    { slug: 'ai-tools', label: 'AI & DEV TOOLS', head: 'Tools that stay local.', sub: 'DevTools · Codex skills' },
+    { slug: 'ai-tools', label: 'AI & DEV TOOLS', head: 'Tools that stay local.', sub: 'Desktop · extensions · skills' },
+    { slug: 'games', label: 'GAMES', head: 'Games to play right now.', sub: 'Three.js · Rapier · Blender' },
     { slug: 'worlds', label: 'INTERACTIVE WORLDS', head: 'Worlds to walk into.', sub: 'Three.js · Blender · NPR' },
     { slug: 'creative', label: 'DESIGN & CREATIVE CODE', head: 'Code that draws.', sub: 'React UI · lyric MV · FX' },
   ],
   zh: [
-    { slug: 'ai-tools', label: 'AI 與開發工具', head: '留在本機的工具', sub: 'DevTools · Codex skills' },
+    { slug: 'ai-tools', label: 'AI 與開發工具', head: '留在本機的工具', sub: '桌面 App · 擴充功能 · Skills' },
+    { slug: 'games', label: '遊戲', head: '打開就能玩的遊戲', sub: 'Three.js · Rapier · Blender' },
     { slug: 'worlds', label: '互動世界', head: '走得進去的世界', sub: 'Three.js · Blender · NPR' },
     { slug: 'creative', label: '設計與創意程式', head: '會畫畫的程式', sub: 'React UI · 歌詞 MV · FX' },
   ],
@@ -476,6 +478,20 @@ const catArt = {
       <path d="M86 -66 l6 16 16 6 -16 6 -6 16 -6 -16 -16 -6 16 -6z" fill="${GOLD}"/>
       <path d="M-112 30 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3z" fill="#FFFFFF"/>
     </g>`,
+  // A game controller over a snowy slope, with coins and a play sign.
+  games: `<defs><linearGradient id="gm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#123B4A"/><stop offset="1" stop-color="#1F6E7A"/></linearGradient></defs>
+    <rect width="400" height="150" fill="url(#gm)"/>
+    <path d="M0 150 L0 104 L120 70 L250 112 L400 84 L400 150 Z" fill="#EAF6FA"/>
+    <path d="M120 70 L104 80 L136 78 Z M400 84 L380 92 L400 96 Z" fill="#FFFFFF"/>
+    <path d="M0 150 L0 128 Q160 108 400 134 L400 150 Z" fill="#CFE7EF"/>
+    ${[[52, 44], [84, 30], [334, 38]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="9" fill="${GOLD}"/><circle cx="${x}" cy="${y}" r="5" fill="none" stroke="#B97A0F" stroke-width="2"/>`).join('')}
+    <g transform="translate(200 70)">
+      <path d="M-74 -26 Q-74 -40 -58 -40 H58 Q74 -40 74 -26 L84 22 Q88 44 68 44 Q56 44 48 30 L38 16 H-38 L-48 30 Q-56 44 -68 44 Q-88 44 -84 22 Z" fill="${GOLD}"/>
+      <rect x="-50" y="-14" width="28" height="9" rx="3" fill="#3A2A06"/><rect x="-40" y="-24" width="9" height="28" rx="3" fill="#3A2A06"/>
+      <circle cx="36" cy="-18" r="7" fill="${TEAL}"/><circle cx="52" cy="-4" r="7" fill="${COPPER}"/><circle cx="20" cy="-4" r="7" fill="#B6AFF1"/><circle cx="36" cy="10" r="7" fill="#FFFFFF"/>
+      ${paw(0, 4, 0.55, '#3A2A06', 0.7)}
+    </g>
+    <g transform="translate(318 104)"><circle r="16" fill="#E5484D"/><path d="M-5 -8 L9 0 L-5 8 Z" fill="#FFFFFF"/></g>`,
   // Night sky, moon and layered hills: the 3D worlds.
   worlds: `<defs><linearGradient id="night" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1B2A5C"/><stop offset="1" stop-color="#3C6FA8"/></linearGradient></defs>
     <rect width="400" height="150" fill="url(#night)"/>
