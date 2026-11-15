@@ -51,7 +51,18 @@
 
 <p align="right"><a href="https://github.com/malilion?tab=repositories"><b>看全部 repo →</b></a> · <a href="https://malilion.com"><b>更多內容在 malilion.com →</b></a></p>
 
-**技術棧** · .NET / C# / Laravel · Vue / React / TypeScript / Next.js · AWS / Docker / Cloudflare / Vercel · PostgreSQL / MySQL · Three.js / Godot
+## 技術棧
+
+<p>
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/stack-core-zh-dark.svg"><img src="./assets/brand/bento/stack-core-zh-light.svg" height="56" alt="語言與核心" /></picture><!--
+--><picture><source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=html,css,js,ts,php,cs,dotnet"><img src="https://skillicons.dev/icons?i=html,css,js,ts,php,cs,dotnet&theme=light" height="56" alt="HTML, CSS, JavaScript, TypeScript, PHP, C#, .NET" /></picture><br />
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/stack-frontend-zh-dark.svg"><img src="./assets/brand/bento/stack-frontend-zh-light.svg" height="56" alt="框架與前端" /></picture><!--
+--><picture><source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=laravel,vue,react,nextjs,vite,pinia,tailwind"><img src="https://skillicons.dev/icons?i=laravel,vue,react,nextjs,vite,pinia,tailwind&theme=light" height="56" alt="Laravel, Vue, React, Next.js, Vite, Pinia, Tailwind CSS" /></picture><br />
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/stack-cloud-zh-dark.svg"><img src="./assets/brand/bento/stack-cloud-zh-light.svg" height="56" alt="雲端與資料" /></picture><!--
+--><picture><source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=aws,docker,vercel,cloudflare,supabase,postgres,mysql"><img src="https://skillicons.dev/icons?i=aws,docker,vercel,cloudflare,supabase,postgres,mysql&theme=light" height="56" alt="AWS, Docker, Vercel, Cloudflare, Supabase, PostgreSQL, MySQL" /></picture><br />
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/stack-tools-zh-dark.svg"><img src="./assets/brand/bento/stack-tools-zh-light.svg" height="56" alt="工具與互動開發" /></picture><!--
+--><picture><source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=git,github,gitlab,pnpm,obsidian,threejs,godot"><img src="https://skillicons.dev/icons?i=git,github,gitlab,pnpm,obsidian,threejs,godot&theme=light" height="56" alt="Git, GitHub, GitLab, pnpm, Obsidian, Three.js, Godot" /></picture>
+</p>
 
 <p align="center">
   <picture>
