@@ -13,6 +13,7 @@
 //   stack-*        400 × 64   (label beside a skillicons.dev strip)
 //   cat-*          400 × 280  (heads each column of the project index)
 //   experience    1200 × 400  |  certifications 1200 × 330
+//   *-m           phone versions, swapped in under 600px (see MOBILE below)
 // Each SVG keeps an 8-unit transparent margin, which becomes the gutter
 // between tiles that sit side by side.
 
@@ -202,8 +203,8 @@ function blob(cx, cy, rx, ry, k = 1) {
   return `M${pts.join(' L')} Z`
 }
 
-function island(c) {
-  const W = 480, H = 420
+// Island illustration in its 480 × 420 frame; the phone tile scales it down.
+const ISLAND = (() => {
   const cx = 240, cy = 168, rx = 150, ry = 58
   const tree = (x, y, s = 1) => `<g transform="translate(${x} ${y}) scale(${s})">
     <ellipse cx="0" cy="2" rx="12" ry="4" fill="#2C6E3F" opacity="0.35"/>
@@ -217,14 +218,13 @@ function island(c) {
   const plot = (x, y, fill) => `<path d="M${x} ${y - 9} L${x + 18} ${y} L${x} ${y + 9} L${x - 18} ${y} Z" fill="${fill}" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="1.5"/>`
   const cloud = (x, y, s) => `<g transform="translate(${x} ${y}) scale(${s})" fill="#FFFFFF"><ellipse cx="0" cy="0" rx="26" ry="10"/><circle cx="-8" cy="-6" r="10"/><circle cx="8" cy="-9" r="13"/></g>`
   const wave = (x, y) => `<path d="M${x} ${y} q6 -5 12 0 t12 0" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.45"/>`
-  const body = `
-<defs>
+  return {
+    defs: `<defs>
   <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9FE7F0"/><stop offset="0.42" stop-color="#4FD1C5"/><stop offset="1" stop-color="#0B6A80"/></linearGradient>
   <linearGradient id="cliff" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B07442"/><stop offset="1" stop-color="#6B3F22"/></linearGradient>
   <clipPath id="mc"><circle cx="${cx + 52}" cy="${cy - 8}" r="17"/></clipPath>
-</defs>
-<g clip-path="url(#tile)">
-  <rect width="${W}" height="${H}" fill="url(#sky)"/>
+</defs>`,
+    art: `
   ${cloud(392, 58, 1)}${cloud(330, 92, 0.6)}${cloud(120, 104, 0.7)}
   <ellipse cx="${cx}" cy="${cy + 52}" rx="${rx + 34}" ry="${ry - 8}" fill="#FFFFFF" opacity="0.18"/>
   ${wave(64, 250)}${wave(400, 236)}${wave(96, 286)}${wave(372, 278)}
@@ -239,6 +239,17 @@ function island(c) {
   <path d="M${cx + 53.5} ${cy - 62} h22 l-6 7 l6 7 h-22 Z" fill="${GOLD}"/>
   <circle cx="${cx + 52}" cy="${cy - 8}" r="20" fill="#FFFFFF"/>
   <image href="${logo}" x="${cx + 33}" y="${cy - 27}" width="38" height="38" clip-path="url(#mc)"/>
+`,
+  }
+})()
+
+function island(c) {
+  const W = 480, H = 420
+  const body = `
+${ISLAND.defs}
+<g clip-path="url(#tile)">
+  <rect width="${W}" height="${H}" fill="url(#sky)"/>
+  ${ISLAND.art}
 </g>
 ${label(40, 64, c.islandLabel, '#0B4A58')}
 ${text(38, 316, esc(c.islandName), { size: 34, weight: 800, fill: '#FFFFFF', ls: -0.8 })}
@@ -314,17 +325,16 @@ ${text(58, 214, esc(c.ctaSub), { size: 16, weight: 700, fill: '#FFFFFF' })}`
 // Slogan ticker between the hero and the tiles. One copy of the slogans is
 // forced to a fixed length with textLength, so two copies side by side loop
 // seamlessly when the group slides left by exactly that length.
-function ticker(c, t) {
-  const W = 1200, H = 60
+function ticker(c, t, { W = 1200, H = 60, fs = 15 } = {}) {
   const line = c.ticker.map((s) => `${s}  ✳  `).join('')
-  const L = Math.round(textWidth(line, 15) + 40)
-  const copy = (x) => `<text x="${x}" y="36" font-family="${MONO}" font-size="15" font-weight="600" letter-spacing="1.5" fill="${t.tickerInk}" textLength="${L}" lengthAdjust="spacing" xml:space="preserve">${esc(line)}</text>`
+  const L = Math.round(textWidth(line, fs) + fs * 2.6)
+  const copy = (x) => `<text x="${x}" y="${Math.round(H / 2 + fs * 0.4)}" font-family="${MONO}" font-size="${fs}" font-weight="600" letter-spacing="1.5" fill="${t.tickerInk}" textLength="${L}" lengthAdjust="spacing" xml:space="preserve">${esc(line)}</text>`
   const body = `
 <defs><clipPath id="band"><rect x="8" y="6" width="${W - 16}" height="${H - 12}" rx="24"/></clipPath></defs>
 <rect x="8" y="6" width="${W - 16}" height="${H - 12}" rx="24" fill="${t.ticker}"/>
 <g clip-path="url(#band)"><g class="run">${copy(24)}${copy(24 + L)}${copy(24 + 2 * L)}</g></g>`
   return svg(W, H, c.ticker.join(' · '), body, {
-    style: `.run{animation:run ${Math.round(L / 40)}s linear infinite}@keyframes run{to{transform:translateX(-${L}px)}}@media (prefers-reduced-motion:reduce){.run{animation:none}}`,
+    style: `.run{animation:run ${Math.round(L / (fs * 2.7))}s linear infinite}@keyframes run{to{transform:translateX(-${L}px)}}@media (prefers-reduced-motion:reduce){.run{animation:none}}`,
   })
 }
 
@@ -483,6 +493,172 @@ ${badges}`
   return svg(W, H, `${e.certLabel}: AWS Cloud Practitioner, AWS AI Practitioner, MTA Database, MTA Networking, MTA Software Development`, body)
 }
 
+
+// ---------- Phone tiles ----------
+// Swapped in by <source media="(max-width: 600px)"> while each <img> keeps its
+// desktop width, so every phone tile is drawn for the width it gets on a
+// ~360px screen: 100% → 600 units, 60% → 360, 40% → 240, 33% → 200. At those
+// scales 20 units is about 12px, the smallest text used here.
+const MOBILE = {
+  en: {
+    heroA: 'I turn small', heroB: 'ideas into', heroC: 'real projects.',
+    heroSub: ['Software engineer by day.', 'UI kits, dev tools & 3D worlds by night.'],
+    uiHead: '161 components later.',
+    island: ['Project', 'Island'],
+    kinds: { contextlion: 'Extension', 'ninefold-court': 'Visual novel', 'cow-pasture': '3D dashboard' },
+    cta: ['Follow', 'the build', 'notes.'],
+    quote: ['I turn real operational problems into', 'maintainable systems, then carry what I', 'learn into side projects and open source.'],
+  },
+  zh: {
+    heroA: '把小點子，', heroB: '做成', heroC: '真的作品。',
+    heroSub: ['白天是軟體工程師，', '晚上做元件庫、開發工具和 3D 世界。'],
+    uiHead: '做了 161 個元件之後',
+    island: ['碼力獅', '專案島'],
+    kinds: { contextlion: '擴充功能', 'ninefold-court': '視覺小說', 'cow-pasture': '3D 儀表板' },
+    cta: ['追蹤我的', '開發筆記'],
+    quote: ['把真實營運問題轉成可維護的系統，', '再把學到的東西帶進', 'Side Project 與開源作品。'],
+  },
+}
+
+function pillRow(x, y, items, fs) {
+  let cx = x
+  const h = Math.round(fs * 2.3)
+  return items
+    .map(({ t, bg, fg }) => {
+      const w = Math.round(textWidth(t, fs) + fs * 2)
+      const g = `<rect x="${cx}" y="${y}" width="${w}" height="${h}" rx="${h / 2}" fill="${bg}"/>${text(cx + w / 2, y + h / 2 + fs * 0.36, esc(t), { size: fs, weight: 600, fill: fg, anchor: 'middle' })}`
+      cx += w + 12
+      return g
+    })
+    .join('')
+}
+
+function heroM(c, m, t) {
+  const W = 600, H = 600
+  const body = `
+<rect x="8" y="8" width="${W - 16}" height="${H - 16}" rx="28" fill="${t.hero}"/>
+<circle cx="490" cy="118" r="76" fill="${GOLD}"/>
+<clipPath id="lc"><circle cx="490" cy="118" r="66"/></clipPath>
+<image href="${logo}" x="424" y="52" width="132" height="132" clip-path="url(#lc)"/>
+${text(44, 70, 'MALILION', { size: 20, weight: 700, fill: GOLD, font: MONO, ls: 3 })}
+${text(44, 100, 'AI × CODE × GAME', { size: 18, weight: 600, fill: t.heroMuted, font: MONO, ls: 2 })}
+${text(40, 262, esc(m.heroA), { size: 56, weight: 800, fill: t.heroInk, ls: -1.5 })}
+${text(40, 326, esc(m.heroB), { size: 56, weight: 800, fill: t.heroInk, ls: -1.5 })}
+${text(40, 390, esc(m.heroC), { size: 56, weight: 800, fill: GOLD, ls: -1.5 })}
+${text(42, 440, esc(m.heroSub[0]), { size: 23, fill: t.heroMuted })}
+${text(42, 472, esc(m.heroSub[1]), { size: 23, fill: t.heroMuted })}
+${pillRow(42, 506, [{ t: 'malilion.com ↗', bg: GOLD, fg: '#111' }, { t: 'Threads @malilion.dev', bg: t.chip, fg: t.heroInk }], 20)}`
+  return svg(W, H, c.heroAria, body)
+}
+
+function uiM(c, m) {
+  const W = 360, H = 420
+  const body = `
+<defs><linearGradient id="ui" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1B1611"/><stop offset="1" stop-color="#3D2A14"/></linearGradient></defs>
+<g clip-path="url(#tile)"><rect width="${W}" height="${H}" fill="url(#ui)"/>${paw(300, 360, 2.6, GOLD, 0.1)}</g>
+${text(32, 62, 'NPM @malilion/ui', { size: 18, weight: 600, fill: '#D9B27A', font: MONO })}
+${text(30, 116, 'Malilion UI', { size: 40, weight: 800, fill: '#FFFFFF', ls: -1 })}
+${text(32, 152, esc(m.uiHead), { size: 22, weight: 600, fill: GOLD })}
+${text(24, 318, '161', { size: 150, weight: 800, fill: GOLD, ls: -7 })}
+${text(32, 370, esc(c.uiUnit), { size: 24, weight: 600, fill: '#CDBDA9' })}`
+  return svg(W, H, `Malilion UI — ${c.uiHead}`, body)
+}
+
+function islandM(c, m) {
+  const W = 240, H = 420, k = 0.62
+  const body = `
+${ISLAND.defs}
+<g clip-path="url(#tile)">
+  <rect width="${W}" height="${H}" fill="url(#sky)"/>
+  <g transform="translate(${120 - 240 * k} ${168 - 168 * k}) scale(${k})">${ISLAND.art}</g>
+</g>
+${text(28, 56, 'WEB 3D', { size: 18, weight: 700, fill: '#0B4A58', font: MONO, ls: 2 })}
+${text(26, 330, esc(m.island[0]), { size: 34, weight: 800, fill: '#FFFFFF', ls: -0.8 })}
+${text(26, 372, esc(m.island[1]), { size: 34, weight: 800, fill: '#FFFFFF', ls: -0.8 })}`
+  return svg(W, H, `${c.islandName} — ${c.islandSub.join(' ')}`, body)
+}
+
+function rowM(slug, p, m, t) {
+  const W = 200, H = 240
+  const body = `
+<g clip-path="url(#tile)"><rect width="${W}" height="${H}" fill="${t.tile}"/></g>
+<g transform="translate(-230 6)">${smallArt[slug](t)}</g>
+${text(24, 176, esc(p.name), { size: 25, weight: 800, fill: t.ink, ls: -0.5 })}
+${text(24, 208, esc(m.kinds[slug]), { size: 20, fill: t.muted })}`
+  return svg(W, H, `${p.name} — ${p.head.join(' ')}`, body)
+}
+
+function nowM(c, t) {
+  const W = 360, H = 340
+  const items = c.now
+    .map((s, i) => `<circle cx="38" cy="${118 + i * 52 - 7}" r="7" fill="${TEAL}"/>${text(56, 118 + i * 52, esc(s), { size: 21, weight: 600, fill: t.ink })}`)
+    .join('')
+  const body = `
+<g clip-path="url(#tile)"><rect width="${W}" height="${H}" fill="${t.tile}"/></g>
+${text(30, 60, esc(c.nowLabel), { size: 18, weight: 700, fill: t.muted, font: MONO, ls: 2 })}
+${items}`
+  return svg(W, H, `${c.nowLabel}: ${c.now.join(', ')}`, body)
+}
+
+function threadsM(c, m) {
+  const W = 240, H = 340
+  const lines = m.cta.map((s, i) => text(26, 112 + i * 44, esc(s), { size: 36, weight: 800, fill: '#111', ls: -0.8 })).join('')
+  const body = `
+<g clip-path="url(#tile)"><rect width="${W}" height="${H}" fill="${GOLD}"/>${paw(190, 230, 3, '#111', 0.1)}</g>
+${text(28, 60, 'THREADS', { size: 18, weight: 700, fill: '#5A3F08', font: MONO, ls: 2 })}
+${lines}
+<rect x="24" y="262" width="192" height="46" rx="23" fill="#111"/>
+${text(120, 292, '@malilion.dev', { size: 20, weight: 700, fill: '#FFFFFF', anchor: 'middle' })}`
+  return svg(W, H, `${c.ctaHead.join(' ')} ${c.ctaSub}`, body)
+}
+
+function experienceM(e, m, t) {
+  const W = 600, H = 910
+  const stops = e.stops
+    .map((s, i) => {
+      const y = 132 + i * 214, cur = i === e.stops.length - 1
+      const node = cur
+        ? `<circle cx="56" cy="${y}" r="18" fill="${GOLD}" opacity="0.25"/><circle cx="56" cy="${y}" r="12" fill="${GOLD}"/>`
+        : `<circle cx="56" cy="${y}" r="11" fill="${t.tile}" stroke="${t.ink}" stroke-width="4"/>`
+      const yw = Math.round(textWidth(s.years, 36) + 104)
+      const pill = cur ? `<rect x="${yw}" y="${y - 18}" width="${Math.round(textWidth(e.now, 18) + 30)}" height="34" rx="17" fill="${GOLD}"/>${text(yw + 15, y + 5, esc(e.now), { size: 18, weight: 700, fill: '#111', font: MONO })}` : ''
+      return `${node}${pill}
+${text(92, y + 12, esc(s.years), { size: 36, weight: 800, fill: cur ? GOLD : t.ink, ls: -0.8 })}
+${text(92, y + 52, esc(e.role), { size: 23, weight: 700, fill: t.ink })}
+${text(92, y + 82, esc(s.org), { size: 21, fill: t.muted })}
+${text(92, y + 118, esc(s.tech[0]), { size: 19, fill: t.muted, font: MONO })}
+${text(92, y + 146, esc(s.tech[1]), { size: 19, fill: t.muted, font: MONO })}`
+    })
+    .join('')
+  const q = m.quote.map((s, i) => text(66, 806 + i * 34, esc(s), { size: 23, fill: t.ink })).join('')
+  const body = `
+<rect x="8" y="8" width="${W - 16}" height="${H - 16}" rx="28" fill="${t.tile}"/>
+${text(40, 70, esc(e.label), { size: 18, weight: 700, fill: t.muted, font: MONO, ls: 2 })}
+<line x1="56" y1="132" x2="56" y2="560" stroke="${t.line}" stroke-width="5" stroke-linecap="round"/>
+<line x1="56" y1="346" x2="56" y2="560" stroke="${GOLD}" stroke-width="5" stroke-linecap="round" opacity="0.6"/>
+${stops}
+<rect x="40" y="782" width="5" height="${m.quote.length * 34 + 4}" rx="2.5" fill="${GOLD}"/>
+${q}`
+  return svg(W, H, e.aria, body)
+}
+
+function certificationsM(e, t) {
+  const W = 600, H = 660
+  const badge = (c, x, y) => `<circle cx="${x}" cy="${y + 64}" r="72" fill="${t.heroInk}" opacity="0.06"/>
+<image href="${certImg[c.file]}" x="${x - 62}" y="${y + 2}" width="124" height="124"/>
+${text(x, y + 166, esc(c.name[0]), { size: 20, weight: 600, fill: t.heroMuted, anchor: 'middle' })}
+${text(x, y + 194, esc(c.name[1]), { size: 21, weight: 700, fill: t.heroInk, anchor: 'middle' })}`
+  const group = (y, s) => `${text(300, y, s, { size: 18, weight: 700, fill: GOLD, font: MONO, anchor: 'middle', ls: 3 })}<line x1="60" y1="${y + 12}" x2="540" y2="${y + 12}" stroke="${GOLD}" stroke-opacity="0.35" stroke-width="2"/>`
+  const body = `
+<rect x="8" y="8" width="${W - 16}" height="${H - 16}" rx="28" fill="${t.hero}"/>
+${text(40, 62, esc(e.certLabel), { size: 18, weight: 700, fill: t.heroMuted, font: MONO, ls: 2 })}
+${group(110, 'AWS')}
+${badge(CERTS[0], 180, 138)}${badge(CERTS[1], 420, 138)}
+${group(386, 'MICROSOFT MTA')}
+${badge(CERTS[2], 110, 414)}${badge(CERTS[3], 300, 414)}${badge(CERTS[4], 490, 414)}`
+  return svg(W, H, `${e.certLabel}: AWS Cloud Practitioner, AWS AI Practitioner, MTA Database, MTA Networking, MTA Software Development`, body)
+}
+
 // Stack row labels. Each sits inline beside a skillicons.dev strip of the
 // same rendered height (the README sets height="56" on both).
 const STACK = {
@@ -528,6 +704,18 @@ for (const [lang, c] of Object.entries(COPY)) {
     for (const cat of CATS[lang]) files[`cat-${cat.slug}`] = categoryCard(cat, t)
     files.experience = experience(EXP[lang], t)
     files.certifications = certifications(EXP[lang], t)
+    const m = MOBILE[lang]
+    Object.assign(files, {
+      'hero-m': heroM(c, m, t),
+      'ticker-m': ticker(c, t, { W: 600, H: 64, fs: 22 }),
+      'malilion-ui-m': uiM(c, m),
+      'project-island-m': islandM(c, m),
+      'now-building-m': nowM(c, t),
+      'threads-m': threadsM(c, m),
+      'experience-m': experienceM(EXP[lang], m, t),
+      'certifications-m': certificationsM(EXP[lang], t),
+    })
+    for (const [slug, p] of Object.entries(c.row3)) files[`${slug}-m`] = rowM(slug, p, m, t)
     for (const [name, data] of Object.entries(files)) {
       writeFileSync(join(out, `${name}-${lang}-${theme}.svg`), data)
       n++

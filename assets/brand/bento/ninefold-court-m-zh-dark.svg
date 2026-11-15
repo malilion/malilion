@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" width="200" height="240" role="img" aria-label="九重燼 — 一款公開開發的 視覺小說">
+<title>九重燼 — 一款公開開發的 視覺小說</title>
+<defs><clipPath id="tile"><rect x="8" y="8" width="184" height="224" rx="24"/></clipPath></defs>
+
+
+<g clip-path="url(#tile)"><rect width="200" height="240" fill="#171A1F"/></g>
+<g transform="translate(-230 6)"><g transform="translate(330 86) scale(0.8)">
+    <path d="M0 -58 C24 -24 40 -6 30 22 C22 46 -22 46 -30 22 C-40 -6 -18 -18 -10 -40 C-4 -24 4 -20 0 -58 Z" fill="#CD7631"/>
+    <path d="M0 -14 C14 4 18 14 12 28 C6 40 -8 40 -12 28 C-16 16 -6 6 0 -14 Z" fill="#F0AD2F"/>
+    <circle cx="-38" cy="-40" r="3" fill="#F0AD2F"/><circle cx="40" cy="-30" r="2.5" fill="#F0AD2F"/></g></g>
+<text x="24" y="176" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="25" font-weight="800" fill="#F1EDE6" text-anchor="start" letter-spacing="-0.5">九重燼</text>
+<text x="24" y="208" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="20" font-weight="400" fill="#9C968D" text-anchor="start">視覺小說</text>
+</svg>

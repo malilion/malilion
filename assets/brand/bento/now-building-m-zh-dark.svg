@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 340" width="360" height="340" role="img" aria-label="最近在做: AI 互動學習體驗, 小而專注的開發工具, 敘事遊戲與 Web 3D, 碼力獅品牌生態系">
+<title>最近在做: AI 互動學習體驗, 小而專注的開發工具, 敘事遊戲與 Web 3D, 碼力獅品牌生態系</title>
+<defs><clipPath id="tile"><rect x="8" y="8" width="344" height="324" rx="24"/></clipPath></defs>
+
+
+<g clip-path="url(#tile)"><rect width="360" height="340" fill="#171A1F"/></g>
+<text x="30" y="60" font-family="'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace" font-size="18" font-weight="700" fill="#9C968D" text-anchor="start" letter-spacing="2">最近在做</text>
+<circle cx="38" cy="111" r="7" fill="#14CFB2"/><text x="56" y="118" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="21" font-weight="600" fill="#F1EDE6" text-anchor="start">AI 互動學習體驗</text><circle cx="38" cy="163" r="7" fill="#14CFB2"/><text x="56" y="170" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="21" font-weight="600" fill="#F1EDE6" text-anchor="start">小而專注的開發工具</text><circle cx="38" cy="215" r="7" fill="#14CFB2"/><text x="56" y="222" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="21" font-weight="600" fill="#F1EDE6" text-anchor="start">敘事遊戲與 Web 3D</text><circle cx="38" cy="267" r="7" fill="#14CFB2"/><text x="56" y="274" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="21" font-weight="600" fill="#F1EDE6" text-anchor="start">碼力獅品牌生態系</text>
+</svg>
