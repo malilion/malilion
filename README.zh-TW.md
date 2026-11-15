@@ -106,5 +106,6 @@
 </p>
 
 <p>
-<a href="https://malilion.com"><picture><source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/brand/bento/footer-m-zh-dark.svg"><source media="(max-width: 600px)" srcset="./assets/brand/bento/footer-m-zh-light.svg"><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/footer-zh-dark.svg"><img src="./assets/brand/bento/footer-zh-light.svg" width="100%" alt="Build、Learn、Share、Build again。謝謝你逛到這裡：malilion.com、Threads @malilion.dev、github.com/malilion" /></picture></a>
+<a href="https://malilion.com"><picture><source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/brand/bento/foot-loop-m-zh-dark.svg"><source media="(max-width: 600px)" srcset="./assets/brand/bento/foot-loop-m-zh-light.svg"><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/foot-loop-zh-dark.svg"><img src="./assets/brand/bento/foot-loop-zh-light.svg" width="39.9%" alt="Build → Learn → Share → Build again：每個作品背後的循環" /></picture></a><!--
+--><a href="https://www.threads.com/@malilion.dev"><picture><source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/brand/bento/foot-sign-m-zh-dark.svg"><source media="(max-width: 600px)" srcset="./assets/brand/bento/foot-sign-m-zh-light.svg"><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/foot-sign-zh-dark.svg"><img src="./assets/brand/bento/foot-sign-zh-light.svg" width="59.9%" alt="謝謝你逛到這裡。看看作品、追蹤實驗，或到 Threads 打聲招呼：malilion.com、@malilion.dev、github.com/malilion" /></picture></a>
 </p>

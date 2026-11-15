@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 340" width="360" height="340" role="img" aria-label="謝謝你逛到這裡。 看看作品、追蹤實驗， 或到 Threads 打聲招呼。 malilion.com · @malilion.dev · github.com/malilion">
+<title>謝謝你逛到這裡。 看看作品、追蹤實驗， 或到 Threads 打聲招呼。 malilion.com · @malilion.dev · github.com/malilion</title>
+<defs><clipPath id="tile"><rect x="8" y="8" width="344" height="324" rx="24"/></clipPath></defs>
+
+
+<rect x="8" y="8" width="344" height="324" rx="24" fill="#F2F3F5"/>
+<text x="28" y="72" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="28" font-weight="800" fill="#0E0E10" text-anchor="start" letter-spacing="-0.5">謝謝你逛到這裡。</text><text x="30" y="112" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="19" font-weight="400" fill="#62666E" text-anchor="start">看看作品、追蹤實驗，</text><text x="30" y="138" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="19" font-weight="400" fill="#62666E" text-anchor="start">或到 Threads</text><text x="30" y="164" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="19" font-weight="400" fill="#62666E" text-anchor="start">打聲招呼。</text>
+<text x="30" y="212" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="19" font-weight="700" fill="#0E0E10" text-anchor="start">malilion.com</text><text x="30" y="242" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="19" font-weight="700" fill="#0E0E10" text-anchor="start">@malilion.dev</text><text x="30" y="272" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="19" font-weight="700" fill="#0E0E10" text-anchor="start">github.com/malilion</text>
+<text x="30" y="314" font-family="'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace" font-size="15" font-weight="400" fill="#62666E" text-anchor="start">© 2026 MaliLion · 在台灣製作</text>
+
+</svg>
