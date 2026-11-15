@@ -10,7 +10,7 @@
 //   malilion-ui    720 × 420  |  project-island 480 × 420
 //   contextlion    400 × 320  |  ninefold-court 400 × 320  |  cow-pasture 400 × 320
 //   now-building   720 × 260  |  threads        480 × 260
-//   stack-*        400 × 64   (label beside a skillicons.dev strip)
+//   stack-*        600 × 240  (2 × 2 grid, icons embedded from assets/brand/icons)
 //   cat-*          400 × 280  (heads each column of the project index)
 //   experience    1200 × 400  |  certifications 1200 × 330
 //   *-m           phone versions, swapped in under 600px (see MOBILE below)
@@ -915,14 +915,44 @@ const STACK = {
 }
 const STACK_DOT = { core: GOLD, frontend: TEAL, cloud: '#B6AFF1', tools: COPPER }
 
-function stackLabel(s, t) {
-  const W = 400, H = 64
+// Stack tiles: one per group, with the Skill Icons (assets/brand/icons,
+// MIT) embedded as data URIs so the tile is a single self-contained image.
+const STACK_ICONS = {
+  core: ['html', 'css', 'js', 'ts', 'php', 'cs', 'dotnet'],
+  frontend: ['laravel', 'vue', 'react', 'nextjs', 'vite', 'pinia', 'tailwind'],
+  cloud: ['aws', 'docker', 'vercel', 'cloudflare', 'supabase', 'postgres', 'mysql'],
+  tools: ['git', 'github', 'gitlab', 'pnpm', 'obsidian', 'threejs', 'godot'],
+}
+const iconUri = (id, theme) =>
+  `data:image/svg+xml;base64,${readFileSync(join(brand, 'icons', `${id}-${theme}.svg`)).toString('base64')}`
+
+function stackTile(s, t, theme) {
+  const W = 600, H = 240, size = 64, gap = 12
+  const icons = STACK_ICONS[s.slug].map((id, i) => `<image href="${iconUri(id, theme)}" x="${36 + i * (size + gap)}" y="134" width="${size}" height="${size}"/>`).join('')
   const body = `
-<rect x="2" y="4" width="${W - 16}" height="${H - 8}" rx="18" fill="${t.tile}"/>
-<circle cx="28" cy="${H / 2}" r="7" fill="${STACK_DOT[s.slug]}"/>
-${text(48, 29, esc(s.name), { size: 18, weight: 800, fill: t.ink })}
-${text(48, 49, esc(s.sub), { size: 12.5, fill: t.muted, font: MONO })}`
-  return svg(W, H, `${s.name}: ${s.sub}`, body)
+<g clip-path="url(#tile)">
+  <rect width="${W}" height="${H}" fill="${t.tile}"/>
+  <rect x="8" y="8" width="${W - 16}" height="8" fill="${STACK_DOT[s.slug]}"/>
+</g>
+<circle cx="44" cy="62" r="8" fill="${STACK_DOT[s.slug]}"/>
+${text(62, 70, esc(s.name), { size: 25, weight: 800, fill: t.ink, ls: -0.4 })}
+${text(38, 104, esc(s.sub), { size: 14, fill: t.muted, font: MONO })}
+${icons}`
+  return svg(W, H, `${s.name}: ${STACK_ICONS[s.slug].join(', ')}`, body)
+}
+
+// Phone version: drawn for half of a ~360px screen, icons in a 4 + 3 grid.
+function stackTileM(s, t, theme) {
+  const W = 300, H = 260, size = 56, gap = 10
+  const icons = STACK_ICONS[s.slug].map((id, i) => `<image href="${iconUri(id, theme)}" x="${26 + (i % 4) * (size + gap)}" y="${92 + Math.floor(i / 4) * (size + gap)}" width="${size}" height="${size}"/>`).join('')
+  const body = `
+<g clip-path="url(#tile)">
+  <rect width="${W}" height="${H}" fill="${t.tile}"/>
+  <rect x="8" y="8" width="${W - 16}" height="8" fill="${STACK_DOT[s.slug]}"/>
+</g>
+${text(26, 66, esc(s.name), { size: 23, weight: 800, fill: t.ink, ls: -0.4 })}
+${icons}`
+  return svg(W, H, `${s.name}: ${STACK_ICONS[s.slug].join(', ')}`, body)
 }
 
 // ---------- Write ----------
@@ -938,7 +968,10 @@ for (const [lang, c] of Object.entries(COPY)) {
       threads: threads(c),
     }
     for (const [slug, p] of Object.entries(c.row3)) files[slug] = rowTile(slug, p, t)
-    for (const st of STACK[lang]) files[`stack-${st.slug}`] = stackLabel(st, t)
+    for (const st of STACK[lang]) {
+      files[`stack-${st.slug}`] = stackTile(st, t, theme)
+      files[`stack-${st.slug}-m`] = stackTileM(st, t, theme)
+    }
     for (const cat of CATS[lang]) files[`cat-${cat.slug}`] = categoryCard(cat, t)
     files.experience = experience(EXP[lang], t)
     files.certifications = certifications(EXP[lang], t)
