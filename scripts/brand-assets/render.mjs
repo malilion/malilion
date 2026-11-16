@@ -235,25 +235,6 @@ ${[['TypeScript', TEAL, '#0B2E28'], ['2 themes', '#B6AFF1', '#211C4A'], ['0 deps
   }, { x: x0, out: '' }).out}`
 }
 
-function malilionUi(c) {
-  const W = 1200, H = 420
-  const body = `
-<defs><linearGradient id="ui" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1B1611"/><stop offset="1" stop-color="#3D2A14"/></linearGradient></defs>
-<g clip-path="url(#tile)">
-  <rect width="${W}" height="${H}" fill="url(#ui)"/>
-  ${paw(600, 372, 2.6, GOLD, 0.08)}
-</g>
-${label(48, 70, c.uiLabel, '#D9B27A')}
-${text(44, 136, 'Malilion UI', { size: 58, weight: 800, fill: '#FFFFFF', ls: -1.5 })}
-${text(48, 180, esc(c.uiHead), { size: 24, weight: 600, fill: GOLD })}
-${text(48, 222, esc(c.uiSub[0]), { size: 18, fill: '#CDBDA9' })}
-${text(48, 250, esc(c.uiSub[1]), { size: 18, fill: '#CDBDA9' })}
-${pills(48, 290, [{ t: 'Vue 3', bg: '#2E2418', fg: '#F3DDB6' }, { t: 'React', bg: '#2E2418', fg: '#F3DDB6' }, { t: 'TypeScript', bg: '#2E2418', fg: '#F3DDB6' }, { t: '0 deps', bg: '#2E2418', fg: '#F3DDB6' }])}
-${text(600, 246, '161', { size: 138, weight: 800, fill: GOLD, ls: -6 })}
-${text(608, 288, esc(c.uiUnit), { size: 22, weight: 600, fill: '#CDBDA9' })}
-${uiSheet(870, 38)}`
-  return svg(W, H, `Malilion UI — ${c.uiHead}`, body)
-}
 
 // Island outline: a squashed blob, so the top reads as seen from above at an angle.
 function blob(cx, cy, rx, ry, k = 1) {
@@ -306,20 +287,6 @@ const ISLAND = (() => {
   }
 })()
 
-function island(c) {
-  const W = 1200, H = 380
-  const body = `
-${ISLAND.defs}
-<g clip-path="url(#tile)">
-  <rect width="${W}" height="${H}" fill="url(#sky)"/>
-  <g transform="translate(${780 - 240 * 1.25} ${190 - 168 * 1.25}) scale(1.25)">${ISLAND.art}</g>
-</g>
-${label(48, 70, c.islandLabel, '#0B4A58')}
-${text(44, 210, esc(c.islandName), { size: 56, weight: 800, fill: '#FFFFFF', ls: -1.5 })}
-${text(48, 256, esc(c.islandSub[0]), { size: 21, fill: '#E3FCF7' })}
-${text(48, 286, esc(c.islandSub[1]), { size: 21, fill: '#E3FCF7' })}`
-  return svg(W, H, `${c.islandName} — ${c.islandSub.join(' ')}`, body)
-}
 
 // Illustration bands for the three project tiles, drawn in a 400 × 150 box.
 const cowFigure = (fill) => `
@@ -390,20 +357,6 @@ const projArt = {
     <path d="M286 126 q4 -10 8 0 M296 128 q3 -8 6 0" fill="none" stroke="#2E8B3E" stroke-width="2"/>`,
 }
 
-function rowTile(slug, p, t) {
-  const W = 1200, H = 280
-  const body = `
-<defs><clipPath id="band"><rect x="560" y="8" width="632" height="${H - 16}" rx="0"/></clipPath></defs>
-<g clip-path="url(#tile)">
-  <rect width="${W}" height="${H}" fill="${t.tile}"/>
-  <g clip-path="url(#band)"><g transform="translate(560 8) scale(1.76)">${projArt[slug]()}</g></g>
-</g>
-${label(48, 70, p.label, t.muted)}
-${text(44, 132, esc(p.head[0]), { size: 40, weight: 800, fill: t.ink, ls: -1 })}
-${text(44, 180, esc(p.head[1]), { size: 40, weight: 800, fill: t.ink, ls: -1 })}
-<text x="48" y="232" font-family="${FONT}" font-size="19" font-weight="700" fill="${t.ink}">${esc(p.name)}<tspan font-weight="400" font-size="17" fill="${t.muted}">  ·  ${esc(p.meta)}</tspan></text>`
-  return svg(W, H, `${p.name} — ${p.head.join(' ')}`, body)
-}
 
 // Isometric block for the "now building" construction scene.
 const cube = (x, y, s, top, left, right) => `<g transform="translate(${x} ${y})">
@@ -714,6 +667,78 @@ ${text(26, 276, esc(p.head[0]), { size: 32, weight: 800, fill: t.ink, ls: -0.6 }
 ${text(26, 316, esc(p.head[1]), { size: 32, weight: 800, fill: t.ink, ls: -0.6 })}
 ${text(28, 362, esc(p.name), { size: 20, weight: 700, fill: t.ink })}`
   return svg(W, H, `${p.name} — ${p.head.join(' ')}`, body)
+}
+
+// ---------- Featured bento (one composite image) ----------
+// GitHub can't change an image's width per screen, so the featured works are
+// laid out as one picture: a bento grid on desktop, a stacked column on phones.
+
+// Malilion UI in the big 720 × 420 bento cell.
+function uiCell(c) {
+  const W = 720, H = 420
+  const body = `
+<defs><linearGradient id="ui" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1B1611"/><stop offset="1" stop-color="#3D2A14"/></linearGradient></defs>
+<g clip-path="url(#tile)">
+  <rect width="${W}" height="${H}" fill="url(#ui)"/>
+  ${paw(340, 380, 2.4, GOLD, 0.08)}
+</g>
+${label(44, 64, c.uiLabel, '#D9B27A')}
+${text(42, 116, 'Malilion UI', { size: 46, weight: 800, fill: '#FFFFFF', ls: -1 })}
+${text(44, 154, esc(c.uiHead), { size: 22, weight: 600, fill: GOLD })}
+${text(44, 190, esc(c.uiSub[0]), { size: 17, fill: '#CDBDA9' })}
+${text(44, 216, esc(c.uiSub[1]), { size: 17, fill: '#CDBDA9' })}
+${text(38, 344, '161', { size: 128, weight: 800, fill: GOLD, ls: -6 })}
+${text(44, 378, esc(c.uiUnit), { size: 20, weight: 600, fill: '#CDBDA9' })}
+${uiSheet()}`
+  return svg(W, H, `Malilion UI — ${c.uiHead}`, body)
+}
+
+// Place a finished tile inside a larger SVG. Ids are prefixed so each tile's
+// clip paths and gradients don't collide with its neighbours'.
+function nest(tile, p, x, y, w) {
+  const [, vw, vh] = tile.match(/viewBox="0 0 (\d+) (\d+)"/).map(Number)
+  const h = Math.round((w * vh) / vw)
+  const inner = tile
+    .replace(/id="([^"]+)"/g, `id="${p}-$1"`)
+    .replace(/url\(#([^)]+)\)/g, `url(#${p}-$1)`)
+    .replace(/href="#([^"]+)"/g, `href="#${p}-$1"`)
+    .replace(/<title>[\s\S]*?<\/title>\n?/, '')
+    .replace(/<svg [^>]*>/, `<svg x="${x}" y="${y}" width="${w}" height="${h}" viewBox="0 0 ${vw} ${vh}">`)
+  return { svg: inner, h }
+}
+
+function compose(W, cells, aria) {
+  let H = 0
+  const parts = cells.map(([tile, x, y, w], i) => {
+    const n = nest(tile, `c${i}`, x, y, w)
+    H = Math.max(H, y + n.h)
+    return n.svg
+  })
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${esc(aria)}">
+<title>${esc(aria)}</title>
+${parts.join('\n')}
+</svg>
+`
+}
+
+function featuredBento(c, m, t) {
+  const rows = Object.entries(c.row3)
+  const aria = `Malilion UI, ${c.islandName}, ${rows.map(([, p]) => p.name).join(', ')}`
+  return compose(1200, [
+    [uiCell(c), 0, 0, 720],
+    [islandM(c, m), 720, 0, 480],
+    ...rows.map(([slug, p], i) => [rowM(slug, p, m, t), i * 400, 420, 400]),
+  ], aria)
+}
+
+function featuredBentoM(c, m, t) {
+  const rows = Object.entries(c.row3)
+  const aria = `Malilion UI, ${c.islandName}, ${rows.map(([, p]) => p.name).join(', ')}`
+  const cells = [[uiM(c, m), 0, 0, 480]]
+  let y = Math.round((480 * 420) / 360)
+  cells.push([islandM(c, m), 0, y, 480]); y += 420
+  for (const [slug, p] of rows) { cells.push([rowM(slug, p, m, t), 0, y, 480]); y += 400 }
+  return compose(480, cells, aria)
 }
 
 function nowM(c, t) {
@@ -1154,12 +1179,9 @@ for (const [lang, c] of Object.entries(COPY)) {
     const files = {
       hero: hero(c, t),
       ticker: ticker(c, t),
-      'malilion-ui': malilionUi(c),
-      'project-island': island(c),
       'now-building': nowBuilding(c, t),
       threads: threads(c),
     }
-    for (const [slug, p] of Object.entries(c.row3)) files[slug] = rowTile(slug, p, t)
     for (const st of STACK[lang]) {
       files[`stack-${st.slug}`] = stackTile(st, t, theme)
       files[`stack-${st.slug}-m`] = stackTileM(st, t, theme)
@@ -1185,8 +1207,6 @@ for (const [lang, c] of Object.entries(COPY)) {
     Object.assign(files, {
       'hero-m': heroM(c, m, t),
       'ticker-m': ticker(c, t, { W: 600, H: 150, fs: 21 }),
-      'malilion-ui-m': uiM(c, m),
-      'project-island-m': islandM(c, m),
       'now-building-m': nowM(c, t),
       'threads-m': threadsM(c, m),
       'cta-explore': ctaTile('explore', CTA[lang], t),
@@ -1202,7 +1222,8 @@ for (const [lang, c] of Object.entries(COPY)) {
       'foot-sign': signTile(FOOT[lang], t),
       'foot-sign-m': signTile(FOOT[lang], t, true),
     })
-    for (const [slug, p] of Object.entries(c.row3)) files[`${slug}-m`] = rowM(slug, p, m, t)
+    files.featured = featuredBento(c, m, t)
+    files['featured-m'] = featuredBentoM(c, m, t)
     for (const [name, data] of Object.entries(files)) {
       writeFileSync(join(out, `${name}-${lang}-${theme}.svg`), data)
       n++
