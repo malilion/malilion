@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" width="200" height="240" role="img" aria-label="九重燼 — A visual novel, built in public.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 400" width="480" height="400" role="img" aria-label="九重燼 — A visual novel, built in public.">
 <title>九重燼 — A visual novel, built in public.</title>
-<defs><clipPath id="tile"><rect x="8" y="8" width="184" height="224" rx="24"/></clipPath></defs>
+<defs><clipPath id="tile"><rect x="8" y="8" width="464" height="384" rx="24"/></clipPath></defs>
 
 
 <g clip-path="url(#tile)">
-  <rect width="200" height="240" fill="#171A1F"/>
-  <g transform="translate(-24 8) scale(0.62)">
+  <rect width="480" height="400" fill="#171A1F"/>
+  <g transform="translate(0 8) scale(1.2)">
     <defs><linearGradient id="pa-nc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2A0F22"/><stop offset="1" stop-color="#8A3424"/></linearGradient></defs>
     <rect width="400" height="150" fill="url(#pa-nc)"/>
     <circle cx="300" cy="46" r="26" fill="#F0AD2F" opacity="0.9"/><circle cx="300" cy="46" r="40" fill="#F0AD2F" opacity="0.15"/>
@@ -27,6 +27,8 @@
     <rect x="50" y="126" width="180" height="5" rx="2.5" fill="#8A6A5A"/><rect x="50" y="134" width="120" height="4" rx="2" fill="#B89A88"/>
     <path d="M346 128 l6 6 6 -6 z" fill="#CD7631"/></g>
 </g>
-<text x="20" y="152" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="25" font-weight="800" fill="#F1EDE6" text-anchor="start" letter-spacing="-0.5">九重燼</text>
-<text x="20" y="186" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="20" font-weight="400" fill="#9C968D" text-anchor="start">Visual novel</text>
+<text x="28" y="232" font-family="'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace" font-size="17" font-weight="700" fill="#9C968D" text-anchor="start" letter-spacing="1.5">VISUAL NOVEL · SERIES</text>
+<text x="26" y="276" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="32" font-weight="800" fill="#F1EDE6" text-anchor="start" letter-spacing="-0.6">A visual novel,</text>
+<text x="26" y="316" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="32" font-weight="800" fill="#F1EDE6" text-anchor="start" letter-spacing="-0.6">built in public.</text>
+<text x="28" y="362" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="20" font-weight="700" fill="#F1EDE6" text-anchor="start">九重燼</text>
 </svg>
