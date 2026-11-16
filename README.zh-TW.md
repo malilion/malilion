@@ -20,7 +20,7 @@
 
 <p>
 <picture><source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/brand/bento/ticker-m-zh-dark.svg"><source media="(max-width: 600px)" srcset="./assets/brand/bento/ticker-m-zh-light.svg"><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/ticker-zh-dark.svg"><img src="./assets/brand/bento/ticker-zh-light.svg" width="100%" alt="碼力獅標語：公開開發、創意程式、開源、Local-first 工具、3D 世界" /></picture><br />
-<a href="https://malilion.github.io/MalilionUI/"><picture><source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/brand/bento/featured-m-zh-dark.svg"><source media="(max-width: 600px)" srcset="./assets/brand/bento/featured-m-zh-light.svg"><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/featured-zh-dark.svg"><img src="./assets/brand/bento/featured-zh-light.svg" width="100%" alt="精選作品：Malilion UI（161 個 Vue／React 元件）、碼力獅專案島（3D 作品集）、ContextLion、九重燼、Cow Pasture" /></picture></a>
+<picture><source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/brand/bento/featured-m-zh-dark.svg"><source media="(max-width: 600px)" srcset="./assets/brand/bento/featured-m-zh-light.svg"><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/featured-zh-dark.svg"><img src="./assets/brand/bento/featured-zh-light.svg" width="100%" alt="精選作品：Malilion UI（161 個 Vue／React 元件）、碼力獅專案島（3D 作品集）、ContextLion、九重燼、Cow Pasture" /></picture>
 </p>
 
 **直接前往 →** [Malilion UI](https://malilion.github.io/MalilionUI/) · [碼力獅專案島](https://www.malilion.com/world) · [ContextLion](https://github.com/malilion/ContextLion) · [九重燼](https://ithelp.ithome.com.tw/users/20183394/ironman/9059) · [Cow Pasture](https://github.com/malilion/cow-pasture)
