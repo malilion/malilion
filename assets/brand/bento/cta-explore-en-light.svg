@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 120" width="600" height="120" role="img" aria-label="Explore my work: PROJECTS · GAMES · TOOLS">
+<title>Explore my work: PROJECTS · GAMES · TOOLS</title>
+<defs><clipPath id="tile"><rect x="8" y="8" width="584" height="104" rx="24"/></clipPath></defs>
+
+
+<rect x="8" y="8" width="584" height="104" rx="26" fill="#F0AD2F" />
+<text x="36" y="48" font-family="'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace" font-size="13" font-weight="700" fill="#5A3F08" text-anchor="start" letter-spacing="1.8">PROJECTS · GAMES · TOOLS</text>
+<text x="34" y="90" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="34" font-weight="800" fill="#111" text-anchor="start" letter-spacing="-0.6">Explore my work →</text>
+<g transform="translate(536 64) scale(1.6)" fill="#111" opacity="0.14">
+    <ellipse cx="0" cy="8" rx="9" ry="7.5"/><ellipse cx="-10" cy="-4" rx="3.6" ry="4.6"/><ellipse cx="-3.6" cy="-10" rx="3.6" ry="4.8"/><ellipse cx="3.6" cy="-10" rx="3.6" ry="4.8"/><ellipse cx="10" cy="-4" rx="3.6" ry="4.6"/></g>
+</svg>

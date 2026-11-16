@@ -8,7 +8,17 @@
 </div>
 
 <p>
-<a href="https://malilion.com"><picture><source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/brand/bento/hero-m-zh-dark.svg"><source media="(max-width: 600px)" srcset="./assets/brand/bento/hero-m-zh-light.svg"><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/hero-zh-dark.svg"><img src="./assets/brand/bento/hero-zh-light.svg" width="100%" alt="碼力獅 MaliLion：把小點子做成真的作品。白天是軟體工程師，晚上做元件庫、開發工具和 3D 世界。" /></picture></a><br />
+<a href="https://malilion.com"><picture><source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/brand/bento/hero-m-zh-dark.svg"><source media="(max-width: 600px)" srcset="./assets/brand/bento/hero-m-zh-light.svg"><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/hero-zh-dark.svg"><img src="./assets/brand/bento/hero-zh-light.svg" width="100%" alt="碼力獅 MaliLion：把小點子做成真的作品。白天是軟體工程師，晚上做元件庫、開發工具和 3D 世界。" /></picture></a>
+</p>
+
+<p>
+<a href="https://malilion.com"><picture><source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/brand/bento/cta-explore-m-zh-dark.svg"><source media="(max-width: 600px)" srcset="./assets/brand/bento/cta-explore-m-zh-light.svg"><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/cta-explore-zh-dark.svg"><img src="./assets/brand/bento/cta-explore-zh-light.svg" width="49.9%" alt="看我的作品：作品、遊戲與工具" /></picture></a><!--
+--><a href="https://malilion.github.io/MalilionUI/"><picture><source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/brand/bento/cta-ui-m-zh-dark.svg"><source media="(max-width: 600px)" srcset="./assets/brand/bento/cta-ui-m-zh-light.svg"><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/cta-ui-zh-dark.svg"><img src="./assets/brand/bento/cta-ui-zh-light.svg" width="49.9%" alt="試用 Malilion UI：161 個 Vue／React 元件" /></picture></a>
+</p>
+
+我是**碼力獅 MaliLion**，台灣的軟體工程師。白天用 Vue 和 .NET 打造企業系統，晚上做 [Malilion UI](https://malilion.github.io/MalilionUI/)（161 個 Vue／React 元件）、Local-first 開發工具，以及打開瀏覽器就能玩的遊戲和 3D 世界。
+
+<p>
 <picture><source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/brand/bento/ticker-m-zh-dark.svg"><source media="(max-width: 600px)" srcset="./assets/brand/bento/ticker-m-zh-light.svg"><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/ticker-zh-dark.svg"><img src="./assets/brand/bento/ticker-zh-light.svg" width="100%" alt="碼力獅標語：公開開發、創意程式、開源、Local-first 工具、3D 世界" /></picture><br />
 <a href="https://malilion.github.io/MalilionUI/"><picture><source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/brand/bento/malilion-ui-m-zh-dark.svg"><source media="(max-width: 600px)" srcset="./assets/brand/bento/malilion-ui-m-zh-light.svg"><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/malilion-ui-zh-dark.svg"><img src="./assets/brand/bento/malilion-ui-zh-light.svg" width="59.9%" alt="Malilion UI：161 個 Vue 3 與 React 元件，雙主題，零執行期相依" /></picture></a><!--
 --><a href="https://www.malilion.com/world"><picture><source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="./assets/brand/bento/project-island-m-zh-dark.svg"><source media="(max-width: 600px)" srcset="./assets/brand/bento/project-island-m-zh-light.svg"><source media="(prefers-color-scheme: dark)" srcset="./assets/brand/bento/project-island-zh-dark.svg"><img src="./assets/brand/bento/project-island-zh-light.svg" width="39.9%" alt="碼力獅專案島：獅子形狀的互動式 3D 作品集" /></picture></a><br />
