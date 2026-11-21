@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 150" width="600" height="150" role="img" aria-label="@malilion/ui v0.15.0 (latest) — npm i @malilion/ui">
+<title>@malilion/ui v0.15.0 (latest) — npm i @malilion/ui</title>
+<defs>
+  <linearGradient id="ui" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1B1611"/><stop offset="1" stop-color="#3D2A14"/></linearGradient>
+  <clipPath id="tile"><rect x="8" y="8" width="584" height="134" rx="24"/></clipPath>
+</defs>
+<rect x="8" y="8" width="584" height="134" rx="24" fill="url(#ui)"/>
+
+<text x="36" y="50" font-family="'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace" font-size="13" font-weight="700" fill="#D9B27A" text-anchor="start" letter-spacing="1.8">NPM PACKAGE · @malilion/ui</text>
+<text x="34" y="110" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="52" font-weight="800" fill="#F0AD2F" text-anchor="start" letter-spacing="-1.5">v0.15.0</text>
+<text x="212.62" y="110" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="16" font-weight="600" fill="#CDBDA9" text-anchor="start">latest</text>
+<rect x="300" y="84" width="212" height="36" rx="10" fill="#120E0A" stroke="#F0AD2F" stroke-opacity="0.35"/>
+<text x="316" y="108" font-family="'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace" font-size="14" font-weight="400" fill="#F3DDB6" text-anchor="start">$ npm i @malilion/ui</text>
+<g transform="translate(540 60) scale(0.9)">
+  <path d="M0 -26 L26 -13 L26 15 L0 28 L-26 15 L-26 -13 Z" fill="#F0AD2F" opacity="0.18"/>
+  <path d="M0 -26 L26 -13 L0 0 L-26 -13 Z" fill="#F0AD2F"/>
+  <path d="M-26 -13 L0 0 V28 L-26 15 Z" fill="#C98A18"/><path d="M26 -13 L0 0 V28 L26 15 Z" fill="#A86E10"/>
+  <path d="M-13 -19.5 L13 -6.5" stroke="#FFF3D1" stroke-width="3" opacity="0.7"/></g>
+</svg>

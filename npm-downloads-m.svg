@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="300" height="200" role="img" aria-label="@malilion/ui: 133 downloads (last 30 days)">
+<title>@malilion/ui: 133 downloads (last 30 days)</title>
+<defs>
+  <linearGradient id="ui" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1B1611"/><stop offset="1" stop-color="#3D2A14"/></linearGradient>
+  <clipPath id="tile"><rect x="8" y="8" width="284" height="184" rx="24"/></clipPath>
+</defs>
+<rect x="8" y="8" width="284" height="184" rx="24" fill="url(#ui)"/>
+
+<text x="24" y="52" font-family="'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace" font-size="18" font-weight="700" fill="#D9B27A" text-anchor="start" letter-spacing="2">DOWNLOADS</text>
+<text x="22" y="124" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="54" font-weight="800" fill="#FFFFFF" text-anchor="start" letter-spacing="-2">133</text>
+<text x="24" y="164" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="20" font-weight="600" fill="#CDBDA9" text-anchor="start">last 30 days</text>
+<g clip-path="url(#tile)"><polyline points="150,120 150.0,120.0 154.5,120.0 159.0,114.9 163.4,112.4 167.9,107.4 172.4,112.4 176.9,117.5 181.4,120.0 185.9,114.9 190.3,92.2 194.8,120.0 199.3,117.5 203.8,117.5 208.3,114.9 212.8,120.0 217.2,117.5 221.7,89.7 226.2,114.9 230.7,117.5 235.2,114.9 239.7,114.9 244.1,72.0 248.6,117.5 253.1,92.2 257.6,112.4 262.1,77.1 266.6,109.9 271.0,82.1 275.5,114.9 280.0,94.7 280,120" fill="#F0AD2F" fill-opacity="0.16" stroke="none"/>
+<polyline points="150.0,120.0 154.5,120.0 159.0,114.9 163.4,112.4 167.9,107.4 172.4,112.4 176.9,117.5 181.4,120.0 185.9,114.9 190.3,92.2 194.8,120.0 199.3,117.5 203.8,117.5 208.3,114.9 212.8,120.0 217.2,117.5 221.7,89.7 226.2,114.9 230.7,117.5 235.2,114.9 239.7,114.9 244.1,72.0 248.6,117.5 253.1,92.2 257.6,112.4 262.1,77.1 266.6,109.9 271.0,82.1 275.5,114.9 280.0,94.7" fill="none" stroke="#F0AD2F" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="280.0" cy="94.7" r="4.5" fill="#F0AD2F"/></g>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 150" width="600" height="150" role="img" aria-label="@malilion/ui: 133 下載次數 (近 30 天)">
+<title>@malilion/ui: 133 下載次數 (近 30 天)</title>
+<defs>
+  <linearGradient id="ui" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1B1611"/><stop offset="1" stop-color="#3D2A14"/></linearGradient>
+  <clipPath id="tile"><rect x="8" y="8" width="584" height="134" rx="24"/></clipPath>
+</defs>
+<rect x="8" y="8" width="584" height="134" rx="24" fill="url(#ui)"/>
+
+<text x="36" y="50" font-family="'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace" font-size="13" font-weight="700" fill="#D9B27A" text-anchor="start" letter-spacing="1.8">下載次數 · 近 30 天</text>
+<text x="34" y="112" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="56" font-weight="800" fill="#FFFFFF" text-anchor="start" letter-spacing="-2">133</text>
+<g clip-path="url(#tile)"><polyline points="250,116 250.0,116.0 260.7,116.0 271.4,109.3 282.1,105.9 292.8,99.2 303.4,105.9 314.1,112.6 324.8,116.0 335.5,109.3 346.2,78.9 356.9,116.0 367.6,112.6 378.3,112.6 389.0,109.3 399.7,116.0 410.3,112.6 421.0,75.6 431.7,109.3 442.4,112.6 453.1,109.3 463.8,109.3 474.5,52.0 485.2,112.6 495.9,78.9 506.6,105.9 517.2,58.7 527.9,102.5 538.6,65.5 549.3,109.3 560.0,82.3 560,116" fill="#F0AD2F" fill-opacity="0.16" stroke="none"/>
+<polyline points="250.0,116.0 260.7,116.0 271.4,109.3 282.1,105.9 292.8,99.2 303.4,105.9 314.1,112.6 324.8,116.0 335.5,109.3 346.2,78.9 356.9,116.0 367.6,112.6 378.3,112.6 389.0,109.3 399.7,116.0 410.3,112.6 421.0,75.6 431.7,109.3 442.4,112.6 453.1,109.3 463.8,109.3 474.5,52.0 485.2,112.6 495.9,78.9 506.6,105.9 517.2,58.7 527.9,102.5 538.6,65.5 549.3,109.3 560.0,82.3" fill="none" stroke="#F0AD2F" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="560.0" cy="82.3" r="4.5" fill="#F0AD2F"/></g>
+</svg>
