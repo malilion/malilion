@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="300" height="200" role="img" aria-label="@malilion/ui: 177 下載次數 (近 30 天)">
+<title>@malilion/ui: 177 下載次數 (近 30 天)</title>
+<defs>
+  <linearGradient id="ui" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1B1611"/><stop offset="1" stop-color="#3D2A14"/></linearGradient>
+  <clipPath id="tile"><rect x="8" y="8" width="284" height="184" rx="24"/></clipPath>
+</defs>
+<rect x="8" y="8" width="284" height="184" rx="24" fill="url(#ui)"/>
+
+<text x="24" y="52" font-family="'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace" font-size="18" font-weight="700" fill="#D9B27A" text-anchor="start" letter-spacing="2">下載次數</text>
+<text x="22" y="124" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="54" font-weight="800" fill="#FFFFFF" text-anchor="start" letter-spacing="-2">177</text>
+<text x="24" y="164" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="20" font-weight="600" fill="#CDBDA9" text-anchor="start">近 30 天</text>
+<g clip-path="url(#tile)"><polyline points="150,120 150.0,120.0 154.5,116.3 159.0,99.7 163.4,120.0 167.9,118.2 172.4,118.2 176.9,116.3 181.4,120.0 185.9,118.2 190.3,97.8 194.8,116.3 199.3,118.2 203.8,116.3 208.3,116.3 212.8,84.9 217.2,118.2 221.7,99.7 226.2,114.5 230.7,88.6 235.2,112.6 239.7,92.3 244.1,116.3 248.6,101.5 253.1,118.2 257.6,120.0 262.1,118.2 266.6,86.8 271.0,114.5 275.5,103.4 280.0,72.0 280,120" fill="#F0AD2F" fill-opacity="0.16" stroke="none"/>
+<polyline points="150.0,120.0 154.5,116.3 159.0,99.7 163.4,120.0 167.9,118.2 172.4,118.2 176.9,116.3 181.4,120.0 185.9,118.2 190.3,97.8 194.8,116.3 199.3,118.2 203.8,116.3 208.3,116.3 212.8,84.9 217.2,118.2 221.7,99.7 226.2,114.5 230.7,88.6 235.2,112.6 239.7,92.3 244.1,116.3 248.6,101.5 253.1,118.2 257.6,120.0 262.1,118.2 266.6,86.8 271.0,114.5 275.5,103.4 280.0,72.0" fill="none" stroke="#F0AD2F" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="280.0" cy="72.0" r="4.5" fill="#F0AD2F"/></g>
+</svg>
